@@ -50,10 +50,7 @@ const HeroSection = () => {
     <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50/30 to-green-50/30">
       {/* Dynamic Background */}
       <motion.div className="absolute inset-0" style={{ y: yBg }}>
-        {/* Geometric Shapes */}
-        <div className="absolute top-20 left-10 w-64 h-64 bg-gradient-to-br from-blue-400/20 to-cyan-400/20 rounded-full blur-2xl" />
-        <div className="absolute top-40 right-20 w-80 h-80 bg-gradient-to-br from-green-400/15 to-emerald-400/15 rounded-full blur-3xl" />
-        <div className="absolute bottom-20 left-1/3 w-72 h-72 bg-gradient-to-br from-orange-400/15 to-yellow-400/15 rounded-full blur-2xl" />
+       
 
         {/* Grid Pattern */}
         <div className="absolute inset-0 opacity-5">
