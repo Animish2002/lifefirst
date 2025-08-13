@@ -147,7 +147,7 @@ const CTASection = () => {
                     <MessageSquare className="w-16 h-16 text-blue-500 mx-auto mb-6" />
                   </motion.div>
 
-                  <h2 className="text-2xl md:text-4xl font-bold mb-6">
+                  <h2 className="text-xl md:text-3xl font-bold mb-6">
                     <span className="text-slate-800">
                       Ready to Transform Your
                     </span>
@@ -157,7 +157,7 @@ const CTASection = () => {
                     </span>
                   </h2>
 
-                  <p className="text-xl text-slate-600 mb-8 max-w-3xl mx-auto leading-relaxed">
+                  <p className="text-sm text-slate-600 mb-8 max-w-3xl mx-auto leading-relaxed">
                     Connect with us to bring sustainable water treatment to your
                     facility or community. Our experts are ready to design the
                     perfect solution for your needs.
@@ -170,12 +170,12 @@ const CTASection = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: 0.4 }}
                   >
-                    <button className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-8 py-3 text-lg shadow-lg hover:shadow-xl transition-all duration-300 rounded-lg flex items-center justify-center">
+                    <button className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-8 py-2 text-sm shadow-lg hover:shadow-xl transition-all duration-300 rounded-lg flex items-center justify-center">
                       Contact Us Now
                       <ChevronRight className="ml-2 w-5 h-5" />
                     </button>
 
-                    <button className="border-2 border-blue-500 text-blue-600 hover:bg-blue-50 px-8 py-3 text-lg rounded-lg transition-all duration-300">
+                    <button className="border-2 border-blue-500 text-blue-600 hover:bg-blue-50 px-8 py-2 text-sm rounded-lg transition-all duration-300">
                       Download Brochure
                     </button>
                   </motion.div>

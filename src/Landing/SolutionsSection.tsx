@@ -123,10 +123,10 @@ const SolutionsSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-5xl font-bold mb-6 text-gray-900">
+          <h2 className="text-3xl font-semibold mb-6 text-gray-900">
             Our Solutions
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Comprehensive water treatment technologies designed for maximum
             efficiency and environmental sustainability. From industrial
             wastewater to drinking water purification.
@@ -156,53 +156,23 @@ const SolutionsSection = () => {
                     {solution.icon}
                   </div>
                   <div className="text-right">
-                    <div className="text-sm text-gray-500 font-medium">
+                    <div className="text-xs text-gray-500 font-medium">
                       {solution.items.length} Solutions
                     </div>
                   </div>
                 </div>
 
-                <h3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-gray-900 transition-colors">
+                <h3 className="text-lg font-semibold text-gray-800 mb-3 group-hover:text-gray-900 transition-colors">
                   {solution.title}
                 </h3>
 
-                <p className="text-gray-600 text-sm mb-4 leading-relaxed">
+                <p className="text-gray-600 text-xs mb-4 leading-relaxed">
                   {solution.description}
                 </p>
 
-                {/* Features */}
-                <div className="flex flex-wrap gap-1 mb-4">
-                  {solution.features.map((feature, featureIndex) => (
-                    <div
-                      key={featureIndex}
-                      className="inline-flex items-center bg-gray-200 text-gray-700 px-2 py-1 rounded-full text-xs font-medium"
-                    >
-                      <CheckCircle className="w-3 h-3 mr-1 text-blue-500" />
-                      {feature}
-                    </div>
-                  ))}
-                </div>
-
-                {/* Solutions List */}
-                <div className="space-y-2 mb-6 flex-1">
-                  {solution.items.slice(0, 4).map((item, itemIndex) => (
-                    <div key={itemIndex} className="flex items-start">
-                      <ChevronRight className="w-4 h-4 text-blue-500 mr-2 flex-shrink-0 mt-0.5" />
-                      <span className="text-gray-700 text-sm leading-relaxed">
-                        {item}
-                      </span>
-                    </div>
-                  ))}
-                  {solution.items.length > 4 && (
-                    <div className="text-gray-500 text-xs italic pl-6">
-                      +{solution.items.length - 4} more solutions
-                    </div>
-                  )}
-                </div>
-
                 {/* Learn More Button */}
                 <motion.button
-                  className={`w-full bg-blue-600 text-white py-3 rounded-xl font-medium shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center group-hover:bg-blue-700`}
+                  className={`w-full mt-18 bg-blue-600 text-white py-3 rounded-xl font-medium shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center group-hover:bg-blue-700`}
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
@@ -223,14 +193,14 @@ const SolutionsSection = () => {
           transition={{ duration: 0.6, delay: 0.3 }}
         >
           <div className="bg-blue-600 rounded-2xl p-8 text-white shadow-2xl">
-            <h3 className="text-2xl font-bold mb-4">Need a Custom Solution?</h3>
-            <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
+            <h3 className="text-xl font-bold mb-4">Need a Custom Solution?</h3>
+            <p className="text-blue-100 mb-6 max-w-2xl mx-auto text-sm">
               Our engineering team can design and implement tailored water
               treatment solutions to meet your specific requirements and
               challenges.
             </p>
             <motion.button
-              className="bg-white text-blue-600 px-8 py-3 rounded-xl font-medium shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-blue-50"
+              className="bg-white text-blue-600 text-sm px-8 py-3 rounded-xl font-medium shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-blue-50"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >

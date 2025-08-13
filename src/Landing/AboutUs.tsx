@@ -70,10 +70,10 @@ const AboutSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-5xl font-bold bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent mb-4">
+          <h2 className="text-3xl font-semibold bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent mb-4">
             About the Company
           </h2>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+          <p className="text-sm text-slate-600 max-w-3xl mx-auto">
             Pioneering sustainable water treatment solutions with cutting-edge
             technology and unwavering commitment to environmental excellence.
           </p>
@@ -91,7 +91,7 @@ const AboutSection = () => {
               <CardHeader>
                 <div className="flex items-center mb-4">
                   <Factory className="w-10 h-10 text-blue-600 mr-4" />
-                  <CardTitle className="text-2xl text-slate-800">
+                  <CardTitle className="text-xl text-slate-800">
                     Our Mission
                   </CardTitle>
                 </div>

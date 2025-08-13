@@ -63,16 +63,9 @@ const HeroSection = () => {
               variants={containerVariants}
             >
               <motion.div variants={itemVariants} className="space-y-6">
-                <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
-                  <span className="block text-slate-800 mb-2">Transform</span>
+                <h1 className="text-5xl font-semibold leading-tight">
                   <span className="block bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-700 bg-clip-text text-transparent mb-2">
-                    Water Systems
-                  </span>
-                  <span className="block text-3xl lg:text-4xl text-slate-600 font-medium">
-                    for a{" "}
-                    <span className="bg-gradient-to-r from-green-500 to-emerald-500 bg-clip-text text-transparent">
-                      Sustainable Future
-                    </span>
+                    Transform Water Systems <br /> for a Sustainable Future
                   </span>
                 </h1>
               </motion.div>
@@ -91,7 +84,7 @@ const HeroSection = () => {
                 className="flex flex-col sm:flex-row gap-4"
               >
                 <Button
-                  size="lg"
+                  size="sm"
                   className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-8 py-4 text-lg shadow-xl hover:shadow-2xl transition-all duration-300 group"
                 >
                   Start Your Project
@@ -100,7 +93,7 @@ const HeroSection = () => {
 
                 <Button
                   variant="outline"
-                  size="lg"
+                  size="sm"
                   className="border-2 border-slate-300 text-slate-700 hover:bg-slate-50 px-8 py-4 text-lg group"
                 >
                   <Play className="mr-2 w-5 h-5 group-hover:scale-110 transition-transform" />
