@@ -1,16 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import {
-  Phone,
-  Mail,
-  MapPin,
-  Send,
-  Clock,
-  Users,
-  Award,
-  CheckCircle,
-  X,
-} from "lucide-react";
+import { Phone, Mail, MapPin, CheckCircle, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -72,7 +62,6 @@ const ContactPage = () => {
   });
   const [message, setMessage] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [bannerVisible, setBannerVisible] = useState(true);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -148,8 +137,8 @@ const ContactPage = () => {
                   Get in Touch
                 </h2>
                 <p className="text-lg text-slate-600 leading-relaxed">
-                  We're here to help you succeed. Reach out through any of these
-                  channels and we'll respond promptly.
+                  We&apos;re here to help you succeed. Reach out through any of
+                  these channels and we&apos;ll respond promptly.
                 </p>
               </div>
 
@@ -202,8 +191,8 @@ const ContactPage = () => {
                     Send us a Message
                   </CardTitle>
                   <CardDescription className="text-base">
-                    Fill out the form below and we'll get back to you within 24
-                    hours.
+                    Fill out the form below and we&apos;ll get back to you
+                    within 24 hours.
                   </CardDescription>
                 </CardHeader>
 

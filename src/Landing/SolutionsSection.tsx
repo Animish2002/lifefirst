@@ -1,4 +1,5 @@
 "use client";
+// /* eslint no-use-before-define: 0 *  // --> OFF
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import {
@@ -6,11 +7,7 @@ import {
   Leaf,
   Shield,
   Zap,
-  ChevronRight,
-  Filter,
-  Recycle,
   ArrowRight,
-  CheckCircle,
 } from "lucide-react";
 
 const SolutionsSection = () => {
