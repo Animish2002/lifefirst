@@ -124,7 +124,7 @@ const SolutionsSection = () => {
         </motion.div>
 
         {/* Solutions Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 md:gap-6 px-4">
           {solutions.map((solution, index) => (
             <motion.div
               key={solution.id}
@@ -162,7 +162,7 @@ const SolutionsSection = () => {
 
                 {/* Learn More Button */}
                 <motion.button
-                  className={`w-full mt-18 bg-blue-600 text-white py-3 rounded-xl font-medium shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center group-hover:bg-blue-700`}
+                  className={`w-full md:mt-18 bg-blue-600 text-white py-3 rounded-xl font-medium shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center group-hover:bg-blue-700`}
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
@@ -176,7 +176,7 @@ const SolutionsSection = () => {
 
         {/* Bottom CTA Section */}
         <motion.div
-          className="mt-16 text-center"
+          className="mt-16 text-center px-4"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

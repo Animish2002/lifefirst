@@ -32,15 +32,15 @@ export function StatsSection() {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
-      className="p-8 md:p-12 bg-gray-50 rounded-lg shadow-inner border border-gray-100"
+      className="p-2 py-8 md:p-12 bg-gray-50 rounded-lg shadow-inner border border-gray-100"
     >
       {/* Stats Section */}
       <motion.div variants={itemVariants}>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 px-6">
+        <div className="grid grid-cols-4 md:grid-cols-4 gap-2 md:gap-6 md:px-6">
           {stats.map((stat, index) => (
             <motion.div
               key={index}
-              className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-blue-100 shadow-lg text-center"
+              className="bg-white/80 backdrop-blur-sm rounded-2xl p-2 md:p-6 border border-blue-100 shadow-lg text-center"
               whileHover={{ scale: 1.05, y: -5 }}
               transition={{
                 type: "spring",
@@ -50,10 +50,10 @@ export function StatsSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
             >
-              <div className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent mb-2">
+              <div className="text-sm md:text-3xl font-semibold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent mb-2">
                 {stat.number}
               </div>
-              <div className="text-sm text-slate-600 font-medium">
+              <div className="text-xs md:text-sm text-slate-600 font-medium">
                 {stat.label}
               </div>
             </motion.div>

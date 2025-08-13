@@ -53,7 +53,7 @@ const HeroSection = () => {
 
       {/* Main Content */}
       <motion.div className="relative z-10 pt-24 pb-16" style={{ y: yContent }}>
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-6  md:mt-0 mt-15">
           <div className="grid lg:grid-cols-12 gap-12 items-center min-h-[80vh]">
             {/* Left Content */}
             <motion.div
@@ -63,7 +63,7 @@ const HeroSection = () => {
               variants={containerVariants}
             >
               <motion.div variants={itemVariants} className="space-y-6">
-                <h1 className="text-5xl font-semibold leading-tight">
+                <h1 className="md:text-5xl text-4xl font-semibold leading-tight">
                   <span className="block bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-700 bg-clip-text text-transparent mb-2">
                     Transform Water Systems <br /> for a Sustainable Future
                   </span>
