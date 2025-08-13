@@ -1,62 +1,67 @@
 "use client";
 import React, { useState } from "react";
-import { motion } from "framer-motion";
-import { Phone, Mail, MapPin } from "lucide-react";
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Send,
+  Clock,
+  Users,
+  Award,
+  CheckCircle,
+  X,
+} from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Alert, AlertDescription } from "@/components/ui/alert";
+import { Separator } from "@/components/ui/separator";
 import Navigation from "@/Landing/Navigation";
 import Footer from "@/Landing/Footer";
 
-// Shadcn UI components for a consistent form design
-const Input = ({ label, type, name, placeholder, value, onChange }) => (
-  <div className="relative z-0 w-full mb-6 group">
-    <input
-      type={type}
-      name={name}
-      id={name}
-      className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-      placeholder=" "
-      required
-      value={value}
-      onChange={onChange}
-    />
-    <label
-      htmlFor={name}
-      className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-    >
-      {label}
-    </label>
-  </div>
-);
+// You could extract these into separate components for better modularity.
+// For example, a ContactCard component.
+interface ContactItemProps {
+  icon: React.ReactNode;
+  title: string;
+  detail: string;
+  subDetail: string;
+  color: string;
+}
 
-const Textarea = ({ label, name, placeholder, value, onChange }) => (
-  <div className="relative z-0 w-full mb-6 group">
-    <textarea
-      name={name}
-      id={name}
-      rows="4"
-      className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-      placeholder=" "
-      required
-      value={value}
-      onChange={onChange}
-    ></textarea>
-    <label
-      htmlFor={name}
-      className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-    >
-      {label}
-    </label>
-  </div>
+const ContactCard = ({
+  icon,
+  title,
+  detail,
+  subDetail,
+  color,
+}: ContactItemProps) => (
+  <Card className="group hover:shadow-lg transition-all duration-300 border-slate-200 hover:border-slate-300">
+    <CardContent className="p-6">
+      <div className="flex items-start space-x-4">
+        <div
+          className={`p-3 rounded-lg bg-slate-50 group-hover:bg-slate-100 transition-colors duration-300 ${color}`}
+        >
+          {icon}
+        </div>
+        <div className="flex-1">
+          <CardTitle className="text-lg text-slate-900 mb-1">{title}</CardTitle>
+          <p className="text-slate-700 font-medium">{detail}</p>
+          <CardDescription className="mt-1">{subDetail}</CardDescription>
+        </div>
+      </div>
+    </CardContent>
+  </Card>
 );
-
-const Button = ({ children, className, ...props }) => (
-  <button
-    className={`w-full px-5 py-2.5 text-sm font-medium text-white bg-blue-600 rounded-lg sm:w-auto hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 transition-colors duration-200 ${className}`}
-    {...props}
-  >
-    {children}
-  </button>
-);
-
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -65,149 +70,281 @@ const ContactPage = () => {
     subject: "",
     message: "",
   });
+  const [message, setMessage] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [bannerVisible, setBannerVisible] = useState(true);
 
-  const handleChange = (e) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // In a real app, you would send this data to an API
-    console.log("Form submitted with data:", formData);
-    // You could also add a success message or clear the form here
-    alert("Thank you for your message! We'll get back to you soon.");
-    setFormData({
-      fullName: "",
-      email: "",
-      subject: "",
-      message: "",
-    });
+    setIsSubmitting(true);
+
+    // Simulate API call
+    setTimeout(() => {
+      console.log("Form submitted with data:", formData);
+      setMessage("Thank you for your message! We'll get back to you soon.");
+      setFormData({
+        fullName: "",
+        email: "",
+        subject: "",
+        message: "",
+      });
+      setIsSubmitting(false);
+    }, 1500);
   };
 
   const contactInfo = [
     {
-      icon: <Phone size={24} className="text-blue-600" />,
+      icon: <Phone size={24} />,
       title: "Phone",
       detail: "+91 (XXX) XXX-XXXX",
-      subDetail: "Mon-Fri 9am-5pm",
+      subDetail: "Mon-Fri 9am-5pm IST",
+      color: "text-blue-600",
     },
     {
-      icon: <Mail size={24} className="text-blue-600" />,
+      icon: <Mail size={24} />,
       title: "Email",
       detail: "info@lifefirsttech.com",
-      subDetail: "Respond within 24 hours",
+      subDetail: "Response within 24 hours",
+      color: "text-purple-600",
     },
     {
-      icon: <MapPin size={24} className="text-blue-600" />,
+      icon: <MapPin size={24} />,
       title: "Address",
-      detail: "123 Main Street, Your City, State",
-      subDetail: "Pin: 000000",
+      detail: "123 Main Street, Your City",
+      subDetail: "Pune, Maharashtra 411001",
+      color: "text-emerald-600",
     },
   ];
 
   return (
-    <div className="bg-gray-50 text-gray-800">
+    <>
       <Navigation />
-      <main className="min-h-screen pt-28 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          {/* Header Section */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h1 className="text-5xl font-bold text-slate-800 mb-4">
-              Get in Touch with Us
-            </h1>
-            <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-              We would love to hear from you. Fill out the form below or reach
-              out directly using our contact information.
-            </p>
-          </motion.div>
-
-          {/* Main Content: Contact Form & Info */}
-          <div className="flex flex-col lg:flex-row gap-12 bg-white rounded-2xl shadow-xl p-8 lg:p-12">
-            {/* Contact Info Column */}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="lg:w-1/3 space-y-8"
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-purple-50/20">
+        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          <div className="grid lg:grid-cols-5 gap-12">
+            {/* Contact Information & Details Section */}
+            <section
+              className="lg:col-span-2 space-y-8"
+              aria-labelledby="contact-info-heading"
             >
-              <h2 className="text-3xl font-bold text-slate-800">
-                Contact Information
-              </h2>
-              <p className="text-lg text-slate-600">
-                Our team is ready to assist you with any questions or project
-                inquiries.
-              </p>
+              <div className="space-y-6">
+                <Badge
+                  variant="outline"
+                  className="bg-blue-50 text-blue-700 border-blue-200"
+                >
+                  Contact Information
+                </Badge>
+                <h2
+                  id="contact-info-heading"
+                  className="text-3xl font-bold text-slate-900"
+                >
+                  Get in Touch
+                </h2>
+                <p className="text-lg text-slate-600 leading-relaxed">
+                  We're here to help you succeed. Reach out through any of these
+                  channels and we'll respond promptly.
+                </p>
+              </div>
+
               <div className="space-y-6">
                 {contactInfo.map((item, index) => (
-                  <div key={index} className="flex items-start space-x-4">
-                    <div className="p-3 rounded-full bg-blue-50">
-                      {item.icon}
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-slate-800">
-                        {item.title}
-                      </h3>
-                      <p className="text-slate-600">{item.detail}</p>
-                      <p className="text-sm text-slate-400">
-                        {item.subDetail}
-                      </p>
-                    </div>
-                  </div>
+                  <ContactCard key={index} {...item} />
                 ))}
               </div>
-            </motion.div>
 
-            {/* Contact Form Column */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="lg:w-2/3"
+              {/* Google Maps Section */}
+              <Card className="overflow-hidden">
+                <CardHeader>
+                  <CardTitle className="flex items-center space-x-2">
+                    <MapPin size={20} aria-hidden="true" />
+                    <span>Find Us</span>
+                  </CardTitle>
+                  <CardDescription>
+                    Visit our office or get directions
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="p-0">
+                  <div className="w-full h-64 bg-slate-100 relative overflow-hidden">
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.2612716766467!2d73.8474246!3d18.5723528!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c079f53e6b3f%3A0x7d0e37e9d72a7201!2sPune%2C%20Maharashtra%20411001%2C%20India!5e0!3m2!1sen!2sus!4v1628169123880!5m2!1sen!2sus"
+                      width="100%"
+                      height="100%"
+                      style={{ border: 0 }}
+                      allowFullScreen
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                      className="rounded-b-lg"
+                      title="Google Maps location of our office"
+                    ></iframe>
+                  </div>
+                </CardContent>
+              </Card>
+            </section>
+
+            {/* Contact Form Section */}
+            <section
+              className="lg:col-span-3"
+              aria-labelledby="contact-form-heading"
             >
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid sm:grid-cols-2 gap-6">
-                  <Input
-                    label="Full Name"
-                    type="text"
-                    name="fullName"
-                    value={formData.fullName}
-                    onChange={handleChange}
-                  />
-                  <Input
-                    label="Email Address"
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                  />
-                </div>
-                <Input
-                  label="Subject"
-                  type="text"
-                  name="subject"
-                  value={formData.subject}
-                  onChange={handleChange}
-                />
-                <Textarea
-                  label="Your Message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                />
-                <Button type="submit">Send Message</Button>
-              </form>
-            </motion.div>
+              <Card className="shadow-2xl border-slate-200">
+                <CardHeader className="pb-6">
+                  <CardTitle
+                    id="contact-form-heading"
+                    className="text-2xl text-slate-900"
+                  >
+                    Send us a Message
+                  </CardTitle>
+                  <CardDescription className="text-base">
+                    Fill out the form below and we'll get back to you within 24
+                    hours.
+                  </CardDescription>
+                </CardHeader>
+
+                <CardContent>
+                  <form onSubmit={handleSubmit} className="space-y-6">
+                    <div className="grid sm:grid-cols-2 gap-6">
+                      <div className="space-y-2">
+                        <Label
+                          htmlFor="fullName"
+                          className="text-sm font-semibold text-slate-700"
+                        >
+                          Full Name
+                        </Label>
+                        <Input
+                          type="text"
+                          name="fullName"
+                          id="fullName"
+                          value={formData.fullName}
+                          onChange={handleChange}
+                          placeholder="Enter your full name"
+                          className="h-12"
+                          required
+                        />
+                      </div>
+                      <div className="space-y-2">
+                        <Label
+                          htmlFor="email"
+                          className="text-sm font-semibold text-slate-700"
+                        >
+                          Email Address
+                        </Label>
+                        <Input
+                          type="email"
+                          name="email"
+                          id="email"
+                          value={formData.email}
+                          onChange={handleChange}
+                          placeholder="your@email.com"
+                          className="h-12"
+                          required
+                        />
+                      </div>
+                    </div>
+
+                    <div className="space-y-2">
+                      <Label
+                        htmlFor="subject"
+                        className="text-sm font-semibold text-slate-700"
+                      >
+                        Subject
+                      </Label>
+                      <Input
+                        type="text"
+                        name="subject"
+                        id="subject"
+                        value={formData.subject}
+                        onChange={handleChange}
+                        placeholder="What's this about?"
+                        className="h-12"
+                        required
+                      />
+                    </div>
+
+                    <div className="space-y-2">
+                      <Label
+                        htmlFor="message"
+                        className="text-sm font-semibold text-slate-700"
+                      >
+                        Your Message
+                      </Label>
+                      <Textarea
+                        name="message"
+                        id="message"
+                        rows={5}
+                        value={formData.message}
+                        onChange={handleChange}
+                        placeholder="Tell us about your project or question..."
+                        className="resize-none"
+                        required
+                      />
+                    </div>
+
+                    <Separator className="my-6" />
+
+                    <Button
+                      type="submit"
+                      disabled={isSubmitting}
+                      className="w-full h-12 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold"
+                      size="lg"
+                    >
+                      {isSubmitting ? (
+                        <>
+                          <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin mr-2"></div>
+                          Sending...
+                        </>
+                      ) : (
+                        <>
+                          <Send size={18} className="mr-2" />
+                          Send Message
+                        </>
+                      )}
+                    </Button>
+
+                    {message && (
+                      <Alert className="border-green-200 bg-green-50">
+                        <CheckCircle className="h-4 w-4 text-green-600" />
+                        <AlertDescription className="text-green-700 font-medium">
+                          {message}
+                        </AlertDescription>
+                      </Alert>
+                    )}
+                  </form>
+                </CardContent>
+              </Card>
+            </section>
           </div>
-        </div>
-      </main>
+        </main>
+
+        {/* Bottom CTA Section */}
+        <Card className="mx-4 sm:mx-6 lg:mx-8 mb-8 bg-gradient-to-r from-slate-900 to-blue-900 border-0 text-white">
+          <CardContent className="py-16 px-4 sm:px-6 lg:px-8 text-center">
+            <div className="max-w-4xl mx-auto">
+              <h3 className="text-3xl font-bold text-white mb-4">
+                Ready to Start Your Project?
+              </h3>
+              <p className="text-xl text-slate-300 mb-8">
+                Join hundreds of satisfied clients who have transformed their
+                businesses with us.
+              </p>
+              <Button
+                size="lg"
+                className="bg-white text-slate-900 hover:bg-slate-100 font-semibold h-12 px-8"
+              >
+                Schedule a Free Consultation
+              </Button>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
       <Footer />
-    </div>
+    </>
   );
 };
 
