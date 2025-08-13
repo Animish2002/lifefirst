@@ -74,32 +74,11 @@ const Footer = () => {
           >
             <div className="flex items-center mb-6">
               {/* Droplet Logo */}
-              <div className="w-10 h-10 mr-3">
-                <svg viewBox="0 0 100 100" className="w-full h-full">
-                  <defs>
-                    <linearGradient
-                      id="footerDropletGradient"
-                      x1="0%"
-                      y1="0%"
-                      x2="100%"
-                      y2="100%"
-                    >
-                      <stop offset="0%" stopColor="#FF6B35" />
-                      <stop offset="25%" stopColor="#F7931E" />
-                      <stop offset="50%" stopColor="#4CAF50" />
-                      <stop offset="75%" stopColor="#2196F3" />
-                      <stop offset="100%" stopColor="#1976D2" />
-                    </linearGradient>
-                  </defs>
-                  <path
-                    d="M50 10 C30 30, 20 50, 30 70 C40 85, 60 85, 70 70 C80 50, 70 30, 50 10 Z"
-                    fill="url(#footerDropletGradient)"
-                  />
-                </svg>
-              </div>
-              <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                Life First Technologies
-              </h3>
+              <img
+                src="https://res.cloudinary.com/dsvfcckqy/image/upload/v1755028854/lifefirst_logo_png_nb1cje.png"
+                alt="Droplet Logo"
+                className="w-40 mr-4"
+              />
             </div>
 
             <p className="text-slate-300 mb-6 leading-relaxed">
