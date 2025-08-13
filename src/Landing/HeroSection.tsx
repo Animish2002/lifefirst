@@ -34,13 +34,11 @@ const HeroSection = () => {
       },
     },
   };
-  
+
   return (
     <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50/30 to-green-50/30">
       {/* Dynamic Background */}
       <motion.div className="absolute inset-0" style={{ y: yBg }}>
-       
-
         {/* Grid Pattern */}
         <div className="absolute inset-0 opacity-5">
           <div
@@ -145,7 +143,9 @@ const HeroSection = () => {
               initial="hidden"
               animate="visible"
               variants={containerVariants}
-            ></motion.div>
+            >
+              <img src="https://res.cloudinary.com/dsvfcckqy/image/upload/v1755028854/lifefirst_logo_png_nb1cje.png" />
+            </motion.div>
           </div>
         </div>
       </motion.div>
