@@ -9,7 +9,6 @@ import {
   ChevronRight,
   Filter,
   Recycle,
-  Waves,
   ArrowRight,
   CheckCircle,
 } from "lucide-react";

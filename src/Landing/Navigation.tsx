@@ -106,7 +106,7 @@ const Navigation = () => {
                     onMouseEnter={() => setIsDropdownOpen(true)}
                     onMouseLeave={() => setIsDropdownOpen(false)}
                   >
-                    {dropdownItems.map((item, index) => (
+                    {dropdownItems.map((item) => (
                       <motion.button
                         key={item}
                         className="w-full text-left px-4 py-3 text-sm text-slate-700 hover:text-blue-600 hover:bg-blue-50 transition-colors border-b border-gray-100 last:border-b-0"

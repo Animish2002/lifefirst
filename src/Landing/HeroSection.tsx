@@ -3,7 +3,6 @@
 import React from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import type { AnimationGeneratorType } from "framer-motion";
 import { ChevronRight, Play, ArrowDown } from "lucide-react";
 
@@ -35,17 +34,7 @@ const HeroSection = () => {
       },
     },
   };
-  const floatingVariants = {
-    animate: {
-      y: [0, -10, 0],
-      transition: {
-        duration: 3,
-        repeat: Infinity,
-        ease: "easeInOut",
-      },
-    },
-  };
-
+  
   return (
     <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50/30 to-green-50/30">
       {/* Dynamic Background */}
