@@ -14,8 +14,6 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import Image from "next/image";
-import Link from "next/link";
 
 const navLinks = [
   { name: "Home", path: "/" },
@@ -140,13 +138,14 @@ const Navigation = () => {
                     className={`h-8 w-8 p-0 text-slate-400 hover:bg-slate-800 transition-all duration-200 ${social.color}`}
                     asChild
                   >
-                    <Link
+                    <a
                       href={social.href}
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={social.label}
-                    />
-                    {social.icon}
+                    >
+                      {social.icon}
+                    </a>
                   </Button>
                 ))}
               </div>
@@ -160,15 +159,15 @@ const Navigation = () => {
               className="flex items-center space-x-3 cursor-pointer"
               whileHover={{ scale: 1.05 }}
             >
-              <Link href="/">
-                <Image
+              <a href="/">
+                <img
                   src="https://res.cloudinary.com/dsvfcckqy/image/upload/v1755028854/lifefirst_logo_png_nb1cje.png"
                   alt="LifeFirst Logo"
                   width={140}
                   height={140}
                   className="w-auto h-auto max-h-12"
                 />
-              </Link>
+              </a>
             </motion.div>
 
             {/* Desktop Navigation */}

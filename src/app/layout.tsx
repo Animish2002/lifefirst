@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
+import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Funnel_Sans } from "next/font/google";
 
 const funnelSans = Funnel_Sans({
-  variable: "--font-funnel-sans",
+  variable: "--font-geist-sans",
   subsets: ["latin"],
 });
 

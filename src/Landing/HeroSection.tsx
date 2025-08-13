@@ -5,7 +5,6 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import type { AnimationGeneratorType } from "framer-motion";
 import { ChevronRight, Play, ArrowDown } from "lucide-react";
-import Image from "next/image";
 
 const HeroSection = () => {
   const { scrollYProgress } = useScroll();
@@ -138,10 +137,7 @@ const HeroSection = () => {
               animate="visible"
               variants={containerVariants}
             >
-              <Image
-                src="https://res.cloudinary.com/dsvfcckqy/image/upload/v1755028854/lifefirst_logo_png_nb1cje.png"
-                alt="LifeFirst logo"
-              />
+              <img src="https://res.cloudinary.com/dsvfcckqy/image/upload/v1755028854/lifefirst_logo_png_nb1cje.png" />
             </motion.div>
           </div>
         </div>

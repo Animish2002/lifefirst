@@ -12,7 +12,6 @@ import {
   ChevronRight,
   Droplets,
 } from "lucide-react";
-import Image from "next/image";
 
 const Footer = () => {
   const quickLinks = [
@@ -75,7 +74,7 @@ const Footer = () => {
           >
             <div className="flex items-center mb-6">
               {/* Droplet Logo */}
-              <Image
+              <img
                 src="https://res.cloudinary.com/dsvfcckqy/image/upload/v1755028854/lifefirst_logo_png_nb1cje.png"
                 alt="Droplet Logo"
                 className="w-40 mr-4"
