@@ -76,34 +76,34 @@ const SolutionsSection = () => {
       ],
       features: ["Smart Technology", "Real-time", "Automated"],
     },
-    {
-      id: "chemical",
-      title: "Chemical Dosing Systems",
-      icon: <Filter className="w-8 h-8" />,
-      description:
-        "Precision chemical dosing for optimal water treatment efficiency",
-      items: [
-        "5 MLD Wastewater Treatment Plant",
-        "5 MLD Water Treatment Plant",
-        "20 KLD Leachate Treatment Plant",
-        "Automated Dosing Controllers",
-      ],
-      features: ["Precise Control", "Automated", "Efficient"],
-    },
-    {
-      id: "specialized",
-      title: "Specialized Systems",
-      icon: <Recycle className="w-8 h-8" />,
-      description:
-        "Custom engineered solutions for unique water treatment challenges",
-      items: [
-        "Custom Water Treatment Plants",
-        "Industrial Process Water",
-        "Zero Liquid Discharge Systems",
-        "Specialized Filtration",
-      ],
-      features: ["Custom Design", "Innovative", "Scalable"],
-    },
+    // {
+    //   id: "chemical",
+    //   title: "Chemical Dosing Systems",
+    //   icon: <Filter className="w-8 h-8" />,
+    //   description:
+    //     "Precision chemical dosing for optimal water treatment efficiency",
+    //   items: [
+    //     "5 MLD Wastewater Treatment Plant",
+    //     "5 MLD Water Treatment Plant",
+    //     "20 KLD Leachate Treatment Plant",
+    //     "Automated Dosing Controllers",
+    //   ],
+    //   features: ["Precise Control", "Automated", "Efficient"],
+    // },
+    // {
+    //   id: "specialized",
+    //   title: "Specialized Systems",
+    //   icon: <Recycle className="w-8 h-8" />,
+    //   description:
+    //     "Custom engineered solutions for unique water treatment challenges",
+    //   items: [
+    //     "Custom Water Treatment Plants",
+    //     "Industrial Process Water",
+    //     "Zero Liquid Discharge Systems",
+    //     "Specialized Filtration",
+    //   ],
+    //   features: ["Custom Design", "Innovative", "Scalable"],
+    // },
   ];
 
   return (
@@ -114,7 +114,7 @@ const SolutionsSection = () => {
       viewport={{ once: true }}
       transition={{ duration: 0.8 }}
     >
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <motion.div
           className="text-center mb-16"
@@ -134,7 +134,7 @@ const SolutionsSection = () => {
         </motion.div>
 
         {/* Solutions Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {solutions.map((solution, index) => (
             <motion.div
               key={solution.id}
@@ -147,11 +147,7 @@ const SolutionsSection = () => {
               onMouseLeave={() => setHoveredCard(null)}
               whileHover={{ y: -5 }}
             >
-              {/* Background decorative elements */}
-              <div className="absolute top-0 right-0 w-24 h-24 bg-gray-200 rounded-full -translate-y-12 translate-x-12" />
-              <div className="absolute bottom-0 left-0 w-16 h-16 bg-gray-200 rounded-full translate-y-8 -translate-x-8" />
-
-              <div className="relative p-6 h-full flex flex-col">
+              <div className="relative p-4 h-full flex flex-col">
                 {/* Icon and Title */}
                 <div className="flex items-start justify-between mb-4">
                   <div

@@ -27,33 +27,12 @@ const Navigation = () => {
             className="flex items-center space-x-3"
             whileHover={{ scale: 1.05 }}
           >
-            {/* Droplet Logo */}
-            <div className="w-10 h-10 relative">
-              <svg viewBox="0 0 100 100" className="w-full h-full">
-                <defs>
-                  <linearGradient
-                    id="dropletGradient"
-                    x1="0%"
-                    y1="0%"
-                    x2="100%"
-                    y2="100%"
-                  >
-                    <stop offset="0%" stopColor="#FF6B35" />
-                    <stop offset="25%" stopColor="#F7931E" />
-                    <stop offset="50%" stopColor="#4CAF50" />
-                    <stop offset="75%" stopColor="#2196F3" />
-                    <stop offset="100%" stopColor="#1976D2" />
-                  </linearGradient>
-                </defs>
-                <path
-                  d="M50 10 C30 30, 20 50, 30 70 C40 85, 60 85, 70 70 C80 50, 70 30, 50 10 Z"
-                  fill="url(#dropletGradient)"
-                />
-              </svg>
-            </div>
-            <h1 className="text-2xl font-bold bg-clip-text text-zinc-800">
-              Life First Technologies
-            </h1>
+            <img
+              src="https://res.cloudinary.com/dsvfcckqy/image/upload/v1755028854/lifefirst_logo_png_nb1cje.png"
+              alt="LifeFirst Logo"
+              width={140}
+              height={140}
+            />
           </motion.div>
 
           <div className="flex space-x-8">
