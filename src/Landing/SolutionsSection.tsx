@@ -1,17 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import {
-  Droplets,
-  Leaf,
-  Shield,
-  Zap,
-  ChevronRight,
-  Filter,
-  Recycle,
-  ArrowRight,
-  CheckCircle,
-} from "lucide-react";
+import { Droplets, Leaf, Shield, Zap, ArrowRight } from "lucide-react";
 
 const SolutionsSection = () => {
   const [hoveredCard, setHoveredCard] = useState(null);

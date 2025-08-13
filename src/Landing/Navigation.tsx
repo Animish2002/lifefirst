@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
+import Link from "next/link";
 
 const navLinks = [
   { name: "Home", path: "/" },
@@ -159,7 +160,7 @@ const Navigation = () => {
               className="flex items-center space-x-3 cursor-pointer"
               whileHover={{ scale: 1.05 }}
             >
-              <a href="/">
+              <Link href="/">
                 <img
                   src="https://res.cloudinary.com/dsvfcckqy/image/upload/v1755028854/lifefirst_logo_png_nb1cje.png"
                   alt="LifeFirst Logo"
@@ -167,7 +168,7 @@ const Navigation = () => {
                   height={140}
                   className="w-auto h-auto max-h-12"
                 />
-              </a>
+              </Link>
             </motion.div>
 
             {/* Desktop Navigation */}

@@ -5,10 +5,11 @@ import { motion } from "framer-motion";
 import { ChevronRight } from "lucide-react";
 import Navigation from "@/Landing/Navigation";
 import Footer from "@/Landing/Footer";
+import Image from "next/image";
 
 const AboutUsPage = () => {
   return (
-    <div className="min-h-screen bg-gray-50 pt-24 pb-16">
+    <div className="min-h-screen bg-gray-50 pt-24 pb-16 mt-26">
       <Navigation />
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
@@ -59,10 +60,12 @@ const AboutUsPage = () => {
             </ul>
           </div>
           <div className="relative overflow-hidden rounded-xl shadow-2xl">
-            <img
+            <Image
               src="https://placehold.co/800x600/60A5FA/FFFFFF?text=Our+Team"
               alt="Life First Technologies Team"
               className="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-500"
+              width={800}
+              height={600}
             />
           </div>
         </motion.div>

@@ -1,16 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import {
-  Phone,
-  Mail,
-  MapPin,
-  Send,
-  Clock,
-  Users,
-  Award,
-  CheckCircle,
-  X,
-} from "lucide-react";
+import { Phone, Mail, MapPin, Send, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -126,7 +116,7 @@ const ContactPage = () => {
   return (
     <>
       <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-purple-50/20">
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-purple-50/20 mt-26">
         <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="grid lg:grid-cols-5 gap-12">
             {/* Contact Information & Details Section */}
@@ -148,8 +138,8 @@ const ContactPage = () => {
                   Get in Touch
                 </h2>
                 <p className="text-lg text-slate-600 leading-relaxed">
-                  We're here to help you succeed. Reach out through any of these
-                  channels and we'll respond promptly.
+                  We&apos;re here to help you succeed. Reach out through any of
+                  these channels and we&apos;ll respond promptly.
                 </p>
               </div>
 
@@ -202,7 +192,7 @@ const ContactPage = () => {
                     Send us a Message
                   </CardTitle>
                   <CardDescription className="text-base">
-                    Fill out the form below and we'll get back to you within 24
+                    Fill out the form below and we&apos;ll get back to you within 24
                     hours.
                   </CardDescription>
                 </CardHeader>
