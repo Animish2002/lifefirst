@@ -21,7 +21,7 @@ import Navigation from "@/Landing/Navigation";
 import Footer from "@/Landing/Footer";
 
 
-const DownloadBrochuresPage = () => {
+const DownloadBrochurespage = () => {
   const brochuresData = [
     {
       title: "Wastewater Treatment Systems",
@@ -203,4 +203,4 @@ const DownloadBrochuresPage = () => {
   );
 };
 
-export default DownloadBrochuresPage;
+export default DownloadBrochurespage;
