@@ -1,0 +1,146 @@
+[
+  {
+    "slug": "wastewater-treatment",
+    "title": "Prefabricated Containerised Wastewater Treatment Plants",
+    "subtitle": "Modular and scalable solutions for industrial wastewater.",
+    "heroImage": "https://placehold.co/1200x600/22c55e/ffffff?text=Wastewater+Treatment",
+    "infoTitle": "Eco-Friendly Wastewater Solutions",
+    "infoContent": "Our containerised plants offer a compact, efficient, and mobile solution for treating wastewater. They are designed for rapid deployment and can be customized to meet various treatment standards, ensuring compliance and environmental responsibility.",
+    "ctaText": "Request a quote for a custom wastewater treatment plant."
+  },
+  {
+    "slug": "effluent-treatment",
+    "title": "Prefabricated Effluent Treatment Plant",
+    "subtitle": "Turn industrial effluent into reusable, clean water.",
+    "heroImage": "https://placehold.co/1200x600/f59e0b/ffffff?text=Effluent+Treatment",
+    "infoTitle": "Efficient Effluent Management",
+    "infoContent": "Our Effluent Treatment Plants (ETP) are engineered to purify industrial wastewater and make it suitable for safe disposal or reuse. These plants are built with advanced technology to handle complex pollutants and ensure your operations meet all regulatory requirements.",
+    "ctaText": "Learn how to improve your effluent treatment process."
+  },
+  {
+    "slug": "water-treatment",
+    "title": "Packaged Water Treatment Plant",
+    "subtitle": "Compact, all-in-one solutions for potable water.",
+    "heroImage": "https://placehold.co/1200x600/0ea5e9/ffffff?text=Water+Treatment",
+    "infoTitle": "Clean Water, Simplified",
+    "infoContent": "The Packaged Water Treatment Plant is designed for small to medium-scale applications, delivering high-quality drinking water. Its compact design and ease of installation make it ideal for communities, residential complexes, and industries requiring a reliable water source.",
+    "ctaText": "Get a consultation for a packaged water treatment system."
+  },
+  {
+    "slug": "ultrafiltration",
+    "title": "Ultrafiltration Systems (UF)",
+    "subtitle": "High-performance membrane filtration for suspended solids.",
+    "heroImage": "https://placehold.co/1200x600/6366f1/ffffff?text=UF+Systems",
+    "infoTitle": "Advanced Filtration Technology",
+    "infoContent": "Ultrafiltration (UF) systems use a physical barrier to effectively remove suspended solids, bacteria, and viruses from water. They are a critical pre-treatment step for more advanced systems like Reverse Osmosis and a standalone solution for producing high-quality process water.",
+    "ctaText": "Find out if UF is the right solution for your needs."
+  },
+  {
+    "slug": "reverse-osmosis",
+    "title": "Reverse Osmosis Systems (RO)",
+    "subtitle": "The ultimate solution for demineralized, pure water.",
+    "heroImage": "https://placehold.co/1200x600/ec4899/ffffff?text=RO+Systems",
+    "infoTitle": "Delivering Pure Water",
+    "infoContent": "Reverse Osmosis (RO) is a membrane-based technology that removes dissolved salts and other impurities from water. Our RO systems are designed to produce exceptionally pure water for industrial processes, drinking, and other high-purity applications.",
+    "ctaText": "Talk to an expert about our RO system capabilities."
+  },
+  {
+    "slug": "pressure-sand-filters",
+    "title": "Pressure Sand Filters (PSF)",
+    "subtitle": "Reliable and effective removal of suspended solids.",
+    "heroImage": "https://placehold.co/1200x600/4ade80/ffffff?text=PSF",
+    "infoTitle": "Robust Pre-Filtration",
+    "infoContent": "Pressure Sand Filters (PSF) are a widely used and reliable method for removing suspended solids, turbidity, and sediments from water. They serve as an essential pre-treatment step to protect downstream equipment and improve water quality.",
+    "ctaText": "Request a quote for a pressure sand filter."
+  },
+  {
+    "slug": "activated-carbon-filters",
+    "title": "Activated Carbon Filters (ACF)",
+    "subtitle": "Remove chlorine, odor, and organic compounds.",
+    "heroImage": "https://placehold.co/1200x600/facc15/ffffff?text=ACF",
+    "infoTitle": "Taste and Odor Improvement",
+    "infoContent": "Activated Carbon Filters (ACF) are highly effective in removing free chlorine, organic contaminants, and improving the taste and odor of water. They are a crucial component for producing high-quality drinking and process water.",
+    "ctaText": "Explore the benefits of activated carbon filtration."
+  },
+  {
+    "slug": "lamella-clarifier",
+    "title": "Lamella Clarifier",
+    "subtitle": "High-rate clarifiers for efficient solids separation.",
+    "heroImage": "https://placehold.co/1200x600/a3e635/ffffff?text=Lamella+Clarifier",
+    "infoTitle": "Compact and Powerful Clarification",
+    "infoContent": "A Lamella Clarifier is a compact sedimentation tank that uses a series of inclined plates to increase the effective settling area. This design allows for a much smaller footprint while achieving high-efficiency solids separation, making it ideal for space-constrained applications.",
+    "ctaText": "Get a quote for a compact lamella clarifier."
+  },
+  {
+    "slug": "clarifier-mechanism",
+    "title": "Clarifier Mechanism",
+    "subtitle": "Advanced systems for sediment removal and clarification.",
+    "heroImage": "https://placehold.co/1200x600/2dd4bf/ffffff?text=Clarifier+Mechanism",
+    "infoTitle": "Reliable Clarification for Clean Water",
+    "infoContent": "Our Clarifier Mechanisms are designed for efficient solid-liquid separation in large-scale water and wastewater treatment plants. They ensure the removal of suspended solids, providing a clear effluent and a concentrated sludge.",
+    "ctaText": "Consult with an expert on our clarifier mechanisms."
+  },
+  {
+    "slug": "tube-settlers",
+    "title": "Tube Settlers",
+    "subtitle": "Increase the settling capacity of clarification tanks.",
+    "heroImage": "https://placehold.co/1200x600/a855f7/ffffff?text=Tube+Settlers",
+    "infoTitle": "Enhancing Settling Efficiency",
+    "infoContent": "Tube Settlers are an innovative solution used to increase the settling capacity of clarifiers. By providing a large surface area for solids to settle, they reduce the required tank size and improve the overall performance of the clarification process.",
+    "ctaText": "Learn how tube settlers can boost your plant's efficiency."
+  },
+  {
+    "slug": "water-softeners",
+    "title": "Water Softeners",
+    "subtitle": "Eliminate hard water issues for improved performance.",
+    "heroImage": "https://placehold.co/1200x600/f472b6/ffffff?text=Water+Softeners",
+    "infoTitle": "Solving Hard Water Problems",
+    "infoContent": "Our Water Softeners use an ion exchange process to remove calcium and magnesium ions, which cause hard water. This prevents scale buildup in pipes and appliances, extending their lifespan and improving the efficiency of water-using equipment.",
+    "ctaText": "Find the perfect water softener for your home or business."
+  },
+  {
+    "slug": "demineralization",
+    "title": "Demineralization Systems (DM)",
+    "subtitle": "Produce high-purity water for critical applications.",
+    "heroImage": "https://placehold.co/1200x600/7c3aed/ffffff?text=DM+Systems",
+    "infoTitle": "Achieve Ultimate Water Purity",
+    "infoContent": "Demineralization (DM) systems remove dissolved minerals and salts from water using ion exchange resins. This process is essential for producing high-purity water for applications like boiler feed, pharmaceuticals, and electronics manufacturing.",
+    "ctaText": "Get a quote for a demineralization system."
+  },
+  {
+    "slug": "chemical-dosing",
+    "title": "Chemical Dosing Systems",
+    "subtitle": "Precise and automated chemical delivery for water treatment.",
+    "heroImage": "https://placehold.co/1200x600/d946ef/ffffff?text=Chemical+Dosing",
+    "infoTitle": "Automated and Accurate Dosing",
+    "infoContent": "Our Chemical Dosing Systems provide precise and reliable delivery of chemicals for various water treatment processes, including disinfection, pH adjustment, and coagulation. Automation ensures consistency and safety, optimizing your plant's performance.",
+    "ctaText": "Discover our range of chemical dosing solutions."
+  },
+  {
+    "slug": "bio-digesters",
+    "title": "Bio-Digesters",
+    "subtitle": "Sustainable and efficient waste decomposition technology.",
+    "heroImage": "https://placehold.co/1200x600/10b981/ffffff?text=Bio-Digesters",
+    "infoTitle": "Harnessing Biological Power",
+    "infoContent": "Bio-Digesters use anaerobic bacteria to break down organic waste, producing clean energy (biogas) and organic fertilizer. These systems are an environmentally friendly way to manage waste from households, communities, and food processing industries.",
+    "ctaText": "Learn more about our bio-digester technology."
+  },
+  {
+    "slug": "bio-toilets",
+    "title": "Bio-Toilets",
+    "subtitle": "Eco-friendly, self-contained sanitation solutions.",
+    "heroImage": "https://placehold.co/1200x600/22c55e/ffffff?text=Bio-Toilets",
+    "infoTitle": "Sanitation with Sustainability",
+    "infoContent": "Our Bio-Toilets use bio-digester technology to treat human waste at the source, eliminating the need for a traditional sewage system. They are perfect for remote locations, public spaces, and mobile applications, providing a hygienic and sustainable sanitation solution.",
+    "ctaText": "Request information on our bio-toilet models."
+  },
+  {
+    "slug": "inflow-system",
+    "title": "InFlow Hydration Monitoring System",
+    "subtitle": "Advanced technology to monitor hydration levels in real-time.",
+    "heroImage": "https://placehold.co/1200x600/3b82f6/ffffff?text=InFlow+Hydration",
+    "infoTitle": "Innovating Hydration Health",
+    "infoContent": "The InFlow Hydration Monitoring System provides continuous, non-invasive hydration data to help athletes and health-conscious individuals optimize their fluid intake. This technology helps prevent dehydration, improve performance, and support overall wellness.",
+    "ctaText": "Get more details on the InFlow monitoring system."
+  }
+]
