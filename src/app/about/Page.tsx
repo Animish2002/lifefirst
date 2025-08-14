@@ -11,7 +11,6 @@ import {
 } from "@/components/ui/card";
 import Navigation from "@/Landing/Navigation";
 import Footer from "@/Landing/Footer";
-import Image from "next/image";
 
 const AboutUsPage = () => {
   const valuesData = [
@@ -96,8 +95,9 @@ const AboutUsPage = () => {
                 transition={{ duration: 0.8, delay: 0.2 }}
                 className="text-sm md:text-lg text-blue-100 mb-8 leading-relaxed"
               >
-                At Life First Technologies, we're dedicated to creating <br />{" "}
-                sustainable water solutions that protect our environment <br />
+                At Life First Technologies, we&apos;re dedicated to creating{" "}
+                <br /> sustainable water solutions that protect our environment{" "}
+                <br />
                 <span className="font-bold bg-gradient-to-r from-blue-500 via-cyan-400 via-green-400 via-blue-400 via-indigo-500 to-orange-400 bg-clip-text text-transparent">
                   and empower communities worldwide.
                 </span>

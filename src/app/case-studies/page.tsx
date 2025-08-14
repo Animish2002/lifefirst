@@ -249,7 +249,7 @@ const CaseStudiesPage = () => {
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               Explore detailed case studies showcasing our innovative solutions
-              and the measurable impact we've created for our clients.
+              and the measurable impact we&apos;ve created for our clients.
             </p>
           </motion.div>
 
@@ -341,8 +341,8 @@ const CaseStudiesPage = () => {
             </h3>
             <p className="text-xl mb-8 opacity-90 max-w-3xl mx-auto">
               Join hundreds of satisfied clients who have transformed their
-              water management with our innovative solutions. Let's discuss your
-              project today.
+              water management with our innovative solutions. Let&apos;s discuss
+              your project today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button className="bg-white text-blue-600 hover:bg-blue-50 font-semibold py-3 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl">
