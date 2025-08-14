@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
-import { Phone, Mail, MapPin, Send, CheckCircle } from "lucide-react";
+import { motion } from "framer-motion";
+import { Phone, Mail, MapPin, Send, CheckCircle, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -12,57 +13,21 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { Alert, AlertDescription } from "@/components/ui/alert";
-import { Separator } from "@/components/ui/separator";
 import Navigation from "@/Landing/Navigation";
 import Footer from "@/Landing/Footer";
-
-// You could extract these into separate components for better modularity.
-// For example, a ContactCard component.
-interface ContactItemProps {
-  icon: React.ReactNode;
-  title: string;
-  detail: string;
-  subDetail: string;
-  color: string;
-}
-
-const ContactCard = ({
-  icon,
-  title,
-  detail,
-  subDetail,
-  color,
-}: ContactItemProps) => (
-  <Card className="group hover:shadow-lg transition-all duration-300 border-slate-200 hover:border-slate-300">
-    <CardContent className="p-6">
-      <div className="flex items-start space-x-4">
-        <div
-          className={`p-3 rounded-lg bg-slate-50 group-hover:bg-slate-100 transition-colors duration-300 ${color}`}
-        >
-          {icon}
-        </div>
-        <div className="flex-1">
-          <CardTitle className="text-lg text-slate-900 mb-1">{title}</CardTitle>
-          <p className="text-slate-700 font-medium">{detail}</p>
-          <CardDescription className="mt-1">{subDetail}</CardDescription>
-        </div>
-      </div>
-    </CardContent>
-  </Card>
-);
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
+    phone: "",
+    company: "",
     subject: "",
     message: "",
   });
   const [message, setMessage] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [bannerVisible, setBannerVisible] = useState(true);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -78,10 +43,14 @@ const ContactPage = () => {
     // Simulate API call
     setTimeout(() => {
       console.log("Form submitted with data:", formData);
-      setMessage("Thank you for your message! We'll get back to you soon.");
+      setMessage(
+        "Thank you for your message! We'll get back to you within 24 hours."
+      );
       setFormData({
         fullName: "",
         email: "",
+        phone: "",
+        company: "",
         subject: "",
         message: "",
       });
@@ -91,248 +60,343 @@ const ContactPage = () => {
 
   const contactInfo = [
     {
-      icon: <Phone size={24} />,
+      icon: <Phone className="w-8 h-8 text-blue-600" />,
       title: "Phone",
-      detail: "+91 (XXX) XXX-XXXX",
-      subDetail: "Mon-Fri 9am-5pm IST",
-      color: "text-blue-600",
+      details: ["+91 (020) 1234-5678", "+91 (020) 8765-4321"],
+      availability: "Mon-Fri 9:00 AM - 6:00 PM IST",
     },
     {
-      icon: <Mail size={24} />,
+      icon: <Mail className="w-8 h-8 text-blue-600" />,
       title: "Email",
-      detail: "info@lifefirsttech.com",
-      subDetail: "Response within 24 hours",
-      color: "text-purple-600",
+      details: ["info@lifefirsttech.com", "support@lifefirsttech.com"],
+      availability: "24/7 Response within 2 hours",
     },
     {
-      icon: <MapPin size={24} />,
-      title: "Address",
-      detail: "123 Main Street, Your City",
-      subDetail: "Pune, Maharashtra 411001",
-      color: "text-emerald-600",
+      icon: <MapPin className="w-8 h-8 text-blue-600" />,
+      title: "Office Address",
+      details: [
+        "Life First Technologies Pvt Ltd",
+        "Sector 15, Pimpri-Chinchwad",
+      ],
+      availability: "Pune, Maharashtra 411017, India",
     },
   ];
 
   return (
     <>
       <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-purple-50/20 mt-26">
-        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <div className="grid lg:grid-cols-5 gap-12">
-            {/* Contact Information & Details Section */}
-            <section
-              className="lg:col-span-2 space-y-8"
-              aria-labelledby="contact-info-heading"
+
+      {/* Hero Section */}
+      <div className="relative h-[75vh] bg-gradient-to-br from-blue-900 via-blue-800 to-cyan-900 overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 bg-black bg-opacity-20">
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-transparent"></div>
+        </div>
+
+        {/* Hero Image */}
+        <div className="absolute inset-0">
+          <img
+            src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+            alt="Contact us for water treatment solutions"
+            className="w-full h-full object-cover opacity-30"
+          />
+        </div>
+
+        {/* Hero Content */}
+        <div className="relative z-10 flex items-center h-[75vh] pt-20">
+          <div className="max-w-7xl md:pl-24 px-6 py-20">
+            <div className="max-w-4xl">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+              >
+                <h1 className="text-3xl md:text-5xl font-semibold text-white leading-tight mb-6">
+                  Let's Discuss Your
+                  <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent block">
+                    Water Treatment Project
+                  </span>
+                </h1>
+              </motion.div>
+
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="text-sm md:text-lg text-blue-100 mb-8 leading-relaxed"
+              >
+                Our team of water treatment experts is ready to help <br /> you
+                find the perfect solution for your unique <br />
+                <span className="font-bold bg-gradient-to-r from-blue-500 via-cyan-400 via-green-400 via-blue-400 via-indigo-500 to-orange-400 bg-clip-text text-transparent">
+                  requirements and challenges.
+                </span>
+              </motion.p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Main Contact Section */}
+      <div className="bg-gray-50 py-20">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid lg:grid-cols-3 gap-16">
+            {/* Contact Information */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="lg:col-span-1"
             >
-              <div className="space-y-6">
-                <Badge
-                  variant="outline"
-                  className="bg-blue-50 text-blue-700 border-blue-200"
-                >
-                  Contact Information
-                </Badge>
-                <h2
-                  id="contact-info-heading"
-                  className="text-3xl font-bold text-slate-900"
-                >
+              <div className="bg-white p-8 rounded-xl shadow-lg h-fit">
+                <h2 className="text-2xl font-bold text-slate-800 mb-8">
                   Get in Touch
                 </h2>
-                <p className="text-lg text-slate-600 leading-relaxed">
-                  We&apos;re here to help you succeed. Reach out through any of
-                  these channels and we&apos;ll respond promptly.
-                </p>
-              </div>
 
-              <div className="space-y-6">
-                {contactInfo.map((item, index) => (
-                  <ContactCard key={index} {...item} />
-                ))}
-              </div>
+                <div className="space-y-8">
+                  {contactInfo.map((info, index) => (
+                    <div key={index} className="flex items-start space-x-4">
+                      <div className="bg-blue-50 p-3 rounded-lg flex-shrink-0">
+                        {info.icon}
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-slate-800 mb-2">
+                          {info.title}
+                        </h3>
+                        {info.details.map((detail, detailIndex) => (
+                          <p
+                            key={detailIndex}
+                            className="text-slate-600 text-sm mb-1"
+                          >
+                            {detail}
+                          </p>
+                        ))}
+                        <div className="flex items-center mt-2">
+                          <Clock className="w-4 h-4 text-slate-400 mr-2" />
+                          <span className="text-xs text-slate-500">
+                            {info.availability}
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
 
-              {/* Google Maps Section */}
-              <Card className="overflow-hidden">
-                <CardHeader>
-                  <CardTitle className="flex items-center space-x-2">
-                    <MapPin size={20} aria-hidden="true" />
-                    <span>Find Us</span>
-                  </CardTitle>
-                  <CardDescription>
-                    Visit our office or get directions
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="p-0">
-                  <div className="w-full h-64 bg-slate-100 relative overflow-hidden">
+                {/* Map */}
+                <div className="mt-8">
+                  <h3 className="font-semibold text-slate-800 mb-4">Find Us</h3>
+                  <div className="w-full h-48 bg-slate-100 rounded-lg overflow-hidden">
                     <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.2612716766467!2d73.8474246!3d18.5723528!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c079f53e6b3f%3A0x7d0e37e9d72a7201!2sPune%2C%20Maharashtra%20411001%2C%20India!5e0!3m2!1sen!2sus!4v1628169123880!5m2!1sen!2sus"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3781.1234567890!2d73.7997406!3d18.6161!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b9c12d3e4f56%3A0x1a2b3c4d5e6f7a8b!2sPimpri-Chinchwad%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1628169123880!5m2!1sen!2sin"
                       width="100%"
                       height="100%"
                       style={{ border: 0 }}
                       allowFullScreen
                       loading="lazy"
                       referrerPolicy="no-referrer-when-downgrade"
-                      className="rounded-b-lg"
-                      title="Google Maps location of our office"
+                      title="Our office location"
                     ></iframe>
                   </div>
-                </CardContent>
-              </Card>
-            </section>
+                </div>
+              </div>
+            </motion.div>
 
-            {/* Contact Form Section */}
-            <section
-              className="lg:col-span-3"
-              aria-labelledby="contact-form-heading"
+            {/* Contact Form */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="lg:col-span-2"
             >
-              <Card className="shadow-2xl border-slate-200">
-                <CardHeader className="pb-6">
-                  <CardTitle
-                    id="contact-form-heading"
-                    className="text-2xl text-slate-900"
-                  >
-                    Send us a Message
-                  </CardTitle>
-                  <CardDescription className="text-base">
-                    Fill out the form below and we&apos;ll get back to you within 24
-                    hours.
-                  </CardDescription>
-                </CardHeader>
+              <div className="bg-white p-8 rounded-xl shadow-lg">
+                <h2 className="text-2xl font-bold text-slate-800 mb-2">
+                  Send us a Message
+                </h2>
+                <p className="text-slate-600 mb-8">
+                  Fill out the form below and we'll get back to you within 24
+                  hours.
+                </p>
 
-                <CardContent>
-                  <form onSubmit={handleSubmit} className="space-y-6">
-                    <div className="grid sm:grid-cols-2 gap-6">
-                      <div className="space-y-2">
-                        <Label
-                          htmlFor="fullName"
-                          className="text-sm font-semibold text-slate-700"
-                        >
-                          Full Name
-                        </Label>
-                        <Input
-                          type="text"
-                          name="fullName"
-                          id="fullName"
-                          value={formData.fullName}
-                          onChange={handleChange}
-                          placeholder="Enter your full name"
-                          className="h-12"
-                          required
-                        />
-                      </div>
-                      <div className="space-y-2">
-                        <Label
-                          htmlFor="email"
-                          className="text-sm font-semibold text-slate-700"
-                        >
-                          Email Address
-                        </Label>
-                        <Input
-                          type="email"
-                          name="email"
-                          id="email"
-                          value={formData.email}
-                          onChange={handleChange}
-                          placeholder="your@email.com"
-                          className="h-12"
-                          required
-                        />
-                      </div>
-                    </div>
-
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="grid md:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <Label
-                        htmlFor="subject"
-                        className="text-sm font-semibold text-slate-700"
+                        htmlFor="fullName"
+                        className="text-slate-700 font-medium"
                       >
-                        Subject
+                        Full Name *
                       </Label>
                       <Input
                         type="text"
-                        name="subject"
-                        id="subject"
-                        value={formData.subject}
+                        name="fullName"
+                        id="fullName"
+                        value={formData.fullName}
                         onChange={handleChange}
-                        placeholder="What's this about?"
-                        className="h-12"
+                        placeholder="Enter your full name"
+                        className="h-12 border-slate-200 focus:border-blue-600"
                         required
                       />
                     </div>
-
                     <div className="space-y-2">
                       <Label
-                        htmlFor="message"
-                        className="text-sm font-semibold text-slate-700"
+                        htmlFor="email"
+                        className="text-slate-700 font-medium"
                       >
-                        Your Message
+                        Email Address *
                       </Label>
-                      <Textarea
-                        name="message"
-                        id="message"
-                        rows={5}
-                        value={formData.message}
+                      <Input
+                        type="email"
+                        name="email"
+                        id="email"
+                        value={formData.email}
                         onChange={handleChange}
-                        placeholder="Tell us about your project or question..."
-                        className="resize-none"
+                        placeholder="your@email.com"
+                        className="h-12 border-slate-200 focus:border-blue-600"
                         required
                       />
                     </div>
+                  </div>
 
-                    <Separator className="my-6" />
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div className="space-y-2">
+                      <Label
+                        htmlFor="phone"
+                        className="text-slate-700 font-medium"
+                      >
+                        Phone Number
+                      </Label>
+                      <Input
+                        type="tel"
+                        name="phone"
+                        id="phone"
+                        value={formData.phone}
+                        onChange={handleChange}
+                        placeholder="+91 XXXXX XXXXX"
+                        className="h-12 border-slate-200 focus:border-blue-600"
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <Label
+                        htmlFor="company"
+                        className="text-slate-700 font-medium"
+                      >
+                        Company Name
+                      </Label>
+                      <Input
+                        type="text"
+                        name="company"
+                        id="company"
+                        value={formData.company}
+                        onChange={handleChange}
+                        placeholder="Your company name"
+                        className="h-12 border-slate-200 focus:border-blue-600"
+                      />
+                    </div>
+                  </div>
 
-                    <Button
-                      type="submit"
-                      disabled={isSubmitting}
-                      className="w-full h-12 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold"
-                      size="lg"
+                  <div className="space-y-2">
+                    <Label
+                      htmlFor="subject"
+                      className="text-slate-700 font-medium"
                     >
-                      {isSubmitting ? (
-                        <>
-                          <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin mr-2"></div>
-                          Sending...
-                        </>
-                      ) : (
-                        <>
-                          <Send size={18} className="mr-2" />
-                          Send Message
-                        </>
-                      )}
-                    </Button>
+                      Subject *
+                    </Label>
+                    <Input
+                      type="text"
+                      name="subject"
+                      id="subject"
+                      value={formData.subject}
+                      onChange={handleChange}
+                      placeholder="What's this regarding?"
+                      className="h-12 border-slate-200 focus:border-blue-600"
+                      required
+                    />
+                  </div>
 
-                    {message && (
-                      <Alert className="border-green-200 bg-green-50">
-                        <CheckCircle className="h-4 w-4 text-green-600" />
-                        <AlertDescription className="text-green-700 font-medium">
-                          {message}
-                        </AlertDescription>
-                      </Alert>
+                  <div className="space-y-2">
+                    <Label
+                      htmlFor="message"
+                      className="text-slate-700 font-medium"
+                    >
+                      Message *
+                    </Label>
+                    <Textarea
+                      name="message"
+                      id="message"
+                      rows={5}
+                      value={formData.message}
+                      onChange={handleChange}
+                      placeholder="Tell us about your water treatment requirements, project details, or any questions you have..."
+                      className="resize-none border-slate-200 focus:border-blue-600"
+                      required
+                    />
+                  </div>
+
+                  <Button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="w-full h-12 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-all duration-300"
+                  >
+                    {isSubmitting ? (
+                      <>
+                        <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin mr-2"></div>
+                        Sending Message...
+                      </>
+                    ) : (
+                      <>
+                        <Send className="w-5 h-5 mr-2" />
+                        Send Message
+                      </>
                     )}
-                  </form>
-                </CardContent>
-              </Card>
-            </section>
-          </div>
-        </main>
+                  </Button>
 
-        {/* Bottom CTA Section */}
-        <Card className="mx-4 sm:mx-6 lg:mx-8 mb-8 bg-gradient-to-r from-slate-900 to-blue-900 border-0 text-white">
-          <CardContent className="py-16 px-4 sm:px-6 lg:px-8 text-center">
-            <div className="max-w-4xl mx-auto">
-              <h3 className="text-3xl font-bold text-white mb-4">
-                Ready to Start Your Project?
-              </h3>
-              <p className="text-xl text-slate-300 mb-8">
-                Join hundreds of satisfied clients who have transformed their
-                businesses with us.
-              </p>
+                  {message && (
+                    <Alert className="border-green-200 bg-green-50">
+                      <CheckCircle className="h-4 w-4 text-green-600" />
+                      <AlertDescription className="text-green-700">
+                        {message}
+                      </AlertDescription>
+                    </Alert>
+                  )}
+                </form>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </div>
+
+      {/* Call to Action Section */}
+      <div className="bg-white py-20">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h3 className="text-3xl font-bold text-slate-800 mb-4">
+              Ready to Get Started?
+            </h3>
+            <p className="text-lg text-slate-600 mb-8 max-w-2xl mx-auto">
+              Join hundreds of satisfied clients who have transformed their
+              water management systems with our innovative solutions.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold">
+                Schedule Free Consultation
+              </Button>
               <Button
-                size="lg"
-                className="bg-white text-slate-900 hover:bg-slate-100 font-semibold h-12 px-8"
+                variant="outline"
+                className="border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-3 rounded-lg font-semibold"
               >
-                Schedule a Free Consultation
+                Download Brochure
               </Button>
             </div>
-          </CardContent>
-        </Card>
+          </motion.div>
+        </div>
       </div>
+
       <Footer />
     </>
   );
