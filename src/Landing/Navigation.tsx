@@ -44,8 +44,6 @@ interface SocialLink {
   color: string;
 }
 
-// ---
-// ## Data
 
 const navLinks: NavLink[] = [
   { name: "Home", path: "/" },

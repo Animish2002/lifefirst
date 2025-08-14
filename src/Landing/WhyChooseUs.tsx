@@ -1,92 +1,80 @@
-"use client";
-
+import { cn } from "@/lib/utils";
 import React from "react";
-import { motion } from "framer-motion";
+import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
 import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { Lightbulb, Rocket, Shield } from "lucide-react"; // Example icons from lucide-react
+  IconArrowWaveRightUp,
+  IconBoxAlignRightFilled,
+  IconBoxAlignTopLeft,
+  IconClipboardCopy,
+  IconFileBroken,
+  IconSignature,
+  IconTableColumn,
+} from "@tabler/icons-react";
 
-const services = [
-  {
-    icon: <Lightbulb className="w-8 h-8 text-blue-500" />,
-    title: "Innovative Solutions",
-    description:
-      "We provide creative and forward-thinking solutions to meet your business needs.",
-  },
-  {
-    icon: <Rocket className="w-8 h-8 text-blue-500" />,
-    title: "Performance Driven",
-    description:
-      "Our focus is on building high-performance websites that deliver results.",
-  },
-  {
-    icon: <Shield className="w-8 h-8 text-blue-500" />,
-    title: "Secure & Reliable",
-    description:
-      "We build robust and secure platforms you can depend on, 24/7.",
-  },
-];
-
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-    },
-  },
-};
-
-const itemVariants = {
-  hidden: { y: 50, opacity: 0 },
-  visible: { y: 0, opacity: 1 },
-};
-
-export function ServicesSection() {
+export function WhyChooseUs() {
   return (
-    <section className="py-20 bg-white max-w-7xl mx-auto" id="services">
-      <div className="container mx-auto">
-        <motion.h2
-          initial={{ y: 20, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-4xl md:text-5xl font-bold text-center mb-12 text-gray-900"
-        >
-          Why Choose Us
-        </motion.h2>
-
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="grid md:grid-cols-3 gap-8"
-        >
-          {services.map((service, index) => (
-            <motion.div key={index} variants={itemVariants}>
-              <Card className="p-6 text-center">
-                <CardHeader>
-                  <div className="mx-auto mb-4">{service.icon}</div>
-                  <CardTitle className="text-xl font-semibold">
-                    {service.title}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-gray-600">
-                    {service.description}
-                  </CardDescription>
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
-        </motion.div>
-      </div>
-    </section>
+    <>
+      <div className="text-3xl font-semibold text-center py-8">Why Choose Us?</div>
+      <BentoGrid className="max-w-7xl mx-auto">
+        {items.map((item, i) => (
+          <BentoGridItem
+            key={i}
+            title={item.title}
+            description={item.description}
+            header={item.header}
+            icon={item.icon}
+            className={i === 3 || i === 6 ? "md:col-span-2" : ""}
+          />
+        ))}
+      </BentoGrid>
+    </>
   );
 }
+const Skeleton = () => (
+  <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100"></div>
+);
+const items = [
+  {
+    title: "The Dawn of Innovation",
+    description: "Explore the birth of groundbreaking ideas and inventions.",
+    header: <Skeleton />,
+    icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
+  },
+  {
+    title: "The Digital Revolution",
+    description: "Dive into the transformative power of technology.",
+    header: <Skeleton />,
+    icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
+  },
+  {
+    title: "The Art of Design",
+    description: "Discover the beauty of thoughtful and functional design.",
+    header: <Skeleton />,
+    icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
+  },
+  {
+    title: "The Power of Communication",
+    description:
+      "Understand the impact of effective communication in our lives.",
+    header: <Skeleton />,
+    icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
+  },
+  {
+    title: "The Pursuit of Knowledge",
+    description: "Join the quest for understanding and enlightenment.",
+    header: <Skeleton />,
+    icon: <IconArrowWaveRightUp className="h-4 w-4 text-neutral-500" />,
+  },
+  {
+    title: "The Joy of Creation",
+    description: "Experience the thrill of bringing ideas to life.",
+    header: <Skeleton />,
+    icon: <IconBoxAlignTopLeft className="h-4 w-4 text-neutral-500" />,
+  },
+  {
+    title: "The Spirit of Adventure",
+    description: "Embark on exciting journeys and thrilling discoveries.",
+    header: <Skeleton />,
+    icon: <IconBoxAlignRightFilled className="h-4 w-4 text-neutral-500" />,
+  },
+];

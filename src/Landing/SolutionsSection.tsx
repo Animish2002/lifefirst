@@ -27,7 +27,7 @@ const SolutionsSection = () => {
         "Comprehensive water purification systems for clean and safe drinking water",
 
       imageurl:
-        "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755164884/wastewater_treatment_plant_yvyzlo.jpg",
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/v1754928781/ChatGPT_Image_Aug_2_2025_at_05_22_38_PM_o2nny8.png",
       features: ["High Quality", "Reliable", "Cost Effective"],
     },
     {
@@ -38,7 +38,7 @@ const SolutionsSection = () => {
         "Sustainable sanitation systems for environmental protection",
 
       imageurl:
-        "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755164884/wastewater_treatment_plant_yvyzlo.jpg",
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/v1754928781/4b2fbe85-ab2c-4bd3-8370-8a9ef6dea608_rptfls.jpg",
       features: ["Sustainable", "Eco-friendly", "Zero Waste"],
     },
     {
@@ -49,7 +49,7 @@ const SolutionsSection = () => {
         "Smart monitoring systems for real-time water quality control",
 
       imageurl:
-        "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755164884/wastewater_treatment_plant_yvyzlo.jpg",
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/v1754928782/ChatGPT_Image_Aug_2_2025_at_05_05_56_PM_mxrymk.png",
       features: ["Smart Technology", "Real-time", "Automated"],
     },
   ];
@@ -106,7 +106,7 @@ const SolutionsSection = () => {
               {/* Dark overlay for better text readability */}
 
               <div className="relative p-4 h-[45vh] flex flex-col z-10">
-                <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-gray-100 transition-colors drop-shadow-lg">
+                <h3 className="text-lg mt-6 font-semibold text-white mb-3 group-hover:text-gray-100 transition-colors drop-shadow-lg">
                   {solution.title}
                 </h3>
                 <p className="text-white text-xs mb-4 leading-relaxed drop-shadow-md opacity-90">
@@ -115,7 +115,7 @@ const SolutionsSection = () => {
 
                 {/* Learn More Button */}
                 <motion.button
-                  className={`mx-auto absolute bottom-4 left-1/2 right-1/2 px-6 bg-zinc-100 bg-opacity-90 text-white py-3 rounded-xl font-medium shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center group-hover:bg-opacity-400 backdrop-blur-sm`}
+                  className={`mx-auto absolute bottom-4 left-12 right-12 px-4  bg-opacity-90 text-white py-3 rounded-xl text-sm font-medium shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center group-hover:bg-opacity-400 backdrop-blur-sm`}
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >

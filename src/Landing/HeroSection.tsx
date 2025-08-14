@@ -84,21 +84,22 @@ const HeroSection = () => {
                 className="flex flex-col sm:flex-row gap-4"
               >
                 <Button
+                  variant="outline"
                   size="sm"
-                  className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-8 py-4 text-lg shadow-xl hover:shadow-2xl transition-all duration-300 group"
+                  className="border-2 border-slate-300 text-slate-700 bg- hover:bg-slate-50 px-8 py-4 text-lg group"
                 >
                   Start Your Project
                   <ChevronRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
 
-                <Button
+                {/* <Button
                   variant="outline"
                   size="sm"
                   className="border-2 border-slate-300 text-slate-700 hover:bg-slate-50 px-8 py-4 text-lg group"
                 >
                   <Play className="mr-2 w-5 h-5 group-hover:scale-110 transition-transform" />
                   Watch How It Works
-                </Button>
+                </Button> */}
               </motion.div>
             </motion.div>
 

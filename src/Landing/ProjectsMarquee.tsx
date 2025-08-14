@@ -1,7 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
 
-
 const ProjectsMarquee = () => {
   // Sample project data - replace with your actual projects
   const projects = [
@@ -96,10 +95,10 @@ const ProjectsMarquee = () => {
   );
 
   return (
-    <div className=" py-16 overflow-hidden max-w-7xl mx-auto">
-      <div className="text-center mb-12">
-        <h2 className="text-4xl font-bold text-gray-900 mb-4">
-          Featured Projects
+    <div className=" py-16 overflow-hidden max-w-7xl mx-auto ">
+      <div className="text-center mb-12 ">
+        <h2 className="text-3xl font-semibold text-gray-900 mb-4">
+          Our Cliental
         </h2>
         <p className="text-gray-600 text-lg">
           Showcasing successful collaborations with amazing clients
