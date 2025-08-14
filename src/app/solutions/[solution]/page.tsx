@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import Navigation from "@/Landing/Navigation";
 import Footer from "@/Landing/Footer";
 import solutionsData from "@/data/data.json";
-import type { Metadata } from "next";
+import type { Metadata } from 'next';
 
 interface Solution {
   slug: string;
@@ -20,6 +20,7 @@ interface PageProps {
   };
   searchParams?: { [key: string]: string | string[] | undefined };
 }
+
 
 // Main Solution Page Component
 const SolutionPage = ({ params }: PageProps) => {
@@ -272,9 +273,8 @@ export async function generateStaticParams() {
   }));
 }
 
-export async function generateMetadata({
-  params,
-}: PageProps): Promise<Metadata> {
+// Generate metadata for each page
+export async function generateMetadata({ params }: PageProps) {
   const { solution: solutionSlug } = params;
   const solution = solutionsData.find((s: Solution) => s.slug === solutionSlug);
 
