@@ -1,4 +1,5 @@
 "use client";
+
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Droplets, Leaf, Shield, Zap, ArrowRight } from "lucide-react";
@@ -20,6 +21,8 @@ const SolutionsSection = () => {
         "Ultrafiltration Systems (UF)",
         "Reverse Osmosis (RO) Systems",
       ],
+      imageurl:
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755164884/wastewater_treatment_plant_yvyzlo.jpg",
       features: ["Eco-friendly", "Energy Efficient", "Low Maintenance"],
     },
     {
@@ -36,6 +39,8 @@ const SolutionsSection = () => {
         "Water Softeners",
         "Demineralization Systems (DM)",
       ],
+      imageurl:
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/v1754928782/ChatGPT_Image_Aug_2_2025_at_05_05_56_PM_mxrymk.png",
       features: ["High Quality", "Reliable", "Cost Effective"],
     },
     {
@@ -50,6 +55,8 @@ const SolutionsSection = () => {
         "Waste Management Systems",
         "Composting Solutions",
       ],
+      imageurl:
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/v1754928782/da331ee6-60ef-4b22-85b1-89a988c60788_gu75ac.jpg",
       features: ["Sustainable", "Eco-friendly", "Zero Waste"],
     },
     {
@@ -64,36 +71,10 @@ const SolutionsSection = () => {
         "Real-time Analytics",
         "Automated Control Systems",
       ],
+      imageurl:
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/v1754928781/ChatGPT_Image_Aug_2_2025_at_05_22_38_PM_o2nny8.png",
       features: ["Smart Technology", "Real-time", "Automated"],
     },
-    // {
-    //   id: "chemical",
-    //   title: "Chemical Dosing Systems",
-    //   icon: <Filter className="w-8 h-8" />,
-    //   description:
-    //     "Precision chemical dosing for optimal water treatment efficiency",
-    //   items: [
-    //     "5 MLD Wastewater Treatment Plant",
-    //     "5 MLD Water Treatment Plant",
-    //     "20 KLD Leachate Treatment Plant",
-    //     "Automated Dosing Controllers",
-    //   ],
-    //   features: ["Precise Control", "Automated", "Efficient"],
-    // },
-    // {
-    //   id: "specialized",
-    //   title: "Specialized Systems",
-    //   icon: <Recycle className="w-8 h-8" />,
-    //   description:
-    //     "Custom engineered solutions for unique water treatment challenges",
-    //   items: [
-    //     "Custom Water Treatment Plants",
-    //     "Industrial Process Water",
-    //     "Zero Liquid Discharge Systems",
-    //     "Specialized Filtration",
-    //   ],
-    //   features: ["Custom Design", "Innovative", "Scalable"],
-    // },
   ];
 
   return (
@@ -133,36 +114,28 @@ const SolutionsSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              // onMouseEnter={() => setHoveredCard(solution.id)}
               onMouseLeave={() => setHoveredCard(null)}
               whileHover={{ y: -5 }}
+              style={{
+                backgroundImage: `
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(${solution.imageurl})
+  `,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+              }}
             >
-              <div className="relative p-4 h-full flex flex-col">
-                {/* Icon and Title */}
-                <div className="flex items-start justify-between mb-4">
-                  <div
-                    className={`p-3 bg-blue-600 text-white rounded-xl shadow-lg group-hover:scale-110 transition-transform duration-300`}
-                  >
-                    {solution.icon}
-                  </div>
-                  <div className="text-right">
-                    <div className="text-xs text-gray-500 font-medium">
-                      {solution.items.length} Solutions
-                    </div>
-                  </div>
-                </div>
-
-                <h3 className="text-lg font-semibold text-gray-800 mb-3 group-hover:text-gray-900 transition-colors">
+              <div className="relative p-4 h-[44vh] flex flex-col justify-end z-10">
+                <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-gray-100 transition-colors drop-shadow-lg">
                   {solution.title}
                 </h3>
-
-                <p className="text-gray-600 text-xs mb-4 leading-relaxed">
+                <p className="text-white text-xs mb-4 leading-relaxed drop-shadow-md opacity-90">
                   {solution.description}
                 </p>
 
-                {/* Learn More Button */}
                 <motion.button
-                  className={`w-full md:mt-18 bg-blue-600 text-white py-3 rounded-xl font-medium shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center group-hover:bg-blue-700`}
+                  className={`w-full  bg-blue-600 bg-opacity-90 text-white py-3 rounded-xl font-medium shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center group-hover:bg-blue-700 group-hover:bg-opacity-100 backdrop-blur-sm`}
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >

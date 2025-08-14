@@ -233,7 +233,7 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto px-6 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-slate-400 text-sm mb-4 md:mb-0">
-              <p>&copy; 2024 Life First Technologies. All rights reserved.</p>
+              <p>&copy; 2025 Life First Technologies. All rights reserved.</p>
             </div>
 
             <div className="flex space-x-6 text-sm">

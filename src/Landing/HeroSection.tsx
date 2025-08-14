@@ -6,7 +6,6 @@ import { Button } from "@/components/ui/button";
 import type { AnimationGeneratorType } from "framer-motion";
 import { ChevronRight, Play, ArrowDown } from "lucide-react";
 
-
 const HeroSection = () => {
   const { scrollYProgress } = useScroll();
   const yBg = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
@@ -99,34 +98,6 @@ const HeroSection = () => {
                 >
                   <Play className="mr-2 w-5 h-5 group-hover:scale-110 transition-transform" />
                   Watch How It Works
-                </Button>
-              </motion.div>
-
-              {/* Quick Actions */}
-              <motion.div
-                variants={itemVariants}
-                className="flex flex-wrap gap-3 pt-4"
-              >
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  className="text-green-600 hover:text-green-700 hover:bg-green-50/80"
-                >
-                  📞 Schedule Consultation
-                </Button>
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  className="text-orange-600 hover:text-orange-700 hover:bg-orange-50/80"
-                >
-                  📋 Get Quote
-                </Button>
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  className="text-purple-600 hover:text-purple-700 hover:bg-purple-50/80"
-                >
-                  🏭 Site Assessment
                 </Button>
               </motion.div>
             </motion.div>

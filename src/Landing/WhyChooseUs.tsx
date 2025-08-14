@@ -13,19 +13,19 @@ import { Lightbulb, Rocket, Shield } from "lucide-react"; // Example icons from 
 
 const services = [
   {
-    icon: <Lightbulb className="w-8 h-8 text-orange-500" />,
+    icon: <Lightbulb className="w-8 h-8 text-blue-500" />,
     title: "Innovative Solutions",
     description:
       "We provide creative and forward-thinking solutions to meet your business needs.",
   },
   {
-    icon: <Rocket className="w-8 h-8 text-orange-500" />,
+    icon: <Rocket className="w-8 h-8 text-blue-500" />,
     title: "Performance Driven",
     description:
       "Our focus is on building high-performance websites that deliver results.",
   },
   {
-    icon: <Shield className="w-8 h-8 text-orange-500" />,
+    icon: <Shield className="w-8 h-8 text-blue-500" />,
     title: "Secure & Reliable",
     description:
       "We build robust and secure platforms you can depend on, 24/7.",
@@ -49,7 +49,7 @@ const itemVariants = {
 
 export function ServicesSection() {
   return (
-    <section className="py-20 bg-white" id="services">
+    <section className="py-20 bg-white max-w-7xl mx-auto" id="services">
       <div className="container mx-auto">
         <motion.h2
           initial={{ y: 20, opacity: 0 }}

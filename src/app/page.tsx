@@ -7,6 +7,7 @@ import Navigation from "@/Landing/Navigation";
 import ProjectsMarquee from "@/Landing/ProjectsMarquee";
 import SolutionsSection from "@/Landing/SolutionsSection";
 import { StatsSection } from "@/Landing/StatsSection";
+import { ServicesSection } from "@/Landing/WhyChooseUs";
 
 export default function Home() {
   return (
@@ -14,9 +15,9 @@ export default function Home() {
       <Navigation />
       <HeroSection />
       <StatsSection />
-      <AboutSection />
-      <ProjectsMarquee />
       <SolutionsSection />
+      <ServicesSection />
+      <ProjectsMarquee />
       <CTASection />
       <Footer />
     </div>

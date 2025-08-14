@@ -13,6 +13,7 @@ import {
   User,
   Building,
   X,
+  Globe,
 } from "lucide-react";
 
 // Define a type for the form data
@@ -20,6 +21,7 @@ type FormData = {
   name: string;
   email: string;
   company: string;
+  website: string;
   phone: string;
   message: string;
   service: string;
@@ -86,6 +88,7 @@ const CTASection = () => {
     name: "",
     email: "",
     company: "",
+    website: "",
     phone: "",
     message: "",
     service: "",
@@ -187,6 +190,92 @@ const CTASection = () => {
           {/* Contact Form and Office Details */}
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Form */}
+
+            {/* Office Contacts */}
+            <motion.div
+              initial={{ x: 30, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <div className="space-y-6">
+                {officeContacts.map((office, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ y: 20, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                  >
+                    <div className="shadow-lg border border-slate-200 hover:shadow-xl transition-all duration-300 rounded-lg">
+                      <h3 className="text-2xl font-bold text-slate-800 flex items-center bg-white p-4">
+                        <MapPin className="w-6 h-6 text-blue-500 mr-3" />
+                        Visit Us At
+                      </h3>
+                      <div className="p-6 bg-white mb-4">
+                        <h4 className="text-xl font-bold text-slate-800 mb-3">
+                          {office.city}
+                        </h4>
+
+                        <div className="space-y-2 text-sm text-slate-600">
+                          <div className="flex items-start">
+                            <MapPin className="w-4 h-4 mt-0.5 mr-2 text-zinc-500 flex-shrink-0" />
+                            <span>{office.address}</span>
+                          </div>
+
+                          <div className="flex items-center">
+                            <Phone className="w-4 h-4 mr-2 text-zinc-500" />
+                            <a
+                              href={`tel:${office.phone}`}
+                              className="text-zinc-600 hover:underline"
+                            >
+                              {office.phone}
+                            </a>
+                          </div>
+
+                          <div className="flex items-center">
+                            <Mail className="w-4 h-4 mr-2 text-zinc-500" />
+                            <a
+                              href={`mailto:${office.email}`}
+                              className="text-zinc-600 hover:underline"
+                            >
+                              {office.email}
+                            </a>
+                          </div>
+
+                          <div className="flex items-center">
+                            <Clock className="w-4 h-4 mr-2 text-zinc-500" />
+                            <span>{office.hours}</span>
+                          </div>
+                        </div>
+                      </div>
+                      <motion.div
+                        initial={{ y: 30, opacity: 0 }}
+                        whileInView={{ y: 0, opacity: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6 }}
+                      >
+                        <div className="bg-white shadow-xl border border-blue-100 overflow-hidden rounded-lg">
+                          <div className="p-0">
+                            <div className="h-96 bg-gray-100 relative">
+                              <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.11609823277!2d72.74109995310096!3d19.08219783958221!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c6306644edc1%3A0x5da4ed8f8d648c69!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1640123456789!5m2!1sen!2sin"
+                                width="100%"
+                                height="100%"
+                                style={{ border: 0 }}
+                                loading="lazy"
+                                referrerPolicy="no-referrer-when-downgrade"
+                                className="absolute inset-0"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </motion.div>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
             <form onSubmit={handleSubmit}>
               <motion.div
                 initial={{ x: -30, opacity: 0 }}
@@ -211,7 +300,7 @@ const CTASection = () => {
                             Full Name *
                           </label>
                           <div className="relative">
-                            <User className="absolute left-3 top-3 w-4 h-4 text-gray-400" />
+                            <User className="absolute left-3 top-4 w-4 h-4 text-gray-400" />
                             <input
                               type="text"
                               name="name"
@@ -233,7 +322,7 @@ const CTASection = () => {
                             Email Address *
                           </label>
                           <div className="relative">
-                            <Mail className="absolute left-3 top-3 w-4 h-4 text-gray-400" />
+                            <Mail className="absolute left-3 top-4 w-4 h-4 text-gray-400" />
                             <input
                               type="email"
                               name="email"
@@ -257,7 +346,7 @@ const CTASection = () => {
                             Company
                           </label>
                           <div className="relative">
-                            <Building className="absolute left-3 top-3 w-4 h-4 text-gray-400" />
+                            <Building className="absolute left-3 top-4 w-4 h-4 text-gray-400" />
                             <input
                               type="text"
                               name="company"
@@ -278,7 +367,7 @@ const CTASection = () => {
                             Phone Number
                           </label>
                           <div className="relative">
-                            <Phone className="absolute left-3 top-3 w-4 h-4 text-gray-400" />
+                            <Phone className="absolute left-3 top-4 w-4 h-4 text-gray-400" />
                             <input
                               type="tel"
                               name="phone"
@@ -289,6 +378,27 @@ const CTASection = () => {
                               placeholder="+91 12345 67890"
                             />
                           </div>
+                        </div>
+                      </div>
+                      <div>
+                        <label
+                          htmlFor="email"
+                          className="block text-sm font-medium text-slate-700 mb-2"
+                        >
+                          Your Website
+                        </label>
+                        <div className="relative">
+                          <Globe className="absolute left-3 top-4 w-4 h-4 text-gray-400" />
+                          <input
+                            type="text"
+                            name="website"
+                            id="website"
+                            value={formData.website}
+                            onChange={handleInputChange}
+                            required
+                            className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 outline-none"
+                            placeholder="www.yourwebsite.com"
+                          />
                         </div>
                       </div>
 
@@ -353,93 +463,6 @@ const CTASection = () => {
                 </div>
               </motion.div>
             </form>
-
-            {/* Office Contacts */}
-            <motion.div
-              initial={{ x: 30, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <div className="space-y-6">
-                <h3 className="text-2xl font-bold text-slate-800 flex items-center">
-                  <MapPin className="w-6 h-6 text-blue-500 mr-3" />
-                  Our Offices
-                </h3>
-
-                {officeContacts.map((office, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ y: 20, opacity: 0 }}
-                    whileInView={{ y: 0, opacity: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                  >
-                    <div className="shadow-lg border border-slate-200 hover:shadow-xl transition-all duration-300 rounded-lg">
-                      <div className="p-6 bg-white mb-4">
-                        <h4 className="text-xl font-bold text-slate-800 mb-3">
-                          {office.city}
-                        </h4>
-
-                        <div className="space-y-2 text-sm text-slate-600">
-                          <div className="flex items-start">
-                            <MapPin className="w-4 h-4 mt-0.5 mr-2 text-blue-500 flex-shrink-0" />
-                            <span>{office.address}</span>
-                          </div>
-
-                          <div className="flex items-center">
-                            <Phone className="w-4 h-4 mr-2 text-green-500" />
-                            <a
-                              href={`tel:${office.phone}`}
-                              className="text-green-600 hover:underline"
-                            >
-                              {office.phone}
-                            </a>
-                          </div>
-
-                          <div className="flex items-center">
-                            <Mail className="w-4 h-4 mr-2 text-orange-500" />
-                            <a
-                              href={`mailto:${office.email}`}
-                              className="text-orange-600 hover:underline"
-                            >
-                              {office.email}
-                            </a>
-                          </div>
-
-                          <div className="flex items-center">
-                            <Clock className="w-4 h-4 mr-2 text-purple-500" />
-                            <span>{office.hours}</span>
-                          </div>
-                        </div>
-                      </div>
-                      <motion.div
-                        initial={{ y: 30, opacity: 0 }}
-                        whileInView={{ y: 0, opacity: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.6 }}
-                      >
-                        <div className="bg-white shadow-xl border border-blue-100 overflow-hidden rounded-lg">
-                          <div className="p-0">
-                            <div className="h-96 bg-gray-100 relative">
-                              <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.11609823277!2d72.74109995310096!3d19.08219783958221!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c6306644edc1%3A0x5da4ed8f8d648c69!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1640123456789!5m2!1sen!2sin"
-                                width="100%"
-                                height="100%"
-                                style={{ border: 0 }}
-                                loading="lazy"
-                                referrerPolicy="no-referrer-when-downgrade"
-                                className="absolute inset-0"
-                              />
-                            </div>
-                          </div>
-                        </div>
-                      </motion.div>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
           </div>
         </div>
       </motion.section>

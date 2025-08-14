@@ -16,7 +16,6 @@ import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import Link from "next/link";
 
-
 const navLinks = [
   { name: "Home", path: "/" },
   { name: "Solutions", path: "/solutions" },
@@ -162,13 +161,18 @@ const Navigation = () => {
               whileHover={{ scale: 1.05 }}
             >
               <Link href="/">
-                <img
-                  src="https://res.cloudinary.com/dsvfcckqy/image/upload/v1755028854/lifefirst_logo_png_nb1cje.png"
-                  alt="LifeFirst Logo"
-                  width={140}
-                  height={140}
-                  className="w-auto h-auto max-h-12"
-                />
+                <div className="flex items-center justify-between">
+                  <img
+                    src="https://res.cloudinary.com/dsvfcckqy/image/upload/v1755163758/Logo_Mark_cxtx7h.png"
+                    alt="LifeFirst logo droplet"
+                    className="w-auto h-auto max-h-14"
+                  />
+                  <img
+                    src="https://res.cloudinary.com/dsvfcckqy/image/upload/v1755163758/Textmark_x3tms3.png"
+                    alt="logo mark"
+                    className="w-auto h-10 "
+                  />
+                </div>
               </Link>
             </motion.div>
 
@@ -216,9 +220,7 @@ const Navigation = () => {
                                   }}
                                   transition={{ duration: 0.15 }}
                                 >
-                                  <li>
-                                    <ul className="inline">{subItem.name}</ul>
-                                  </li>
+                                  {subItem.name}
                                 </motion.div>
                               </a>
                             ))}
