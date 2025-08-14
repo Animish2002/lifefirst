@@ -105,7 +105,7 @@ const ContactPage = () => {
                 transition={{ duration: 0.8 }}
               >
                 <h1 className="text-3xl md:text-5xl font-semibold text-white leading-tight mb-6">
-                  Let's Discuss Your
+                  Let&apos;s Discuss Your
                   <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent block">
                     Water Treatment Project
                   </span>
@@ -207,8 +207,8 @@ const ContactPage = () => {
                   Send us a Message
                 </h2>
                 <p className="text-slate-600 mb-8">
-                  Fill out the form below and we'll get back to you within 24
-                  hours.
+                  Fill out the form below and we&apos;ll get back to you within
+                  24 hours.
                 </p>
 
                 <form onSubmit={handleSubmit} className="space-y-6">
