@@ -36,7 +36,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50/30 to-green-50/30">
+    <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50/30 to-green-50/30 ">
       {/* Dynamic Background */}
       <motion.div className="absolute inset-0" style={{ y: yBg }}>
         {/* Grid Pattern */}

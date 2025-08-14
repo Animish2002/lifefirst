@@ -95,7 +95,7 @@ const Navigation = () => {
         animate={{ y: 0 }}
         className="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-xl border-b border-blue-100 shadow-sm"
       >
-        <div className="bg-gradient-to-br from-slate-800 via-slate-900 to-blue-900 text-white">
+        <div className="bg-gradient-to-tl from-slate-800 via-slate-900 to-blue-900 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between py-3">
               {/* Left Side - Contact Information */}
@@ -208,14 +208,16 @@ const Navigation = () => {
                             {item.subItems.map((subItem) => (
                               <a href={subItem.path} key={subItem.name}>
                                 <motion.div
-                                  className="w-full text-left px-4 py-3 text-sm text-slate-700 hover:text-blue-600 hover:bg-blue-50 transition-colors border-b border-gray-100 last:border-b-0"
+                                  className="w-full text-lg text-left px-4 py-3 text-slate-700 hover:text-blue-600 hover:bg-blue-50 transition-colors border-b border-gray-100 last:border-b-0"
                                   whileHover={{
                                     x: 4,
                                     backgroundColor: "rgb(239 246 255)",
                                   }}
                                   transition={{ duration: 0.15 }}
                                 >
-                                  {subItem.name}
+                                  <li>
+                                    <ul className="inline">{subItem.name}</ul>
+                                  </li>
                                 </motion.div>
                               </a>
                             ))}

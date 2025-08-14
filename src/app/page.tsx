@@ -4,6 +4,7 @@ import Footer from "@/Landing/Footer";
 
 import HeroSection from "@/Landing/HeroSection";
 import Navigation from "@/Landing/Navigation";
+import ProjectsMarquee from "@/Landing/ProjectsMarquee";
 import SolutionsSection from "@/Landing/SolutionsSection";
 import { StatsSection } from "@/Landing/StatsSection";
 
@@ -14,6 +15,7 @@ export default function Home() {
       <HeroSection />
       <StatsSection />
       <AboutSection />
+      <ProjectsMarquee />
       <SolutionsSection />
       <CTASection />
       <Footer />

@@ -121,3 +121,9 @@
   }
 }
 
+.hero-bg {
+  background-image: url("https://res.cloudinary.com/dsvfcckqy/image/upload/v1754928782/clean-organized-pharmaceutical-plant-where-steel-pipelines-valves-are-part-sterile-environment_bcf5w4.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
