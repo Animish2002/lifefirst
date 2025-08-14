@@ -55,32 +55,14 @@ const SolutionPage = ({ params }: PageProps) => {
 
         {/* Content Section */}
         <div className="container mx-auto px-6 py-16 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-start">
+          <div className="grid lg:grid-cols-2 gap-4 items-start">
             {/* Info Section */}
-            <div className="group relative overflow-hidden bg-gradient-to-br from-white via-blue-50/30 to-white rounded-3xl shadow-2xl border border-gray-200/50 hover:shadow-3xl transition-all duration-500 transform hover:-translate-y-1">
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-indigo-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div className="group relative overflow-hidden rounded-3xl shadow-2xl border border-gray-200/50 hover:shadow-3xl transition-all duration-500 transform hover:-translate-y-1">
               <div className="relative p-10">
                 {/* Icon and Title */}
                 <div className="flex items-center mb-6">
-                  <div className="relative">
-                    <div className="absolute inset-0 bg-blue-500 rounded-2xl blur opacity-25 group-hover:opacity-40 transition-opacity duration-500"></div>
-                    <div className="relative bg-gradient-to-r from-blue-500 to-blue-600 rounded-2xl p-3 shadow-lg">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="w-8 h-8 text-white"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      >
-                        <path d="M7.9 20A9.3 9.3 0 0 1 4 16.1L2 22l6-2zm8.1-1.4c-3.1 1.4-6.6 1.4-9.7 0a8.7 8.7 0 0 1-2-11.3L4 5c-1.5 4.8-.8 10 2.2 13.5a9.3 9.3 0 0 0 4.1 2.3 9.3 9.3 0 0 0 4.1-2.3c3-3.5 3.7-8.7 2.2-13.5l-2 5.5a8.7 8.7 0 0 1-2 11.3z" />
-                      </svg>
-                    </div>
-                  </div>
-                  <div className="ml-5">
-                    <h2 className="text-3xl lg:text-4xl font-bold bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
+                  <div>
+                    <h2 className="text-2xl lg:text-3xl font-semibold bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
                       {solution.infoTitle}
                     </h2>
                   </div>
@@ -88,23 +70,19 @@ const SolutionPage = ({ params }: PageProps) => {
 
                 {/* Content */}
                 <div className="space-y-6">
-                  <p className="text-gray-600 leading-relaxed text-lg font-medium">
+                  <p className="text-gray-600 leading-relaxed text-md font-medium">
                     {solution.infoContent}
                   </p>
 
                   {/* Enhanced CTA */}
                   <div className="relative overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-r from-blue-600 via-blue-500 to-indigo-600 rounded-2xl blur opacity-20"></div>
                     <div className="relative bg-gradient-to-r from-blue-500/10 via-blue-500/5 to-indigo-500/10 rounded-2xl p-6 border border-blue-200/50 backdrop-blur-sm">
                       <div className="flex items-start space-x-4">
-                        <div className="flex-shrink-0 mt-1">
-                          <div className="w-3 h-3 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full animate-pulse"></div>
-                        </div>
                         <div>
                           <p className="font-semibold text-blue-800 text-lg leading-relaxed">
                             {solution.ctaText}
                           </p>
-                          <p className="text-blue-600/80 text-sm mt-2 font-medium">
+                          <p className="text-blue-600/80 text-sm mt-2 font-sm">
                             Our experts are ready to help you find the perfect
                             solution.
                           </p>
@@ -117,44 +95,21 @@ const SolutionPage = ({ params }: PageProps) => {
             </div>
 
             {/* Contact Form */}
-            <div className="group relative overflow-hidden bg-white rounded-3xl shadow-2xl border border-gray-200/50 hover:shadow-3xl transition-all duration-500 transform hover:-translate-y-1">
-              <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/5 via-transparent to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <div className="relative p-10">
+            <div className="group max-w-7xl mx-auto relative overflow-hidden bg-white rounded-3xl shadow-2xl border border-gray-200/50 hover:shadow-3xl transition-all duration-500 transform hover:-translate-y-1 w-full md:w-[35rem] h-full md:h-[90vh]">
+              <div className="relative p-4 md:p-10">
                 {/* Form Header */}
                 <div className="text-center mb-8">
-                  <div className="inline-flex items-center justify-center mb-4">
-                    <div className="relative">
-                      <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-2xl blur opacity-25"></div>
-                      <div className="relative bg-gradient-to-r from-indigo-500 to-purple-600 rounded-2xl p-3 shadow-lg">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          className="w-8 h-8 text-white"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        >
-                          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
-                          <path d="M8 10h.01" />
-                          <path d="M12 10h.01" />
-                          <path d="M16 10h.01" />
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                  <h2 className="text-3xl lg:text-4xl font-bold bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent mb-2">
-                    Get in Touch
+                  <h2 className="text-2xl lg:text-3xl font-semibold bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent mb-2">
+                    Contact Us
                   </h2>
-                  <p className="text-gray-600 font-medium">
-                    Let's discuss your water treatment needs
+                  <p className="text-gray-600 font-sm">
+                    Let&apos;s discuss your water treatment needs
                   </p>
                 </div>
 
                 {/* Form */}
                 <form className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-6">
+                  <div className="grid md:grid-cols-2 gap-4 ">
                     <div className="group/input">
                       <label
                         htmlFor="name"
@@ -168,7 +123,7 @@ const SolutionPage = ({ params }: PageProps) => {
                           id="name"
                           name="name"
                           placeholder="John Doe"
-                          className="w-full p-4 border border-gray-300 rounded-2xl focus:ring-4 focus:ring-blue-500/20 focus:border-blue-500 transition-all duration-300 placeholder:text-gray-400 hover:border-gray-400 bg-gray-50/50 focus:bg-white"
+                          className="w-full py-2 p-2 border border-gray-300 rounded-2xl focus:ring-4 focus:ring-blue-500/20 focus:border-blue-500 transition-all duration-300 placeholder:text-gray-400 hover:border-gray-400 bg-gray-50/50 focus:bg-white"
                         />
                         <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-500/10 to-indigo-500/10 opacity-0 group-focus-within/input:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
                       </div>
@@ -186,11 +141,70 @@ const SolutionPage = ({ params }: PageProps) => {
                           id="email"
                           name="email"
                           placeholder="john.doe@example.com"
-                          className="w-full p-4 border border-gray-300 rounded-2xl focus:ring-4 focus:ring-blue-500/20 focus:border-blue-500 transition-all duration-300 placeholder:text-gray-400 hover:border-gray-400 bg-gray-50/50 focus:bg-white"
+                          className="w-full py-2 p-2 border border-gray-300 rounded-2xl focus:ring-4 focus:ring-blue-500/20 focus:border-blue-500 transition-all duration-300 placeholder:text-gray-400 hover:border-gray-400 bg-gray-50/50 focus:bg-white"
                         />
                         <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-500/10 to-indigo-500/10 opacity-0 group-focus-within/input:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
                       </div>
                     </div>
+                  </div>
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <div className="group/input">
+                      <label
+                        htmlFor="name"
+                        className="block text-sm font-semibold text-gray-700 mb-2 group-focus-within/input:text-blue-600 transition-colors"
+                      >
+                        Phone Number
+                      </label>
+                      <div className="relative">
+                        <input
+                          type="text"
+                          id="phone"
+                          name="phone"
+                          placeholder="(+91) 123-456-7890"
+                          className="w-full py-2 p-2 border border-gray-300 rounded-2xl focus:ring-4 focus:ring-blue-500/20 focus:border-blue-500 transition-all duration-300 placeholder:text-gray-400 hover:border-gray-400 bg-gray-50/50 focus:bg-white"
+                        />
+                        <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-500/10 to-indigo-500/10 opacity-0 group-focus-within/input:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+                      </div>
+                    </div>
+                    <div className="group/input">
+                      <label
+                        htmlFor="webite"
+                        className="block text-sm font-semibold text-gray-700 mb-2 group-focus-within/input:text-blue-600 transition-colors"
+                      >
+                        Website Name
+                      </label>
+                      <div className="relative">
+                        <input
+                          type="text"
+                          id="website"
+                          name="website"
+                          placeholder="www.example.com"
+                          className="w-full py-2 p-2 border border-gray-300 rounded-2xl focus:ring-4 focus:ring-blue-500/20 focus:border-blue-500 transition-all duration-300 placeholder:text-gray-400 hover:border-gray-400 bg-gray-50/50 focus:bg-white"
+                        />
+                        <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-500/10 to-indigo-500/10 opacity-0 group-focus-within/input:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <label
+                      htmlFor="service"
+                      className="block text-sm font-medium text-slate-700 mb-2"
+                    >
+                      Service Interest
+                    </label>
+                    <select
+                      name="service"
+                      id="service"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 outline-none"
+                    >
+                      <option value="">Select a service</option>
+                      <option value="water-treatment">
+                        Water Treatment Systems
+                      </option>
+                      <option value="consultation">Free Consultation</option>
+                      <option value="maintenance">Maintenance Services</option>
+                      <option value="site-assessment">Site Assessment</option>
+                    </select>
                   </div>
                   <div className="group/input">
                     <label

@@ -13,11 +13,8 @@ import {
   Youtube,
   Clock,
 } from "lucide-react";
+import Link from "next/link";
 
-// ---
-// ## Type Definitions
-
-// Interface for navigation sub-items, allowing for nested sub-items
 interface NavSubItem {
   name: string;
   path: string;
@@ -238,7 +235,7 @@ const Navigation: React.FC = () => {
           whileHover={{ y: -2 }}
         >
           {item.path ? (
-            <a href={item.path} className="flex items-center space-x-1">
+            <Link href={item.path} className="flex items-center space-x-1">
               <span>{item.name}</span>
               <motion.div
                 animate={{ rotate: isOpen ? 180 : 0 }}
@@ -246,7 +243,7 @@ const Navigation: React.FC = () => {
               >
                 <ChevronDown size={16} />
               </motion.div>
-            </a>
+            </Link>
           ) : (
             <>
               <span>{item.name}</span>
@@ -281,7 +278,7 @@ const Navigation: React.FC = () => {
                       </h3>
                       <div className="space-y-2">
                         {item.subItems.slice(0, 3).map((subItem) => (
-                          <a href={subItem.path} key={subItem.name}>
+                          <Link href={subItem.path} key={subItem.name}>
                             <motion.div
                               className="text-slate-600 hover:text-blue-600 transition-colors cursor-pointer text-sm leading-relaxed flex items-start"
                               whileHover={{ x: 4, color: "#2563eb" }}
@@ -291,7 +288,7 @@ const Navigation: React.FC = () => {
                               </span>
                               {subItem.name}
                             </motion.div>
-                          </a>
+                          </Link>
                         ))}
                       </div>
                     </div>
@@ -305,7 +302,7 @@ const Navigation: React.FC = () => {
                         {item.subItems[3]?.subItems
                           ?.slice(0, 10)
                           .map((nestedItem) => (
-                            <a href={nestedItem.path} key={nestedItem.name}>
+                            <Link href={nestedItem.path} key={nestedItem.name}>
                               <motion.div
                                 className="text-slate-600 hover:text-blue-600 transition-colors cursor-pointer text-sm flex items-start"
                                 whileHover={{ x: 4, color: "#2563eb" }}
@@ -315,7 +312,7 @@ const Navigation: React.FC = () => {
                                 </span>
                                 {nestedItem.name}
                               </motion.div>
-                            </a>
+                            </Link>
                           ))}
                       </div>
                     </div>
@@ -333,7 +330,10 @@ const Navigation: React.FC = () => {
                               {category.name}
                             </div>
                             {category.subItems?.map((nestedItem) => (
-                              <a href={nestedItem.path} key={nestedItem.name}>
+                              <Link
+                                href={nestedItem.path}
+                                key={nestedItem.name}
+                              >
                                 <motion.div
                                   className="text-slate-600 hover:text-blue-600 transition-colors cursor-pointer text-sm ml-2 flex items-start"
                                   whileHover={{ x: 4, color: "#2563eb" }}
@@ -343,7 +343,7 @@ const Navigation: React.FC = () => {
                                   </span>
                                   {nestedItem.name}
                                 </motion.div>
-                              </a>
+                              </Link>
                             ))}
                           </div>
                         ))}
@@ -355,7 +355,7 @@ const Navigation: React.FC = () => {
                 // Standard dropdown for Our Company
                 <div className="py-2">
                   {item.subItems.map((subItem) => (
-                    <a href={subItem.path} key={subItem.name}>
+                    <Link href={subItem.path} key={subItem.name}>
                       <motion.div
                         className="w-full text-left px-4 py-2 text-slate-700 hover:text-blue-600 hover:bg-blue-50 transition-colors flex items-center text-sm"
                         whileHover={{
@@ -367,7 +367,7 @@ const Navigation: React.FC = () => {
                         <span className="text-blue-400 mr-2">•</span>
                         {subItem.name}
                       </motion.div>
-                    </a>
+                    </Link>
                   ))}
                 </div>
               )}
@@ -451,7 +451,7 @@ const Navigation: React.FC = () => {
                               className="pl-4 mt-2 space-y-2 border-l border-blue-100 overflow-hidden"
                             >
                               {subItem.subItems.map((nestedItem) => (
-                                <a
+                                <Link
                                   href={nestedItem.path}
                                   key={nestedItem.name}
                                   onClick={() => setIsMobileMenuOpen(false)}
@@ -462,7 +462,7 @@ const Navigation: React.FC = () => {
                                   >
                                     • {nestedItem.name}
                                   </motion.div>
-                                </a>
+                                </Link>
                               ))}
                             </motion.div>
                           )}
@@ -470,7 +470,7 @@ const Navigation: React.FC = () => {
                       </div>
                     ) : (
                       // Regular item
-                      <a
+                      <Link
                         href={subItem.path}
                         onClick={() => setIsMobileMenuOpen(false)}
                       >
@@ -480,7 +480,7 @@ const Navigation: React.FC = () => {
                         >
                           {subItem.name}
                         </motion.div>
-                      </a>
+                      </Link>
                     )}
                   </div>
                 ))}
@@ -506,13 +506,13 @@ const Navigation: React.FC = () => {
               {contactInfo.map((item, index) => (
                 <div key={index} className="flex items-center">
                   {item.href ? (
-                    <a
+                    <Link
                       href={item.href}
                       className="flex items-center space-x-2 text-slate-300 hover:text-white transition-colors duration-200 text-sm"
                     >
                       <span className="text-slate-400">{item.icon}</span>
                       <span className="hidden sm:inline">{item.text}</span>
-                    </a>
+                    </Link>
                   ) : (
                     <div className="flex items-center space-x-2 text-slate-300 text-sm">
                       <span className="text-slate-400">{item.icon}</span>
@@ -532,7 +532,7 @@ const Navigation: React.FC = () => {
                 Follow us:
               </span>
               {socialLinks.map((social) => (
-                <a
+                <Link
                   key={social.label}
                   href={social.href}
                   target="_blank"
@@ -541,7 +541,7 @@ const Navigation: React.FC = () => {
                   className={`h-8 w-8 p-0 text-slate-400 hover:bg-slate-800 transition-all duration-200 ${social.color} rounded flex items-center justify-center`}
                 >
                   {social.icon}
-                </a>
+                </Link>
               ))}
             </div>
           </div>
@@ -555,7 +555,7 @@ const Navigation: React.FC = () => {
             className="flex items-center space-x-3 cursor-pointer"
             whileHover={{ scale: 1.05 }}
           >
-            <a href="/" className="flex items-center space-x-2">
+            <Link href="/" className="flex items-center space-x-2">
               <img
                 src="https://res.cloudinary.com/dsvfcckqy/image/upload/v1755163758/Logo_Mark_cxtx7h.png"
                 alt="LifeFirst logo droplet"
@@ -566,7 +566,7 @@ const Navigation: React.FC = () => {
                 alt="logo mark"
                 className="w-auto h-8 md:h-10"
               />
-            </a>
+            </Link>
           </motion.div>
 
           {/* Desktop Navigation */}
@@ -576,7 +576,7 @@ const Navigation: React.FC = () => {
                 return renderMegaMenu(item);
               } else {
                 return (
-                  <a href={item.path as string} key={item.name}>
+                  <Link href={item.path as string} key={item.name}>
                     <motion.div
                       className="text-slate-700 hover:text-blue-600 transition-colors text-lg font-medium relative cursor-pointer"
                       whileHover={{ y: -2 }}
@@ -588,7 +588,7 @@ const Navigation: React.FC = () => {
                         transition={{ duration: 0.2 }}
                       />
                     </motion.div>
-                  </a>
+                  </Link>
                 );
               }
             })}
@@ -622,7 +622,7 @@ const Navigation: React.FC = () => {
                   return renderMobileAccordion(item);
                 } else {
                   return (
-                    <a
+                    <Link
                       href={item.path as string}
                       key={item.name}
                       onClick={() => setIsMobileMenuOpen(false)}
@@ -633,7 +633,7 @@ const Navigation: React.FC = () => {
                       >
                         {item.name}
                       </motion.div>
-                    </a>
+                    </Link>
                   );
                 }
               })}
