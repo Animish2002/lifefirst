@@ -18,6 +18,7 @@ interface PageProps {
   params: {
     solution: string;
   };
+  searchParams?: { [key: string]: string | string[] | undefined };
 }
 
 // Main Solution Page Component
