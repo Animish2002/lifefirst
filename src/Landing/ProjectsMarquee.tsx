@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import Image from "next/image";
+
 
 const ProjectsMarquee = () => {
   // Sample project data - replace with your actual projects
@@ -71,7 +71,7 @@ const ProjectsMarquee = () => {
           {/* Logo and Client Section */}
           <div className="flex items-start justify-between mb-4">
             <div className="flex-1">
-              <Image
+              <img
                 src={project.logo}
                 alt={`${project.client} logo`}
                 width={80} // add width and height for next/image

@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/card";
 import Navigation from "@/Landing/Navigation";
 import Footer from "@/Landing/Footer";
-import Image from "next/image";
+
 
 const OurSolutionsPage = () => {
   const solutionsData = [
@@ -65,7 +65,7 @@ const OurSolutionsPage = () => {
 
         {/* Hero Image */}
         <div className="absolute inset-0">
-          <Image
+          <img
             src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
             alt="Water treatment facility"
             className="w-full h-full object-cover opacity-30"
