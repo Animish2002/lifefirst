@@ -12,7 +12,6 @@ import {
 import Navigation from "@/Landing/Navigation";
 import Footer from "@/Landing/Footer";
 
-
 const AboutUsPage = () => {
   const valuesData = [
     {
@@ -58,7 +57,7 @@ const AboutUsPage = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <div className="relative h-[75vh] bg-gradient-to-br from-blue-900 via-blue-800 to-cyan-900 overflow-hidden">
+      <div className="relative h-[75vh] mt-36 bg-gradient-to-br from-blue-900 via-blue-800 to-cyan-900 overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 bg-black bg-opacity-20">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-transparent"></div>
@@ -67,7 +66,7 @@ const AboutUsPage = () => {
         {/* Hero Image */}
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+            src="https://res.cloudinary.com/dsvfcckqy/image/upload/v1754928781/20250802_153036_k6qhoj.jpg"
             alt="Water treatment professionals"
             className="w-full h-full object-cover opacity-30"
           />

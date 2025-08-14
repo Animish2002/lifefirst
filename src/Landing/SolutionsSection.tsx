@@ -14,13 +14,7 @@ const SolutionsSection = () => {
       icon: <Droplets className="w-8 h-8" />,
       description:
         "Advanced wastewater treatment solutions for industrial and municipal applications",
-      items: [
-        "Prefabricated Containerized WWTP",
-        "Membrane Bio-Reactor (MBR)",
-        "Prefabricated Effluent Treatment Plant (ETP)",
-        "Ultrafiltration Systems (UF)",
-        "Reverse Osmosis (RO) Systems",
-      ],
+
       imageurl:
         "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755164884/wastewater_treatment_plant_yvyzlo.jpg",
       features: ["Eco-friendly", "Energy Efficient", "Low Maintenance"],
@@ -31,16 +25,9 @@ const SolutionsSection = () => {
       icon: <Shield className="w-8 h-8" />,
       description:
         "Comprehensive water purification systems for clean and safe drinking water",
-      items: [
-        "Pressure Sand Filters (PSF)",
-        "Activated Carbon Filters (ACF)",
-        "Lamella Clarifier",
-        "Dissolved Air Flotation",
-        "Water Softeners",
-        "Demineralization Systems (DM)",
-      ],
+
       imageurl:
-        "https://res.cloudinary.com/dsvfcckqy/image/upload/v1754928782/ChatGPT_Image_Aug_2_2025_at_05_05_56_PM_mxrymk.png",
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755164884/wastewater_treatment_plant_yvyzlo.jpg",
       features: ["High Quality", "Reliable", "Cost Effective"],
     },
     {
@@ -49,14 +36,9 @@ const SolutionsSection = () => {
       icon: <Leaf className="w-8 h-8" />,
       description:
         "Sustainable sanitation systems for environmental protection",
-      items: [
-        "Bio-Digesters",
-        "Bio-Toilets",
-        "Waste Management Systems",
-        "Composting Solutions",
-      ],
+
       imageurl:
-        "https://res.cloudinary.com/dsvfcckqy/image/upload/v1754928782/da331ee6-60ef-4b22-85b1-89a988c60788_gu75ac.jpg",
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755164884/wastewater_treatment_plant_yvyzlo.jpg",
       features: ["Sustainable", "Eco-friendly", "Zero Waste"],
     },
     {
@@ -65,14 +47,9 @@ const SolutionsSection = () => {
       icon: <Zap className="w-8 h-8" />,
       description:
         "Smart monitoring systems for real-time water quality control",
-      items: [
-        "Inflow Hydration Monitoring System",
-        "Water Quality Sensors",
-        "Real-time Analytics",
-        "Automated Control Systems",
-      ],
+
       imageurl:
-        "https://res.cloudinary.com/dsvfcckqy/image/upload/v1754928781/ChatGPT_Image_Aug_2_2025_at_05_22_38_PM_o2nny8.png",
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755164884/wastewater_treatment_plant_yvyzlo.jpg",
       features: ["Smart Technology", "Real-time", "Automated"],
     },
   ];
@@ -126,7 +103,9 @@ const SolutionsSection = () => {
                 backgroundRepeat: "no-repeat",
               }}
             >
-              <div className="relative p-4 h-[44vh] flex flex-col justify-end z-10">
+              {/* Dark overlay for better text readability */}
+
+              <div className="relative p-4 h-[45vh] flex flex-col z-10">
                 <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-gray-100 transition-colors drop-shadow-lg">
                   {solution.title}
                 </h3>
@@ -134,8 +113,9 @@ const SolutionsSection = () => {
                   {solution.description}
                 </p>
 
+                {/* Learn More Button */}
                 <motion.button
-                  className={`w-full  bg-blue-600 bg-opacity-90 text-white py-3 rounded-xl font-medium shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center group-hover:bg-blue-700 group-hover:bg-opacity-100 backdrop-blur-sm`}
+                  className={`mx-auto absolute bottom-4 left-1/2 right-1/2 px-6 bg-zinc-100 bg-opacity-90 text-white py-3 rounded-xl font-medium shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center group-hover:bg-opacity-400 backdrop-blur-sm`}
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
