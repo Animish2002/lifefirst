@@ -1,9 +1,9 @@
 import { notFound } from "next/navigation";
 import Navigation from "@/Landing/Navigation";
 import Footer from "@/Landing/Footer";
-import solutionsData from "@/data/data.json"; // Adjust path as needed
+import solutionsData from "@/data/data.json";
+import type { Metadata } from "next";
 
-// TypeScript interface for solution data
 interface Solution {
   slug: string;
   title: string;
@@ -272,8 +272,9 @@ export async function generateStaticParams() {
   }));
 }
 
-// Generate metadata for each page
-export async function generateMetadata({ params }: PageProps) {
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
   const { solution: solutionSlug } = params;
   const solution = solutionsData.find((s: Solution) => s.slug === solutionSlug);
 
