@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { Droplets, ArrowRight } from "lucide-react";
+import { Droplets } from "lucide-react";
 import {
   Card,
   CardContent,
@@ -10,7 +10,6 @@ import {
 } from "@/components/ui/card";
 import Navigation from "@/Landing/Navigation";
 import Footer from "@/Landing/Footer";
-
 
 const OurSolutionsPage = () => {
   const solutionsData = [
