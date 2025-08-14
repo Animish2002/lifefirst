@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const ProjectsMarquee = () => {
   // Sample project data - replace with your actual projects
@@ -45,8 +46,20 @@ const ProjectsMarquee = () => {
       logo: "https://via.placeholder.com/80x40/000000/FFFFFF?text=MED",
     },
   ];
+  interface Project {
+    id: number;
+    title: string;
+    client: string;
+    logo: string;
+  }
 
-  const ProjectCard = ({ project, index }: { project: any; index: number }) => (
+  const ProjectCard = ({
+    project,
+    index,
+  }: {
+    project: Project;
+    index: number;
+  }) => (
     <motion.div
       key={`${project.id}-${index}`}
       className="flex-shrink-0 mx-4 relative group cursor-pointer"
@@ -58,9 +71,11 @@ const ProjectsMarquee = () => {
           {/* Logo and Client Section */}
           <div className="flex items-start justify-between mb-4">
             <div className="flex-1">
-              <img
+              <Image
                 src={project.logo}
                 alt={`${project.client} logo`}
+                width={80} // add width and height for next/image
+                height={40}
                 className="h-10 object-contain mb-2"
               />
               <p className="text-sm text-gray-500 font-medium">

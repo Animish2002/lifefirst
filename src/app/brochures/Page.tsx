@@ -19,6 +19,7 @@ import {
 import { Button } from "@/components/ui/button";
 import Navigation from "@/Landing/Navigation";
 import Footer from "@/Landing/Footer";
+import Image from "next/image";
 
 const DownloadBrochuresPage = () => {
   const brochuresData = [
@@ -79,7 +80,7 @@ const DownloadBrochuresPage = () => {
 
         {/* Hero Image */}
         <div className="absolute inset-0">
-          <img
+          <Image
             src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
             alt="Technical documents and brochures"
             className="w-full h-full object-cover opacity-30"

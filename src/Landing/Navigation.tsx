@@ -15,6 +15,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import Link from "next/link";
+import Image from "next/image";
 
 const navLinks = [
   { name: "Home", path: "/" },
@@ -161,7 +162,7 @@ const Navigation = () => {
               whileHover={{ scale: 1.05 }}
             >
               <Link href="/">
-                <img
+                <Image
                   src="https://res.cloudinary.com/dsvfcckqy/image/upload/v1755028854/lifefirst_logo_png_nb1cje.png"
                   alt="LifeFirst Logo"
                   width={140}

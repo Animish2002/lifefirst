@@ -22,6 +22,7 @@ import {
 import { Button } from "@/components/ui/button";
 import Navigation from "@/Landing/Navigation";
 import Footer from "@/Landing/Footer";
+import Image from "next/image";
 
 const CaseStudiesPage = () => {
   const caseStudiesData = [
@@ -165,7 +166,7 @@ const CaseStudiesPage = () => {
 
         {/* Hero Image */}
         <div className="absolute inset-0">
-          <img
+          <Image
             src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
             alt="Water treatment success stories"
             className="w-full h-full object-cover opacity-30"
@@ -265,7 +266,7 @@ const CaseStudiesPage = () => {
                 <Card className="h-full transform transition-all duration-300 hover:scale-105 hover:shadow-xl border-0 shadow-lg overflow-hidden group">
                   {/* Card Image */}
                   <div className="relative h-48 overflow-hidden">
-                    <img
+                    <Image
                       src={study.image}
                       alt={study.title}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"

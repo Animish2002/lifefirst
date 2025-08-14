@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/card";
 import Navigation from "@/Landing/Navigation";
 import Footer from "@/Landing/Footer";
+import Image from "next/image";
 
 const AboutUsPage = () => {
   const valuesData = [
@@ -65,7 +66,7 @@ const AboutUsPage = () => {
 
         {/* Hero Image */}
         <div className="absolute inset-0">
-          <img
+          <Image
             src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
             alt="Water treatment professionals"
             className="w-full h-full object-cover opacity-30"
@@ -173,7 +174,7 @@ const AboutUsPage = () => {
               </p>
               <div className="mt-8">
                 <div className="relative overflow-hidden rounded-xl shadow-lg">
-                  <img
+                  <Image
                     src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                     alt="Life First Technologies Team"
                     className="w-full h-48 object-cover transform hover:scale-105 transition-transform duration-500"

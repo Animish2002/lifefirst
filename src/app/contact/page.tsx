@@ -9,6 +9,7 @@ import { Label } from "@/components/ui/label";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import Navigation from "@/Landing/Navigation";
 import Footer from "@/Landing/Footer";
+import Image from "next/image";
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -88,7 +89,7 @@ const ContactPage = () => {
 
         {/* Hero Image */}
         <div className="absolute inset-0">
-          <img
+          <Image
             src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
             alt="Contact us for water treatment solutions"
             className="w-full h-full object-cover opacity-30"
