@@ -74,7 +74,7 @@ const AboutUsPage = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <div className="relative h-[50vh] mt-36 bg-gradient-to-br from-blue-900 via-blue-800 to-cyan-900 overflow-hidden">
+      <div className="relative h-[50vh] md:mt-36 mt-34 bg-gradient-to-br from-blue-900 via-blue-800 to-cyan-900 overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 bg-black bg-opacity-20">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-transparent"></div>

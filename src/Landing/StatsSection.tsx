@@ -32,11 +32,11 @@ export function StatsSection() {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
-      className="p-2 py-8 md:p-12 bg-gray-50 rounded-lg shadow-inner border border-gray-100"
+      className="py-8 md:p-12 bg-gray-50 rounded-lg shadow-inner border border-gray-100 p-4"
     >
       {/* Stats Section */}
       <motion.div variants={itemVariants}>
-        <div className="grid grid-cols-4 md:grid-cols-4 gap-2 md:gap-6 md:px-6 max-w-7xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-6 md:px-6 max-w-7xl mx-auto">
           {stats.map((stat, index) => (
             <motion.div
               key={index}

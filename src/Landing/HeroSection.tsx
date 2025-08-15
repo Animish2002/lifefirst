@@ -4,7 +4,7 @@ import React from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import type { AnimationGeneratorType } from "framer-motion";
-import { ChevronRight,  ArrowDown } from "lucide-react";
+import { ChevronRight, ArrowDown } from "lucide-react";
 
 const HeroSection = () => {
   const { scrollYProgress } = useScroll();
@@ -36,21 +36,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50/30 to-green-50/30 ">
-      {/* Dynamic Background */}
-      <motion.div className="absolute inset-0" style={{ y: yBg }}>
-        {/* Grid Pattern */}
-        <div className="absolute inset-0 opacity-5">
-          <div
-            className="h-full w-full"
-            style={{
-              backgroundImage: `radial-gradient(circle at 1px 1px, rgb(59 130 246) 1px, transparent 0)`,
-              backgroundSize: "40px 40px",
-            }}
-          />
-        </div>
-      </motion.div>
-
+    <section className="relative min-h-screen overflow-hidden">
       {/* Main Content */}
       <motion.div className="relative z-10 pt-24 pb-16" style={{ y: yContent }}>
         <div className="max-w-7xl mx-auto px-6  md:mt-0 mt-15">

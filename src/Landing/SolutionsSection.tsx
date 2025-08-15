@@ -11,7 +11,7 @@ const SolutionsSection = () => {
     {
       id: "wastewater",
       title: "Wastewater Treatment Plants",
-      icon: <Droplets className="w-8 h-8" />,
+
       description:
         "Advanced wastewater treatment solutions for industrial and municipal applications",
 
@@ -22,7 +22,7 @@ const SolutionsSection = () => {
     {
       id: "water",
       title: "Water Treatment Plants",
-      icon: <Shield className="w-8 h-8" />,
+
       description:
         "Comprehensive water purification systems for clean and safe drinking water",
 
@@ -33,7 +33,7 @@ const SolutionsSection = () => {
     {
       id: "sanitation",
       title: "Sanitation Solutions",
-      icon: <Leaf className="w-8 h-8" />,
+
       description:
         "Sustainable sanitation systems for environmental protection",
 
@@ -44,7 +44,7 @@ const SolutionsSection = () => {
     {
       id: "hydration",
       title: "Hydration Monitoring",
-      icon: <Zap className="w-8 h-8" />,
+
       description:
         "Smart monitoring systems for real-time water quality control",
 
@@ -71,10 +71,10 @@ const SolutionsSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl md:text-4xl font-semibold mb-6 text-gray-900">
+          <h2 className="text-3xl md:text-4xl font-semibold mb-6 text-gray-900 p-4">
             Our Solutions
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed ">
             Comprehensive water treatment technologies designed for maximum
             efficiency and environmental sustainability. From industrial
             wastewater to drinking water purification.
@@ -103,9 +103,7 @@ const SolutionsSection = () => {
                 backgroundRepeat: "no-repeat",
               }}
             >
-              {/* Dark overlay for better text readability */}
-
-              <div className="relative p-4 h-[45vh] flex flex-col z-10">
+              <div className="relative p-4 h-[40vh] lg:h-[45vh] flex flex-col z-10">
                 <h3 className="text-lg mt-6 font-semibold text-white mb-3 group-hover:text-gray-100 transition-colors drop-shadow-lg">
                   {solution.title}
                 </h3>
@@ -115,7 +113,7 @@ const SolutionsSection = () => {
 
                 {/* Learn More Button */}
                 <motion.button
-                  className={`mx-auto absolute bottom-4 left-12 right-12 px-4  bg-opacity-90 text-white py-3 rounded-xl text-sm font-medium shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center group-hover:bg-opacity-400 backdrop-blur-sm`}
+                  className={`mx-auto absolute bottom-4 md:left-12 md:right-12 px-4  bg-opacity-90 text-white py-3 rounded-xl text-sm font-medium shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center group-hover:bg-opacity-400 backdrop-blur-sm`}
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
