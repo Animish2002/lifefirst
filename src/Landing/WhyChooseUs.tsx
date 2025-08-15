@@ -14,7 +14,7 @@ import {
 export function WhyChooseUs() {
   return (
     <>
-      <div className="text-3xl font-semibold text-center py-8">Why Choose Us?</div>
+      <div className="text-3xl md:text-4xl font-semibold text-center py-8">Why Choose Us?</div>
       <BentoGrid className="max-w-7xl mx-auto">
         {items.map((item, i) => (
           <BentoGridItem

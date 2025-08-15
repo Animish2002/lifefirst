@@ -124,8 +124,8 @@ const navLinks: NavLink[] = [
     name: "Our Company",
     path: null,
     subItems: [
-      { name: "About LifeFirst", path: "/about" },
-      { name: "Brochures", path: "/brochures" },
+      { name: "About LifeFirst", path: "/about-us" },
+      { name: "Brochures", path: "/company-brochures" },
       { name: "Case Studies", path: "/case-studies" },
     ],
   },

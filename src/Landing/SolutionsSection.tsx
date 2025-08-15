@@ -71,7 +71,7 @@ const SolutionsSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl font-semibold mb-6 text-gray-900">
+          <h2 className="text-3xl md:text-4xl font-semibold mb-6 text-gray-900">
             Our Solutions
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
