@@ -207,8 +207,8 @@ const CTASection = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                   >
-                    <div className="shadow-lg border border-slate-200 hover:shadow-xl transition-all duration-300 rounded-lg">
-                      <h3 className="text-2xl font-bold text-slate-800 flex items-center bg-white p-4">
+                    <div className="shadow-lg border border-slate-200 hover:shadow-xl bg-white transition-all duration-300 rounded-xl">
+                      <h3 className="text-2xl font-bold text-slate-800 flex items-center p-4">
                         <MapPin className="w-6 h-6 text-blue-500 mr-3" />
                         Visit Us At
                       </h3>

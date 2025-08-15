@@ -1,63 +1,80 @@
 "use client";
-import React from "react";
-import { motion } from "framer-motion";
-import { Target, Eye, Users, Award, Heart, Lightbulb } from "lucide-react";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Target, Eye, ChevronLeft, ChevronRight } from "lucide-react";
+
 import Navigation from "@/Landing/Navigation";
 import Footer from "@/Landing/Footer";
+import CTASection from "@/Landing/Contact";
 
 const AboutUsPage = () => {
-  const valuesData = [
+  const [currentTeamMember, setCurrentTeamMember] = useState(0);
+
+  const teamMembers = [
     {
-      title: "Innovation",
-      description:
-        "Pioneering cutting-edge technologies to solve complex water treatment challenges.",
-      icon: <Lightbulb className="w-12 h-12 text-blue-600" />,
+      name: "Sagar Shah",
+      position: "CEO",
+      experience:
+        "With over 31 years of experience, Sagar leads with a vision for innovative solutions.",
+      image:
+        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
     },
     {
-      title: "Sustainability",
-      description:
-        "Committed to eco-friendly solutions that protect our environment for future generations.",
-      icon: <Heart className="w-12 h-12 text-green-600" />,
+      name: "Gajanan Ghule",
+      position: "COO",
+      experience:
+        "Gajanan, our Technical Head, transforms innovation into sustainable and cost-effective solutions.",
+      image:
+        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
     },
     {
-      title: "Excellence",
-      description:
-        "Delivering the highest quality solutions with precision and attention to detail.",
-      icon: <Award className="w-12 h-12 text-orange-600" />,
+      name: "Dattaram Rane",
+      position: "VP Global Sales & Projects",
+      experience:
+        "Dattaram holds a Diploma and B.E. in Chemical Engineering, is DNV-certified in Risk Assessment, and brings 12 years of global expertise in the Water Treatment Industry.",
+      image:
+        "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
     },
     {
-      title: "Community Focus",
-      description:
-        "Empowering communities worldwide with access to clean, safe water resources.",
-      icon: <Users className="w-12 h-12 text-purple-600" />,
+      name: "Supriya Sathe",
+      position: "Global Business Head Marketing & Sales",
+      experience:
+        "Supriya, with a B.E. in Computer Science and an MBA in HR, is a Certified CSR Practitioner who brings a unique blend of strategy, innovation, and purpose-driven leadership.",
+      image:
+        "https://images.unsplash.com/photo-1494790108755-2616c395b36a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
     },
     {
-      title: "Mission Driven",
-      description:
-        "Guided by our mission to make clean water accessible to all through innovative technology.",
-      icon: <Target className="w-12 h-12 text-cyan-600" />,
-    },
-    {
-      title: "Visionary Leadership",
-      description:
-        "Leading the industry towards a sustainable future with forward-thinking solutions.",
-      icon: <Eye className="w-12 h-12 text-red-600" />,
+      name: "Shashank More",
+      position: "Manager Projects",
+      experience:
+        "Shashank, a B.E. in Civil Engineering, brings 8 years of expertise in executing water and wastewater projects with a strong focus on quality, efficiency, reliability, and timely delivery.",
+      image:
+        "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
     },
   ];
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTeamMember((prev) => (prev + 1) % teamMembers.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const nextMember = () => {
+    setCurrentTeamMember((prev) => (prev + 1) % teamMembers.length);
+  };
+
+  const prevMember = () => {
+    setCurrentTeamMember(
+      (prev) => (prev - 1 + teamMembers.length) % teamMembers.length
+    );
+  };
 
   return (
     <>
       <Navigation />
 
       {/* Hero Section */}
-      <div className="relative h-[75vh] mt-36 bg-gradient-to-br from-blue-900 via-blue-800 to-cyan-900 overflow-hidden">
+      <div className="relative h-[50vh] mt-36 bg-gradient-to-br from-blue-900 via-blue-800 to-cyan-900 overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 bg-black bg-opacity-20">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-transparent"></div>
@@ -73,7 +90,7 @@ const AboutUsPage = () => {
         </div>
 
         {/* Hero Content */}
-        <div className="relative z-10 flex items-center h-[75vh] pt-20">
+        <div className="relative z-10 flex items-center h-[50vh]">
           <div className="max-w-7xl md:pl-24 px-6 py-20">
             <div className="max-w-4xl">
               <motion.div
@@ -107,135 +124,185 @@ const AboutUsPage = () => {
         </div>
       </div>
 
-      {/* Mission & Vision Section */}
+      {/* Mission & Vision Section - Restructured */}
       <div className="bg-gray-50 py-20">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-16">
-            {/* Mission */}
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* Left side - Image placeholder */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="bg-white p-8 rounded-xl shadow-lg"
+              className="relative"
             >
-              <div className="flex items-center mb-6">
-                <div className="bg-gradient-to-r from-blue-50 to-cyan-50 p-4 rounded-full mr-4">
-                  <Target className="w-8 h-8 text-blue-600" />
-                </div>
-                <h2 className="text-3xl font-bold text-blue-600">
-                  Our Mission
-                </h2>
-              </div>
-              <p className="text-lg text-slate-600 leading-relaxed mb-6">
-                At Life First Technologies, our mission is to provide
-                innovative, sustainable, and reliable water solutions that
-                empower communities and industries to thrive. We are dedicated
-                to creating a positive impact on the environment by protecting
-                water resources and promoting responsible usage.
-              </p>
-              <div className="space-y-3 text-slate-700">
-                <div className="flex items-center">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full mr-3"></div>
-                  <p>Delivering cutting-edge wastewater treatment solutions</p>
-                </div>
-                <div className="flex items-center">
-                  <div className="w-2 h-2 bg-green-600 rounded-full mr-3"></div>
-                  <p>Ensuring access to clean and safe drinking water</p>
-                </div>
-                <div className="flex items-center">
-                  <div className="w-2 h-2 bg-orange-600 rounded-full mr-3"></div>
-                  <p>Promoting sustainability through eco-friendly practices</p>
-                </div>
+              <div className="relative overflow-hidden rounded-xl shadow-lg">
+                <img
+                  src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                  alt="Life First Technologies Team"
+                  className="w-full h-96 object-cover transform hover:scale-105 transition-transform duration-500"
+                />
               </div>
             </motion.div>
 
-            {/* Vision */}
+            {/* Right side - Mission & Vision */}
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="bg-white p-8 rounded-xl shadow-lg"
+              className="space-y-8"
             >
-              <div className="flex items-center mb-6">
-                <div className="bg-gradient-to-r from-blue-50 to-cyan-50 p-4 rounded-full mr-4">
-                  <Eye className="w-8 h-8 text-blue-600" />
+              {/* Mission */}
+              <div className="bg-white p-8 rounded-xl shadow-lg">
+                <div className="flex items-center mb-6">
+                  <div className="bg-blue-50 p-3 rounded-full mr-4">
+                    <Target className="w-6 h-6 text-blue-600" />
+                  </div>
+                  <h2 className="text-2xl font-bold text-gray-800">
+                    Our Mission
+                  </h2>
                 </div>
-                <h2 className="text-3xl font-bold text-blue-600">Our Vision</h2>
+                <p className="text-gray-600 leading-relaxed mb-4">
+                  At Life First Technologies, our mission is to provide
+                  innovative, sustainable, and reliable water solutions that
+                  empower communities and industries to thrive.
+                </p>
+                <div className="space-y-2 text-sm text-gray-700">
+                  <div className="flex items-center">
+                    <div className="w-2 h-2 bg-blue-600 rounded-full mr-3"></div>
+                    <p>
+                      Delivering cutting-edge wastewater treatment solutions
+                    </p>
+                  </div>
+                  <div className="flex items-center">
+                    <div className="w-2 h-2 bg-green-600 rounded-full mr-3"></div>
+                    <p>Ensuring access to clean and safe drinking water</p>
+                  </div>
+                </div>
               </div>
-              <p className="text-lg text-slate-600 leading-relaxed">
-                To be the global leader in water and sanitation technology,
-                setting the standard for innovation, quality, and environmental
-                stewardship. We envision a future where clean water is a
-                fundamental right, and our technology plays a pivotal role in
-                making that a reality for everyone.
-              </p>
-              <div className="mt-8">
-                <div className="relative overflow-hidden rounded-xl shadow-lg">
-                  <img
-                    src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                    alt="Life First Technologies Team"
-                    className="w-full h-48 object-cover transform hover:scale-105 transition-transform duration-500"
-                    width={800}
-                    height={300}
-                  />
+
+              {/* Vision */}
+              <div className="bg-white p-8 rounded-xl shadow-lg">
+                <div className="flex items-center mb-6">
+                  <div className="bg-blue-50 p-3 rounded-full mr-4">
+                    <Eye className="w-6 h-6 text-blue-600" />
+                  </div>
+                  <h2 className="text-2xl font-bold text-gray-800">
+                    Our Vision
+                  </h2>
                 </div>
+                <p className="text-gray-600 leading-relaxed">
+                  To be the global leader in water and sanitation technology,
+                  setting the standard for innovation, quality, and
+                  environmental stewardship. We envision a future where clean
+                  water is a fundamental right.
+                </p>
               </div>
             </motion.div>
           </div>
         </div>
       </div>
 
-      {/* Values Section */}
-      <div className="min-h-screen bg-white py-20">
+      {/* Team Section */}
+      <div className="bg-white py-20">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-5xl font-bold text-slate-800 mb-6">
-              Our Core Values
-            </h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              The principles that guide our work and define our commitment to
-              excellence in water technology solutions.
+            <h2 className="text-4xl font-bold text-gray-800 mb-4">Our Team</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Our team includes seasoned engineers from Chemical, Mechanical,
+              Civil, Electrical, and Instrumentation disciplines, along with
+              experienced project managers and skilled workers, all dedicated to
+              achieving excellence in every project.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {valuesData.map((value, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <Card className="h-full transform transition-all duration-300 hover:scale-105 hover:shadow-xl border-0 shadow-lg">
-                  <CardHeader className="flex flex-col items-center text-center p-6">
-                    <div className="bg-gradient-to-r from-blue-50 to-cyan-50 p-4 rounded-full mb-4">
-                      {value.icon}
+          {/* Team Carousel */}
+          <div className="relative bg-gray-50 rounded-2xl p-8 shadow-lg">
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              {/* Left side - Team member image */}
+              <div className="relative">
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={currentTeamMember}
+                    initial={{ opacity: 0, x: -50 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: 50 }}
+                    transition={{ duration: 0.5 }}
+                    className="relative"
+                  >
+                    <div className="w-80 h-80 mx-auto overflow-hidden rounded-full border-4 border-white shadow-xl">
+                      <img
+                        src={teamMembers[currentTeamMember].image}
+                        alt={teamMembers[currentTeamMember].name}
+                        className="w-full h-full object-cover"
+                      />
                     </div>
-                    <CardTitle className="text-2xl font-semibold text-slate-800">
-                      {value.title}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="text-center p-6 pt-0">
-                    <CardDescription className="text-lg text-slate-600 leading-relaxed">
-                      {value.description}
-                    </CardDescription>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
+                  </motion.div>
+                </AnimatePresence>
+              </div>
+
+              {/* Right side - Team member info */}
+              <div className="relative">
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={currentTeamMember}
+                    initial={{ opacity: 0, x: 50 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: -50 }}
+                    transition={{ duration: 0.5 }}
+                    className="space-y-4"
+                  >
+                    <h3 className="text-3xl font-bold text-gray-800">
+                      {teamMembers[currentTeamMember].name}
+                    </h3>
+                    <p className="text-xl font-semibold text-blue-600">
+                      {teamMembers[currentTeamMember].position}
+                    </p>
+                    <p className="text-gray-600 leading-relaxed text-lg">
+                      {teamMembers[currentTeamMember].experience}
+                    </p>
+                  </motion.div>
+                </AnimatePresence>
+              </div>
+            </div>
+
+            {/* Navigation buttons */}
+            <button
+              onClick={prevMember}
+              className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white hover:bg-gray-50 rounded-full p-3 shadow-lg transition-colors duration-200"
+            >
+              <ChevronLeft className="w-6 h-6 text-gray-600" />
+            </button>
+            <button
+              onClick={nextMember}
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white hover:bg-gray-50 rounded-full p-3 shadow-lg transition-colors duration-200"
+            >
+              <ChevronRight className="w-6 h-6 text-gray-600" />
+            </button>
+
+            {/* Dots indicator */}
+            <div className="flex justify-center mt-8 space-x-2">
+              {teamMembers.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentTeamMember(index)}
+                  className={`w-3 h-3 rounded-full transition-colors duration-200 ${
+                    index === currentTeamMember ? "bg-blue-600" : "bg-gray-300"
+                  }`}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </div>
-
+      <CTASection />
       <Footer />
     </>
   );
