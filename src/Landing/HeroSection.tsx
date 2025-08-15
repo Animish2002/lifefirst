@@ -4,7 +4,7 @@ import React from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import type { AnimationGeneratorType } from "framer-motion";
-import { ChevronRight, Play, ArrowDown } from "lucide-react";
+import { ChevronRight,  ArrowDown } from "lucide-react";
 
 const HeroSection = () => {
   const { scrollYProgress } = useScroll();

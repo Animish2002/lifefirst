@@ -530,7 +530,7 @@ const CaseStudies = () => {
               Ready to Start Your Project?
             </h3>
             <p className="text-blue-100 mb-6 max-w-2xl mx-auto text-lg">
-              Let's discuss how we can deliver measurable results for your
+              Let&apos;s discuss how we can deliver measurable results for your
               wastewater challenges
             </p>
             <Button
