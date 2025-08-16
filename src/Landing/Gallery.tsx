@@ -130,34 +130,6 @@ const Gallery = () => {
           </p>
         </div>
 
-        {/* Filter Buttons */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {categories.map((category) => (
-            <Button
-              key={category.id}
-              variant={activeFilter === category.id ? "default" : "outline"}
-              onClick={() => setActiveFilter(category.id)}
-              className={`transition-all duration-300 ${
-                activeFilter === category.id
-                  ? "bg-blue-600 hover:bg-blue-700 text-white shadow-lg"
-                  : "bg-white text-gray-700 hover:bg-blue-50 border-gray-200"
-              }`}
-            >
-              {category.label}
-              <Badge
-                variant="secondary"
-                className={`ml-2 ${
-                  activeFilter === category.id
-                    ? "bg-blue-500 text-white"
-                    : "bg-gray-100 text-gray-600"
-                }`}
-              >
-                {category.count}
-              </Badge>
-            </Button>
-          ))}
-        </div>
-
         {/* Gallery Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredItems.map((item) => (
