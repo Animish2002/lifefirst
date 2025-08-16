@@ -37,6 +37,7 @@ const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen overflow-hidden">
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.1)_1px,transparent_1px)] bg-[size:50px_50px] opacity-50 sm:opacity-100"></div>
       {/* Main Content */}
       <motion.div className="relative z-10 pt-24 pb-16" style={{ y: yContent }}>
         <div className="max-w-7xl mx-auto px-6  md:mt-0 mt-15">

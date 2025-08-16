@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import Navigation from "@/Landing/Navigation";
 import Footer from "@/Landing/Footer";
 import solutionsData from "@/data/data.json";
-import type { Metadata } from 'next';
+
 
 interface Solution {
   slug: string;

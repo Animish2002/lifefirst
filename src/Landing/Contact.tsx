@@ -128,6 +128,7 @@ const CTASection = () => {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
+        id="contact"
       >
         <div className="max-w-7xl mx-auto px-6">
           {/* Main CTA Card */}
