@@ -1,7 +1,7 @@
 "use client";
-import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Target, Eye, ChevronLeft, ChevronRight } from "lucide-react";
+import React from "react";
+import { motion } from "framer-motion";
+import { Target, Eye } from "lucide-react";
 
 import Navigation from "@/Landing/Navigation";
 import Footer from "@/Landing/Footer";
@@ -203,9 +203,10 @@ const AboutUsPage = () => {
               </p>
               <div className="bg-white bg-opacity-50 p-4 rounded-xl">
                 <p className="text-gray-600 italic">
-                  "We envision a future where clean water is a fundamental
+                  &quot;We envision a future where clean water is a fundamental
                   right, accessible to every community, and where our technology
-                  contributes to a sustainable planet for future generations."
+                  contributes to a sustainable planet for future
+                  generations.&quot;
                 </p>
               </div>
             </motion.div>

@@ -8,7 +8,6 @@ import { ChevronRight, ArrowDown } from "lucide-react";
 
 const HeroSection = () => {
   const { scrollYProgress } = useScroll();
-  const yBg = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
   const yContent = useTransform(scrollYProgress, [0, 1], ["0%", "-10%"]);
 
   const containerVariants = {

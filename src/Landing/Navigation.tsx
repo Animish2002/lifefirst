@@ -263,7 +263,7 @@ const Navigation: React.FC = () => {
               exit={{ opacity: 0, y: 10, scale: 0.95 }}
               transition={{ duration: 0.2 }}
               className={`absolute top-full left-1/2 transform -translate-x-1/2 mt-2 ${
-                item.name === "Solutions" ? "w-screen max-w-4xl" : "w-56"
+                item.name === "Solutions" ? "w-screen max-w-[50rem]" : "w-56"
               } bg-white rounded-xl shadow-xl border border-blue-100 overflow-hidden z-50`}
             >
               {item.name === "Solutions" ? (
@@ -271,14 +271,14 @@ const Navigation: React.FC = () => {
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {/* Main Products Column */}
                     <div>
-                      <h3 className="font-semibold text-slate-800 text-xs uppercase tracking-wide mb-3 pb-2 border-b border-blue-100">
+                      <h3 className="font-semibold text-slate-800 text-lg uppercase tracking-wide mb-3 pb-2 border-b border-blue-100">
                         Main Products
                       </h3>
                       <div className="space-y-2">
                         {item.subItems.slice(0, 3).map((subItem) => (
                           <Link href={subItem.path} key={subItem.name}>
                             <motion.div
-                              className="text-slate-600 hover:text-blue-600 transition-colors cursor-pointer text-sm leading-relaxed flex items-start"
+                              className="text-slate-600 hover:text-blue-600 transition-colors cursor-pointer text-md leading-relaxed flex items-start"
                               whileHover={{ x: 4, color: "#2563eb" }}
                             >
                               <span className="text-blue-400 mr-2 mt-0.5 text-sm">
@@ -293,7 +293,7 @@ const Navigation: React.FC = () => {
 
                     {/* Other Products Column */}
                     <div>
-                      <h3 className="font-semibold text-slate-800 text-xs uppercase tracking-wide mb-3 pb-2 border-b border-blue-100">
+                      <h3 className="font-semibold text-slate-800 text-lg uppercase tracking-wide mb-3 pb-2 border-b border-blue-100">
                         Other Products
                       </h3>
                       <div className="space-y-1.5">
@@ -302,7 +302,7 @@ const Navigation: React.FC = () => {
                           .map((nestedItem) => (
                             <Link href={nestedItem.path} key={nestedItem.name}>
                               <motion.div
-                                className="text-slate-600 hover:text-blue-600 transition-colors cursor-pointer text-sm flex items-start"
+                                className="text-slate-600 hover:text-blue-600 transition-colors cursor-pointer text-md flex items-start"
                                 whileHover={{ x: 4, color: "#2563eb" }}
                               >
                                 <span className="text-blue-400 mr-2 mt-0.5 text-sm">
@@ -317,14 +317,14 @@ const Navigation: React.FC = () => {
 
                     {/* Additional Products & Solutions Column */}
                     <div>
-                      <h3 className="font-semibold text-slate-800 text-xs uppercase tracking-wide mb-3 pb-2 border-b border-blue-100">
+                      <h3 className="font-semibold text-slate-800 text-lg uppercase tracking-wide mb-3 pb-2 border-b border-blue-100">
                         More Products
                       </h3>
 
                       <div className="space-y-1.5">
                         {item.subItems.slice(4).map((category) => (
                           <div key={category.name}>
-                            <div className="font-medium text-slate-700 text-sm uppercase tracking-wide mb-1.5">
+                            <div className="font-medium text-slate-700 text-md uppercase tracking-wide mb-1.5">
                               {category.name}
                             </div>
                             {category.subItems?.map((nestedItem) => (
@@ -333,7 +333,7 @@ const Navigation: React.FC = () => {
                                 key={nestedItem.name}
                               >
                                 <motion.div
-                                  className="text-slate-600 hover:text-blue-600 transition-colors cursor-pointer text-sm ml-2 flex items-start"
+                                  className="text-slate-600 hover:text-blue-600 transition-colors cursor-pointer text-md ml-2 flex items-start"
                                   whileHover={{ x: 4, color: "#2563eb" }}
                                 >
                                   <span className="text-blue-400 mr-2 mt-0.5 text-sm">
@@ -355,7 +355,7 @@ const Navigation: React.FC = () => {
                   {item.subItems.map((subItem) => (
                     <Link href={subItem.path} key={subItem.name}>
                       <motion.div
-                        className="w-full text-left px-4 py-2 text-slate-700 hover:text-blue-600 hover:bg-blue-50 transition-colors flex items-center text-sm"
+                        className="w-full text-left px-4 py-2 text-slate-700 hover:text-blue-600 hover:bg-blue-50 transition-colors flex items-center text-lg"
                         whileHover={{
                           x: 4,
                           backgroundColor: "rgb(239 246 255)",
