@@ -221,7 +221,7 @@ const CaseStudies = () => {
               Ready to Start Your Project?
             </h3>
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto text-lg">
-              Let's discuss how we can deliver measurable results for your
+              Let&apos;s discuss how we can deliver measurable results for your
               wastewater challenges
             </p>
             <button className="bg-white text-gray-900 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors duration-300 inline-flex items-center gap-2">
