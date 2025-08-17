@@ -1,6 +1,5 @@
 "use client";
 import { motion } from "framer-motion";
-import { title } from "process";
 
 const ProjectsMarquee = () => {
   // Government projects data
@@ -40,115 +39,126 @@ const ProjectsMarquee = () => {
       client: "Administrative Services",
       logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755419445/samta_nyay_ekmata_jsklxd.png",
     },
-  {
-    id: 7,
-    title: "Navodyay Vidyalaya Samiti",
-    client: "Health Department",
-    logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755419445/navoday_vidyalaya_samiti_vjgr5p.png",
-  },
-  {
-    id: 8,
-    title: "National Health Mission",
-    client: "Public Works Department",
-    logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755419439/national_health_mission_r3cczk.png",
-  },
-  {
-    id: 9,
-    title: "Nanded Municipal Corporation",
-    client: "Public Works Department",
-    logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755419438/nanded_municipal_vfwleq.png",
-  },{
-    id: 10,
-    title: "Nagpur Municipal Corporation",
-    client: "Public Works Department",
-    logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755419438/nagpur_municipal_hgupzl.png",
-  },{
-    id: 11,
-    title: "Maharashtra Kamgar Kalyan Mandal",
-    client: "Public Works Department",
-    logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755419437/maharashtra_kamgar_xndrlh.png",
-  },{
-    id: 12,
-    title: "Panvel Municipal Corporation",
-    client: "Public Works Department",
-    logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755419437/mahanagar_palika_panvel_qcuyfw.png",
-  },{
-    id: 13,
-    title: "Mukhed Municipal Corporation",
-    client: "Public Works Department",
-    logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755419437/mahanagar_palika_mukhed_ogfahi.jpg",
-  },{
-    id: 14,
-    title: "Maharashtra Public Welfare Department",
-    client: "Public Works Department",
-    logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755419293/maha_pwd_zqarhf.jpg",
-  },{
-    id: 15,
-    title: "Latur Municipal Corporation",
-    client: "Public Works Department",
-    logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755419273/latur_municipal_hjaqnm.jpg",
-  },{
-    id: 16,
-    title: "Maharashtra State Police",
-    client: "Public Works Department",
-    logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755419272/maha_police_j8reuy.png",
-  },{
-    id: 17,
-    title: "Government Ayurvedic College and Hospital Nanded",
-    client: "Public Works Department",
-    logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755419272/goverment_ayurved_college_nanded_hgdjxc.jpg",
-  },{
-    id: 18,
-    title: "Indira Gandhi Government Medical College and Hospital, Nagpur ",
-    client: "Public Works Department",
-    logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755419271/iggmc_nagpur_na4nve.jpg",
-  },{
-    id: 19,
-    title: "Government Medical College, Solapur",
-    client: "Public Works Department",
-    logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755418776/gmc_solapur_qckyps.png",
-  },{
-    id: 20,
-    title: "Aurangabad Municipal Corporation",
-    client: "Public Works Department",
-    logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755418742/aurangabad_municipal_rbc0g9.jpg",
-  },{
-    id: 21,
-    title: "Dr Shankarrao Chavan Government Medical College, Nanded",
-    client: "Public Works Department",
-    logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755418742/gmc_nanded_zuobuz.jpg",
-  },
-  {
-    id: 22,
-    title: "Chandrapur Municipal Corporation",
-    client: "Public Works Department",
-    logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755418742/chandrapur_mahanagarpalika_dnkqct.png",
-  },
-  {
-    id: 23,
-    title: "Maharashtra Tribal Development Department",
-    client: "Public Works Department",
-    logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755418742/aadivaasi_vikas_vibhag_hqlptb.png",
-  },
-  {
-    id: 24,
-    title: "Government Medical College and Hospital, Nagpur",
-    client: "Public Works Department",
-    logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755418742/gmc_nanded_zuobuz.jpg",
-  },
-  {
-    id: 25,
-    title: "Government Medical College, Nalgonda",
-    client: "Public Works Department",
-    logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755418741/gmc_nalgonda_g2gzfy.jpg",
-  },
-  {
-    id: 26,
-    title: "Vilasrao Deshmukh Government Medical College, Latur",
-    client: "Public Works Department",
-    logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755418741/gmc_latur_o79kjt.jpg",
-  },
-
+    {
+      id: 7,
+      title: "Navodyay Vidyalaya Samiti",
+      client: "Health Department",
+      logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755419445/navoday_vidyalaya_samiti_vjgr5p.png",
+    },
+    {
+      id: 8,
+      title: "National Health Mission",
+      client: "Public Works Department",
+      logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755419439/national_health_mission_r3cczk.png",
+    },
+    {
+      id: 9,
+      title: "Nanded Municipal Corporation",
+      client: "Public Works Department",
+      logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755419438/nanded_municipal_vfwleq.png",
+    },
+    {
+      id: 10,
+      title: "Nagpur Municipal Corporation",
+      client: "Public Works Department",
+      logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755419438/nagpur_municipal_hgupzl.png",
+    },
+    {
+      id: 11,
+      title: "Maharashtra Kamgar Kalyan Mandal",
+      client: "Public Works Department",
+      logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755419437/maharashtra_kamgar_xndrlh.png",
+    },
+    {
+      id: 12,
+      title: "Panvel Municipal Corporation",
+      client: "Public Works Department",
+      logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755419437/mahanagar_palika_panvel_qcuyfw.png",
+    },
+    {
+      id: 13,
+      title: "Mukhed Municipal Corporation",
+      client: "Public Works Department",
+      logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755419437/mahanagar_palika_mukhed_ogfahi.jpg",
+    },
+    {
+      id: 14,
+      title: "Maharashtra Public Welfare Department",
+      client: "Public Works Department",
+      logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755419293/maha_pwd_zqarhf.jpg",
+    },
+    {
+      id: 15,
+      title: "Latur Municipal Corporation",
+      client: "Public Works Department",
+      logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755419273/latur_municipal_hjaqnm.jpg",
+    },
+    {
+      id: 16,
+      title: "Maharashtra State Police",
+      client: "Public Works Department",
+      logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755419272/maha_police_j8reuy.png",
+    },
+    {
+      id: 17,
+      title: "Government Ayurvedic College and Hospital Nanded",
+      client: "Public Works Department",
+      logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755419272/goverment_ayurved_college_nanded_hgdjxc.jpg",
+    },
+    {
+      id: 18,
+      title: "Indira Gandhi Government Medical College and Hospital, Nagpur ",
+      client: "Public Works Department",
+      logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755419271/iggmc_nagpur_na4nve.jpg",
+    },
+    {
+      id: 19,
+      title: "Government Medical College, Solapur",
+      client: "Public Works Department",
+      logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755418776/gmc_solapur_qckyps.png",
+    },
+    {
+      id: 20,
+      title: "Aurangabad Municipal Corporation",
+      client: "Public Works Department",
+      logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755418742/aurangabad_municipal_rbc0g9.jpg",
+    },
+    {
+      id: 21,
+      title: "Dr Shankarrao Chavan Government Medical College, Nanded",
+      client: "Public Works Department",
+      logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755418742/gmc_nanded_zuobuz.jpg",
+    },
+    {
+      id: 22,
+      title: "Chandrapur Municipal Corporation",
+      client: "Public Works Department",
+      logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755418742/chandrapur_mahanagarpalika_dnkqct.png",
+    },
+    {
+      id: 23,
+      title: "Maharashtra Tribal Development Department",
+      client: "Public Works Department",
+      logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755418742/aadivaasi_vikas_vibhag_hqlptb.png",
+    },
+    {
+      id: 24,
+      title: "Government Medical College and Hospital, Nagpur",
+      client: "Public Works Department",
+      logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755418742/gmc_nanded_zuobuz.jpg",
+    },
+    {
+      id: 25,
+      title: "Government Medical College, Nalgonda",
+      client: "Public Works Department",
+      logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755418741/gmc_nalgonda_g2gzfy.jpg",
+    },
+    {
+      id: 26,
+      title: "Vilasrao Deshmukh Government Medical College, Latur",
+      client: "Public Works Department",
+      logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755418741/gmc_latur_o79kjt.jpg",
+    },
   ];
 
   // Private sector projects data
@@ -273,48 +283,12 @@ const ProjectsMarquee = () => {
       client: "MedTech Group",
       logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755419545/bluedrop_enviro_aglo4m.webp",
     },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   ];
 
   interface Project {
     id: number;
     title: string;
-    client: string;
+    client?: string;
     logo: string;
   }
 
@@ -333,38 +307,25 @@ const ProjectsMarquee = () => {
       whileHover={{ scale: 1.05 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="w-80 h-48 bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
-        <div className="p-6 flex flex-col justify-between h-full">
+      <div className="w-auto h-56 overflow-hidden hover:shadow-2xs transition-shadow duration-300">
+        <div className="p-4 flex flex-col justify-between h-full">
           {/* Logo and Client Section */}
-          <div className="flex items-start justify-between mb-4">
+          <div className="flex items-center justify-center mb-4 mx-auto">
             <div className="flex-1">
               <img
                 src={project.logo}
                 alt={`${project.client} logo`}
                 width={80}
                 height={40}
-                className="h-10 object-contain mb-2"
+                className="h-28 object-contain mb-2"
               />
-              {/* <p className="text-sm text-gray-500 font-medium">
-                {project.client}
-              </p> */}
-              {/* Sector badge */}
-              {/* <span
-                className={`inline-block px-2 py-1 text-xs font-medium rounded-full mt-2 ${
-                  isGovernment
-                    ? "bg-blue-100 text-blue-800"
-                    : "bg-green-100 text-green-800"
-                }`}
-              >
-                {isGovernment ? "Government" : "Private Sector"}
-              </span> */}
             </div>
           </div>
 
           {/* Project Title */}
           <div className="flex-1">
             <h3
-              className={`text-xl font-bold text-gray-900 mb-3 transition-colors duration-300 ${
+              className={`text-md w-[15rem] mx-auto text-center font-semibold text-gray-900 mb-3 transition-colors duration-300 ${
                 isGovernment
                   ? "group-hover:text-blue-600"
                   : "group-hover:text-green-600"
@@ -391,7 +352,7 @@ const ProjectsMarquee = () => {
     isGovernment?: boolean;
     direction?: "left" | "right";
   }) => (
-    <div className="mb-16">
+    <div className="mb-10">
       {/* Section Header */}
       <div className="text-center mb-8">
         <h2
@@ -401,11 +362,11 @@ const ProjectsMarquee = () => {
         >
           {title}
         </h2>
-        <p className="text-gray-600 text-lg">{subtitle}</p>
+        <p className="text-gray-600 text-sm">{subtitle}</p>
       </div>
 
       {/* Marquee */}
-      <div className="relative overflow-hidden py-8">
+      <div className="relative overflow-hidden py-2">
         <motion.div
           className="flex"
           animate={{
@@ -433,10 +394,6 @@ const ProjectsMarquee = () => {
             />
           ))}
         </motion.div>
-
-        {/* Gradient overlays for smooth edge fade */}
-        <div className="absolute top-0 left-0 w-32 h-full bg-gradient-to-r from-gray-50 to-transparent pointer-events-none z-10" />
-        <div className="absolute top-0 right-0 w-32 h-full bg-gradient-to-l from-gray-50 to-transparent pointer-events-none z-10" />
       </div>
     </div>
   );
@@ -444,7 +401,7 @@ const ProjectsMarquee = () => {
   return (
     <div className="py-16 overflow-hidden max-w-7xl mx-auto">
       {/* Main Header */}
-      <div className="text-center mb-16">
+      <div className="text-center mb-10">
         <h1 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-4">
           Trusted By
         </h1>
