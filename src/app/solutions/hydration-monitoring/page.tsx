@@ -3,51 +3,15 @@ import Navigation from "@/Landing/Navigation";
 import React from "react";
 import Link from "next/link";
 import CTASection from "@/Landing/Contact";
-import solutionsData from "@/data/data.json";
 
 const page = () => {
   const solutions = [
     {
-      name: "Prefabricated Containerised Waste water treatment plants",
-      path: "/solutions/wastewater-treatment",
+      name: "InFlow Hydration Monitoring System",
+      path: "/solutions/inflow-system",
       description:
-        "Complete containerized wastewater treatment solutions designed for easy installation and efficient operation. Our prefabricated plants offer reliable treatment with minimal maintenance requirements.",
-      icon: "🏭",
-    },
-    {
-      name: "Prefabricated Effluent Treatment Plant",
-      path: "/solutions/effluent-treatment",
-      description:
-        "Advanced effluent treatment systems that ensure compliance with environmental regulations. Compact, efficient, and designed for industrial applications.",
-      icon: "🌊",
-    },
-    {
-      name: "Packaged Water Treatment Plant",
-      path: "/solutions/water-treatment",
-      description:
-        "Comprehensive water treatment solutions packaged for quick deployment. Suitable for various applications from municipal to industrial water treatment needs.",
-      icon: "💧",
-    },
-    {
-      name: "Advanced Filtration and Treatment",
-      path: "/solutions/advanced-filtration-and-treatment",
-      description:
-        "Specialized water treatment components including filtration systems, clarifiers, softeners, and chemical dosing systems for customized treatment solutions.",
-      icon: "⚙️",
-    },
-    {
-      name: "Sanitation Solutions",
-      path: "/solutions/sanitation",
-      description:
-        "Eco-friendly sanitation solutions including bio-digesters and bio-toilets that provide sustainable waste management for various applications.",
-      icon: "🌱",
-    },
-    {
-      name: "Hydration Monitoring Technology",
-      path: "/solutions/hydration-monitoring",
-      description:
-        "Advanced monitoring systems that track and optimize water usage and hydration levels with real-time data analytics and intelligent controls.",
-      icon: "📊",
+        "Advanced membrane filtration technology that removes suspended solids, bacteria, and viruses from water. Ideal for pre-treatment in RO systems and producing high-quality filtered water.",
+      icon: "🔬",
     },
   ];
 
@@ -93,7 +57,7 @@ const page = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-800 mb-4">
-              Complete Water Treatment Solutions
+              Hydration Monitoring Technology Solutions
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               From prefabricated treatment plants to advanced monitoring
@@ -102,7 +66,7 @@ const page = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-1 lg:grid-cols-1  gap-8">
             {solutions.map((solution, index) => (
               <div
                 key={index}

@@ -8,46 +8,74 @@ import solutionsData from "@/data/data.json";
 const page = () => {
   const solutions = [
     {
-      name: "Prefabricated Containerised Waste water treatment plants",
-      path: "/solutions/wastewater-treatment",
+      name: "Ultrafiltration Systems (UF)",
+      path: "/solutions/ultrafiltration",
       description:
-        "Complete containerized wastewater treatment solutions designed for easy installation and efficient operation. Our prefabricated plants offer reliable treatment with minimal maintenance requirements.",
-      icon: "🏭",
+        "Advanced membrane filtration technology that removes suspended solids, bacteria, and viruses from water. Ideal for pre-treatment in RO systems and producing high-quality filtered water.",
+      icon: "🔬",
     },
     {
-      name: "Prefabricated Effluent Treatment Plant",
-      path: "/solutions/effluent-treatment",
+      name: "Reverse Osmosis Systems (RO)",
+      path: "/solutions/reverse-osmosis",
       description:
-        "Advanced effluent treatment systems that ensure compliance with environmental regulations. Compact, efficient, and designed for industrial applications.",
-      icon: "🌊",
+        "High-efficiency water purification systems that remove dissolved salts, chemicals, and contaminants. Perfect for producing pure water for industrial and drinking applications.",
+      icon: "💎",
     },
     {
-      name: "Packaged Water Treatment Plant",
-      path: "/solutions/water-treatment",
+      name: "Pressure Sand Filters (PSF)",
+      path: "/solutions/pressure-sand-filters",
       description:
-        "Comprehensive water treatment solutions packaged for quick deployment. Suitable for various applications from municipal to industrial water treatment needs.",
-      icon: "💧",
+        "Robust filtration systems using graded sand media to remove turbidity, suspended particles, and sediments from water. Essential first-stage treatment for clear water production.",
+      icon: "🏔️",
     },
     {
-      name: "Advanced Filtration and Treatment",
-      path: "/solutions/advanced-filtration-and-treatment",
+      name: "Activated Carbon Filters (ACF)",
+      path: "/solutions/activated-carbon-filters",
       description:
-        "Specialized water treatment components including filtration systems, clarifiers, softeners, and chemical dosing systems for customized treatment solutions.",
+        "Highly effective filtration systems that remove chlorine, organic compounds, odors, and taste from water using activated carbon media for superior water quality.",
+      icon: "⚫",
+    },
+    {
+      name: "Lamella Clarifier",
+      path: "/solutions/lamella-clarifier",
+      description:
+        "High-rate sedimentation systems using inclined plates to maximize settling area. Efficiently removes suspended solids and turbidity in a compact footprint.",
+      icon: "📐",
+    },
+    {
+      name: "Clarifier Mechanism",
+      path: "/solutions/clarifier-mechanism",
+      description:
+        "Automated mechanical systems for sludge removal and water clarification. Features rotating scrapers and skimmers for continuous operation and optimal performance.",
       icon: "⚙️",
     },
     {
-      name: "Sanitation Solutions",
-      path: "/solutions/sanitation",
+      name: "Tube Settlers",
+      path: "/solutions/tube-settlers",
       description:
-        "Eco-friendly sanitation solutions including bio-digesters and bio-toilets that provide sustainable waste management for various applications.",
-      icon: "🌱",
+        "Modular settling media that increases the effective settling area of clarifiers. Improves sedimentation efficiency and reduces the required tank size significantly.",
+      icon: "🔧",
     },
     {
-      name: "Hydration Monitoring Technology",
-      path: "/solutions/hydration-monitoring",
+      name: "Water Softeners",
+      path: "/solutions/water-softeners",
       description:
-        "Advanced monitoring systems that track and optimize water usage and hydration levels with real-time data analytics and intelligent controls.",
-      icon: "📊",
+        "Ion exchange systems that remove calcium and magnesium ions from hard water. Prevents scale formation and extends equipment life while improving water quality.",
+      icon: "💧",
+    },
+    {
+      name: "Demineralization Systems (DM)",
+      path: "/solutions/demineralization",
+      description:
+        "Complete ion removal systems producing ultra-pure water for industrial processes. Uses mixed bed or separate bed ion exchange technology for maximum purity.",
+      icon: "🧪",
+    },
+    {
+      name: "Chemical Dosing Systems",
+      path: "/solutions/chemical-dosing",
+      description:
+        "Precision chemical injection systems for water treatment processes. Automated dosing pumps and controllers ensure accurate chemical addition for optimal treatment results.",
+      icon: "💉",
     },
   ];
 
@@ -90,10 +118,10 @@ const page = () => {
 
       {/* Solutions Grid */}
       <section className="py-20 px-4 bg-gray-50">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-800 mb-4">
-              Complete Water Treatment Solutions
+              Advanced Filtration and Treatment Solutions
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               From prefabricated treatment plants to advanced monitoring
@@ -102,7 +130,7 @@ const page = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
             {solutions.map((solution, index) => (
               <div
                 key={index}
