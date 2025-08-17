@@ -1,13 +1,14 @@
 import React from "react";
 import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
 import {
-  IconArrowWaveRightUp,
-  IconBoxAlignRightFilled,
-  IconBoxAlignTopLeft,
-  IconClipboardCopy,
-  IconFileBroken,
-  IconSignature,
-  IconTableColumn,
+  IconBolt,
+  IconWorldCheck,
+  IconBuildingFactory2,
+  IconCertificate,
+  IconTools,
+  IconRecycle,
+  IconCpu,
+  IconCurrencyRupee,
 } from "@tabler/icons-react";
 
 export function WhyChooseUs() {
@@ -22,7 +23,6 @@ export function WhyChooseUs() {
             key={i}
             title={item.title}
             description={item.description}
-            header={item.header}
             icon={item.icon}
             className={i === 3 || i === 6 ? "md:col-span-2" : ""}
           />
@@ -31,51 +31,54 @@ export function WhyChooseUs() {
     </>
   );
 }
-const Skeleton = () => (
-  <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100"></div>
-);
+
 const items = [
   {
-    title: "The Dawn of Innovation",
-    description: "Explore the birth of groundbreaking ideas and inventions.",
-    header: <Skeleton />,
-    icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
-  },
-  {
-    title: "The Digital Revolution",
-    description: "Dive into the transformative power of technology.",
-    header: <Skeleton />,
-    icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
-  },
-  {
-    title: "The Art of Design",
-    description: "Discover the beauty of thoughtful and functional design.",
-    header: <Skeleton />,
-    icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
-  },
-  {
-    title: "The Power of Communication",
+    title: "Energy Efficient",
     description:
-      "Understand the impact of effective communication in our lives.",
-    header: <Skeleton />,
-    icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
+      "Save power and reduce operating costs with our advanced, optimized treatment technologies.",
+    icon: <IconBolt className="h-10 w-10 text-blue-600" />,
   },
   {
-    title: "The Pursuit of Knowledge",
-    description: "Join the quest for understanding and enlightenment.",
-    header: <Skeleton />,
-    icon: <IconArrowWaveRightUp className="h-4 w-4 text-neutral-500" />,
+    title: "Global Standards",
+    description:
+      "ISO 9001:2015 certified and compliant with CPCB, SPCB, and ZLD norms — ready for global deployment.",
+    icon: <IconWorldCheck className="h-10 w-10 text-green-600" />,
   },
   {
-    title: "The Joy of Creation",
-    description: "Experience the thrill of bringing ideas to life.",
-    header: <Skeleton />,
-    icon: <IconBoxAlignTopLeft className="h-4 w-4 text-neutral-500" />,
+    title: "Plug & Play Solutions",
+    description:
+      "Prefabricated, containerized plants for quick setup, minimal civil work, and easy scalability.",
+    icon: <IconBuildingFactory2 className="h-10 w-10 text-indigo-600" />,
   },
   {
-    title: "The Spirit of Adventure",
-    description: "Embark on exciting journeys and thrilling discoveries.",
-    header: <Skeleton />,
-    icon: <IconBoxAlignRightFilled className="h-4 w-4 text-neutral-500" />,
+    title: "Proven Track Record",
+    description:
+      "500+ projects executed and 50 million+ litres treated per day across diverse industries.",
+    icon: <IconCertificate className="h-10 w-10 text-amber-600" />,
+  },
+  {
+    title: "Low Maintenance",
+    description:
+      "Smart automation and robust engineering deliver reduced downtime and reliable operations.",
+    icon: <IconTools className="h-10 w-10 text-gray-600" />,
+  },
+  {
+    title: "Sustainability First",
+    description:
+      "Turning wastewater into a resource through ZLD, reuse, and eco-focused solutions.",
+    icon: <IconRecycle className="h-10 w-10 text-green-500" />,
+  },
+  {
+    title: "Innovative Technology",
+    description:
+      "IoT-enabled systems, smart meters, and real-time monitoring ensure smarter water management.",
+    icon: <IconCpu className="h-10 w-10 text-purple-600" />,
+  },
+  {
+    title: "Cost-Effective",
+    description:
+      "Efficient designs ensure high performance at lower lifecycle costs, delivering strong ROI.",
+    icon: <IconCurrencyRupee className="h-10 w-10 text-emerald-600" />,
   },
 ];
