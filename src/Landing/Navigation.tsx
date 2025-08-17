@@ -272,7 +272,7 @@ const Navigation: React.FC = () => {
                     {/* Main Products Column */}
                     <div>
                       <h3 className="font-semibold text-slate-800 text-lg uppercase tracking-wide mb-3 pb-2 border-b border-blue-100">
-                        Main Products
+                        CORE SOLUTIONS
                       </h3>
                       <div className="space-y-2">
                         {item.subItems.slice(0, 3).map((subItem) => (
@@ -294,7 +294,7 @@ const Navigation: React.FC = () => {
                     {/* Other Products Column */}
                     <div>
                       <h3 className="font-semibold text-slate-800 text-lg uppercase tracking-wide mb-3 pb-2 border-b border-blue-100">
-                        Other Products
+                        ADVANCED FILTRATION AND TREATMENT
                       </h3>
                       <div className="space-y-1.5">
                         {item.subItems[3]?.subItems
@@ -318,7 +318,7 @@ const Navigation: React.FC = () => {
                     {/* Additional Products & Solutions Column */}
                     <div>
                       <h3 className="font-semibold text-slate-800 text-lg uppercase tracking-wide mb-3 pb-2 border-b border-blue-100">
-                        More Products
+                        SUSTAINABLE TECHNOLOGIES
                       </h3>
 
                       <div className="space-y-1.5">
