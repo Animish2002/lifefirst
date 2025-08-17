@@ -31,8 +31,8 @@ const page = () => {
       icon: "💧",
     },
     {
-      name: "Other Products",
-      path: "/solutions/other-products",
+      name: "Advanced Filtration and Treatment",
+      path: "/solutions/advanced-filtration-and-treatment",
       description:
         "Specialized water treatment components including filtration systems, clarifiers, softeners, and chemical dosing systems for customized treatment solutions.",
       icon: "⚙️",
