@@ -17,14 +17,41 @@ export function WhyChooseUs() {
       <div className="text-3xl md:text-4xl font-semibold text-center py-8">
         Why Choose Us?
       </div>
+
+      {/* First row - 3 items */}
       <BentoGrid className="max-w-7xl mx-auto">
-        {items.map((item, i) => (
+        {items.slice(0, 3).map((item, i) => (
           <BentoGridItem
             key={i}
             title={item.title}
             description={item.description}
             icon={item.icon}
-            className={i === 3 || i === 6 ? "md:col-span-2" : ""}
+          />
+        ))}
+      </BentoGrid>
+
+      {/* Second row - 2 items centered */}
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 px-4 md:auto-rows-[12rem]">
+          {items.slice(3, 5).map((item, i) => (
+            <BentoGridItem
+              key={i + 3}
+              title={item.title}
+              description={item.description}
+              icon={item.icon}
+            />
+          ))}
+        </div>
+      </div>
+
+      {/* Third row - 3 items */}
+      <BentoGrid className="max-w-7xl mx-auto">
+        {items.slice(5, 8).map((item, i) => (
+          <BentoGridItem
+            key={i + 5}
+            title={item.title}
+            description={item.description}
+            icon={item.icon}
           />
         ))}
       </BentoGrid>

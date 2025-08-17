@@ -69,7 +69,7 @@ const AboutUsPage = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <div className="relative h-[60vh] md:mt-36 mt-34 bg-gradient-to-br from-blue-900 via-blue-800 to-cyan-900 overflow-hidden">
+      <div className="relative h-[65vh] md:mt-32 mt-34 bg-gradient-to-br from-blue-900 via-blue-800 to-cyan-900 overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 bg-black bg-opacity-20">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-transparent"></div>
@@ -80,13 +80,13 @@ const AboutUsPage = () => {
           <img
             src="https://res.cloudinary.com/dsvfcckqy/image/upload/v1754928781/20250802_153036_k6qhoj.jpg"
             alt="Water treatment professionals"
-            className="w-full h-full object-cover opacity-30"
+            className="w-full h-full object-cover opacity-60"
           />
         </div>
 
         {/* Hero Content */}
-        <div className="relative z-10 flex items-center h-[50vh]">
-          <div className="max-w-7xl md:pl-24 px-6 py-20">
+        <div className="relative z-10 flex items-center h-[65vh]">
+          <div className="max-w-7xl md:pl-24 px-6 py-20 md:ml-14">
             <div className="max-w-4xl">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}

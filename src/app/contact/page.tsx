@@ -92,13 +92,13 @@ const ContactPage = () => {
           <img
             src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
             alt="Contact us for water treatment solutions"
-            className="w-full h-full object-cover opacity-30"
+            className="w-full h-full object-cover opacity-60"
           />
         </div>
 
         {/* Hero Content */}
         <div className="relative z-10 flex items-center h-[75vh] pt-20">
-          <div className="max-w-7xl md:pl-24 px-6 py-20">
+          <div className="max-w-7xl md:pl-24 px-6 py-20 md:ml-14">
             <div className="max-w-4xl">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
