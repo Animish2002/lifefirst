@@ -307,7 +307,7 @@ const ProjectsMarquee = () => {
       whileHover={{ scale: 1.05 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="w-auto h-56 overflow-hidden hover:shadow-2xs transition-shadow duration-300">
+      <div className="md:w-auto w-[10rem] md:h-36 h-28 overflow-hidden hover:shadow-2xs transition-shadow duration-300">
         <div className="p-4 flex flex-col justify-between h-full">
           {/* Logo and Client Section */}
           <div className="flex items-center justify-center mb-4 mx-auto">
@@ -315,9 +315,7 @@ const ProjectsMarquee = () => {
               <img
                 src={project.logo}
                 alt={`${project.client} logo`}
-                width={80}
-                height={40}
-                className="h-28 object-contain mb-2"
+                className="md:h-16 h-14 object-contain mb-2"
               />
             </div>
           </div>
@@ -325,7 +323,7 @@ const ProjectsMarquee = () => {
           {/* Project Title */}
           <div className="flex-1">
             <h3
-              className={`text-md w-[15rem] mx-auto text-center font-semibold text-gray-900 mb-3 transition-colors duration-300 ${
+              className={`md:text-md text-xs md:w-[15rem] w-[8rem] mx-auto text-center font-semibold text-gray-900 mb-3 transition-colors duration-300 ${
                 isGovernment
                   ? "group-hover:text-blue-600"
                   : "group-hover:text-green-600"
@@ -352,7 +350,7 @@ const ProjectsMarquee = () => {
     isGovernment?: boolean;
     direction?: "left" | "right";
   }) => (
-    <div className="mb-10">
+    <div className="mb-8">
       {/* Section Header */}
       <div className="text-center mb-8">
         <h2
@@ -370,7 +368,7 @@ const ProjectsMarquee = () => {
         <motion.div
           className="flex"
           animate={{
-            x: direction === "left" ? ["-100%", "0%"] : ["0%", "-100%"],
+            x: direction === "left" ? [0, "-50%"] : ["-50%", 0],
           }}
           transition={{
             x: {
@@ -401,7 +399,7 @@ const ProjectsMarquee = () => {
   return (
     <div className="py-16 overflow-hidden max-w-7xl mx-auto">
       {/* Main Header */}
-      <div className="text-center mb-10">
+      <div className="text-center mb-8">
         <h1 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-4">
           Trusted By
         </h1>
