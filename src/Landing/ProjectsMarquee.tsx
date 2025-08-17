@@ -1,85 +1,314 @@
 "use client";
 import { motion } from "framer-motion";
+import { title } from "process";
 
 const ProjectsMarquee = () => {
   // Government projects data
   const governmentProjects = [
     {
       id: 1,
-      title: "Digital ID Management System",
-      client: "Ministry of Digital Affairs",
-      logo: "https://via.placeholder.com/80x40/1e3a8a/FFFFFF?text=GOV",
+      title: "Zilla Parishad Nanded",
+      logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755419492/zilla_parishad_nanded_gxeizl.png",
     },
     {
       id: 2,
-      title: "Tax Portal Modernization",
+      title: "Zilla Parishad Nagpur",
       client: "Revenue Department",
-      logo: "https://via.placeholder.com/80x40/1e3a8a/FFFFFF?text=TAX",
+      logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755419476/zilla_parishad_nagpur_gfuejj.jpg",
     },
     {
       id: 3,
-      title: "Healthcare Management System",
+      title: "Zilla Parishad Latur",
       client: "Department of Health",
-      logo: "https://via.placeholder.com/80x40/1e3a8a/FFFFFF?text=HEALTH",
+      logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755419475/zilla_parishad_latur_mlg0ka.png",
     },
     {
       id: 4,
-      title: "Education Portal",
+      title: "Zilla Parishad Gadchiroli",
       client: "Ministry of Education",
-      logo: "https://via.placeholder.com/80x40/1e3a8a/FFFFFF?text=EDU",
+      logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755419461/zilla_parishad_gadchiroli_y2p3nb.png",
     },
     {
       id: 5,
-      title: "Smart City Dashboard",
+      title: "Sarvajanik Arogya Vibhag",
       client: "Urban Development Authority",
-      logo: "https://via.placeholder.com/80x40/1e3a8a/FFFFFF?text=SMART",
+      logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755419445/sarvajanik_arogya_vibhag_wsaxbn.png",
     },
     {
       id: 6,
-      title: "E-Governance Platform",
+      title: "Samta Nyay Ekmatta",
       client: "Administrative Services",
-      logo: "https://via.placeholder.com/80x40/1e3a8a/FFFFFF?text=EGOV",
+      logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755419445/samta_nyay_ekmata_jsklxd.png",
     },
+  {
+    id: 7,
+    title: "Navodyay Vidyalaya Samiti",
+    client: "Health Department",
+    logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755419445/navoday_vidyalaya_samiti_vjgr5p.png",
+  },
+  {
+    id: 8,
+    title: "National Health Mission",
+    client: "Public Works Department",
+    logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755419439/national_health_mission_r3cczk.png",
+  },
+  {
+    id: 9,
+    title: "Nanded Municipal Corporation",
+    client: "Public Works Department",
+    logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755419438/nanded_municipal_vfwleq.png",
+  },{
+    id: 10,
+    title: "Nagpur Municipal Corporation",
+    client: "Public Works Department",
+    logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755419438/nagpur_municipal_hgupzl.png",
+  },{
+    id: 11,
+    title: "Maharashtra Kamgar Kalyan Mandal",
+    client: "Public Works Department",
+    logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755419437/maharashtra_kamgar_xndrlh.png",
+  },{
+    id: 12,
+    title: "Panvel Municipal Corporation",
+    client: "Public Works Department",
+    logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755419437/mahanagar_palika_panvel_qcuyfw.png",
+  },{
+    id: 13,
+    title: "Mukhed Municipal Corporation",
+    client: "Public Works Department",
+    logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755419437/mahanagar_palika_mukhed_ogfahi.jpg",
+  },{
+    id: 14,
+    title: "Maharashtra Public Welfare Department",
+    client: "Public Works Department",
+    logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755419293/maha_pwd_zqarhf.jpg",
+  },{
+    id: 15,
+    title: "Latur Municipal Corporation",
+    client: "Public Works Department",
+    logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755419273/latur_municipal_hjaqnm.jpg",
+  },{
+    id: 16,
+    title: "Maharashtra State Police",
+    client: "Public Works Department",
+    logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755419272/maha_police_j8reuy.png",
+  },{
+    id: 17,
+    title: "Government Ayurvedic College and Hospital Nanded",
+    client: "Public Works Department",
+    logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755419272/goverment_ayurved_college_nanded_hgdjxc.jpg",
+  },{
+    id: 18,
+    title: "Indira Gandhi Government Medical College and Hospital, Nagpur ",
+    client: "Public Works Department",
+    logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755419271/iggmc_nagpur_na4nve.jpg",
+  },{
+    id: 19,
+    title: "Government Medical College, Solapur",
+    client: "Public Works Department",
+    logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755418776/gmc_solapur_qckyps.png",
+  },{
+    id: 20,
+    title: "Aurangabad Municipal Corporation",
+    client: "Public Works Department",
+    logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755418742/aurangabad_municipal_rbc0g9.jpg",
+  },{
+    id: 21,
+    title: "Dr Shankarrao Chavan Government Medical College, Nanded",
+    client: "Public Works Department",
+    logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755418742/gmc_nanded_zuobuz.jpg",
+  },
+  {
+    id: 22,
+    title: "Chandrapur Municipal Corporation",
+    client: "Public Works Department",
+    logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755418742/chandrapur_mahanagarpalika_dnkqct.png",
+  },
+  {
+    id: 23,
+    title: "Maharashtra Tribal Development Department",
+    client: "Public Works Department",
+    logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755418742/aadivaasi_vikas_vibhag_hqlptb.png",
+  },
+  {
+    id: 24,
+    title: "Government Medical College and Hospital, Nagpur",
+    client: "Public Works Department",
+    logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755418742/gmc_nanded_zuobuz.jpg",
+  },
+  {
+    id: 25,
+    title: "Government Medical College, Nalgonda",
+    client: "Public Works Department",
+    logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755418741/gmc_nalgonda_g2gzfy.jpg",
+  },
+  {
+    id: 26,
+    title: "Vilasrao Deshmukh Government Medical College, Latur",
+    client: "Public Works Department",
+    logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755418741/gmc_latur_o79kjt.jpg",
+  },
+
   ];
 
   // Private sector projects data
   const privateSectorProjects = [
     {
       id: 1,
-      title: "E-commerce Platform",
+      title: "XRBIA Builders and Developers",
       client: "TechCorp Inc.",
-      logo: "https://via.placeholder.com/80x40/059669/FFFFFF?text=TECH",
+      logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755420595/xrbia_qy9vbe.webp",
     },
     {
       id: 2,
-      title: "Mobile Banking App",
+      title: "Shiv Chhatrapatil Shikshan Sansthan",
       client: "FinanceHub",
-      logo: "https://via.placeholder.com/80x40/059669/FFFFFF?text=FINANCE",
+      logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755420595/shahu_college_enz1bn.png",
     },
     {
       id: 3,
-      title: "AI Dashboard",
+      title: "Unitop Aquacare Limited",
       client: "DataMind Solutions",
-      logo: "https://via.placeholder.com/80x40/059669/FFFFFF?text=DATA",
+      logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755420595/unitap_aquacare_im9xqg.png",
     },
     {
       id: 4,
-      title: "SaaS Management Tool",
+      title: "Jijo Ent(OPC) Private Limited",
       client: "StartupXYZ",
-      logo: "https://via.placeholder.com/80x40/059669/FFFFFF?text=SAAS",
+      logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755420595/something-something_osljhe.jpg",
     },
     {
       id: 5,
-      title: "Real Estate Portal",
+      title: "Unique Group",
       client: "PropertyPro",
-      logo: "https://via.placeholder.com/80x40/059669/FFFFFF?text=PROP",
+      logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755420595/unique_group_ku90k8.png",
     },
     {
       id: 6,
-      title: "Healthcare System",
+      title: "Royal Orange County",
       client: "MedTech Group",
-      logo: "https://via.placeholder.com/80x40/059669/FFFFFF?text=MED",
+      logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755419600/royal_orange_county_mha5zb.jpg",
     },
+    {
+      id: 7,
+      title: "Royal Connaught Boat Club",
+      client: "MedTech Group",
+      logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755419553/royal_connaught_boat_club_obgo9o.jpg",
+    },
+    {
+      id: 8,
+      title: "Rohan Corporation",
+      client: "MedTech Group",
+      logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755419552/rohan_corporation_lzua1r.svg",
+    },
+    {
+      id: 9,
+      title: "Rajeev Education Trust",
+      client: "MedTech Group",
+      logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755419551/rajeev_education_trust_wv4jvg.png",
+    },
+    {
+      id: 10,
+      title: "Pyramid Infratech Private Limited",
+      client: "MedTech Group",
+      logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755419550/pyramid-infratech-logo_v3f7uj.jpg",
+    },
+    {
+      id: 11,
+      title: "Profile Property Group Private Limited",
+      client: "MedTech Group",
+      logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755419550/profile_property_group_qjpr7m.gif",
+    },
+    {
+      id: 12,
+      title: "Oxford 1Earth Group",
+      client: "MedTech Group",
+      logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755419549/oxford_1earth_hsjflk.jpg",
+    },
+    {
+      id: 13,
+      title: "Logicon Technologies Private Limited",
+      client: "MedTech Group",
+      logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755419548/logicon_technosolutions_gjrkpj.png",
+    },
+    {
+      id: 14,
+      title: "Kirloskar Industries",
+      client: "MedTech Group",
+      logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755419548/kirloskar_industries_a0ibvy.jpg",
+    },
+    {
+      id: 15,
+      title: "Golden Group",
+      client: "MedTech Group",
+      logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755419547/Golden_Group_kt4rsr.jpg",
+    },
+    {
+      id: 16,
+      title: "Filesure India Private Limited",
+      client: "MedTech Group",
+      logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755419546/filesure_fp1dj4.png",
+    },
+    {
+      id: 17,
+      title: "Dayanand Shikshan Sansthan, Latur",
+      client: "MedTech Group",
+      logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755419546/dayanand_college_wppsrf.jpg",
+    },
+    {
+      id: 18,
+      title: "Daund Sugar Private Limited",
+      client: "MedTech Group",
+      logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755419545/daund_sugar_ucaqhr.jpg",
+    },
+    {
+      id: 19,
+      title: "Agro Diamond Water and Cooling Solution",
+      client: "MedTech Group",
+      logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755419545/Agro_diamond_water_htbhbv.jpg",
+    },
+    {
+      id: 20,
+      title: "Bluedrop Enviro",
+      client: "MedTech Group",
+      logo: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755419545/bluedrop_enviro_aglo4m.webp",
+    },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   ];
 
   interface Project {
@@ -102,7 +331,7 @@ const ProjectsMarquee = () => {
       key={`${project.id}-${index}`}
       className="flex-shrink-0 mx-4 relative group cursor-pointer"
       whileHover={{ scale: 1.05 }}
-      transition={{ duration: 0.3 }}
+      transition={{ duration: 0.5 }}
     >
       <div className="w-80 h-48 bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
         <div className="p-6 flex flex-col justify-between h-full">
@@ -116,11 +345,11 @@ const ProjectsMarquee = () => {
                 height={40}
                 className="h-10 object-contain mb-2"
               />
-              <p className="text-sm text-gray-500 font-medium">
+              {/* <p className="text-sm text-gray-500 font-medium">
                 {project.client}
-              </p>
+              </p> */}
               {/* Sector badge */}
-              <span
+              {/* <span
                 className={`inline-block px-2 py-1 text-xs font-medium rounded-full mt-2 ${
                   isGovernment
                     ? "bg-blue-100 text-blue-800"
@@ -128,7 +357,7 @@ const ProjectsMarquee = () => {
                 }`}
               >
                 {isGovernment ? "Government" : "Private Sector"}
-              </span>
+              </span> */}
             </div>
           </div>
 
@@ -186,7 +415,7 @@ const ProjectsMarquee = () => {
             x: {
               repeat: Infinity,
               repeatType: "loop",
-              duration: 30,
+              duration: 70,
               ease: "linear",
             },
           }}
@@ -217,7 +446,7 @@ const ProjectsMarquee = () => {
       {/* Main Header */}
       <div className="text-center mb-16">
         <h1 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-4">
-          Our Client Portfolio
+          Trusted By
         </h1>
         <p className="text-gray-600 text-xl">
           Delivering excellence across government and private sectors
