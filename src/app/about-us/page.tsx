@@ -275,7 +275,7 @@ const AboutUsPage = () => {
                         {/* Experience Badge */}
                         <div className="inline-flex items-center bg-blue-50 text-blue-700 text-xs px-3 py-1 rounded-full w-fit">
                           <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
-                          Expert
+                          LinkedIn
                         </div>
                       </div>
                     </div>
