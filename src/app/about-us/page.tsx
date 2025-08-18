@@ -85,9 +85,9 @@ const AboutUsPage = () => {
         </div>
 
         {/* Hero Content */}
-        <div className="relative z-10 flex items-center h-[65vh]">
-          <div className="max-w-7xl md:pl-24 px-6 py-20 md:ml-14">
-            <div className="max-w-4xl">
+        <div className="relative z-10 flex items-center h-[65vh] max-w-7xl mx-auto">
+          <div className="px-6 py-20">
+            <div className="max-w-7xl">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}

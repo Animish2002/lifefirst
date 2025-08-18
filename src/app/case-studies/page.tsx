@@ -174,8 +174,8 @@ const CaseStudiesPage = () => {
         </div>
 
         {/* Hero Content */}
-        <div className="relative z-10 flex items-center h-[75vh] pt-20">
-          <div className="max-w-7xl md:pl-24 px-6 py-20 md:ml-14">
+        <div className="relative z-10 flex items-center h-[75vh] pt-20 max-w-7xl mx-auto">
+          <div className="px-6 py-20 ">
             <div className="max-w-4xl">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
