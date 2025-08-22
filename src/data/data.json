@@ -5,7 +5,19 @@
     "subtitle": "Modular and scalable solutions for industrial wastewater.",
     "heroImage": "https://placehold.co/1200x600/22c55e/ffffff?text=Wastewater+Treatment",
     "infoTitle": "Eco-Friendly Wastewater Solutions",
-    "infoContent": "Our containerised plants offer a compact, efficient, and mobile solution for treating wastewater. They are designed for rapid deployment and can be customized to meet various treatment standards, ensuring compliance and environmental responsibility.",
+    "infoContent": {
+      "paragraph": "",
+      "points": [
+        "Compact & Ready-to-Deploy: Pre-fabricated units designed for quick installation at the source.",
+        "Versatile Applications: Suitable for residential & commercial complexes, hotels, institutions, and hospitals.",
+        "Minimal Civil Work: Requires little on-site construction, reducing project time and cost.",
+        "Ideal for Areas Without Sewer Networks: Provides an independent treatment solution where centralized systems aren’t available.",
+        "Supports Water Reuse: Treated water can be safely used for landscaping, gardening, or toilet flushing.",
+        "Eco-Friendly: Reduces environmental impact by treating wastewater locally.",
+        "Sustainable Water Management: Promotes conservation and efficient resource utilization.",
+        "Perfect for Modern Infrastructure: Meets the growing demand for smart, decentralized sanitation systems."
+      ]
+    },
     "ctaText": "Request a quote for a custom wastewater treatment plant."
   },
   {
@@ -14,7 +26,18 @@
     "subtitle": "Turn industrial effluent into reusable, clean water.",
     "heroImage": "https://placehold.co/1200x600/f59e0b/ffffff?text=Effluent+Treatment",
     "infoTitle": "Efficient Effluent Management",
-    "infoContent": "Our Effluent Treatment Plants (ETP) are engineered to purify industrial wastewater and make it suitable for safe disposal or reuse. These plants are built with advanced technology to handle complex pollutants and ensure your operations meet all regulatory requirements.",
+    "infoContent": {
+      "paragraph": "Our Prefabricated Effluent Treatment Plant is designed to efficiently treat industrial effluent, turning it into reusable, clean water. With a compact and modular design, it can be easily integrated into existing processes.",
+      "points": [
+        "Plug & Play Design: Factory-built, ready-to-install units.",
+        "Quick Installation: Minimal civil work and reduced setup time.",
+        "Compact & Portable: Easy to transport and relocate.",
+        "Low Maintenance: Designed for hassle-free operation.",
+        "High Efficiency: Ensures consistent water quality.",
+        "Eco-Friendly: Supports water reuse and sustainable practices.",
+        "Versatile Applications: Suitable for residential, commercial, and industrial needs."
+      ]
+    },
     "ctaText": "Learn how to improve your effluent treatment process."
   },
   {
@@ -23,7 +46,18 @@
     "subtitle": "Compact, all-in-one solutions for potable water.",
     "heroImage": "https://placehold.co/1200x600/0ea5e9/ffffff?text=Water+Treatment",
     "infoTitle": "Clean Water, Simplified",
-    "infoContent": "The Packaged Water Treatment Plant is designed for small to medium-scale applications, delivering high-quality drinking water. Its compact design and ease of installation make it ideal for communities, residential complexes, and industries requiring a reliable water source.",
+    "infoContent": {
+      "paragraph": "A Prefabricated Water Treatment Plant is a plug-and-play solution designed for quick deployment and efficient treatment of water and wastewater. Built in modular units, these plants require minimal civil work, reduce installation time, and ensure reliable performance — making them ideal for industries, institutions, residential complexes, and remote locations.",
+      "points": [
+        "Plug & Play Design: Factory-built, ready-to-install units.",
+        "Quick Installation: Minimal civil work and reduced setup time.",
+        "Compact & Portable: Easy to transport and relocate.",
+        "Low Maintenance: Designed for hassle-free operation.",
+        "High Efficiency: Ensures consistent water quality.",
+        "Eco-Friendly: Supports water reuse and sustainable practices.",
+        "Versatile Applications: Suitable for residential, commercial, and industrial needs."
+      ]
+    },
     "ctaText": "Get a consultation for a packaged water treatment system."
   },
   {
@@ -32,7 +66,16 @@
     "subtitle": "High-performance membrane filtration for suspended solids.",
     "heroImage": "https://placehold.co/1200x600/6366f1/ffffff?text=UF+Systems",
     "infoTitle": "Advanced Filtration Technology",
-    "infoContent": "Ultrafiltration (UF) systems use a physical barrier to effectively remove suspended solids, bacteria, and viruses from water. They are a critical pre-treatment step for more advanced systems like Reverse Osmosis and a standalone solution for producing high-quality process water.",
+    "infoContent": {
+      "paragraph": "Ultrafiltration Plants use advanced membrane technology to remove suspended solids, bacteria, viruses, and high molecular weight contaminants from water. Operating under low pressure, UF systems offer superior filtration compared to conventional methods while retaining essential minerals. They are ideal for tertiary treatment, pre-treatment to RO systems, and in industrial, commercial, and municipal applications. Known for their high recovery rate, easy operation, and consistent output quality, UF plants are a reliable solution for producing clean and safe water.",
+      "points": [
+        "Advanced Membrane Filtration.",
+        "Low Operating Cost & Easy Maintenance.",
+        "Integration with Other Systems.",
+        "Available from 1 m³/hr to 1,000 m³/hr and beyond.",
+        "High-Quality Treated WaterSkid mounted, prefabricated units for easy installation and relocation."
+      ]
+    },
     "ctaText": "Find out if UF is the right solution for your needs."
   },
   {
@@ -41,7 +84,15 @@
     "subtitle": "The ultimate solution for demineralized, pure water.",
     "heroImage": "https://placehold.co/1200x600/ec4899/ffffff?text=RO+Systems",
     "infoTitle": "Delivering Pure Water",
-    "infoContent": "Reverse Osmosis (RO) is a membrane-based technology that removes dissolved salts and other impurities from water. Our RO systems are designed to produce exceptionally pure water for industrial processes, drinking, and other high-purity applications.",
+    "infoContent": {
+      "paragraph": "Reverse Osmosis (RO) plants use a semi-permeable membrane and high pressure to remove dissolved salts, minerals, heavy metals, and other impurities from water, making it safe for various applications after being used in conjunction with pre-treatment units like sand and carbon filters.",
+      "points": [
+        "Advanced Purification Technology.",
+        "Removes TDS, hardness, heavy metals, bacteria, and viruses.",
+        "Equipped with PLC/SCADA integration for real‑time monitoring.",
+        "Built with FRP, SS, or MS powder‑coated frames for durability and corrosion resistance."
+      ]
+    },
     "ctaText": "Talk to an expert about our RO system capabilities."
   },
   {
@@ -50,7 +101,10 @@
     "subtitle": "Reliable and effective removal of suspended solids.",
     "heroImage": "https://placehold.co/1200x600/4ade80/ffffff?text=PSF",
     "infoTitle": "Robust Pre-Filtration",
-    "infoContent": "Pressure Sand Filters (PSF) are a widely used and reliable method for removing suspended solids, turbidity, and sediments from water. They serve as an essential pre-treatment step to protect downstream equipment and improve water quality.",
+    "infoContent": {
+      "paragraph": "A Pressure Sand Filter is a widely used filtration system designed to remove suspended solids, turbidity, and particulate matter from water. It operates under pressure, forcing water through multiple layers of quartz sand and gravel media to trap impurities. PSFs are commonly used in water treatment plants, industrial processes, and commercial applications as a pre-treatment step before disinfection or further purification. Known for their simplicity, efficiency, and low maintenance, these filters help ensure consistent water quality and protect downstream equipment.",
+      "points": []
+    },
     "ctaText": "Request a quote for a pressure sand filter."
   },
   {
@@ -59,7 +113,10 @@
     "subtitle": "Remove chlorine, odor, and organic compounds.",
     "heroImage": "https://placehold.co/1200x600/facc15/ffffff?text=ACF",
     "infoTitle": "Taste and Odor Improvement",
-    "infoContent": "Activated Carbon Filters (ACF) are highly effective in removing free chlorine, organic contaminants, and improving the taste and odor of water. They are a crucial component for producing high-quality drinking and process water.",
+    "infoContent": {
+      "paragraph": "Activated Carbon Filters are essential in water and wastewater treatment for removing organic compounds, chlorine, odor, color, and residual chemicals. These filters use high-grade activated carbon media with a large surface area that adsorbs impurities as water passes through. Commonly used after Pressure Sand Filters, ACFs improve taste, reduce harmful contaminants, and prepare water for safe discharge or reuse. They are ideal for residential, commercial, and industrial applications requiring high water quality standards.",
+      "points": []
+    },
     "ctaText": "Explore the benefits of activated carbon filtration."
   },
   {
@@ -68,7 +125,18 @@
     "subtitle": "High-rate clarifiers for efficient solids separation.",
     "heroImage": "https://placehold.co/1200x600/a3e635/ffffff?text=Lamella+Clarifier",
     "infoTitle": "Compact and Powerful Clarification",
-    "infoContent": "A Lamella Clarifier is a compact sedimentation tank that uses a series of inclined plates to increase the effective settling area. This design allows for a much smaller footprint while achieving high-efficiency solids separation, making it ideal for space-constrained applications.",
+    "infoContent": {
+      "paragraph": " A Lamella Clarifier, also known as a Inclined Plate Settler, is a compact sedimentation device used to efficiently remove suspended solids from wastewater. It uses a series of inclined plates to increase the settling surface area, allowing particles to settle faster and in a smaller footprint compared to traditional clarifiers. Lamella Clarifiers are ideal for space constrained sites and are commonly used in STPs, ETPs, and pre-treatment systems for high-efficiency solids removal with low maintenance.",
+      "points": [
+        "Compact & High-Efficiency Design.",
+        "Superior Solid-Liquid Separation.",
+        "Low Operation & Maintenance.",
+        "Wide Range of Applications.",
+        "Customizable & Modular.",
+        "Economic & Sustainable.",
+        "Space-Saving Solution."
+      ]
+    },
     "ctaText": "Get a quote for a compact lamella clarifier."
   },
   {
@@ -77,7 +145,17 @@
     "subtitle": "Advanced systems for sediment removal and clarification.",
     "heroImage": "https://placehold.co/1200x600/2dd4bf/ffffff?text=Clarifier+Mechanism",
     "infoTitle": "Reliable Clarification for Clean Water",
-    "infoContent": "Our Clarifier Mechanisms are designed for efficient solid-liquid separation in large-scale water and wastewater treatment plants. They ensure the removal of suspended solids, providing a clear effluent and a concentrated sludge.",
+    "infoContent": {
+      "paragraph": " A Clarifier Mechanism is a key component in wastewater treatment systems, designed to separate solid particles (sludge) from treated water through sedimentation. Installed within primary or secondary clarifiers, this mechanism typically includes a rotating scraper arm that gently moves settled sludge toward a central hopper for removal. Clarifiers help produce clear, low-turbidity water and improve the efficiency of downstream treatment processes. They are essential for maintaining consistent water quality in both Sewage and Effluent Treatment Plants",
+      "points": [
+        "Removes suspended solids, sludge, and turbidity from wastewater.",
+        "Available in MS, MSRL, or SS materials for long service life.",
+        "Handles high hydraulic and organic loads efficiently.",
+        "Low-maintenance gear and bearing assemblies.",
+        "Reduces chemical dosing requirements when paired with tube settlers."  
+
+      ]
+    },
     "ctaText": "Consult with an expert on our clarifier mechanisms."
   },
   {
@@ -86,7 +164,19 @@
     "subtitle": "Increase the settling capacity of clarification tanks.",
     "heroImage": "https://placehold.co/1200x600/a855f7/ffffff?text=Tube+Settlers",
     "infoTitle": "Enhancing Settling Efficiency",
-    "infoContent": "Tube Settlers are an innovative solution used to increase the settling capacity of clarifiers. By providing a large surface area for solids to settle, they reduce the required tank size and improve the overall performance of the clarification process.",
+    "infoContent": {
+      "paragraph": " Tube Settlers are compact, high-efficiency sedimentation systems that use inclined tubular modules to increase the effective settling area for suspended solids. By allowing particles to settle quickly in a smaller footprint, they enhance clarification efficiency by up to 6–8 times compared to conventional basins. Prefabricated and easy to install, tube settlers are widely used in water treatment plants, sewage treatment plants, and industrial effluent systems to improve solid liquid separation, reduce turbidity, and optimize downstream treatment processes.",
+      "points": [
+        "High-Efficiency Sedimentation: Uses inclined tubular modules to enhance settling area, increasing clarification efficiency by up to 6–8 times compared to conventional basins.",
+        "Compact & Modular Design: Prefabricated units reduce civil construction requirements and save up to 70% space, making them ideal for industries with limited land.",
+        "Durable Construction: Manufactured in FRP/MS with epoxy coating for strength and corrosion resistance, the lightweight modules allow for easy transport and installation.",
+        "Low Operation & Maintenance: With minimal mechanical parts, these systems are easy to clean and maintain, providing a long service life with reduced downtime.",
+        "Industry Applications: Municipal Water & Sewage Treatment Plants, Food & Beverage Industry, Textile & Dyeing, Sugar & Distilleries, Pharmaceutical & Chemical Industries, Mining & Metal Processing",
+        "Customization & Scalability: Available in various module sizes and inclinations (commonly 60°), these systems can be scaled from small industrial plants to large municipal facilities."
+      
+      
+      ]
+    },
     "ctaText": "Learn how tube settlers can boost your plant's efficiency."
   },
   {
@@ -95,7 +185,17 @@
     "subtitle": "Eliminate hard water issues for improved performance.",
     "heroImage": "https://placehold.co/1200x600/f472b6/ffffff?text=Water+Softeners",
     "infoTitle": "Solving Hard Water Problems",
-    "infoContent": "Our Water Softeners use an ion exchange process to remove calcium and magnesium ions, which cause hard water. This prevents scale buildup in pipes and appliances, extending their lifespan and improving the efficiency of water-using equipment.",
+    "infoContent": {
+      "paragraph": "Water Softeners are specialized treatment units designed to remove hardness-causing minerals like calcium and magnesium from water through an ion exchange process. These units help prevent scaling in pipelines, boilers, and appliances, improving their efficiency and lifespan. Commonly used in residential, commercial, and industrial setups, water softeners ensure smooth operation of equipment and enhance the effectiveness of soaps and detergents. They are an essential part of any water management system in areas with hard water supply.",
+      "points": [
+        "Effective Hardness Removal.",
+        "Consistent Water Quality.",
+        "Skid‑mounted units for quick installation and minimal civil work.",
+        "Wide Industrial & Commercial Applications.",
+        "Meets industry norms for process and utility water requirements."
+
+      ]
+    },
     "ctaText": "Find the perfect water softener for your home or business."
   },
   {
@@ -104,7 +204,18 @@
     "subtitle": "Produce high-purity water for critical applications.",
     "heroImage": "https://placehold.co/1200x600/7c3aed/ffffff?text=DM+Systems",
     "infoTitle": "Achieve Ultimate Water Purity",
-    "infoContent": "Demineralization (DM) systems remove dissolved minerals and salts from water using ion exchange resins. This process is essential for producing high-purity water for applications like boiler feed, pharmaceuticals, and electronics manufacturing.",
+    "infoContent": {
+      "paragraph": "Demineralization Plants are specialized water treatment systems that remove dissolved salts and minerals through ion exchange technology, producing high purity water. Typically used in industries like pharmaceuticals, power plants, electronics, and laboratories, DM plants eliminate ions such as calcium, magnesium, sodium, chlorides, and sulfates. The process involves cation and anion exchange resins, and often includes a mixed bed for polishing. DM water is essential for applications where mineral-free, non-conductive water is required.",
+      "points": [
+        "High-Purity Water Production",
+        "Proven Ion Exchange Technology",
+        "Robust & Compact Design",
+        "Ease of Operation & Maintenance",
+        "Wide Industrial Applications",
+        "Economic & Sustainable",
+        "Compliance & Quality Assurance"
+      ]
+    },
     "ctaText": "Get a quote for a demineralization system."
   },
   {
@@ -113,7 +224,20 @@
     "subtitle": "Precise and automated chemical delivery for water treatment.",
     "heroImage": "https://placehold.co/1200x600/d946ef/ffffff?text=Chemical+Dosing",
     "infoTitle": "Automated and Accurate Dosing",
-    "infoContent": "Our Chemical Dosing Systems provide precise and reliable delivery of chemicals for various water treatment processes, including disinfection, pH adjustment, and coagulation. Automation ensures consistency and safety, optimizing your plant's performance.",
+    "infoContent": {
+      "paragraph": " Chemical Dosing Systems are precision-engineered units used to automatically dose specific quantities of chemicals into water or wastewater for effective treatment. Commonly used for pH correction, disinfection, coagulation, and scaling control, these systems ensure consistent dosing, reduce manual errors, and enhance treatment efficiency. Ideal for STPs, ETPs, RO plants, and cooling towers, they typically include a dosing pump, chemical storage tank, and control panel, and can be customized for both manual and automated operations.",
+      "points": [
+        "Precise & Reliable Dosing",
+        "Robust & Modular Design",
+        "Material & Build Options",
+        "Automation & Control",
+        "Wide Industry Applications",
+        "Operational Efficiency",
+        "Safety & Compliance",
+        "Customization & Scalability"
+
+      ]
+    },
     "ctaText": "Discover our range of chemical dosing solutions."
   },
   {
@@ -122,7 +246,15 @@
     "subtitle": "Sustainable and efficient waste decomposition technology.",
     "heroImage": "https://placehold.co/1200x600/10b981/ffffff?text=Bio-Digesters",
     "infoTitle": "Harnessing Biological Power",
-    "infoContent": "Bio-Digesters use anaerobic bacteria to break down organic waste, producing clean energy (biogas) and organic fertilizer. These systems are an environmentally friendly way to manage waste from households, communities, and food processing industries.",
+    "infoContent": {
+      "paragraph": "Bio-Digesters use anaerobic bacteria to break down organic waste, producing clean energy (biogas) and organic fertilizer. These systems are an environmentally friendly way to manage waste from households, communities, and food processing industries.",
+      "points": [
+        "Advanced FRP Bio-Digester Systems: Manufactured using Fiberglass Reinforced Plastic (FRP) for durability, lightweight handling, and corrosion resistance, with a leak-proof and maintenance-free design for a long service life.",
+        "Eco-Friendly Sanitation Solutions: Treats human and organic waste through anaerobic bacterial digestion to produce pathogen-free water suitable for gardening, flushing, or safe discharge. This process also reduces foul odors, sludge, and the need for frequent desludging.",
+        "Compact & Modular Designs: Capacities range from 500 Liters to 10,000 Liters and are available in rectangular and customized shapes. They are easy to transport, install, and integrate into both remote and urban locations.",
+        "Applications Across Sectors: Ideal for areas without sewer infrastructure or with limited water supply, and suitable for residential colonies, schools, hospitals, defense camps, railway coaches, rural sanitation projects, and community toilets.",
+        "Sustainability & Compliance: Aligns with global SDG sanitation goals and promotes zero discharge, water conservation, and environmental protection."      ]
+    },
     "ctaText": "Learn more about our bio-digester technology."
   },
   {
@@ -131,7 +263,13 @@
     "subtitle": "Eco-friendly, self-contained sanitation solutions.",
     "heroImage": "https://placehold.co/1200x600/22c55e/ffffff?text=Bio-Toilets",
     "infoTitle": "Sanitation with Sustainability",
-    "infoContent": "Our Bio-Toilets use bio-digester technology to treat human waste at the source, eliminating the need for a traditional sewage system. They are perfect for remote locations, public spaces, and mobile applications, providing a hygienic and sustainable sanitation solution.",
+    "infoContent": {
+      "paragraph": "Our Bio-Toilets use bio-digester technology to treat human waste at the source, eliminating the need for a traditional sewage system. They are perfect for remote locations, public spaces, and mobile applications, providing a hygienic and sustainable sanitation solution.",
+      "points": [
+        "Bio-Toilets Integration: Prefabricated and mobile units equipped with bio-digester tanks.",
+        "Hygienic Sanitation: Ensures hygienic sanitation facilities in construction sites, public events, and disaster relief zones."
+      ]
+    },
     "ctaText": "Request information on our bio-toilet models."
   },
   {
@@ -140,7 +278,16 @@
     "subtitle": "Advanced technology to monitor hydration levels in real-time.",
     "heroImage": "https://placehold.co/1200x600/3b82f6/ffffff?text=InFlow+Hydration",
     "infoTitle": "Innovating Hydration Health",
-    "infoContent": "The InFlow Hydration Monitoring System provides continuous, non-invasive hydration data to help athletes and health-conscious individuals optimize their fluid intake. This technology helps prevent dehydration, improve performance, and support overall wellness.",
+    "infoContent": {
+      "paragraph": "The InFlow Hydration Monitoring System provides continuous, non-invasive hydration data to help athletes and health-conscious individuals optimize their fluid intake. This technology helps prevent dehydration, improve performance, and support overall wellness.",
+      "points": [
+        "Next-Generation Hydration Monitoring: The world’s first real-time, non-invasive urine analysis device for hydration tracking, providing instant and accurate hydration status through color codes.",
+        "Key Features: This first-of-its-kind, patent-backed device is compact, hygienic, and touch-free, and it measures hydration levels within seconds.",
+        "Health & Performance Benefits: This device supports preventive healthcare by detecting early signs of imbalance, which helps prevent the risks of dehydration and over-hydration and improves workplace safety, athletic performance, and patient care.",
+        "Technology & Innovation: Based on proprietary light spectrum analysis, the device uses reflectance spectroscopy and proprietary algorithms, making it energy-efficient with low maintenance requirements.",
+        "Applications Across Sectors: Used in hospitals and clinics for patient hydration monitoring to ensure faster recovery, in sports and fitness to optimize athlete performance and recovery, in workplaces and industries to enhance worker safety and productivity, and in defense and aviation for critical hydration monitoring in high-stress environments." 
+      ]
+    },
     "ctaText": "Get more details on the InFlow monitoring system."
   }
 ]

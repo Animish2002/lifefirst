@@ -3,6 +3,10 @@ import Navigation from "@/Landing/Navigation";
 import Footer from "@/Landing/Footer";
 import solutionsData from "@/data/data.json";
 
+interface InfoContentObject {
+  paragraph?: string;
+  points?: string[];
+}
 
 interface Solution {
   slug: string;
@@ -10,7 +14,7 @@ interface Solution {
   subtitle: string;
   heroImage: string;
   infoTitle: string;
-  infoContent: string;
+  infoContent: string | InfoContentObject; // <-- supports both formats
   ctaText: string;
 }
 
@@ -20,7 +24,6 @@ interface PageProps {
   };
   searchParams?: { [key: string]: string | string[] | undefined };
 }
-
 
 // Main Solution Page Component
 const SolutionPage = ({ params }: PageProps) => {
@@ -72,9 +75,26 @@ const SolutionPage = ({ params }: PageProps) => {
 
                 {/* Content */}
                 <div className="space-y-6">
-                  <p className="text-gray-600 leading-relaxed text-md font-medium">
-                    {solution.infoContent}
-                  </p>
+                  {typeof solution.infoContent === "string" ? (
+                    <p className="text-gray-600 leading-relaxed text-md font-medium">
+                      {solution.infoContent}
+                    </p>
+                  ) : (
+                    <>
+                      {solution.infoContent.paragraph && (
+                        <p className="text-gray-600 leading-relaxed text-md font-medium">
+                          {solution.infoContent.paragraph}
+                        </p>
+                      )}
+                      {solution.infoContent.points && (
+                        <ul className="list-disc list-inside space-y-2 text-gray-600 text-md font-medium">
+                          {solution.infoContent.points.map((point, idx) => (
+                            <li key={idx}>{point}</li>
+                          ))}
+                        </ul>
+                      )}
+                    </>
+                  )}
 
                   {/* Enhanced CTA */}
                   <div className="relative overflow-hidden">
@@ -152,7 +172,7 @@ const SolutionPage = ({ params }: PageProps) => {
                   <div className="grid md:grid-cols-2 gap-4">
                     <div className="group/input">
                       <label
-                        htmlFor="name"
+                        htmlFor="phone"
                         className="block text-sm font-semibold text-gray-700 mb-2 group-focus-within/input:text-blue-600 transition-colors"
                       >
                         Phone Number
@@ -170,7 +190,7 @@ const SolutionPage = ({ params }: PageProps) => {
                     </div>
                     <div className="group/input">
                       <label
-                        htmlFor="webite"
+                        htmlFor="website"
                         className="block text-sm font-semibold text-gray-700 mb-2 group-focus-within/input:text-blue-600 transition-colors"
                       >
                         Website Name
