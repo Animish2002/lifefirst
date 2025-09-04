@@ -204,20 +204,7 @@ const Footer = () => {
               </motion.div>
             </div>
 
-            {/* Newsletter Signup */}
-            <div className="mt-8">
-              <h5 className="font-semibold mb-3 text-white">Stay Updated</h5>
-              <div className="flex">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="flex-1 px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-l-lg text-white placeholder-slate-400 focus:outline-none focus:border-blue-400"
-                />
-                <Button className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white px-4 py-2 rounded-l-none">
-                  <ChevronRight className="w-4 h-4" />
-                </Button>
-              </div>
-            </div>
+            
           </motion.div>
         </div>
       </div>
@@ -244,10 +231,10 @@ const Footer = () => {
                 Privacy Policy
               </a>
               <a
-                href="/terms-of-service"
+                href="/terms-of-use"
                 className="text-slate-400 hover:text-blue-400 transition-colors"
               >
-                Terms of Service
+                Terms of Use
               </a>
               <a
                 href="#"

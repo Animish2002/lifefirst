@@ -13,6 +13,8 @@ const page = () => {
               <h1 className="text-3xl font-bold text-gray-900 mb-2">
                 Privacy Policy
               </h1>
+              <span>Effective Date: 05 September 2025</span>
+
               <p className="text-gray-700 leading-relaxed">
                 LifeFirst Concepts & Technologies Pvt. Ltd. (“LifeFirst”, “we”,
                 “our”, “us”) respects your privacy and is committed to
@@ -87,36 +89,85 @@ const page = () => {
 
               <section>
                 <h2 className="text-xl font-semibold text-gray-800 mb-4 border-b border-gray-200 pb-2">
+                  Sharing of Information
+                </h2>
+                <p className="text-gray-700 leading-relaxed">
+                  We do not sell your personal information. We may share it
+                  with:
+                  <li>
+                    Service providers who assist us in communication, hosting,
+                    or analytics
+                  </li>
+                  <li>Legal authorities if required by law</li>
+                </p>
+              </section>
+
+              <section>
+                <h2 className="text-xl font-semibold text-gray-800 mb-4 border-b border-gray-200 pb-2">
+                  Marketing Communication
+                </h2>
+                <p className="text-gray-700 leading-relaxed">
+                  By submitting your information, you consent to receive
+                  marketing and promotional messages from us. You may opt-out at
+                  any time by following the unsubscribe instructions in our
+                  emails or by contacting us directly.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="text-xl font-semibold text-gray-800 mb-4 border-b border-gray-200 pb-2">
+                  Data Retention
+                </h2>
+                <p className="text-gray-700 leading-relaxed">
+                  We retain your information as long as necessary for business
+                  purposes or as required by law. You can request deletion of
+                  your data at any time.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="text-xl font-semibold text-gray-800 mb-4 border-b border-gray-200 pb-2">
                   Your Rights
                 </h2>
                 <p className="text-gray-700 leading-relaxed">
-                  You have the right to access, update, or delete your personal
-                  information. You may also opt out of certain communications
-                  from us. To exercise these rights, please contact us using the
-                  information provided in our contact section.
+                  Depending on your location, you may have the right to:
+                  <li>Access the personal data we hold about you</li>
+                  <li>Request corrections or updates </li>
+                  <li>Request deletion of your data </li>
+                  <li> Opt-out of marketing communications</li>
+                  To exercise these rights, contact us at:{" "}
+                  <a
+                    href="mailto:coo@life-first.in"
+                    className="hover:text-blue-600  "
+                  >
+                    coo@life-first.in
+                  </a>
                 </p>
               </section>
 
               <section>
                 <h2 className="text-xl font-semibold text-gray-800 mb-4 border-b border-gray-200 pb-2">
-                  Cookies and Tracking
+                  Changes to this Policy
                 </h2>
                 <p className="text-gray-700 leading-relaxed">
-                  We use cookies and similar technologies to enhance your
-                  browsing experience, analyze site traffic, and personalize
-                  content. You can control cookie preferences through your
-                  browser settings.
+                  We may update this Privacy Policy from time to time. Changes
+                  will be posted on this page with a revised “Effective Date.”
                 </p>
               </section>
 
               <section>
                 <h2 className="text-xl font-semibold text-gray-800 mb-4 border-b border-gray-200 pb-2">
-                  Changes to This Policy
+                  Contact Us
                 </h2>
                 <p className="text-gray-700 leading-relaxed">
-                  We may update this privacy policy from time to time. We will
-                  notify you of any material changes by posting the updated
-                  policy on our website and updating the effective date.
+                  If you have any questions about this Privacy Policy or how we
+                  handle your information, please write us at:{" "}
+                  <a
+                    href="mailto:coo@life-first.in"
+                    className="hover:text-blue-600  "
+                  >
+                    coo@life-first.in
+                  </a>
                 </p>
               </section>
             </div>
@@ -124,7 +175,7 @@ const page = () => {
             <div className="mt-12 pt-6 border-t border-gray-200 text-center">
               <p className="text-sm text-gray-500">
                 This privacy policy is effective as of the date last updated and
-                applies to all users of LifeFirst services.
+                applies to all visitors.
               </p>
             </div>
           </div>
