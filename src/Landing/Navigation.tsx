@@ -135,14 +135,14 @@ const navLinks: NavLink[] = [
 const contactInfo: ContactInfo[] = [
   {
     icon: <Mail size={16} />,
-    text: "info@lifefirsttech.com",
-    href: "mailto:info@lifefirsttech.com",
+    text: "coo@life-first.in",
+    href: "mailto:coo@life-first.in",
     type: "email",
   },
   {
     icon: <Phone size={16} />,
-    text: "+91 (XXX) XXX-XXXX",
-    href: "tel:+91XXXXXXXXXX",
+    text: "+91 9607 377 277",
+    href: "tel:+919607377277",
     type: "phone",
   },
   {
