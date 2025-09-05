@@ -110,16 +110,6 @@ const CTASection = () => {
     setIsModalOpen(true);
   };
 
-  const officeContacts: OfficeContact[] = [
-    {
-      city: "Mumbai",
-      address: "123 Business Park, Andheri East, Mumbai - 400069",
-      phone: "+91 22 1234 5678",
-      email: "mumbai@lifefirsttech.com",
-      hours: "Mon-Sat: 9:00 AM - 6:00 PM",
-    },
-  ];
-
   return (
     <>
       <motion.section
@@ -155,7 +145,6 @@ const CTASection = () => {
                     <span className="text-slate-800">
                       Ready to Transform Your
                     </span>
-                    &nbsp;
                     <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
                       Water Treatment?
                     </span>
@@ -200,81 +189,106 @@ const CTASection = () => {
               transition={{ duration: 0.6 }}
             >
               <div className="space-y-6">
-                {officeContacts.map((office, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ y: 20, opacity: 0 }}
-                    whileInView={{ y: 0, opacity: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                  >
-                    <div className="shadow-lg border border-slate-200 hover:shadow-xl bg-white transition-all duration-300 rounded-xl">
-                      <h3 className="text-2xl font-bold text-slate-800 flex items-center p-4">
-                        <MapPin className="w-6 h-6 text-blue-500 mr-3" />
-                        Visit Us At
-                      </h3>
-                      <div className="p-6 bg-white mb-4">
-                        <h4 className="text-xl font-bold text-slate-800 mb-3">
-                          {office.city}
-                        </h4>
+                <motion.div
+                  initial={{ y: 20, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 0.1 }}
+                >
+                  <div className="shadow-lg border border-slate-200 hover:shadow-xl bg-white transition-all duration-300 rounded-xl">
+                    <h3 className="text-2xl font-bold text-slate-800 flex items-center p-4">
+                      <MapPin className="w-6 h-6 text-blue-500 mr-3" />
+                      Visit Us At
+                    </h3>
+                    <div className="p-6 bg-white mb-4">
+                      <h4 className="text-xl font-bold text-slate-800 mb-3">
+                        Corporate Office & Factory
+                      </h4>
 
-                        <div className="space-y-2 text-sm text-slate-600">
-                          <div className="flex items-start">
-                            <MapPin className="w-4 h-4 mt-0.5 mr-2 text-zinc-500 flex-shrink-0" />
-                            <span>{office.address}</span>
-                          </div>
+                      <div className="space-y-2 text-sm text-slate-600">
+                        <div className="flex items-start">
+                          <MapPin className="w-4 h-4 mt-0.5 mr-2 text-zinc-500 flex-shrink-0" />
+                          <span>
+                            Gat. No 1086, Next to Wadki Timber Market, Pune
+                            Saswad Road, Wadki, Pune - 412308, Maharashtra,
+                            INDIA
+                          </span>
+                        </div>
 
-                          <div className="flex items-center">
-                            <Phone className="w-4 h-4 mr-2 text-zinc-500" />
-                            <a
-                              href={`tel:${office.phone}`}
-                              className="text-zinc-600 hover:underline"
-                            >
-                              {office.phone}
-                            </a>
-                          </div>
+                        <div className="flex items-center">
+                          <Phone className="w-4 h-4 mr-2 text-zinc-500" />
+                          <a
+                            href="tel:+919607377277"
+                            className="text-zinc-600 hover:underline"
+                          >
+                            +91 96073 77277
+                          </a>
+                        </div>
 
-                          <div className="flex items-center">
-                            <Mail className="w-4 h-4 mr-2 text-zinc-500" />
-                            <a
-                              href={`mailto:${office.email}`}
-                              className="text-zinc-600 hover:underline"
-                            >
-                              {office.email}
-                            </a>
-                          </div>
+                        <div className="flex items-center">
+                          <Mail className="w-4 h-4 mr-2 text-zinc-500" />
+                          <a
+                            href="mailto:coo@life-first.in"
+                            className="text-zinc-600 hover:underline"
+                          >
+                            coo@life-first.in
+                          </a>
+                        </div>
 
-                          <div className="flex items-center">
-                            <Clock className="w-4 h-4 mr-2 text-zinc-500" />
-                            <span>{office.hours}</span>
+                        <div className="flex items-center">
+                          <Globe className="w-4 h-4 mr-2 text-zinc-500" />
+                          <a
+                            href="http://www.life-first.in"
+                            className="text-zinc-600 hover:underline"
+                          >
+                            www.life-first.in
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <motion.div
+                      initial={{ y: 30, opacity: 0 }}
+                      whileInView={{ y: 0, opacity: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.6 }}
+                    >
+                      <div className="bg-white shadow-xl border border-blue-100 overflow-hidden rounded-lg">
+                        <div className="p-0">
+                          <div className="h-96 bg-gray-100 relative">
+                            <iframe
+                              src="www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.3323082539095!2d73.91136457497125!3d18.51479868257256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c1df5c3f309b%3A0xf6702e863d043c7b!2sWadki%20Timber%20Market!5e0!3m2!1sen!2sin!4v1693999965152!5m2!1sen!2sin"
+                              width="100%"
+                              height="100%"
+                              style={{ border: 0 }}
+                              loading="lazy"
+                              referrerPolicy="no-referrer-when-downgrade"
+                              className="absolute inset-0"
+                            />
                           </div>
                         </div>
                       </div>
-                      <motion.div
-                        initial={{ y: 30, opacity: 0 }}
-                        whileInView={{ y: 0, opacity: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.6 }}
-                      >
-                        <div className="bg-white shadow-xl border border-blue-100 overflow-hidden rounded-lg">
-                          <div className="p-0">
-                            <div className="h-96 bg-gray-100 relative">
-                              <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.11609823277!2d72.74109995310096!3d19.08219783958221!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c6306644edc1%3A0x5da4ed8f8d648c69!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1640123456789!5m2!1sen!2sin"
-                                width="100%"
-                                height="100%"
-                                style={{ border: 0 }}
-                                loading="lazy"
-                                referrerPolicy="no-referrer-when-downgrade"
-                                className="absolute inset-0"
-                              />
-                            </div>
-                          </div>
-                        </div>
-                      </motion.div>
+                    </motion.div>
+                  </div>
+                </motion.div>
+                <motion.div
+                  initial={{ y: 20, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                >
+                  <div className="shadow-lg border border-slate-200 hover:shadow-xl bg-white transition-all duration-300 rounded-xl">
+                    <div className="p-6 bg-white">
+                      <h4 className="text-xl font-bold text-slate-800 mb-3">
+                        Project Offices
+                      </h4>
+
+                      <div className="text-sm text-slate-600">
+                        Mumbai, Nagpur, Chhatrapati Sambhajinagar, Chandrapur,
+                        Panvel, Nanded, Latur & Solapur
+                      </div>
                     </div>
-                  </motion.div>
-                ))}
+                  </div>
+                </motion.div>
               </div>
             </motion.div>
             <form onSubmit={handleSubmit}>
@@ -383,7 +397,7 @@ const CTASection = () => {
                       </div>
                       <div>
                         <label
-                          htmlFor="email"
+                          htmlFor="website"
                           className="block text-sm font-medium text-slate-700 mb-2"
                         >
                           Your Website
@@ -396,7 +410,6 @@ const CTASection = () => {
                             id="website"
                             value={formData.website}
                             onChange={handleInputChange}
-                            required
                             className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 outline-none"
                             placeholder="www.yourwebsite.com"
                           />
