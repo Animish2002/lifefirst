@@ -1,14 +1,65 @@
 "use client";
 
-import React from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import React, { useState, useEffect } from "react";
+import {
+  motion,
+  useScroll,
+  useTransform,
+  AnimatePresence,
+} from "framer-motion";
 import { Button } from "@/components/ui/button";
-import type { AnimationGeneratorType } from "framer-motion";
-import { ChevronRight, ArrowDown } from "lucide-react";
+import {
+  ChevronRight,
+  ArrowDown,
+  ChevronLeft,
+  Pause,
+  Play,
+} from "lucide-react";
+
+// Sample carousel data - replace with your actual data
+const carouselData = [
+  {
+    id: 1,
+    image:
+      "https://res.cloudinary.com/dsvfcckqy/image/upload/v1757067608/1_wq9mmx.jpg",
+    title: "Advanced Water Treatment",
+    subtitle: "Revolutionary filtration technology",
+    description: "Cutting-edge solutions for industrial water processing",
+  },
+  {
+    id: 2,
+    image:
+      "https://res.cloudinary.com/dsvfcckqy/image/upload/v1757067608/2_lguy1a.jpg",
+    subtitle: "Sustainable Engineering",
+    title: "Eco-Friendly Systems",
+    description: "Environmental protection through innovative design",
+  },
+  // {
+  //   id: 3,
+  //   image:
+  //     "https://images.unsplash.com/photo-1581093458791-9f3c3250a33a?w=1920&h=1080&fit=crop",
+  //   title: "Complete Sanitation",
+  //   subtitle: "Total water management",
+  //   description: "Comprehensive solutions for all water treatment needs",
+  // },
+];
 
 const HeroSection = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isPlaying, setIsPlaying] = useState(true);
   const { scrollYProgress } = useScroll();
   const yContent = useTransform(scrollYProgress, [0, 1], ["0%", "-10%"]);
+
+  // Auto-advance carousel
+  useEffect(() => {
+    if (!isPlaying) return;
+
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % carouselData.length);
+    }, 5000); // Change slide every 5 seconds
+
+    return () => clearInterval(interval);
+  }, [isPlaying]);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -27,21 +78,144 @@ const HeroSection = () => {
       y: 0,
       opacity: 1,
       transition: {
-        type: "spring" as AnimationGeneratorType,
+        type: "spring",
         stiffness: 80,
         damping: 20,
       },
     },
   };
 
+  const slideVariants = {
+    enter: {
+      y: "100%",
+      opacity: 1,
+      zIndex: 1,
+    },
+    center: {
+      y: "0%",
+      opacity: 1,
+      zIndex: 2,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut",
+      },
+    },
+    exit: {
+      y: "-50%", // Don't move as far up
+      opacity: 0.8, // Slight fade but not complete
+      zIndex: 0,
+      transition: {
+        duration: 1, // Longer exit to ensure overlap
+        ease: "easeIn",
+      },
+    },
+  };
+
+  const goToSlide = (index: number) => {
+    setCurrentSlide(index);
+  };
+
+  const goToPrevious = () => {
+    setCurrentSlide(
+      (prev) => (prev - 1 + carouselData.length) % carouselData.length
+    );
+  };
+
+  const goToNext = () => {
+    setCurrentSlide((prev) => (prev + 1) % carouselData.length);
+  };
+
+  const togglePlayPause = () => {
+    setIsPlaying(!isPlaying);
+  };
+
   return (
-    <section className="relative min-h-screen overflow-hidden">
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.1)_1px,transparent_1px)] bg-[size:50px_50px] opacity-50 sm:opacity-100"></div>
+    <section className="relative min-h-screen overflow-hidden bg-slate-900">
+      <div className="absolute inset-0 bg-slate-900">
+        {/* Blurred backdrop for smooth transitions */}
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20 transition-all duration-1000"
+          style={{
+            backgroundImage: `url(${carouselData[currentSlide].image})`,
+            filter: "blur(30px) brightness(0.4)",
+          }}
+        />
+
+        <AnimatePresence mode="popLayout">
+          <motion.div
+            key={currentSlide}
+            className="absolute inset-0"
+            variants={slideVariants}
+            initial="enter"
+            animate="center"
+            exit="exit"
+          >
+            <div
+              className="w-full h-full bg-cover bg-center bg-no-repeat"
+              style={{
+                backgroundImage: `url(${carouselData[currentSlide].image})`,
+              }}
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30" />
+          </motion.div>
+        </AnimatePresence>
+      </div>
+
+      {/* Carousel Controls */}
+      <div className="absolute top-1/2 left-6 transform -translate-y-1/2 z-20">
+        <button
+          onClick={goToPrevious}
+          className="p-3 rounded-full bg-white/20 backdrop-blur-sm hover:bg-white/30 transition-colors text-white"
+        >
+          <ChevronLeft className="w-5 h-5" />
+        </button>
+      </div>
+
+      <div className="absolute top-1/2 right-6 transform -translate-y-1/2 z-20">
+        <button
+          onClick={goToNext}
+          className="p-3 rounded-full bg-white/20 backdrop-blur-sm hover:bg-white/30 transition-colors text-white"
+        >
+          <ChevronRight className="w-5 h-5" />
+        </button>
+      </div>
+
+      {/* Play/Pause Button */}
+      <div className="absolute top-6 right-6 z-20">
+        <button
+          onClick={togglePlayPause}
+          className="p-3 rounded-full bg-white/20 backdrop-blur-sm hover:bg-white/30 transition-colors text-white"
+        >
+          {isPlaying ? (
+            <Pause className="w-4 h-4" />
+          ) : (
+            <Play className="w-4 h-4" />
+          )}
+        </button>
+      </div>
+
+      {/* Carousel Indicators */}
+      <div className="absolute bottom-24 left-1/2 transform -translate-x-1/2 z-20">
+        <div className="flex space-x-3">
+          {carouselData.map((_, index: number) => (
+            <button
+              key={index}
+              onClick={() => goToSlide(index)}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                index === currentSlide
+                  ? "bg-white scale-125"
+                  : "bg-white/50 hover:bg-white/70"
+              }`}
+            />
+          ))}
+        </div>
+      </div>
+
       {/* Main Content */}
       <motion.div className="relative z-10 pt-24 pb-16" style={{ y: yContent }}>
-        <div className="max-w-7xl mx-auto px-6  md:mt-0 mt-15">
+        <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-12 gap-12 items-center min-h-[80vh]">
-            {/* Left Content */}
+            {/* Left Content - Static */}
             <motion.div
               className="lg:col-span-7 space-y-8"
               initial="hidden"
@@ -49,8 +223,8 @@ const HeroSection = () => {
               variants={containerVariants}
             >
               <motion.div variants={itemVariants} className="space-y-6">
-                <h1 className="md:text-5xl text-4xl font-semibold leading-tight">
-                  <span className="block bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-700 bg-clip-text text-transparent mb-2">
+                <h1 className="md:text-5xl text-4xl font-bold leading-tight text-white">
+                  <span className="block bg-gradient-to-r from-blue-400 via-cyan-300 to-blue-500 bg-clip-text text-transparent mb-2">
                     Transform Water Systems <br /> for a Sustainable Future
                   </span>
                 </h1>
@@ -58,7 +232,7 @@ const HeroSection = () => {
 
               <motion.p
                 variants={itemVariants}
-                className="text-lg text-slate-600 leading-relaxed max-w-2xl"
+                className="text-lg text-gray-200 leading-relaxed max-w-2xl"
               >
                 Pioneering advanced water treatment technologies that deliver
                 exceptional results while protecting our environment. From
@@ -71,35 +245,13 @@ const HeroSection = () => {
               >
                 <Button
                   variant="outline"
-                  size="sm"
-                  className="border-2 border-slate-300 text-slate-700 bg- hover:bg-slate-50 px-8 py-4 text-lg group"
+                  size="lg"
+                  className="border-2 border-white/30 text-white bg-white/10 backdrop-blur-sm hover:bg-white/20 px-8 py-4 text-lg group transition-all duration-300"
                 >
                   Start Your Project
                   <ChevronRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
-
-                {/* <Button
-                  variant="outline"
-                  size="sm"
-                  className="border-2 border-slate-300 text-slate-700 hover:bg-slate-50 px-8 py-4 text-lg group"
-                >
-                  <Play className="mr-2 w-5 h-5 group-hover:scale-110 transition-transform" />
-                  Watch How It Works
-                </Button> */}
               </motion.div>
-            </motion.div>
-
-            {/* Right Content - Interactive Elements */}
-            <motion.div
-              className="lg:col-span-5 space-y-6"
-              initial="hidden"
-              animate="visible"
-              variants={containerVariants}
-            >
-              <img
-                src="https://res.cloudinary.com/dsvfcckqy/image/upload/v1755028854/lifefirst_logo_png_nb1cje.png"
-                alt="Lifefirst Logo"
-              />
             </motion.div>
           </div>
         </div>
@@ -107,7 +259,7 @@ const HeroSection = () => {
 
       {/* Scroll Indicator */}
       <motion.div
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1, duration: 0.8 }}
@@ -115,7 +267,7 @@ const HeroSection = () => {
         <motion.div
           animate={{ y: [0, 8, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
-          className="flex flex-col items-center text-slate-400"
+          className="flex flex-col items-center text-white/70"
         >
           <span className="text-xs mb-2">Scroll to explore</span>
           <ArrowDown className="w-4 h-4" />
