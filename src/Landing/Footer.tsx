@@ -56,7 +56,7 @@ const Footer = () => {
 
   return (
     <motion.footer
-      className="bg-gradient-to-br from-slate-800 via-slate-900 to-blue-900 text-white"
+      className="bg-[rgba(255, 255, 255, 0.15)] text-slate-700 font-semibold border-t "
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
@@ -82,7 +82,7 @@ const Footer = () => {
               />
             </div>
 
-            <p className="text-slate-300 mb-6 leading-relaxed">
+            <p className="text-slate-700 font-medium mb-6 leading-relaxed">
               Leading water treatment solutions provider committed to creating
               sustainable and innovative technologies for a cleaner future.
             </p>
@@ -93,7 +93,7 @@ const Footer = () => {
                 <motion.a
                   key={index}
                   href={social.href}
-                  className={`w-10 h-10 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center text-slate-300 ${social.color} transition-all duration-300 hover:bg-white/20`}
+                  className={`w-10 h-10 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center text-slate-700 font-semibold ${social.color} transition-all duration-300 hover:bg-white/20`}
                   whileHover={{ scale: 1.1, y: -2 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -110,13 +110,13 @@ const Footer = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            <h4 className="text-xl font-bold mb-6 text-white">Quick Links</h4>
+            <h4 className="text-xl font-bold mb-6 ">Quick Links</h4>
             <ul className="space-y-3">
               {quickLinks.map((link, index) => (
                 <li key={index}>
                   <motion.a
                     href="#"
-                    className="text-slate-300 hover:text-blue-400 transition-colors duration-200 flex items-center group"
+                    className="text-slate-700 font-medium hover:text-blue-400 transition-colors duration-200 flex items-center group"
                     whileHover={{ x: 5 }}
                   >
                     <ChevronRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -134,13 +134,13 @@ const Footer = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <h4 className="text-xl font-bold mb-6 text-white">Our Solutions</h4>
+            <h4 className="text-xl font-bold mb-6">Our Solutions</h4>
             <ul className="space-y-3">
               {solutions.map((solution, index) => (
                 <li key={index}>
                   <motion.a
                     href="#"
-                    className="text-slate-300 hover:text-green-400 transition-colors duration-200 flex items-center group"
+                    className="text-slate-700 font-medium hover:text-green-400 transition-colors duration-200 flex items-center group"
                     whileHover={{ x: 5 }}
                   >
                     <Droplets className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -158,7 +158,7 @@ const Footer = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            <h4 className="text-xl font-bold mb-6 text-white">Contact Us</h4>
+            <h4 className="text-xl font-bold mb-6">Contact Us</h4>
             <div className="space-y-4">
               <motion.div
                 className="flex items-start group cursor-pointer"
@@ -166,10 +166,10 @@ const Footer = () => {
               >
                 <Phone className="w-5 h-5 text-blue-400 mr-3 mt-0.5 group-hover:scale-110 transition-transform" />
                 <div>
-                  <p className="text-slate-300 font-medium">
+                  <p className="text-slate-700">
                     +91 (XXX) XXX-XXXX
                   </p>
-                  <p className="text-slate-400 text-sm">
+                  <p className="text-slate-600 font-medium text-sm">
                     24/7 Support Available
                   </p>
                 </div>
@@ -181,10 +181,10 @@ const Footer = () => {
               >
                 <Mail className="w-5 h-5 text-green-400 mr-3 mt-0.5 group-hover:scale-110 transition-transform" />
                 <div>
-                  <p className="text-slate-300 font-medium">
+                  <p className="text-slate-700 font-semibold font-medium">
                     info@lifefirsttech.com
                   </p>
-                  <p className="text-slate-400 text-sm">
+                  <p className="text-slate-600 font-medium text-sm">
                     Quick Response Guaranteed
                   </p>
                 </div>
@@ -196,8 +196,8 @@ const Footer = () => {
               >
                 <MapPin className="w-5 h-5 text-orange-400 mr-3 mt-0.5 group-hover:scale-110 transition-transform" />
                 <div>
-                  <p className="text-slate-300 font-medium">Corporate Office</p>
-                  <p className="text-slate-400 text-sm">
+                  <p className="text-slate-700 font-semibold font-medium">Corporate Office</p>
+                  <p className="text-slate-600 font-medium text-sm">
                     Your City, State - 000000
                   </p>
                 </div>
@@ -211,7 +211,7 @@ const Footer = () => {
 
       {/* Bottom Footer */}
       <motion.div
-        className="border-t border-white/10 bg-slate-900/50"
+        className="border-t border-gray-800/10 bg-gradient-to-tl from-slate-800 via-slate-900 to-blue-900 text-white "
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
@@ -219,26 +219,26 @@ const Footer = () => {
       >
         <div className="max-w-7xl mx-auto px-6 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="text-slate-400 text-sm mb-4 md:mb-0">
+            <div className="text-slate-200 font-medium text-sm mb-4 md:mb-0">
               <p>&copy; 2025 Life First Technologies. All rights reserved.</p>
             </div>
 
             <div className="flex space-x-6 text-sm">
               <a
                 href="/privacy-policy"
-                className="text-slate-400 hover:text-blue-400 transition-colors"
+                className="text-slate-200 font-medium hover:text-blue-400 transition-colors"
               >
                 Privacy Policy
               </a>
               <a
                 href="/terms-of-use"
-                className="text-slate-400 hover:text-blue-400 transition-colors"
+                className="text-slate-200 font-medium hover:text-blue-400 transition-colors"
               >
                 Terms of Use
               </a>
               <a
                 href="#"
-                className="text-slate-400 hover:text-blue-400 transition-colors"
+                className="text-slate-200 font-medium hover:text-blue-400 transition-colors"
               >
                 Sitemap
               </a>
