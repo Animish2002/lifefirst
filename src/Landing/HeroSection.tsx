@@ -11,7 +11,7 @@ import { Button } from "@/components/ui/button";
 import {
   ChevronRight,
   ArrowDown,
-  ChevronLeft,
+
   Pause,
   Play,
 } from "lucide-react";
@@ -161,24 +161,7 @@ const HeroSection = () => {
         </AnimatePresence>
       </div>
 
-      {/* Carousel Controls */}
-      <div className="absolute top-1/2 left-6 transform -translate-y-1/2 z-20">
-        <button
-          onClick={goToPrevious}
-          className="p-3 rounded-full bg-white/20 backdrop-blur-sm hover:bg-white/30 transition-colors text-white"
-        >
-          <ChevronLeft className="w-5 h-5" />
-        </button>
-      </div>
-
-      <div className="absolute top-1/2 right-6 transform -translate-y-1/2 z-20">
-        <button
-          onClick={goToNext}
-          className="p-3 rounded-full bg-white/20 backdrop-blur-sm hover:bg-white/30 transition-colors text-white"
-        >
-          <ChevronRight className="w-5 h-5" />
-        </button>
-      </div>
+     
 
       {/* Play/Pause Button */}
       <div className="absolute top-6 right-6 z-20">
