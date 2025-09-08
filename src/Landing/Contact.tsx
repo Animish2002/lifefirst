@@ -8,7 +8,6 @@ import {
   Mail,
   MessageSquare,
   MapPin,
-  Clock,
   Send,
   User,
   Building,
@@ -156,8 +155,8 @@ const CTASection = () => {
                   </h2>
 
                   <p className="text-sm mb-4 max-w-3xl mx-auto leading-relaxed">
-                    Empowering communities through sustainable water,
-                    wastewater, and sanitation innovations.
+                    Empowering communities through Sustainable Water,
+                    Wastewater, and Sanitation Innovations.
                   </p>
 
                   <motion.div
@@ -256,7 +255,7 @@ const CTASection = () => {
                         <div className="p-0">
                           <div className="h-96 bg-gray-100 relative">
                             <iframe
-                              src="www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.3323082539095!2d73.91136457497125!3d18.51479868257256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c1df5c3f309b%3A0xf6702e863d043c7b!2sWadki%20Timber%20Market!5e0!3m2!1sen!2sin!4v1693999965152!5m2!1sen!2sin"
+                              src="#"
                               width="100%"
                               height="100%"
                               style={{ border: 0 }}
@@ -421,7 +420,7 @@ const CTASection = () => {
                           htmlFor="service"
                           className="block text-sm font-medium text-slate-700 mb-2"
                         >
-                          Service Interest
+                          Services Interested
                         </label>
                         <select
                           name="service"
@@ -432,16 +431,25 @@ const CTASection = () => {
                         >
                           <option value="">Select a service</option>
                           <option value="water-treatment">
-                            Water Treatment Systems
+                            Water Treatment 
+                          </option>
+                          <option value="wasterwater-treatment">
+                            Wasterwater Treatment
+                          </option>
+                          <option value="sanitation-solutions">
+                            Sanitation Solutions
+                          </option>
+                          <option value="hydration-monitoring-systems">
+                            Hydration Monitoring Systems
+                          </option>
+                          <option value="retro-fitting-operation-maintenance">
+                            Retro fitting or Operation & Maintenance
+                          </option>
+                          <option value="feasibility-study">
+                            Feasibility Study
                           </option>
                           <option value="consultation">
-                            Free Consultation
-                          </option>
-                          <option value="maintenance">
-                            Maintenance Services
-                          </option>
-                          <option value="site-assessment">
-                            Site Assessment
+                            Consultation
                           </option>
                         </select>
                       </div>

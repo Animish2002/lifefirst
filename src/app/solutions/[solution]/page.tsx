@@ -212,20 +212,34 @@ const SolutionPage = ({ params }: PageProps) => {
                       htmlFor="service"
                       className="block text-sm font-medium text-slate-700 mb-2"
                     >
-                      Service Interest
+                      Services Interested
                     </label>
                     <select
                       name="service"
                       id="service"
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 outline-none"
                     >
-                      <option value="">Select a service</option>
                       <option value="water-treatment">
-                        Water Treatment Systems
-                      </option>
-                      <option value="consultation">Free Consultation</option>
-                      <option value="maintenance">Maintenance Services</option>
-                      <option value="site-assessment">Site Assessment</option>
+                            Water Treatment 
+                          </option>
+                          <option value="wasterwater-treatment">
+                            Wasterwater Treatment
+                          </option>
+                          <option value="sanitation-solutions">
+                            Sanitation Solutions
+                          </option>
+                          <option value="hydration-monitoring-systems">
+                            Hydration Monitoring Systems
+                          </option>
+                          <option value="retro-fitting-operation-maintenance">
+                            Retro fitting or Operation & Maintenance
+                          </option>
+                          <option value="feasibility-study">
+                            Feasibility Study
+                          </option>
+                          <option value="consultation">
+                            Consultation
+                          </option>
                     </select>
                   </div>
                   <div className="group/input">

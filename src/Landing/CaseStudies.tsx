@@ -114,8 +114,8 @@ const CaseStudies = () => {
             Case Studies
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Discover our journey of converting water, wastewater, and sanitation
-            challenges into innovative, sustainable solutions.
+            Discover our journey of converting Water, Wastewater, and Sanitation
+            challenges into Innovative, Sustainable Solutions.
           </p>
         </div>
 

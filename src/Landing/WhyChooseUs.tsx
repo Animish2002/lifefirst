@@ -95,7 +95,7 @@ const items = [
   {
     title: "Sustainability First",
     description:
-      "Turning wastewater into a resource through reduce, reuse and restore.",
+      "Turning wastewater into a resource through 3Rs: Reduce, Reuse and Restore.",
     icon: <IconRecycle className="h-10 w-10 text-green-500" />,
   },
   {

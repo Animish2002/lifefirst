@@ -22,8 +22,8 @@ const Footer = () => {
   ];
 
   const solutions = [
-    "Wastewater Treatment",
     "Water Treatment",
+    "Wastewater Treatment",
     "Sanitation",
     "Hydration Monitoring",
   ];
@@ -162,9 +162,9 @@ const Footer = () => {
               >
                 <Phone className="w-5 h-5 text-blue-400 mr-3 mt-0.5 group-hover:scale-110 transition-transform" />
                 <div>
-                  <p className="text-slate-700">+91 9607 377 277</p>
+                  <a href="tel:+919011677277" className="text-slate-700 ">+91 9011 677 277</a>
                   <p className="text-slate-600 font-medium text-sm">
-                    Mon-Fri 9AM-5PM IST
+                    Mon-Wed, Fri 9AM-5PM IST, Thu closed
                   </p>
                 </div>
               </motion.div>
@@ -176,14 +176,14 @@ const Footer = () => {
                 <Mail className="w-5 h-5 text-green-400 mr-3 mt-0.5 group-hover:scale-110 transition-transform" />
                 <div>
                   <a
-                    href="mailto:coo@life-first.in"
-                    className="text-slate-700 font-semibold font-medium"
+                    href="mailto:sales@life-first.in"
+                    className="text-slate-700 font-semibold font-medium block"
                   >
-                    coo@life-first.in
+                    sales@life-first.in
+                    <span className="text-slate-600 font-medium text-sm block">
+                      Expect a response in 2 working days
+                    </span>
                   </a>
-                  <p className="text-slate-600 font-medium text-sm">
-                    Expect a response in 2 working days
-                  </p>
                 </div>
               </motion.div>
 
@@ -224,6 +224,11 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-slate-200 font-medium text-sm mb-4 md:mb-0">
               <p>&copy; 2025 Life First Technologies. All rights reserved.</p>
+            </div>
+
+
+            <div>
+              <a> Website by The Fortune Club</a>
             </div>
 
             <div className="flex space-x-6 text-sm">

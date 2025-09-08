@@ -83,40 +83,6 @@ const AboutUsPage = () => {
             className="w-full h-full object-cover opacity-60"
           />
         </div>
-
-        {/* Hero Content */}
-        <div className="relative z-10 flex items-center h-[65vh] max-w-7xl mx-auto">
-          <div className="px-6 py-20">
-            <div className="max-w-7xl">
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-              >
-                <h1 className="text-3xl md:text-5xl font-semibold text-white leading-tight mb-6">
-                  Pioneering Water
-                  <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent block">
-                    Technology Innovation
-                  </span>
-                </h1>
-              </motion.div>
-
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                className="text-sm md:text-lg text-blue-100 mb-8 leading-relaxed"
-              >
-                At Life First Technologies, we&apos;re dedicated to creating{" "}
-                <br /> sustainable water solutions that protect our environment{" "}
-                <br />
-                <span className="font-bold bg-gradient-to-r from-blue-500 via-cyan-400 via-green-400 via-blue-400 via-indigo-500 to-orange-400 bg-clip-text text-transparent">
-                  and empower communities worldwide.
-                </span>
-              </motion.p>
-            </div>
-          </div>
-        </div>
       </div>
 
       {/* Mission & Vision Section - Redesigned */}
@@ -130,11 +96,11 @@ const AboutUsPage = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-gray-800 mb-4">
-              Mission & Vision
+              Our Vision and Values
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Driving innovation in water technology to create a sustainable
-              future for all.
+              Driven by innovation, integrity, and sustainability to deliver
+              world-class water and sanitation solutions.
             </p>
           </motion.div>
 
@@ -152,32 +118,34 @@ const AboutUsPage = () => {
                   <Target className="w-8 h-8 text-blue-600" />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-800">
-                  Our Mission
+                  Value Statement
                 </h3>
               </div>
               <p className="text-gray-700 leading-relaxed mb-6 text-lg">
-                At Life First Technologies, our mission is to provide
-                innovative, sustainable, and reliable water solutions that
-                empower communities and industries to thrive.
+                We are committed to delivering sustainable, reliable, and
+                innovative wastewater treatment solutions that protect the
+                environment, support public health, and empower communities.
+                Through quality engineering and responsible practices, we strive
+                to conserve water, reduce pollution, and create a cleaner, more
+                resilient future
               </p>
               <div className="space-y-3">
                 <div className="flex items-center">
                   <div className="w-3 h-3 bg-blue-600 rounded-full mr-4"></div>
-                  <p className="text-gray-600">
-                    Delivering cutting-edge wastewater treatment solutions
-                  </p>
+                  <p className="text-gray-600">Commitment to Quality</p>
                 </div>
                 <div className="flex items-center">
                   <div className="w-3 h-3 bg-green-600 rounded-full mr-4"></div>
-                  <p className="text-gray-600">
-                    Ensuring access to clean and safe drinking water
-                  </p>
+                  <p className="text-gray-600">Quality Assurance</p>
                 </div>
                 <div className="flex items-center">
                   <div className="w-3 h-3 bg-cyan-600 rounded-full mr-4"></div>
-                  <p className="text-gray-600">
-                    Building sustainable environmental solutions
-                  </p>
+                  <p className="text-gray-600">Safety Standards</p>
+                </div>
+
+                <div className="flex items-center">
+                  <div className="w-3 h-3 bg-cyan-600 rounded-full mr-4"></div>
+                  <p className="text-gray-600">Production Facility</p>
                 </div>
               </div>
             </motion.div>
@@ -194,7 +162,9 @@ const AboutUsPage = () => {
                 <div className="bg-green-100 p-4 rounded-full mr-4">
                   <Eye className="w-8 h-8 text-green-600" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-800">Our Vision</h3>
+                <h3 className="text-2xl font-bold text-gray-800">
+                  Vision Statement
+                </h3>
               </div>
               <p className="text-gray-700 leading-relaxed mb-6 text-lg">
                 To be the global leader in water and sanitation technology,
@@ -227,10 +197,10 @@ const AboutUsPage = () => {
               Meet Our Team
             </h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-              Our diverse team of experienced professionals brings together
-              expertise from Chemical, Mechanical, Civil, Electrical, and
-              Instrumentation engineering disciplines. Together, we have the
-              resources and support to deliver excellence in every project.
+              Our team comprises seasoned engineers across Chemical, Mechanical,
+              Civil, Electrical, and Instrumentation disciplines, supported by
+              experienced project managers and skilled technicians all committed
+              to delivering excellence in every project.
             </p>
           </motion.div>
 
