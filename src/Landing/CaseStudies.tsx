@@ -216,8 +216,8 @@ const CaseStudies = () => {
         </div>
 
         {/* CTA Section */}
-        <div className="mt-20 text-center relative">
-          <div className="bg-gradient-to-tl from-slate-800 via-slate-900 to-blue-900 text-white rounded-3xl p-12 ">
+        <div className="mt-20 text-center ">
+          <div className="bg-gradient-to-tl from-slate-800 via-slate-900 to-blue-900 text-white rounded-3xl p-12 max-w-6xl mx-auto relative">
             {/* Background pattern */}
             <div className="absolute inset-0 opacity-10">
               <div className="absolute top-0 left-0 w-34 h-34 rounded-full bg-white transform -translate-x-12 -translate-y-12" />

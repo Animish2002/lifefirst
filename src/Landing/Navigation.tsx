@@ -382,7 +382,7 @@ const Navigation: React.FC = () => {
     return (
       <div key={item.name} className="border-b border-gray-100 last:border-b-0">
         <motion.button
-          className="w-full text-left flex justify-between items-center py-4 text-slate-700 hover:text-blue-600 transition-colors font-medium text-lg"
+          className="w-full text-left flex justify-between items-center py-4 text-slate-700 hover:text-blue-600 transition-colors font-medium text-lg "
           onClick={() => toggleMobileItem(item.name)}
         >
           <span>{item.name}</span>
@@ -493,7 +493,7 @@ const Navigation: React.FC = () => {
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className="fixed top-0 w-full z-40 bg-white/95 backdrop-blur-xl border-b border-blue-100 shadow-sm"
+      className="fixed top-0 w-full z-40 bg-white/95 backdrop-blur-xl border-b border-blue-100 shadow-sm "
     >
       <div className="bg-gradient-to-tl from-slate-800 via-slate-900 to-blue-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -545,7 +545,7 @@ const Navigation: React.FC = () => {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-8 py-4 md:py-2">
+      <div className="max-w-7xl mx-auto px-6 py-4 md:py-2">
         <div className="flex items-center justify-between">
           {/* Logo Section */}
           <motion.div

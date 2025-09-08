@@ -23,10 +23,9 @@ const Footer = () => {
 
   const solutions = [
     "Wastewater Treatment",
-    "Water Treatment Plants",
-    "Sanitation Solutions",
-    "Monitoring Systems",
-    "Chemical Dosing",
+    "Water Treatment",
+    "Sanitation",
+    "Hydration Monitoring",
   ];
 
   const socialLinks = [
@@ -81,8 +80,7 @@ const Footer = () => {
             </div>
 
             <p className="text-slate-700 font-medium mb-6 leading-relaxed">
-              Leading water treatment solutions provider committed to creating
-              sustainable and innovative technologies for a cleaner future.
+              Water, Wastewater & Sanitation Solution Company
             </p>
 
             {/* Social Links */}

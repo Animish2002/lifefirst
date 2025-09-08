@@ -129,7 +129,7 @@ const CTASection = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <div className="bg-gradient-to-tl from-slate-800 via-slate-900 to-blue-900 text-white shadow-2xl overflow-hidden relative rounded-xl">
+            <div className="bg-gradient-to-tl from-slate-800 via-slate-900 to-blue-900 text-white shadow-2xl overflow-hidden relative rounded-xl max-w-6xl mx-auto">
               {/* Background pattern */}
               <div className="absolute inset-0 opacity-10">
                 <div className="absolute top-0 left-0 w-34 h-34 rounded-full bg-white transform -translate-x-12 -translate-y-12" />
@@ -148,14 +148,14 @@ const CTASection = () => {
 
                   <h2 className="text-2xl font-bold mb-2">
                     <span className="">
-                      Ready to Create Sustainable Change in
+                      Ready to Create Sustainable Change in &nbsp;
                     </span>
                     <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
                       Water, Wastewater & Sanitation?
                     </span>
                   </h2>
 
-                  <p className="text-sm mb-8 max-w-3xl mx-auto leading-relaxed">
+                  <p className="text-sm mb-4 max-w-3xl mx-auto leading-relaxed">
                     Empowering communities through sustainable water,
                     wastewater, and sanitation innovations.
                   </p>

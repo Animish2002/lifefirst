@@ -117,11 +117,11 @@ const Gallery = () => {
       : galleryItems.filter((item) => item.category === activeFilter);
 
   return (
-    <section className="py-20 px-4 bg-gradient-to-br from-slate-50 to-blue-50">
+    <section className="py-20 bg-gradient-to-br from-slate-50 to-blue-50 px-10">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-6">
+        <div className="text-center mb-8">
+          <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-2">
             Success Stories
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -130,7 +130,7 @@ const Gallery = () => {
         </div>
 
         {/* Gallery Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {filteredItems.map((item) => (
             <div
               key={item.id}

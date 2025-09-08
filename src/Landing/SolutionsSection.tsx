@@ -244,7 +244,7 @@ const SolutionsSection = () => {
           transition={{ duration: 0.6, delay: 0.3 }}
         >
           <motion.div
-            className="bg-gradient-to-tl from-slate-800 via-slate-900 to-blue-900 text-white rounded-2xl p-8 shadow-2xl relative overflow-hidden"
+            className="bg-gradient-to-tl from-slate-800 via-slate-900 to-blue-900 text-white rounded-2xl p-8 shadow-2xl relative overflow-hidden max-w-6xl mx-auto"
             whileHover={{
               scale: 1.02,
               transition: { type: "spring", stiffness: 300, damping: 25 },

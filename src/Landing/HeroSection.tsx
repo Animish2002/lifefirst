@@ -116,7 +116,7 @@ const HeroSection = () => {
   return (
     <section
       id="hero"
-      className="relative min-h-screen overflow-hidden bg-slate-900 md:px-4"
+      className="relative min-h-screen overflow-hidden bg-slate-900 "
     >
       <div className="absolute inset-0 bg-slate-900">
         {/* Blurred backdrop for smooth transitions */}
@@ -181,8 +181,8 @@ const HeroSection = () => {
 
       {/* Main Content */}
       <motion.div className="relative z-10 pt-24 pb-16" style={{ y: yContent }}>
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-12 gap-12 items-center min-h-[80vh]">
+        <div className="max-w-7xl mx-auto px-8">
+          <div className="grid gap-12 items-center min-h-[80vh]">
             {/* Left Content - Static */}
             <motion.div
               className="lg:col-span-7 space-y-8"
@@ -193,7 +193,7 @@ const HeroSection = () => {
               <motion.div variants={itemVariants} className="space-y-6">
                 <h1 className="md:text-5xl text-4xl font-bold leading-tight text-white">
                   <span className="block text-gray-200 mb-2 font-medium">
-                    Sustainable Water, Wastewater & Sanitation Solutions
+                    Sustainable Water, Wastewater <br /> & Sanitation Solutions
                   </span>
                 </h1>
               </motion.div>
