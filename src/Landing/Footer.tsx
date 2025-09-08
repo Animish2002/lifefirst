@@ -1,6 +1,5 @@
 "use client";
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
 import {
   Phone,
   Mail,
@@ -12,7 +11,6 @@ import {
   ChevronRight,
   Droplets,
 } from "lucide-react";
-
 
 const Footer = () => {
   const quickLinks = [
@@ -166,11 +164,9 @@ const Footer = () => {
               >
                 <Phone className="w-5 h-5 text-blue-400 mr-3 mt-0.5 group-hover:scale-110 transition-transform" />
                 <div>
-                  <p className="text-slate-700">
-                    +91 (XXX) XXX-XXXX
-                  </p>
+                  <p className="text-slate-700">+91 9607 377 277</p>
                   <p className="text-slate-600 font-medium text-sm">
-                    24/7 Support Available
+                    Mon-Fri 9AM-5PM IST
                   </p>
                 </div>
               </motion.div>
@@ -181,11 +177,14 @@ const Footer = () => {
               >
                 <Mail className="w-5 h-5 text-green-400 mr-3 mt-0.5 group-hover:scale-110 transition-transform" />
                 <div>
-                  <p className="text-slate-700 font-semibold font-medium">
-                    info@lifefirsttech.com
-                  </p>
+                  <a
+                    href="mailto:coo@life-first.in"
+                    className="text-slate-700 font-semibold font-medium"
+                  >
+                    coo@life-first.in
+                  </a>
                   <p className="text-slate-600 font-medium text-sm">
-                    Quick Response Guaranteed
+                    Expect a response in 2 working days
                   </p>
                 </div>
               </motion.div>
@@ -194,17 +193,23 @@ const Footer = () => {
                 className="flex items-start group cursor-pointer"
                 whileHover={{ x: 5 }}
               >
-                <MapPin className="w-5 h-5 text-orange-400 mr-3 mt-0.5 group-hover:scale-110 transition-transform" />
-                <div>
-                  <p className="text-slate-700 font-semibold font-medium">Corporate Office</p>
-                  <p className="text-slate-600 font-medium text-sm">
-                    Your City, State - 000000
-                  </p>
-                </div>
+                <a
+                  href="https://maps.app.goo.gl/5dkdXT8gxGHYHVED9"
+                  rel="noopener noreferrer"
+                  className="flex items-center group"
+                >
+                  <MapPin className="w-5 h-5 text-orange-400 mr-3 mt-0.5 group-hover:scale-110 transition-transform" />
+                  <div>
+                    <p className="text-slate-700 font-semibold font-medium">
+                      Corporate Office
+                    </p>
+                    <span className="text-slate-600 font-medium text-sm">
+                      Pune, MH, India
+                    </span>
+                  </div>
+                </a>
               </motion.div>
             </div>
-
-            
           </motion.div>
         </div>
       </div>
