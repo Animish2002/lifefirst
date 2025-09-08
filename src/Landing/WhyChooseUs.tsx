@@ -14,47 +14,49 @@ import {
 export function WhyChooseUs() {
   return (
     <>
-      <div className="text-3xl md:text-4xl font-semibold text-center py-8">
-        Why Choose Us?
-      </div>
+      <div className="md:px-4">
+        <div className="text-3xl md:text-4xl font-semibold text-center py-8">
+          Why Choose Us?
+        </div>
 
-      {/* First row - 3 items */}
-      <BentoGrid className="max-w-7xl mx-auto">
-        {items.slice(0, 3).map((item, i) => (
-          <BentoGridItem
-            key={i}
-            title={item.title}
-            description={item.description}
-            icon={item.icon}
-          />
-        ))}
-      </BentoGrid>
-
-      {/* Second row - 2 items centered */}
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 px-4 md:auto-rows-[12rem]">
-          {items.slice(3, 5).map((item, i) => (
+        {/* First row - 3 items */}
+        <BentoGrid className="max-w-7xl mx-auto ">
+          {items.slice(0, 3).map((item, i) => (
             <BentoGridItem
-              key={i + 3}
+              key={i}
               title={item.title}
               description={item.description}
               icon={item.icon}
             />
           ))}
-        </div>
-      </div>
+        </BentoGrid>
 
-      {/* Third row - 3 items */}
-      <BentoGrid className="max-w-7xl mx-auto">
-        {items.slice(5, 8).map((item, i) => (
-          <BentoGridItem
-            key={i + 5}
-            title={item.title}
-            description={item.description}
-            icon={item.icon}
-          />
-        ))}
-      </BentoGrid>
+        {/* Second row - 2 items centered */}
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 px-4 md:auto-rows-[12rem]">
+            {items.slice(3, 5).map((item, i) => (
+              <BentoGridItem
+                key={i + 3}
+                title={item.title}
+                description={item.description}
+                icon={item.icon}
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* Third row - 3 items */}
+        <BentoGrid className="max-w-7xl mx-auto">
+          {items.slice(5, 8).map((item, i) => (
+            <BentoGridItem
+              key={i + 5}
+              title={item.title}
+              description={item.description}
+              icon={item.icon}
+            />
+          ))}
+        </BentoGrid>
+      </div>
     </>
   );
 }
@@ -93,7 +95,7 @@ const items = [
   {
     title: "Sustainability First",
     description:
-      "Turning wastewater into a resource through ZLD, reuse, and eco-focused solutions.",
+      "Turning wastewater into a resource through reduce, reuse and restore.",
     icon: <IconRecycle className="h-10 w-10 text-green-500" />,
   },
   {

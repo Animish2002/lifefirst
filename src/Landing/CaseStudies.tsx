@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { ArrowRight, ArrowLeft } from "lucide-react";
+import { motion } from "framer-motion";
 
 const CaseStudies = () => {
   const [activeCase, setActiveCase] = useState(0);
@@ -113,8 +114,8 @@ const CaseStudies = () => {
             Case Studies
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Discover how we transform wastewater challenges into sustainable
-            solutions
+            Discover our journey of converting water, wastewater, and sanitation
+            challenges into innovative, sustainable solutions.
           </p>
         </div>
 
@@ -215,19 +216,46 @@ const CaseStudies = () => {
         </div>
 
         {/* CTA Section */}
-        <div className="mt-20 text-center">
-          <div className="bg-gray-900 rounded-3xl p-12 text-white">
-            <h3 className="text-3xl font-bold mb-4">
-              Ready to Start Your Project?
+        <div className="mt-20 text-center relative">
+          <div className="bg-gradient-to-tl from-slate-800 via-slate-900 to-blue-900 text-white rounded-3xl p-12 ">
+            {/* Background pattern */}
+            <div className="absolute inset-0 opacity-10">
+              <div className="absolute top-0 left-0 w-34 h-34 rounded-full bg-white transform -translate-x-12 -translate-y-12" />
+              <div className="absolute bottom-0 right-0 w-34 h-34 rounded-full bg-white transform translate-x-12 translate-y-12" />
+            </div>
+            <h3 className="text-2xl font-bold mb-2">
+              Let&apos;s bring your project to life!
             </h3>
-            <p className="text-gray-300 mb-8 max-w-2xl mx-auto text-lg">
-              Let&apos;s discuss how we can deliver measurable results for your
-              wastewater challenges
+            <p className="text-gray-300 mb-8 max-w-2xl mx-auto text-sm">
+              Let&apos;s explore how we can turn your water, wastewater, and
+              sanitation challenges into effective solutions.
             </p>
-            <button className="bg-white text-gray-900 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors duration-300 inline-flex items-center gap-2">
-              Get Started Today
-              <ArrowRight className="w-5 h-5" />
-            </button>
+            <motion.button
+              className="bg-white text-blue-600 text-sm px-8 py-3 rounded-xl font-medium shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-blue-50 relative overflow-hidden group"
+              whileHover={{
+                scale: 1.05,
+                transition: { type: "spring", stiffness: 400, damping: 25 },
+              }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <span className="relative z-10 flex items-center">
+                Let&apos;s Get Started Now
+                <motion.div
+                  whileHover={{ x: 3 }}
+                  transition={{ type: "spring", stiffness: 400 }}
+                >
+                  <ArrowRight className="ml-2 w-4 h-4" />
+                </motion.div>
+              </span>
+
+              {/* Button hover effect */}
+              <motion.div
+                className="absolute inset-0 bg-blue-100"
+                initial={{ x: "-100%" }}
+                whileHover={{ x: "0%" }}
+                transition={{ duration: 0.3 }}
+              />
+            </motion.button>
           </div>
         </div>
       </div>

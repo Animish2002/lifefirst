@@ -44,7 +44,6 @@ interface SocialLink {
   color: string;
 }
 
-
 const navLinks: NavLink[] = [
   { name: "Home", path: "/" },
   {
@@ -135,19 +134,19 @@ const navLinks: NavLink[] = [
 const contactInfo: ContactInfo[] = [
   {
     icon: <Mail size={16} />,
-    text: "coo@life-first.in",
-    href: "mailto:coo@life-first.in",
+    text: "sales@life-first.in",
+    href: "mailto:sales@life-first.in",
     type: "email",
   },
   {
     icon: <Phone size={16} />,
-    text: "+91 9607 377 277",
-    href: "tel:+919607377277",
+    text: "+91 90116 77277",
+    href: "tel:+919011677277",
     type: "phone",
   },
   {
     icon: <Clock size={16} />,
-    text: "Mon-Fri 9AM-5PM IST",
+    text: "Mon-Wed, Fri 9AM-5PM IST, Thu closed",
     href: null,
     type: "hours",
   },
@@ -546,7 +545,7 @@ const Navigation: React.FC = () => {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 py-4 md:py-2">
+      <div className="max-w-7xl mx-auto px-8 py-4 md:py-2">
         <div className="flex items-center justify-between">
           {/* Logo Section */}
           <motion.div

@@ -1,4 +1,3 @@
-
 import CaseStudies from "@/Landing/CaseStudies";
 import CTASection from "@/Landing/Contact";
 import Footer from "@/Landing/Footer";
@@ -8,7 +7,8 @@ import HeroSection from "@/Landing/HeroSection";
 import Navigation from "@/Landing/Navigation";
 import ProjectsMarquee from "@/Landing/ProjectsMarquee";
 import SolutionsSection from "@/Landing/SolutionsSection";
-import { StatsSection } from "@/Landing/StatsSection";
+import StatsSection from "@/Landing/StatsSection";
+
 import { WhyChooseUs } from "@/Landing/WhyChooseUs";
 
 export default function Home() {

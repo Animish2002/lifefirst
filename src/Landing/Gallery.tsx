@@ -122,11 +122,10 @@ const Gallery = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-6">
-            Project Gallery
+            Success Stories
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover our comprehensive wastewater management solutions across
-            various industries and municipalities
+            Discover how we turned challenges into inspiring success stories.
           </p>
         </div>
 

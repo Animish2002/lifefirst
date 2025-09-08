@@ -139,7 +139,12 @@ const CTASection = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <div className="bg-gradient-to-br from-white to-blue-50 border border-blue-100 shadow-2xl overflow-hidden rounded-xl">
+            <div className="bg-gradient-to-tl from-slate-800 via-slate-900 to-blue-900 text-white shadow-2xl overflow-hidden relative rounded-xl">
+              {/* Background pattern */}
+              <div className="absolute inset-0 opacity-10">
+                <div className="absolute top-0 left-0 w-34 h-34 rounded-full bg-white transform -translate-x-12 -translate-y-12" />
+                <div className="absolute bottom-0 right-0 w-34 h-34 rounded-full bg-white transform translate-x-12 translate-y-12" />
+              </div>
               <div className="p-6 relative">
                 <div className="relative z-10">
                   <motion.div
@@ -148,23 +153,22 @@ const CTASection = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: 0.2 }}
                   >
-                    <MessageSquare className="w-16 h-16 text-blue-500 mx-auto mb-6" />
+                    <MessageSquare className="w-16 h-14 text-blue-500 mx-auto mb-6" />
                   </motion.div>
 
-                  <h2 className="text-xl md:text-3xl font-bold mb-6">
-                    <span className="text-slate-800">
-                      Ready to Transform Your
+                  <h2 className="text-2xl font-bold mb-2">
+                    <span className="">
+                      Ready to Create Sustainable Change in
                     </span>
                     &nbsp;
                     <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
-                      Water Treatment?
+                      Water, Wastewater & Sanitation?
                     </span>
                   </h2>
 
-                  <p className="text-sm text-slate-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-                    Connect with us to bring sustainable water treatment to your
-                    facility or community. Our experts are ready to design the
-                    perfect solution for your needs.
+                  <p className="text-sm mb-8 max-w-3xl mx-auto leading-relaxed">
+                    Empowering communities through sustainable water,
+                    wastewater, and sanitation innovations.
                   </p>
 
                   <motion.div
@@ -175,12 +179,8 @@ const CTASection = () => {
                     transition={{ duration: 0.5, delay: 0.4 }}
                   >
                     <button className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-8 py-2 text-sm shadow-lg hover:shadow-xl transition-all duration-300 rounded-lg flex items-center justify-center">
-                      Contact Us Now
+                      Connect with LifeFirst
                       <ChevronRight className="ml-2 w-5 h-5" />
-                    </button>
-
-                    <button className="border-2 border-blue-500 text-blue-600 hover:bg-blue-50 px-8 py-2 text-sm rounded-lg transition-all duration-300">
-                      Download Brochure
                     </button>
                   </motion.div>
                 </div>

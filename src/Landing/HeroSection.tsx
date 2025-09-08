@@ -8,13 +8,7 @@ import {
   AnimatePresence,
 } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import {
-  ChevronRight,
-  ArrowDown,
-
-  Pause,
-  Play,
-} from "lucide-react";
+import { ChevronRight, ArrowDown, Pause, Play } from "lucide-react";
 
 // Sample carousel data - replace with your actual data
 const carouselData = [
@@ -115,22 +109,15 @@ const HeroSection = () => {
     setCurrentSlide(index);
   };
 
-  const goToPrevious = () => {
-    setCurrentSlide(
-      (prev) => (prev - 1 + carouselData.length) % carouselData.length
-    );
-  };
-
-  const goToNext = () => {
-    setCurrentSlide((prev) => (prev + 1) % carouselData.length);
-  };
-
   const togglePlayPause = () => {
     setIsPlaying(!isPlaying);
   };
 
   return (
-    <section className="relative min-h-screen overflow-hidden bg-slate-900">
+    <section
+      id="hero"
+      className="relative min-h-screen overflow-hidden bg-slate-900 md:px-4"
+    >
       <div className="absolute inset-0 bg-slate-900">
         {/* Blurred backdrop for smooth transitions */}
         <div
@@ -160,8 +147,6 @@ const HeroSection = () => {
           </motion.div>
         </AnimatePresence>
       </div>
-
-     
 
       {/* Play/Pause Button */}
       <div className="absolute top-6 right-6 z-20">
@@ -207,8 +192,8 @@ const HeroSection = () => {
             >
               <motion.div variants={itemVariants} className="space-y-6">
                 <h1 className="md:text-5xl text-4xl font-bold leading-tight text-white">
-                  <span className="block bg-gradient-to-r from-blue-400 via-cyan-300 to-blue-500 bg-clip-text text-transparent mb-2">
-                    Transform Water Systems <br /> for a Sustainable Future
+                  <span className="block text-gray-200 mb-2 font-medium">
+                    Sustainable Water, Wastewater & Sanitation Solutions
                   </span>
                 </h1>
               </motion.div>
@@ -217,9 +202,8 @@ const HeroSection = () => {
                 variants={itemVariants}
                 className="text-lg text-gray-200 leading-relaxed max-w-2xl"
               >
-                Pioneering advanced water treatment technologies that deliver
-                exceptional results while protecting our environment. From
-                wastewater management to complete sanitation solutions.
+                Turning Water & Wastewater Challenges in to clean water
+                solutions
               </motion.p>
 
               <motion.div

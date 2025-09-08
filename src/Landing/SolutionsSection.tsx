@@ -56,13 +56,13 @@ const SolutionsSection = () => {
 
   return (
     <motion.section
-      className="py-20 bg-gray-50"
+      className="py-8 bg-gray-50"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 0.8 }}
     >
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto md:px-4">
         {/* Section Header */}
         <motion.div
           className="text-center mb-10"
@@ -71,18 +71,17 @@ const SolutionsSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl md:text-4xl font-semibold mb-6 text-gray-900 p-4">
+          <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 p-2">
             Our Solutions
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Comprehensive water treatment technologies designed for maximum
-            efficiency and environmental sustainability. From industrial
-            wastewater to drinking water purification.
+            Innovative water, wastewater, and sanitation solutions for a
+            sustainable future.
           </p>
         </motion.div>
 
         {/* Solutions Grid */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 md:gap-6 px-4">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 md:gap-4 px-4">
           {solutions.map((solution, index) => (
             <motion.div
               key={solution.id}
@@ -120,7 +119,7 @@ const SolutionsSection = () => {
                 transition={{ duration: 0.3 }}
               />
 
-              <div className="relative p-4 h-[40vh] lg:h-[45vh] flex flex-col z-10">
+              <div className="relative p-4 h-[40vh] md:[45vh] lg:h-[55vh] flex flex-col z-10">
                 {/* Text Content with staggered animation */}
                 <motion.div
                   className="flex flex-col"
@@ -176,7 +175,7 @@ const SolutionsSection = () => {
                   }}
                   whileHover={{
                     scale: hoveredCard === solution.id ? 1 : 1.05,
-                    transition: { type: "spring", stiffness: 400, damping: 25 },
+                    transition: { type: "tween", stiffness: 400, damping: 25 },
                   }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -191,7 +190,7 @@ const SolutionsSection = () => {
                       transition={{
                         duration: 0.4,
                         ease: "backOut",
-                        type: "spring",
+                        type: "tween",
                         stiffness: 300,
                       }}
                     >
@@ -203,12 +202,12 @@ const SolutionsSection = () => {
                       initial={{ opacity: 1 }}
                       exit={{ opacity: 0 }}
                       whileHover={{ x: 2 }}
-                      transition={{ type: "spring", stiffness: 400 }}
+                      transition={{ type: "tween", stiffness: 600 }}
                     >
                       Learn More
                       <motion.div
                         whileHover={{ x: 3 }}
-                        transition={{ type: "spring", stiffness: 400 }}
+                        transition={{ type: "tween", stiffness: 600 }}
                       >
                         <ArrowRight className="ml-2 w-4 h-4 " />
                       </motion.div>
@@ -245,7 +244,7 @@ const SolutionsSection = () => {
           transition={{ duration: 0.6, delay: 0.3 }}
         >
           <motion.div
-            className="bg-gradient-to-br from-blue-600 to-blue-700 rounded-2xl p-8 text-white shadow-2xl relative overflow-hidden"
+            className="bg-gradient-to-tl from-slate-800 via-slate-900 to-blue-900 text-white rounded-2xl p-8 shadow-2xl relative overflow-hidden"
             whileHover={{
               scale: 1.02,
               transition: { type: "spring", stiffness: 300, damping: 25 },
@@ -253,18 +252,18 @@ const SolutionsSection = () => {
           >
             {/* Background pattern */}
             <div className="absolute inset-0 opacity-10">
-              <div className="absolute top-0 left-0 w-32 h-32 rounded-full bg-white transform -translate-x-16 -translate-y-16" />
-              <div className="absolute bottom-0 right-0 w-24 h-24 rounded-full bg-white transform translate-x-12 translate-y-12" />
+              <div className="absolute top-0 left-0 w-34 h-34 rounded-full bg-white transform -translate-x-12 -translate-y-12" />
+              <div className="absolute bottom-0 right-0 w-34 h-34 rounded-full bg-white transform translate-x-12 translate-y-12" />
             </div>
 
             <div className="relative z-10">
-              <h3 className="text-xl font-bold mb-4">
-                Need a Custom Solution?
+              <h3 className="text-2xl font-bold mb-2">
+                Looking for a customised solution?
               </h3>
               <p className="text-blue-100 mb-6 max-w-2xl mx-auto text-sm leading-relaxed">
-                Our engineering team can design and implement tailored water
-                treatment solutions to meet your specific requirements and
-                challenges.
+                Our engineering team can design & implement tailored Water,
+                Wastewater & Sanitation solutions to meet your specific
+                requirements.
               </p>
               <motion.button
                 className="bg-white text-blue-600 text-sm px-8 py-3 rounded-xl font-medium shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-blue-50 relative overflow-hidden group"
@@ -275,7 +274,7 @@ const SolutionsSection = () => {
                 whileTap={{ scale: 0.95 }}
               >
                 <span className="relative z-10 flex items-center">
-                  Contact Our Engineers
+                  Connect with us
                   <motion.div
                     whileHover={{ x: 3 }}
                     transition={{ type: "spring", stiffness: 400 }}

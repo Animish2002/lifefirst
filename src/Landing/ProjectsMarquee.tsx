@@ -404,7 +404,7 @@ const ProjectsMarquee = () => {
           Trusted By
         </h1>
         <p className="text-gray-600 text-xl">
-          Delivering excellence across government and private sectors
+          Driving Excellence in Both Government and Private Sectors
         </p>
       </div>
 
@@ -412,7 +412,7 @@ const ProjectsMarquee = () => {
       <MarqueeSection
         projects={governmentProjects}
         title="Government Projects"
-        subtitle="Empowering public services with innovative digital solutions"
+        subtitle="Partnering with Governments to create infrastructure for a better future."
         isGovernment={true}
         direction="left"
       />
@@ -421,7 +421,7 @@ const ProjectsMarquee = () => {
       <MarqueeSection
         projects={privateSectorProjects}
         title="Private Sector Projects"
-        subtitle="Driving business growth through cutting-edge technology"
+        subtitle="Collaborating with Private enterprises to deliver performance-driven projects."
         isGovernment={false}
         direction="right"
       />
