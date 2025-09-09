@@ -182,7 +182,7 @@ const HeroSection = () => {
       {/* Main Content */}
       <motion.div className="relative z-10 pt-24 pb-16" style={{ y: yContent }}>
         <div className="max-w-7xl mx-auto px-8">
-          <div className="grid gap-12 items-center min-h-[80vh]">
+          <div className="grid items-center min-h-[80vh]">
             {/* Left Content - Static */}
             <motion.div
               className="lg:col-span-7 space-y-8"

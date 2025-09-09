@@ -162,7 +162,9 @@ const Footer = () => {
               >
                 <Phone className="w-5 h-5 text-blue-400 mr-3 mt-0.5 group-hover:scale-110 transition-transform" />
                 <div>
-                  <a href="tel:+919011677277" className="text-slate-700 ">+91 9011 677 277</a>
+                  <a href="tel:+919011677277" className="text-slate-700 ">
+                    +91 9011 677 277
+                  </a>
                   <p className="text-slate-600 font-medium text-sm">
                     Mon-Wed, Fri 9AM-5PM IST, Thu closed
                   </p>
@@ -177,7 +179,7 @@ const Footer = () => {
                 <div>
                   <a
                     href="mailto:sales@life-first.in"
-                    className="text-slate-700 font-semibold font-medium block"
+                    className="text-slate-700 font-medium block"
                   >
                     sales@life-first.in
                     <span className="text-slate-600 font-medium text-sm block">
@@ -198,7 +200,7 @@ const Footer = () => {
                 >
                   <MapPin className="w-5 h-5 text-orange-400 mr-3 mt-0.5 group-hover:scale-110 transition-transform" />
                   <div>
-                    <p className="text-slate-700 font-semibold font-medium">
+                    <p className="text-slate-700 font-medium">
                       Corporate Office
                     </p>
                     <span className="text-slate-600 font-medium text-sm">
@@ -222,16 +224,11 @@ const Footer = () => {
       >
         <div className="max-w-7xl mx-auto px-6 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="text-slate-200 font-medium text-sm mb-4 md:mb-0">
+            <div className="text-slate-200 font-medium text-md mb-4 md:mb-0">
               <p>&copy; 2025 Life First Technologies. All rights reserved.</p>
             </div>
 
-
-            <div>
-              <a> Website by The Fortune Club</a>
-            </div>
-
-            <div className="flex space-x-6 text-sm">
+            <div className="flex space-x-6 text-md">
               <a
                 href="/privacy-policy"
                 className="text-slate-200 font-medium hover:text-blue-400 transition-colors"
@@ -251,6 +248,19 @@ const Footer = () => {
                 Sitemap
               </a>
             </div>
+          </div>
+          <div className="text-center text-slate-100 text-lg mt-4 font-light">
+            <p>
+              Website designed & developed by{" "}
+              <a
+                href="https://www.thefortune.club/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-yellow-200 font-medium hover:text-yellow-400 transition-colors"
+              >
+                TheFortuneClub
+              </a>
+            </p>
           </div>
         </div>
       </motion.div>

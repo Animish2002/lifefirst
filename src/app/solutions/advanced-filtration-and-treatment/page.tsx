@@ -3,7 +3,7 @@ import Navigation from "@/Landing/Navigation";
 import React from "react";
 import Link from "next/link";
 import CTASection from "@/Landing/Contact";
-import solutionsData from "@/data/data.json";
+
 
 const page = () => {
   const solutions = [

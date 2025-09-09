@@ -29,49 +29,56 @@ const page = () => {
                 <h2 className="text-xl font-semibold text-gray-800 mb-4 border-b border-gray-200 pb-2">
                   Information We Collect
                 </h2>
-                <p className="text-gray-700 leading-relaxed">
+                <div className="text-gray-700 leading-relaxed">
                   When you use our website or contact form, we may collect:
-                  <li>Name</li>
-                  <li>Email Address</li>
-                  <li>Phone Number</li>
-                  <li>Company Website</li>
-                  <li>Product or Service of Interest</li>
+                  <ul>
+                    <li>Name</li>
+                    <li>Email Address</li>
+                    <li>Phone Number</li>
+                    <li>Company Website</li>
+                    <li>Product or Service of Interest</li>
+                  </ul>
                   We may also collect limited technical information (such as IP
                   address, browser type, and device details) for analytics and
                   security.
-                </p>
+                </div>
               </section>
 
               <section>
                 <h2 className="text-xl font-semibold text-gray-800 mb-4 border-b border-gray-200 pb-2">
                   How We Use Your Information
                 </h2>
-                <p className="text-gray-700 leading-relaxed">
+                <div className="text-gray-700 leading-relaxed">
                   We use the information you provide to:
-                  <li>Respond to your inquiries and schedule calls</li>
-                  <li>Share proposals or relevant product information</li>
-                  <li>
-                    Send marketing, promotional, or informational communications
-                  </li>
-                  <li>
-                    Improve our website, services, and customer experience
-                  </li>
-                </p>
+                  <ul>
+                    <li>Respond to your inquiries and schedule calls</li>
+                    <li>Share proposals or relevant product information</li>
+                    <li>
+                      Send marketing, promotional, or informational
+                      communications
+                    </li>
+                    <li>
+                      Improve our website, services, and customer experience
+                    </li>
+                  </ul>
+                </div>
               </section>
 
               <section>
                 <h2 className="text-xl font-semibold text-gray-800 mb-4 border-b border-gray-200 pb-2">
                   Legal Basis for Processing
                 </h2>
-                <p className="text-gray-700 leading-relaxed">
+                <div className="text-gray-700 leading-relaxed">
                   We process your personal information:
-                  <li>With your consent (when you submit our form)</li>
-                  <li>
-                    For legitimate business purposes (responding to inquiries,
-                    providing services)
-                  </li>
-                  <li>To comply with legal obligations</li>
-                </p>
+                  <ul>
+                    <li>With your consent (when you submit our form)</li>
+                    <li>
+                      For legitimate business purposes (responding to inquiries,
+                      providing services)
+                    </li>
+                    <li>To comply with legal obligations</li>
+                  </ul>
+                </div>
               </section>
 
               <section>
@@ -91,15 +98,17 @@ const page = () => {
                 <h2 className="text-xl font-semibold text-gray-800 mb-4 border-b border-gray-200 pb-2">
                   Sharing of Information
                 </h2>
-                <p className="text-gray-700 leading-relaxed">
+                <div className="text-gray-700 leading-relaxed">
                   We do not sell your personal information. We may share it
                   with:
-                  <li>
-                    Service providers who assist us in communication, hosting,
-                    or analytics
-                  </li>
-                  <li>Legal authorities if required by law</li>
-                </p>
+                  <ul>
+                    <li>
+                      Service providers who assist us in communication, hosting,
+                      or analytics
+                    </li>
+                    <li>Legal authorities if required by law</li>
+                  </ul>
+                </div>
               </section>
 
               <section>
@@ -129,12 +138,14 @@ const page = () => {
                 <h2 className="text-xl font-semibold text-gray-800 mb-4 border-b border-gray-200 pb-2">
                   Your Rights
                 </h2>
-                <p className="text-gray-700 leading-relaxed">
+                <div className="text-gray-700 leading-relaxed">
                   Depending on your location, you may have the right to:
-                  <li>Access the personal data we hold about you</li>
-                  <li>Request corrections or updates </li>
-                  <li>Request deletion of your data </li>
-                  <li> Opt-out of marketing communications</li>
+                  <ul>
+                    <li>Access the personal data we hold about you</li>
+                    <li>Request corrections or updates </li>
+                    <li>Request deletion of your data </li>
+                    <li> Opt-out of marketing communications</li>
+                  </ul>
                   To exercise these rights, contact us at:{" "}
                   <a
                     href="mailto:coo@life-first.in"
@@ -142,7 +153,7 @@ const page = () => {
                   >
                     coo@life-first.in
                   </a>
-                </p>
+                </div>
               </section>
 
               <section>

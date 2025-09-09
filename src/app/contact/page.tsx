@@ -1,8 +1,6 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
-
-import { Button } from "@/components/ui/button";
 
 import Navigation from "@/Landing/Navigation";
 import Footer from "@/Landing/Footer";

@@ -8,6 +8,11 @@ const stats = [
   { number: 100, suffix: "%", label: "Eco-Friendly Systems" },
   { number: 3, suffix: "R's", label: "Reduce, Reuse & Restore" },
 ];
+interface Stat {
+  number: number;
+  suffix: string;
+  label: string;
+}
 
 // Custom hook for counter animation
 const useCounter = (end: number, duration = 2000, shouldStart = false) => {
@@ -17,7 +22,7 @@ const useCounter = (end: number, duration = 2000, shouldStart = false) => {
     if (!shouldStart) return;
 
     let startTime: number;
-  let animationFrame: number | null;
+    let animationFrame: number | null;
 
     const animate = (currentTime: number) => {
       if (!startTime) startTime = currentTime;
@@ -65,7 +70,6 @@ export default function StatsSection() {
   const ref = React.useRef(null);
   const isInView = useInView(ref, {
     once: true,
-    threshold: 0.3,
     margin: "-100px 0px",
   });
 
@@ -75,7 +79,7 @@ export default function StatsSection() {
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, threshold: 0.3 }}
+      viewport={{ once: true, amount: 0.3 }}
       className="py-8 md:p-12 bg-gray-50 rounded-lg shadow-inner border border-gray-100 p-4"
     >
       {/* Stats Section */}
