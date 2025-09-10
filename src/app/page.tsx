@@ -9,6 +9,7 @@ import SolutionsSection from "@/Landing/SolutionsSection";
 import StatsSection from "@/Landing/StatsSection";
 
 import { WhyChooseUs } from "@/Landing/WhyChooseUs";
+import AboutSection from "@/Landing/AboutUs";
 
 export default function Home() {
   return (
@@ -16,10 +17,10 @@ export default function Home() {
       <Navigation />
       <HeroSection />
       <StatsSection />
+      <AboutSection />
       <SolutionsSection />
       <WhyChooseUs />
       <ProjectsMarquee />
-
       <CTASection />
       <Footer />
     </div>
