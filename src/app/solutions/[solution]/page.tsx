@@ -43,7 +43,7 @@ const SolutionPage = ({ params }: PageProps) => {
       <main className="flex-grow">
         {/* Hero Section */}
         <div
-          className="relative h-96 bg-cover bg-center rounded-b-3xl overflow-hidden shadow-xl md:mt-32 mt-34"
+          className="relative h-96 bg-cover bg-center rounded-b-3xl overflow-hidden shadow-xl md:mt-26 mt-34"
           style={{ backgroundImage: `url(${solution.heroImage})` }}
         >
           <div className="absolute inset-0 bg-gray-900 bg-opacity-70 flex items-center justify-center p-8">

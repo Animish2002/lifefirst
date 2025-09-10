@@ -3,16 +3,7 @@
 import React, { useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, Menu, X, Plus, Minus } from "lucide-react";
-import {
-  Phone,
-  Mail,
-  Facebook,
-  Twitter,
-  Linkedin,
-  Instagram,
-  Youtube,
-  Clock,
-} from "lucide-react";
+import { Phone, Mail, Facebook, Twitter, Linkedin } from "lucide-react";
 import Link from "next/link";
 
 interface NavSubItem {
@@ -45,9 +36,9 @@ interface SocialLink {
 }
 
 const navLinks: NavLink[] = [
-  { name: "Home", path: "/" },
+  { name: "Our Company", path: "/" },
   {
-    name: "Solutions",
+    name: "Our Solutions",
     path: "/solutions",
     subItems: [
       {
@@ -120,15 +111,19 @@ const navLinks: NavLink[] = [
     ],
   },
   {
-    name: "Our Company",
+    name: "Products & Technologies",
+    path: null,
+    subItems: [{ name: "About LifeFirst", path: "/about-us" }],
+  },
+  {
+    name: "Resources",
     path: null,
     subItems: [
-      { name: "About LifeFirst", path: "/about-us" },
       { name: "Brochures", path: "/company-brochures" },
       { name: "Case Studies", path: "/case-studies" },
+      { name: "Gallery", path: "/gallery" },
     ],
   },
-  { name: "Contact", path: "/contact" },
 ];
 
 const contactInfo: ContactInfo[] = [
@@ -144,19 +139,13 @@ const contactInfo: ContactInfo[] = [
     href: "tel:+919011677277",
     type: "phone",
   },
-  {
-    icon: <Clock size={16} />,
-    text: "Mon-Wed, Fri 9AM-5PM IST, Thu closed",
-    href: null,
-    type: "hours",
-  },
 ];
 
 const socialLinks: SocialLink[] = [
   {
     icon: <Facebook size={18} />,
     href: "https://facebook.com/lifefirsttech",
-    label: "Facebook",
+    label: "Investors",
     color: "hover:text-blue-600",
   },
   {
@@ -171,22 +160,7 @@ const socialLinks: SocialLink[] = [
     label: "LinkedIn",
     color: "hover:text-blue-700",
   },
-  {
-    icon: <Instagram size={18} />,
-    href: "https://instagram.com/lifefirsttech",
-    label: "Instagram",
-    color: "hover:text-pink-600",
-  },
-  {
-    icon: <Youtube size={18} />,
-    href: "https://youtube.com/lifefirsttech",
-    label: "YouTube",
-    color: "hover:text-red-600",
-  },
 ];
-
-// ---
-// ## Component
 
 const Navigation: React.FC = () => {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -262,10 +236,10 @@ const Navigation: React.FC = () => {
               exit={{ opacity: 0, y: 10, scale: 0.95 }}
               transition={{ duration: 0.2 }}
               className={`absolute top-full left-1/2 transform -translate-x-1/2 mt-2 ${
-                item.name === "Solutions" ? "w-screen max-w-[50rem]" : "w-56"
+                item.name === "Our Solutions" ? "w-screen max-w-[50rem]" : "w-56"
               } bg-white rounded-xl shadow-xl border border-blue-100 overflow-hidden z-50`}
             >
-              {item.name === "Solutions" ? (
+              {item.name === "Our Solutions" ? (
                 <div className="p-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {/* Main Products Column */}
@@ -497,7 +471,7 @@ const Navigation: React.FC = () => {
     >
       <div className="bg-gradient-to-tl from-slate-800 via-slate-900 to-blue-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between py-3">
+          <div className="flex items-center justify-between py-1.5">
             {/* Left Side - Contact Information */}
             <div className="flex items-center space-x-6">
               {contactInfo.map((item, index) => (
@@ -507,13 +481,17 @@ const Navigation: React.FC = () => {
                       href={item.href}
                       className="flex items-center space-x-2 text-slate-300 hover:text-white transition-colors duration-200 text-sm"
                     >
-                      <span className="text-slate-400">{item.icon}</span>
-                      <span className="hidden sm:inline">{item.text}</span>
+                      <span className="text-slate-400 h-4 w-4">{item.icon}</span>
+                      <span className="hidden sm:inline text-sm">
+                        {item.text}
+                      </span>
                     </Link>
                   ) : (
                     <div className="flex items-center space-x-2 text-slate-300 text-sm">
                       <span className="text-slate-400">{item.icon}</span>
-                      <span className="hidden sm:inline">{item.text}</span>
+                      <span className="hidden sm:inline text-sm">
+                        {item.text}
+                      </span>
                     </div>
                   )}
                   {index < contactInfo.length - 1 && (
@@ -525,9 +503,6 @@ const Navigation: React.FC = () => {
 
             {/* Right Side - Social Links */}
             <div className="flex items-center space-x-1">
-              <span className="text-slate-400 text-sm mr-3 hidden md:inline">
-                Follow us:
-              </span>
               {socialLinks.map((social) => (
                 <Link
                   key={social.label}
@@ -535,11 +510,21 @@ const Navigation: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={social.label}
-                  className={`h-8 w-8 p-0 text-slate-400 hover:bg-slate-800 transition-all duration-200 ${social.color} rounded flex items-center justify-center`}
+                  className={`h-4 w-4 ml-3 text-slate-400 hover:bg-slate-800 transition-all duration-200 ${social.color} rounded flex items-center justify-center`}
                 >
                   {social.icon}
                 </Link>
               ))}
+
+              <Link href="/investors" className="px-2 text-sm">
+                Investors
+              </Link>
+              <Link href="/careers" className="px-2 text-sm">
+                Carrers
+              </Link>
+              <Link href="/contact" className="px-2 text-sm">
+                Contact
+              </Link>
             </div>
           </div>
         </div>
