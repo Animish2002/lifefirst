@@ -175,7 +175,7 @@ const contactInfo: ContactInfo[] = [
   },
   {
     icon: <Phone size={16} />,
-    text: "+91 9011 677 277",
+    text: "+91-901 167 7277",
     href: "tel:+919011677277",
     type: "phone",
   },
@@ -279,7 +279,7 @@ const Navigation: React.FC = () => {
                 item.name === "Our Solutions"
                   ? "w-screen max-w-[35rem]"
                   : "w-[12rem]"
-              } bg-white rounded-xl shadow-xl border border-blue-100 overflow-hidden z-50`}
+              } bg-white border-t-blue-400 border-t-4 shadow-xl border border-blue-100 overflow-hidden z-50 rounded-b-2xl`}
             >
               {item.name === "Our Solutions" ? (
                 <div className="p-4">
@@ -305,7 +305,6 @@ const Navigation: React.FC = () => {
                         ))}
                       </div>
                     </div>
-
 
                     {/* Additional Products & Solutions Column */}
                     <div>
@@ -347,7 +346,7 @@ const Navigation: React.FC = () => {
                   {item.subItems.map((subItem) => (
                     <Link href={subItem.path} key={subItem.name}>
                       <motion.div
-                        className="w-full text-left px-4 py-2 text-slate-700 hover:text-blue-600 hover:bg-blue-50 transition-colors flex items-center text-lg"
+                        className="w-full text-left px-4 py-1 text-slate-700 hover:text-blue-600 hover:bg-blue-50 transition-colors flex items-center text-md"
                         whileHover={{
                           x: 4,
                           backgroundColor: "rgb(239 246 255)",
@@ -403,7 +402,7 @@ const Navigation: React.FC = () => {
                       // Nested accordion
                       <div>
                         <motion.button
-                          className="w-full text-left flex justify-between items-center py-2 text-base font-medium text-slate-600 hover:text-blue-600 transition-colors"
+                          className="w-full text-left flex justify-between items-center py-2 font-medium text-slate-600 hover:text-blue-600 transition-colors text-sm"
                           onClick={() =>
                             toggleMobileItem(`${item.name}-${subItem.name}`)
                           }
@@ -537,13 +536,13 @@ const Navigation: React.FC = () => {
                 </Link>
               ))}
 
-              <Link href="/investors" className="px-2 text-sm">
+              <Link href="/investors" className="px-2 text-sm uppercase">
                 Investors
               </Link>
-              <Link href="/careers" className="px-2 text-sm">
+              <Link href="/careers" className="px-2 text-sm uppercase">
                 Carrers
               </Link>
-              <Link href="/contact" className="px-2 text-sm">
+              <Link href="/contact" className="px-2 text-sm uppercase">
                 Contact
               </Link>
             </div>
