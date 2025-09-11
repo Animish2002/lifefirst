@@ -1,6 +1,5 @@
 "use client";
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import { ComponentProps } from "react";
 import Navigation from "@/Landing/Navigation";
 import Footer from "@/Landing/Footer";
@@ -95,7 +94,7 @@ const jobs = [
   },
 ];
 
-const page = () => {
+const Page = () => {
   const [openJobId, setOpenJobId] = useState<number | null>(null);
 
   const toggleJobDescription = (id: number) => {
@@ -113,8 +112,8 @@ const page = () => {
             Join Our Team
           </h1>
           <p className="text-lg sm:text-xl lg:text-2xl font-light max-w-2xl mx-auto">
-            We're building the future, and we need your help. Explore our open
-            roles and find your next opportunity.
+            We&apos;re building the future, and we need your help. Explore our
+            open roles and find your next opportunity.
           </p>
         </div>
       </section>
@@ -156,7 +155,7 @@ const page = () => {
                 Growth & Development
               </h3>
               <p className="text-gray-500">
-                We invest in our employees' professional growth through
+                We invest in our employees professional growth through
                 mentorship and continuous learning.
               </p>
             </div>
@@ -215,7 +214,7 @@ const page = () => {
             Ready to Join Us?
           </h2>
           <p className="text-lg text-gray-600 mb-8">
-            If you don't see an opening that fits your skills, we'd still love
+            If you don&apos;t see an opening that fits your skills, we&apos;d still love
             to hear from you.
           </p>
           <a
@@ -232,4 +231,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

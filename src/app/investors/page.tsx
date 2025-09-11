@@ -34,7 +34,7 @@ const investorNews = [
   },
 ];
 
-const page = () => {
+const Page = () => {
   const [openNewsId, setOpenNewsId] = useState<number | null>(null);
 
   const toggleNews = (id: number) => {
@@ -116,4 +116,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
