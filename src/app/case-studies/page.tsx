@@ -174,7 +174,7 @@ const CaseStudiesPage = () => {
         </div>
 
         {/* Hero Content */}
-        <div className="relative z-10 flex items-center h-[75vh] pt-20 max-w-7xl mx-auto">
+        <div className="relative z-10 flex items-center h-[75vh] pt-20 max-w-6xl mx-auto">
           <div className="px-6 py-20 ">
             <div className="max-w-4xl">
               <motion.div
@@ -209,7 +209,7 @@ const CaseStudiesPage = () => {
 
       {/* Stats Section */}
       <div className="bg-white py-16">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-6xl mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <motion.div
@@ -237,7 +237,7 @@ const CaseStudiesPage = () => {
 
       {/* Case Studies Section */}
       <div className="min-h-screen bg-gray-50 py-20">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-6xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

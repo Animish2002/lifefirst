@@ -87,7 +87,7 @@ const AboutUsPage = () => {
 
       {/* Mission & Vision Section - Redesigned */}
       <div className="bg-white py-20">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-6xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -204,7 +204,7 @@ const AboutUsPage = () => {
             </p>
           </motion.div>
 
-          <div className="max-w-7xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             {/* First Row - 2 members centered */}
             <div className="flex justify-center mb-8">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl">
@@ -256,7 +256,7 @@ const AboutUsPage = () => {
 
             {/* Second Row - 3 members centered */}
             <div className="flex justify-center">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl">
                 {teamMembers2.slice(0, 3).map((member, index) => (
                   <motion.div
                     key={member.name}

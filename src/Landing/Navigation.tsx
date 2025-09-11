@@ -36,7 +36,15 @@ interface SocialLink {
 }
 
 const navLinks: NavLink[] = [
-  { name: "Our Company", path: "/" },
+  {
+    name: "Our Company",
+    path: null,
+    subItems: [
+      { name: "About Us", path: "/about-us" },
+      { name: "Investors", path: "/investors" },
+      { name: "Careers", path: "/careers" },
+    ],
+  },
   {
     name: "Our Solutions",
     path: "/solutions",
@@ -112,8 +120,40 @@ const navLinks: NavLink[] = [
   },
   {
     name: "Products & Technologies",
-    path: null,
-    subItems: [{ name: "About LifeFirst", path: "/about-us" }],
+    path: "/",
+    subItems: [
+      {
+        name: "Ultrafiltration Systems (UF)",
+        path: "/solutions/ultrafiltration",
+      },
+      {
+        name: "Reverse Osmosis Systems (RO)",
+        path: "/solutions/reverse-osmosis",
+      },
+      {
+        name: "Pressure Sand Filters (PSF)",
+        path: "/solutions/pressure-sand-filters",
+      },
+      {
+        name: "Activated Carbon Filters (ACF)",
+        path: "/solutions/activated-carbon-filters",
+      },
+      { name: "Lamella Clarifier", path: "/solutions/lamella-clarifier" },
+      {
+        name: "Clarifier Mechanism",
+        path: "/solutions/clarifier-mechanism",
+      },
+      { name: "Tube Settlers", path: "/solutions/tube-settlers" },
+      { name: "Water Softeners", path: "/solutions/water-softeners" },
+      {
+        name: "Demineralization Systems (DM)",
+        path: "/solutions/demineralization",
+      },
+      {
+        name: "Chemical Dosing Systems",
+        path: "/solutions/chemical-dosing",
+      },
+    ],
   },
   {
     name: "Resources",
@@ -202,7 +242,7 @@ const Navigation: React.FC = () => {
         onMouseLeave={handleMouseLeave}
       >
         <motion.div
-          className="text-slate-700 hover:text-blue-600 transition-colors text-lg font-medium relative cursor-pointer flex items-center space-x-1"
+          className="text-slate-700 hover:text-blue-600 transition-colors text-md font-medium relative cursor-pointer flex items-center space-x-1 uppercase "
           whileHover={{ y: -2 }}
         >
           {item.path ? (
@@ -236,15 +276,17 @@ const Navigation: React.FC = () => {
               exit={{ opacity: 0, y: 10, scale: 0.95 }}
               transition={{ duration: 0.2 }}
               className={`absolute top-full left-1/2 transform -translate-x-1/2 mt-2 ${
-                item.name === "Our Solutions" ? "w-screen max-w-[50rem]" : "w-56"
+                item.name === "Our Solutions"
+                  ? "w-screen max-w-[35rem]"
+                  : "w-56"
               } bg-white rounded-xl shadow-xl border border-blue-100 overflow-hidden z-50`}
             >
               {item.name === "Our Solutions" ? (
                 <div className="p-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
                     {/* Main Products Column */}
                     <div>
-                      <h3 className="font-semibold text-slate-800 text-lg uppercase tracking-wide mb-3 pb-2 border-b border-blue-100">
+                      <h3 className="font-semibold text-slate-800 text-md uppercase tracking-wide mb-3 pb-2 border-b border-blue-100">
                         CORE SOLUTIONS
                       </h3>
                       <div className="space-y-2">
@@ -264,33 +306,10 @@ const Navigation: React.FC = () => {
                       </div>
                     </div>
 
-                    {/* Other Products Column */}
-                    <div>
-                      <h3 className="font-semibold text-slate-800 text-lg uppercase tracking-wide mb-3 pb-2 border-b border-blue-100">
-                        ADVANCED FILTRATION AND TREATMENT
-                      </h3>
-                      <div className="space-y-1.5">
-                        {item.subItems[3]?.subItems
-                          ?.slice(0, 10)
-                          .map((nestedItem) => (
-                            <Link href={nestedItem.path} key={nestedItem.name}>
-                              <motion.div
-                                className="text-slate-600 hover:text-blue-600 transition-colors cursor-pointer text-md flex items-start"
-                                whileHover={{ x: 4, color: "#2563eb" }}
-                              >
-                                <span className="text-blue-400 mr-2 mt-0.5 text-sm">
-                                  •
-                                </span>
-                                {nestedItem.name}
-                              </motion.div>
-                            </Link>
-                          ))}
-                      </div>
-                    </div>
 
                     {/* Additional Products & Solutions Column */}
                     <div>
-                      <h3 className="font-semibold text-slate-800 text-lg uppercase tracking-wide mb-3 pb-2 border-b border-blue-100">
+                      <h3 className="font-semibold text-slate-800 text-md uppercase tracking-wide mb-3 pb-2 border-b border-blue-100">
                         SUSTAINABLE TECHNOLOGIES
                       </h3>
 
@@ -470,7 +489,7 @@ const Navigation: React.FC = () => {
       className="fixed top-0 w-full z-40 bg-white/95 backdrop-blur-xl border-b border-blue-100 shadow-sm "
     >
       <div className="bg-gradient-to-tl from-slate-800 via-slate-900 to-blue-900 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between py-1.5">
             {/* Left Side - Contact Information */}
             <div className="flex items-center space-x-6">
@@ -481,7 +500,9 @@ const Navigation: React.FC = () => {
                       href={item.href}
                       className="flex items-center space-x-2 text-slate-300 hover:text-white transition-colors duration-200 text-sm"
                     >
-                      <span className="text-slate-400 h-4 w-4">{item.icon}</span>
+                      <span className="text-slate-400 h-4 w-4">
+                        {item.icon}
+                      </span>
                       <span className="hidden sm:inline text-sm">
                         {item.text}
                       </span>
@@ -530,7 +551,7 @@ const Navigation: React.FC = () => {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 py-4 md:py-2">
+      <div className="max-w-6xl mx-auto px-6 py-4 md:py-2">
         <div className="flex items-center justify-between">
           {/* Logo Section */}
           <motion.div

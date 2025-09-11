@@ -84,7 +84,7 @@ export default function StatsSection() {
     >
       {/* Stats Section */}
       <motion.div variants={itemVariants}>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-6 md:px-6 max-w-7xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-6 md:px-6 max-w-6xl mx-auto">
           {stats.map((stat, index) => (
             <AnimatedStatCard
               key={index}

@@ -20,7 +20,7 @@ export function WhyChooseUs() {
         </div>
 
         {/* First row - 3 items */}
-        <BentoGrid className="max-w-7xl mx-auto ">
+        <BentoGrid className="max-w-6xl mx-auto ">
           {items.slice(0, 3).map((item, i) => (
             <BentoGridItem
               key={i}
@@ -32,7 +32,7 @@ export function WhyChooseUs() {
         </BentoGrid>
 
         {/* Second row - 2 items centered */}
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 px-4 md:auto-rows-[12rem]">
             {items.slice(3, 5).map((item, i) => (
               <BentoGridItem
@@ -46,7 +46,7 @@ export function WhyChooseUs() {
         </div>
 
         {/* Third row - 3 items */}
-        <BentoGrid className="max-w-7xl mx-auto">
+        <BentoGrid className="max-w-6xl mx-auto">
           {items.slice(5, 8).map((item, i) => (
             <BentoGridItem
               key={i + 5}

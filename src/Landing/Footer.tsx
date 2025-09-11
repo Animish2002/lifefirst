@@ -10,6 +10,8 @@ import {
   Instagram,
   ChevronRight,
   Droplets,
+  
+  ExternalLink,
 } from "lucide-react";
 
 const Footer = () => {
@@ -60,7 +62,7 @@ const Footer = () => {
       transition={{ duration: 0.8 }}
     >
       {/* Main Footer Content */}
-      <div className="max-w-7xl mx-auto px-6 py-16">
+      <div className="max-w-6xl mx-auto px-6 py-16">
         <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-12">
           {/* Company Info */}
           <motion.div
@@ -222,7 +224,7 @@ const Footer = () => {
         viewport={{ once: true }}
         transition={{ duration: 0.6, delay: 0.4 }}
       >
-        <div className="max-w-7xl mx-auto px-6 py-6">
+        <div className="max-w-6xl mx-auto px-6 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-slate-200 font-medium text-md mb-4 md:mb-0">
               <p>&copy; 2025 Life First Technologies. All rights reserved.</p>
@@ -249,16 +251,17 @@ const Footer = () => {
               </a>
             </div>
           </div>
-          <div className="text-center text-slate-100 text-lg mt-4 font-light">
+          <div className="text-center text-slate-100 text-sm mt-4 font-light">
             <p>
               Website designed & developed by{" "}
               <a
                 href="https://www.thefortune.club/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-yellow-200 font-medium hover:text-yellow-400 transition-colors"
+                className="text-yellow-200 font-medium hover:text-yellow-400 transition-colors group"
               >
                 TheFortuneClub
+                <ExternalLink className="inline w-4 h-4 m-1 mb-2 opacity-0 group-hover:opacity-100 transition-opacity" />
               </a>
             </p>
           </div>

@@ -43,7 +43,7 @@ const SolutionPage = ({ params }: PageProps) => {
       <main className="flex-grow">
         {/* Hero Section */}
         <div
-          className="relative h-96 bg-cover bg-center rounded-b-3xl overflow-hidden shadow-xl md:mt-26 mt-34"
+          className="relative h-96 bg-cover bg-center rounded-b-3xl overflow-hidden shadow-xl md:mt-24 mt-34"
           style={{ backgroundImage: `url(${solution.heroImage})` }}
         >
           <div className="absolute inset-0 bg-gray-900 bg-opacity-70 flex items-center justify-center p-8">
@@ -117,7 +117,7 @@ const SolutionPage = ({ params }: PageProps) => {
             </div>
 
             {/* Contact Form */}
-            <div className="group max-w-7xl mx-auto relative overflow-hidden bg-white rounded-3xl shadow-2xl border border-gray-200/50 hover:shadow-3xl transition-all duration-500 transform hover:-translate-y-1 w-full md:w-[35rem] h-full md:h-[90vh]">
+            <div className="group max-w-6xl mx-auto relative overflow-hidden bg-white rounded-3xl shadow-2xl border border-gray-200/50 hover:shadow-3xl transition-all duration-500 transform hover:-translate-y-1 w-full md:w-[35rem] h-full md:h-[90vh]">
               <div className="relative p-4 md:p-10">
                 {/* Form Header */}
                 <div className="text-center mb-8">

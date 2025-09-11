@@ -88,7 +88,7 @@ const DownloadBrochurespage = () => {
         </div>
 
         {/* Hero Content */}
-        <div className="relative z-10 flex items-center h-[75vh] pt-20 mx-auto max-w-7xl">
+        <div className="relative z-10 flex items-center h-[75vh] pt-20 mx-auto max-w-6xl">
           <div className="px-6 py-20">
             <div className="max-w-4xl">
               <motion.div
@@ -123,7 +123,7 @@ const DownloadBrochurespage = () => {
 
       {/* Brochures Section */}
       <div className="min-h-screen bg-gray-50 py-20">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-6xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

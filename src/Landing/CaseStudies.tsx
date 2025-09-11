@@ -107,7 +107,7 @@ const CaseStudies = () => {
 
   return (
     <section className="px-6 bg-white">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-10">
           <h2 className="text-4xl font-bold mb-4 text-gray-900">

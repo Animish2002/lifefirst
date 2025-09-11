@@ -62,7 +62,7 @@ const SolutionsSection = () => {
       viewport={{ once: true }}
       transition={{ duration: 0.8 }}
     >
-      <div className="max-w-7xl mx-auto md:px-4">
+      <div className="max-w-6xl mx-auto md:px-4">
         {/* Section Header */}
         <motion.div
           className="text-center mb-10"

@@ -6,8 +6,8 @@ const page = () => {
   return (
     <>
       <Navigation />
-      <div className="bg-gray-50 min-h-screen py-8 mt-36">
-        <div className="max-w-7xl mx-auto px-6">
+      <div className="bg-gray-50 min-h-screen py-8 mt-24">
+        <div className="max-w-6xl mx-auto px-6">
           <div className="bg-white rounded-lg shadow-lg p-8">
             <div className="mb-8">
               <h1 className="text-3xl font-bold text-gray-900 mb-2">
