@@ -155,7 +155,7 @@ const CTASection: React.FC = () => {
   return (
     <>
       <section className="py-16 bg-gray-50" id="contact">
-        <div className="max-w-6xl mx-auto px-8">
+        <div className="max-w-6xl mx-auto md:px-8 px-4">
           {/* Header */}
           <div className="text-center mb-12">
             <div className="bg-gradient-to-tl from-slate-800 via-slate-900 to-blue-900 text-white p-12 px-8 rounded-xl relative overflow-hidden max-w-6xl mx-auto">

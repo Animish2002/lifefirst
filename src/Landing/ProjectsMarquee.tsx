@@ -397,13 +397,13 @@ const ProjectsMarquee = () => {
   );
 
   return (
-    <div className="py-16 overflow-hidden max-w-6xl mx-auto">
+    <div className="py-16 overflow-hidden max-w-6xl mx-auto px-6">
       {/* Main Header */}
       <div className="text-center mb-8">
         <h1 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-4">
           Trusted By
         </h1>
-        <p className="text-gray-600 text-xl">
+        <p className="text-gray-600 text-xs">
           Driving Excellence in Both Government and Private Sectors
         </p>
       </div>

@@ -56,13 +56,13 @@ const AboutSection = () => {
 
   return (
     <motion.section
-      className="py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-green-50 px-8"
+      className="py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-green-50 md:px-8"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 0.8 }}
     >
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-4">
         <motion.div
           className="text-center mb-16"
           initial={{ y: 30, opacity: 0 }}

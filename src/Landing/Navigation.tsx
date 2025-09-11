@@ -252,7 +252,7 @@ const Navigation: React.FC = () => {
               {item.name === "Our Solutions" ? (
                 <div className="p-4">
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
-                    {/* Main Products Column */}
+                    {/* Core Solutions Column */}
                     <div>
                       <h3 className="font-semibold text-slate-800 text-md uppercase tracking-wide mb-3 pb-2 border-b border-blue-100">
                         CORE SOLUTIONS
@@ -274,14 +274,15 @@ const Navigation: React.FC = () => {
                       </div>
                     </div>
 
-                    {/* Additional Products & Solutions Column */}
+                    {/* Sustainable Technologies Column */}
                     <div>
                       <h3 className="font-semibold text-slate-800 text-md uppercase tracking-wide mb-3 pb-2 border-b border-blue-100">
                         SUSTAINABLE TECHNOLOGIES
                       </h3>
 
                       <div className="space-y-1.5">
-                        {item.subItems.slice(4).map((category) => (
+                        {/* Correctly render Sanitation Solutions and Hydration */}
+                        {item.subItems.slice(3).map((category) => (
                           <div key={category.name}>
                             <div className="font-medium text-slate-700 text-md uppercase tracking-wide mb-1.5">
                               {category.name}
@@ -309,7 +310,7 @@ const Navigation: React.FC = () => {
                   </div>
                 </div>
               ) : (
-                // Standard dropdown for Our Company and Resources
+                // Standard dropdown for other menu items
                 <div className="py-2">
                   {item.subItems.map((subItem) => (
                     <Link href={subItem.path} key={subItem.name}>
@@ -527,7 +528,7 @@ const Navigation: React.FC = () => {
         </div>
       </div>
 
-      <div className="max-w-6xl mx-auto px-6 py-4 md:py-2">
+      <div className="max-w-6xl mx-auto px-6 py-2 md:py-2">
         <div className="flex items-center justify-between">
           {/* Logo Section */}
           <motion.div
@@ -538,12 +539,12 @@ const Navigation: React.FC = () => {
               <img
                 src="https://res.cloudinary.com/dsvfcckqy/image/upload/v1755163758/Logo_Mark_cxtx7h.png"
                 alt="LifeFirst logo droplet"
-                className="w-auto h-12 md:h-12"
+                className="w-auto h-13 md:h-12"
               />
               <img
                 src="https://res.cloudinary.com/dsvfcckqy/image/upload/v1755163758/Textmark_x3tms3.png"
                 alt="logo mark"
-                className="w-auto h-8 md:h-9"
+                className="w-auto h-9 md:h-9"
               />
             </Link>
           </motion.div>
