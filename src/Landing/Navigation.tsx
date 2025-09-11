@@ -275,14 +275,14 @@ const Navigation: React.FC = () => {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 10, scale: 0.95 }}
               transition={{ duration: 0.2 }}
-              className={`absolute top-full left-1/2 transform -translate-x-1/2 mt-2 ${
+              className={`absolute top-full left-1/2 transform -translate-x-1/2 mt-5 ${
                 item.name === "Our Solutions"
                   ? "w-screen max-w-[35rem]"
-                  : "w-56"
+                  : "w-[12rem]"
               } bg-white rounded-xl shadow-xl border border-blue-100 overflow-hidden z-50`}
             >
               {item.name === "Our Solutions" ? (
-                <div className="p-6">
+                <div className="p-4">
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
                     {/* Main Products Column */}
                     <div>
@@ -562,12 +562,12 @@ const Navigation: React.FC = () => {
               <img
                 src="https://res.cloudinary.com/dsvfcckqy/image/upload/v1755163758/Logo_Mark_cxtx7h.png"
                 alt="LifeFirst logo droplet"
-                className="w-auto h-12 md:h-14"
+                className="w-auto h-12 md:h-12"
               />
               <img
                 src="https://res.cloudinary.com/dsvfcckqy/image/upload/v1755163758/Textmark_x3tms3.png"
                 alt="logo mark"
-                className="w-auto h-8 md:h-10"
+                className="w-auto h-8 md:h-9"
               />
             </Link>
           </motion.div>
