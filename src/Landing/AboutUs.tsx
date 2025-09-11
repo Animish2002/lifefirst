@@ -56,13 +56,13 @@ const AboutSection = () => {
 
   return (
     <motion.section
-      className="py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-green-50 md:px-8"
+      className="py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-green-50 "
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 0.8 }}
     >
-      <div className="max-w-6xl mx-auto px-4">
+      <div className="max-w-6xl mx-auto md:px-8 px-4">
         <motion.div
           className="text-center mb-16"
           initial={{ y: 30, opacity: 0 }}
@@ -96,7 +96,6 @@ const AboutSection = () => {
                   alt="Company Facility"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 "
                 />
-                <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-black/30"></div>
               </div>
             </CardContent>
           </motion.div>
@@ -104,7 +103,7 @@ const AboutSection = () => {
           {/* Mission Section - Top Right */}
           <motion.div
             className="md:col-span-4 lg:col-span-4 order-2"
-            initial={{ x: 50, opacity: 0 }}
+            initial={{ y: 50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -124,7 +123,7 @@ const AboutSection = () => {
 
           {/* Vision & Values - Bottom Full Width */}
           <motion.div
-            className="md:col-span-4 lg:col-span-8 order-3"
+            className="md:col-span-4 lg:col-span-8 order-3 md:mt-0 mt-10"
             initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}

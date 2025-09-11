@@ -2,21 +2,24 @@
 import React, { useState, useEffect } from "react";
 import { motion, useInView } from "framer-motion";
 
-const stats = [
-  { number: 500, suffix: "+", label: "Projects Successfully Delivered" },
-  { number: 50, suffix: "+ Million Liters", label: "Wastewater Recycled" },
-  { number: 100, suffix: "%", label: "Eco-Friendly Systems" },
-  { number: 3, suffix: "R's", label: "Reduce, Reuse & Restore" },
-];
+// Defines the shape of our stat objects
 interface Stat {
   number: number;
   suffix: string;
   label: string;
 }
 
-// Custom hook for counter animation
+// The data for our statistic cards
+const stats: Stat[] = [
+  { number: 500, suffix: "+", label: "Projects Successfully Delivered" },
+  { number: 50, suffix: " Million Liters", label: "Wastewater Recycled" },
+  { number: 100, suffix: "%", label: "Eco-Friendly Systems" },
+  { number: 3, suffix: "R's", label: "Reduce, Reuse & Restore" },
+];
+
+// Custom hook for the animated number counter
 const useCounter = (end: number, duration = 2000, shouldStart = false) => {
-  const [count, setCount] = useState(10);
+  const [count, setCount] = useState(0);
 
   useEffect(() => {
     if (!shouldStart) return;
@@ -28,9 +31,9 @@ const useCounter = (end: number, duration = 2000, shouldStart = false) => {
       if (!startTime) startTime = currentTime;
       const progress = Math.min((currentTime - startTime) / duration, 1);
 
-      // Easing function for smooth animation
-      const easeOutQuart = 1 - Math.pow(1 - progress, 4);
-      const currentCount = Math.floor(10 + (end - 10) * easeOutQuart);
+      // Easing function for smooth animation (ease out cubic)
+      const easeOutCubic = 1 - Math.pow(1 - progress, 3);
+      const currentCount = Math.floor(end * easeOutCubic);
 
       setCount(currentCount);
 
@@ -51,12 +54,13 @@ const useCounter = (end: number, duration = 2000, shouldStart = false) => {
   return count;
 };
 
+// Variants for Framer Motion animations
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.1,
+      staggerChildren: 0.2, // Stagger the animation of the children
     },
   },
 };
@@ -66,7 +70,8 @@ const itemVariants = {
   visible: { y: 0, opacity: 1 },
 };
 
-export default function StatsSection() {
+// Main component that renders the entire Stats Section
+export default function App() {
   const ref = React.useRef(null);
   const isInView = useInView(ref, {
     once: true,
@@ -80,11 +85,13 @@ export default function StatsSection() {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.3 }}
-      className="py-8 md:p-12 bg-gray-50 rounded-lg shadow-inner border border-gray-100 p-4"
+      className="py-16 px-4 md:px-8 bg-slate-50 rounded-2xl shadow-inner border border-slate-100"
     >
-      {/* Stats Section */}
-      <motion.div variants={itemVariants}>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-6 md:px-6 max-w-6xl mx-auto">
+      <div className="max-w-6xl mx-auto">
+        <motion.div
+          variants={itemVariants}
+          className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 items-stretch"
+        >
           {stats.map((stat, index) => (
             <AnimatedStatCard
               key={index}
@@ -93,8 +100,8 @@ export default function StatsSection() {
               shouldStart={isInView}
             />
           ))}
-        </div>
-      </motion.div>
+        </motion.div>
+      </div>
     </motion.section>
   );
 }
@@ -105,6 +112,7 @@ interface AnimatedStatCardProps {
   shouldStart: boolean;
 }
 
+// The individual card component
 const AnimatedStatCard: React.FC<AnimatedStatCardProps> = ({
   stat,
   index,
@@ -114,32 +122,34 @@ const AnimatedStatCard: React.FC<AnimatedStatCardProps> = ({
 
   return (
     <motion.div
-      className="bg-white/80 backdrop-blur-sm rounded-2xl p-2 md:p-6 border border-blue-100 shadow-lg text-center"
+      variants={itemVariants}
+      className="bg-white/80 backdrop-blur-sm rounded-2xl p-2 md:p-6 border border-blue-100 shadow-lg"
       whileHover={{ scale: 1.05, y: -5 }}
       transition={{
-        type: "spring",
+        type: "tween",
         stiffness: 300,
-        delay: index * 0.1,
+        delay: index * 0.2,
       }}
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
     >
-      <motion.div
-        className="text-sm md:text-2xl font-semibold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent mb-2"
-        initial={{ scale: 0.8 }}
-        animate={{ scale: 1 }}
-        transition={{
-          duration: 0.5,
-          delay: index * 0.1,
-          type: "spring",
-          stiffness: 200,
-        }}
-      >
-        {count}
-        {stat.suffix}
-      </motion.div>
-      <div className="text-xs md:text-sm text-slate-600 font-medium">
-        {stat.label}
+      {/* Use flexbox to center content vertically and horizontally within the card */}
+      <div className="flex flex-col h-full justify-center items-center text-center">
+        <motion.div
+          className="text-lg lg:text-xl font-medium bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent mb-1"
+          initial={{ scale: 0.8 }}
+          animate={{ scale: 1 }}
+          transition={{
+            duration: 0.5,
+            delay: index * 0.1,
+            type: "tween",
+            stiffness: 200,
+          }}
+        >
+          {count}
+          {stat.suffix}
+        </motion.div>
+        <div className="text-xs md:text-sm text-slate-600 font-medium leading-tight">
+          {stat.label}
+        </div>
       </div>
     </motion.div>
   );
