@@ -175,7 +175,7 @@ const contactInfo: ContactInfo[] = [
   },
   {
     icon: <Phone size={16} />,
-    text: "+91-901 167 7277",
+    text: "+91 - 901 167 7277",
     href: "tel:+919011677277",
     type: "phone",
   },
