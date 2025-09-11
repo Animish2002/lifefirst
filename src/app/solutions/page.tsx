@@ -56,7 +56,7 @@ const page = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative text-white py-20 px-4 overflow-hidden mt-34 md:mt-32 h-[50vh]">
+      <section className="relative text-white py-20 px-4 overflow-hidden mt-34 md:mt-24 h-[50vh]">
         {/* Background Image */}
 
         <div className="absolute inset-0 z-0">

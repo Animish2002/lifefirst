@@ -62,43 +62,6 @@ const navLinks: NavLink[] = [
         path: "/solutions/water-treatment",
       },
       {
-        name: "Other Products",
-        path: "/solutions/other-products",
-        subItems: [
-          {
-            name: "Ultrafiltration Systems (UF)",
-            path: "/solutions/ultrafiltration",
-          },
-          {
-            name: "Reverse Osmosis Systems (RO)",
-            path: "/solutions/reverse-osmosis",
-          },
-          {
-            name: "Pressure Sand Filters (PSF)",
-            path: "/solutions/pressure-sand-filters",
-          },
-          {
-            name: "Activated Carbon Filters (ACF)",
-            path: "/solutions/activated-carbon-filters",
-          },
-          { name: "Lamella Clarifier", path: "/solutions/lamella-clarifier" },
-          {
-            name: "Clarifier Mechanism",
-            path: "/solutions/clarifier-mechanism",
-          },
-          { name: "Tube Settlers", path: "/solutions/tube-settlers" },
-          { name: "Water Softeners", path: "/solutions/water-softeners" },
-          {
-            name: "Demineralization Systems (DM)",
-            path: "/solutions/demineralization",
-          },
-          {
-            name: "Chemical Dosing Systems",
-            path: "/solutions/chemical-dosing",
-          },
-        ],
-      },
-      {
         name: "Sanitation Solutions",
         path: "/solutions/sanitation",
         subItems: [
@@ -230,6 +193,11 @@ const Navigation: React.FC = () => {
     }));
   };
 
+  const handleMobileLinkClick = () => {
+    setIsMobileMenuOpen(false);
+    setMobileExpandedItems({});
+  };
+
   // Mega Menu for Desktop
   const renderMegaMenu = (item: NavLink) => {
     const isOpen = activeDropdown === item.name;
@@ -242,7 +210,7 @@ const Navigation: React.FC = () => {
         onMouseLeave={handleMouseLeave}
       >
         <motion.div
-          className="text-slate-700 hover:text-blue-600 transition-colors text-md font-medium relative cursor-pointer flex items-center space-x-1 uppercase "
+          className="text-slate-700 hover:text-blue-600 transition-colors text-md font-medium relative cursor-pointer flex items-center space-x-1 uppercase"
           whileHover={{ y: -2 }}
         >
           {item.path ? (
@@ -341,7 +309,7 @@ const Navigation: React.FC = () => {
                   </div>
                 </div>
               ) : (
-                // Standard dropdown for Our Company
+                // Standard dropdown for Our Company and Resources
                 <div className="py-2">
                   {item.subItems.map((subItem) => (
                     <Link href={subItem.path} key={subItem.name}>
@@ -374,7 +342,7 @@ const Navigation: React.FC = () => {
     return (
       <div key={item.name} className="border-b border-gray-100 last:border-b-0">
         <motion.button
-          className="w-full text-left flex justify-between items-center py-4 text-slate-700 hover:text-blue-600 transition-colors font-medium text-lg "
+          className="w-full text-left flex justify-between items-center py-4 text-slate-700 hover:text-blue-600 transition-colors font-medium text-lg"
           onClick={() => toggleMobileItem(item.name)}
         >
           <span>{item.name}</span>
@@ -395,14 +363,14 @@ const Navigation: React.FC = () => {
               transition={{ duration: 0.3, ease: "easeInOut" }}
               className="overflow-hidden"
             >
-              <div className="pl-4 pb-4 border-l-2 border-blue-200">
+              <div className="pl-4 border-l-2 border-blue-200">
                 {item.subItems.map((subItem) => (
                   <div key={subItem.name} className="mb-3">
                     {subItem.subItems ? (
                       // Nested accordion
                       <div>
                         <motion.button
-                          className="w-full text-left flex justify-between items-center py-2 font-medium text-slate-600 hover:text-blue-600 transition-colors text-sm"
+                          className="w-full text-left flex justify-between items-center py-2 font-medium text-slate-600 hover:text-blue-600 transition-colors text-base"
                           onClick={() =>
                             toggleMobileItem(`${item.name}-${subItem.name}`)
                           }
@@ -443,7 +411,7 @@ const Navigation: React.FC = () => {
                                 <Link
                                   href={nestedItem.path}
                                   key={nestedItem.name}
-                                  onClick={() => setIsMobileMenuOpen(false)}
+                                  onClick={handleMobileLinkClick}
                                 >
                                   <motion.div
                                     className="block text-sm text-slate-500 hover:text-blue-600 transition-colors py-1"
@@ -459,12 +427,9 @@ const Navigation: React.FC = () => {
                       </div>
                     ) : (
                       // Regular item
-                      <Link
-                        href={subItem.path}
-                        onClick={() => setIsMobileMenuOpen(false)}
-                      >
+                      <Link href={subItem.path} onClick={handleMobileLinkClick}>
                         <motion.div
-                          className="block text-base text-slate-600 hover:text-blue-600 transition-colors py-2"
+                          className="block text-base text-slate-600 hover:text-blue-600 transition-colors"
                           whileHover={{ x: 4 }}
                         >
                           {subItem.name}
@@ -485,13 +450,13 @@ const Navigation: React.FC = () => {
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className="fixed top-0 w-full z-40 bg-white/95 backdrop-blur-xl border-b border-blue-100 shadow-sm "
+      className="fixed top-0 w-full z-40 bg-white/95 backdrop-blur-xl border-b border-blue-100 shadow-sm"
     >
       <div className="bg-gradient-to-tl from-slate-800 via-slate-900 to-blue-900 text-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto px-2 sm:px-4 lg:px-8 py-1">
           <div className="flex items-center justify-between py-1.5">
             {/* Left Side - Contact Information */}
-            <div className="flex items-center space-x-6">
+            <div className="flex items-center md:space-x-6 space-x-2">
               {contactInfo.map((item, index) => (
                 <div key={index} className="flex items-center">
                   {item.href ? (
@@ -515,7 +480,7 @@ const Navigation: React.FC = () => {
                     </div>
                   )}
                   {index < contactInfo.length - 1 && (
-                    <div className="h-4 mx-4 w-px bg-slate-700 hidden lg:block" />
+                    <div className="h-4 mx-4 w-px bg-slate-700 hidden" />
                   )}
                 </div>
               ))}
@@ -530,19 +495,31 @@ const Navigation: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={social.label}
-                  className={`h-4 w-4 ml-3 text-slate-400 hover:bg-slate-800 transition-all duration-200 ${social.color} rounded flex items-center justify-center`}
+                  className={`h-4 w-4 ml-3 text-slate-400 hover:bg-slate-800 transition-all duration-200 ${social.color} rounded items-center justify-center hidden sm:flex`}
                 >
                   {social.icon}
                 </Link>
               ))}
 
-              <Link href="/investors" className="px-2 text-sm uppercase">
+              <Link
+                href="/investors"
+                className="px-2 text-xs md:text-sm uppercase"
+                onClick={handleMobileLinkClick}
+              >
                 Investors
               </Link>
-              <Link href="/careers" className="px-2 text-sm uppercase">
-                Carrers
+              <Link
+                href="/careers"
+                className="px-2 text-xs md:text-sm uppercase"
+                onClick={handleMobileLinkClick}
+              >
+                Careers
               </Link>
-              <Link href="/contact" className="px-2 text-sm uppercase">
+              <Link
+                href="/contact"
+                className="px-2 text-xs md:text-sm uppercase"
+                onClick={handleMobileLinkClick}
+              >
                 Contact
               </Link>
             </div>
@@ -580,7 +557,7 @@ const Navigation: React.FC = () => {
                 return (
                   <Link href={item.path as string} key={item.name}>
                     <motion.div
-                      className="text-slate-700 hover:text-blue-600 transition-colors text-lg font-medium relative cursor-pointer"
+                      className="text-slate-700 hover:text-blue-600 transition-colors text-lg font-medium relative cursor-pointer uppercase"
                       whileHover={{ y: -2 }}
                     >
                       {item.name}
@@ -601,6 +578,7 @@ const Navigation: React.FC = () => {
             <motion.button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               whileTap={{ scale: 0.9 }}
+              aria-label="Toggle mobile menu"
             >
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </motion.button>
@@ -618,7 +596,7 @@ const Navigation: React.FC = () => {
             transition={{ duration: 0.3 }}
             className="md:hidden bg-white/95 backdrop-blur-md overflow-hidden border-t border-blue-100"
           >
-            <div className="px-6 py-4">
+            <div className="px-6 py-4 overflow-y-auto max-h-[80vh]">
               {navLinks.map((item) => {
                 if (item.subItems) {
                   return renderMobileAccordion(item);
@@ -627,7 +605,7 @@ const Navigation: React.FC = () => {
                     <Link
                       href={item.path as string}
                       key={item.name}
-                      onClick={() => setIsMobileMenuOpen(false)}
+                      onClick={handleMobileLinkClick}
                     >
                       <motion.div
                         className="block py-4 text-slate-700 hover:text-blue-600 transition-colors font-medium text-lg border-b border-gray-100 last:border-b-0"
