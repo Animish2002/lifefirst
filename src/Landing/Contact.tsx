@@ -205,7 +205,7 @@ const CTASection: React.FC = () => {
                 <div className="flex border-b border-gray-200">
                   <button
                     onClick={() => setActiveOffice("india")}
-                    className={`flex-1 py-4 px-6 text-sm font-medium transition-colors ${
+                    className={`flex-1 py-4 px-6 text-sm md:text-lg font-semibold transition-colors ${
                       activeOffice === "india"
                         ? "bg-blue-50 text-blue-700 border-b-2 border-blue-500"
                         : "text-gray-600 hover:text-gray-900"
@@ -213,9 +213,10 @@ const CTASection: React.FC = () => {
                   >
                     India Offices
                   </button>
+
                   <button
                     onClick={() => setActiveOffice("overseas")}
-                    className={`flex-1 py-4 px-6 text-sm font-medium transition-colors ${
+                    className={`flex-1 py-4 px-6 text-sm md:text-lg font-semibold transition-colors ${
                       activeOffice === "overseas"
                         ? "bg-blue-50 text-blue-700 border-b-2 border-blue-500"
                         : "text-gray-600 hover:text-gray-900"
