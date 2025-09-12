@@ -69,20 +69,8 @@ const AboutUsPage = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <div className="relative h-[65vh] md:mt-26 mt-34 bg-gradient-to-br from-blue-900 via-blue-800 to-cyan-900 overflow-hidden">
-        {/* Background Pattern */}
-        <div className="absolute inset-0 bg-black bg-opacity-20">
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-transparent"></div>
-        </div>
-
-        {/* Hero Image */}
-        <div className="absolute inset-0">
-          <img
-            src="https://res.cloudinary.com/dsvfcckqy/image/upload/v1754928781/20250802_153036_k6qhoj.jpg"
-            alt="Water treatment professionals"
-            className="w-full h-full object-cover opacity-60"
-          />
-        </div>
+      <div className="relative md:mt-26 mt-34 overflow-hidden">
+       
       </div>
 
       {/* Mission & Vision Section - Redesigned */}

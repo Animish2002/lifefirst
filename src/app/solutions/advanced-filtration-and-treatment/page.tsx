@@ -4,7 +4,6 @@ import React from "react";
 import Link from "next/link";
 import CTASection from "@/Landing/Contact";
 
-
 const page = () => {
   const solutions = [
     {
@@ -91,7 +90,7 @@ const page = () => {
           <img
             src="https://res.cloudinary.com/dsvfcckqy/image/upload/v1755351636/water-treatment_yagiov.jpg"
             alt="Water treatment facility"
-            className="w-full h-[50vh] "
+            className="w-full h-[35vh]"
             style={{
               objectFit: "cover",
               background:

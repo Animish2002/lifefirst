@@ -46,7 +46,7 @@ const Page = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-24 px-4 sm:px-6 lg:px-8 md:mt-24 h-[50vh]">
+      <section className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-24 px-4 sm:px-6 lg:px-8 md:mt-24 h-[35vh]">
         <div className="max-w-6xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-4">
             Investor News

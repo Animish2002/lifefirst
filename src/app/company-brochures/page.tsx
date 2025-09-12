@@ -20,7 +20,6 @@ import { Button } from "@/components/ui/button";
 import Navigation from "@/Landing/Navigation";
 import Footer from "@/Landing/Footer";
 
-
 const DownloadBrochurespage = () => {
   const brochuresData = [
     {
@@ -72,7 +71,7 @@ const DownloadBrochurespage = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <div className="relative h-[75vh] bg-gradient-to-br from-blue-900 via-blue-800 to-cyan-900 overflow-hidden">
+      <section className="relative text-white py-10 px-4 overflow-hidden mt-34 md:mt-24 h-[35vh]">
         {/* Background Pattern */}
         <div className="absolute inset-0 bg-black bg-opacity-20">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-transparent"></div>
@@ -88,8 +87,8 @@ const DownloadBrochurespage = () => {
         </div>
 
         {/* Hero Content */}
-        <div className="relative z-10 flex items-center h-[75vh] pt-20 mx-auto max-w-6xl">
-          <div className="px-6 py-20">
+        <div className="relative z-10 flex items-center h-full pt-10 mx-auto max-w-6xl">
+          <div className="px-6 py-10">
             <div className="max-w-4xl">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
@@ -104,7 +103,7 @@ const DownloadBrochurespage = () => {
                 </h1>
               </motion.div>
 
-              <motion.p
+              {/* <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
@@ -115,11 +114,11 @@ const DownloadBrochurespage = () => {
                 <span className="font-bold bg-gradient-to-r from-blue-500 via-cyan-400 via-green-400 via-blue-400 via-indigo-500 to-orange-400 bg-clip-text text-transparent">
                   explore our water treatment solutions.
                 </span>
-              </motion.p>
+              </motion.p> */}
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Brochures Section */}
       <div className="min-h-screen bg-gray-50 py-20">

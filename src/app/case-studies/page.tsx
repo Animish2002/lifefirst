@@ -22,7 +22,7 @@ import {
 import { Button } from "@/components/ui/button";
 import Navigation from "@/Landing/Navigation";
 import Footer from "@/Landing/Footer";
-
+import StatsSection from "@/Landing/StatsSection";
 
 const CaseStudiesPage = () => {
   const caseStudiesData = [
@@ -158,7 +158,7 @@ const CaseStudiesPage = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <div className="relative h-[75vh] bg-gradient-to-br from-blue-900 via-blue-800 to-cyan-900 overflow-hidden">
+      <section className="relative text-white py-10 px-4 overflow-hidden mt-34 md:mt-24 h-[35vh]">
         {/* Background Pattern */}
         <div className="absolute inset-0 bg-black bg-opacity-20">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-transparent"></div>
@@ -174,8 +174,8 @@ const CaseStudiesPage = () => {
         </div>
 
         {/* Hero Content */}
-        <div className="relative z-10 flex items-center h-[75vh] pt-20 max-w-6xl mx-auto">
-          <div className="px-6 py-20 ">
+        <div className="relative z-10 flex items-center h-[35vh] max-w-6xl mx-auto">
+          <div className="px-6 py-10 ">
             <div className="max-w-4xl">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
@@ -189,7 +189,7 @@ const CaseStudiesPage = () => {
                   </span>
                 </h1>
               </motion.div>
-
+              {/* 
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -201,39 +201,13 @@ const CaseStudiesPage = () => {
                 <span className="font-bold bg-gradient-to-r from-blue-500 via-cyan-400 via-green-400 via-blue-400 via-indigo-500 to-orange-400 bg-clip-text text-transparent">
                   India and beyond.
                 </span>
-              </motion.p>
+              </motion.p> */}
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* Stats Section */}
-      <div className="bg-white py-16">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="flex justify-center mb-4">
-                  <div className="bg-gradient-to-r from-blue-50 to-cyan-50 p-3 rounded-full">
-                    {stat.icon}
-                  </div>
-                </div>
-                <h3 className="text-3xl md:text-4xl font-bold text-slate-800 mb-2">
-                  {stat.number}
-                </h3>
-                <p className="text-slate-600 font-medium">{stat.label}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </div>
+      <StatsSection />
 
       {/* Case Studies Section */}
       <div className="min-h-screen bg-gray-50 py-20">

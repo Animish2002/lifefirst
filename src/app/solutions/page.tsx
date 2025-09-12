@@ -56,14 +56,14 @@ const page = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative text-white py-20 px-4 overflow-hidden mt-34 md:mt-24 h-[50vh]">
+      <section className="relative text-white py-10 px-4 overflow-hidden mt-34 md:mt-24 h-[35vh]">
         {/* Background Image */}
 
         <div className="absolute inset-0 z-0">
           <img
             src="https://res.cloudinary.com/dsvfcckqy/image/upload/v1755351636/water-treatment_yagiov.jpg"
             alt="Water treatment facility"
-            className="w-full h-[50vh] "
+            className="w-full h-[35vh] "
             style={{
               objectFit: "cover",
               background:
@@ -89,7 +89,7 @@ const page = () => {
       </section>
 
       {/* Solutions Grid */}
-      <section className="py-20 px-4 bg-gray-50">
+      <section className="py-10 px-4 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-800 mb-4">
