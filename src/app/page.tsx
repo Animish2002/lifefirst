@@ -7,6 +7,7 @@ import SolutionsSection from "@/Landing/SolutionsSection";
 import StatsSection from "@/Landing/StatsSection";
 import { WhyChooseUs } from "@/Landing/WhyChooseUs";
 import AboutSection from "@/Landing/AboutUs";
+import MeetTheTeam from "@/Landing/MeetTheTeam";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <SolutionsSection />
       <WhyChooseUs />
       <ProjectsMarquee />
+      <MeetTheTeam />
       <CTASection />
       <Footer />
     </div>
