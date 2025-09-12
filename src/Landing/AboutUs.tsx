@@ -75,7 +75,7 @@ const AboutSection = () => {
           {/* Mission & Key Points Section - Top Right */}
           <motion.div
             className="md:col-span-2 lg:col-span-2"
-            initial={{ x: 50, opacity: 0 }}
+            initial={{ y: 50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
