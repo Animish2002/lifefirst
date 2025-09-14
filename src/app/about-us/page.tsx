@@ -1,33 +1,36 @@
 "use client";
-import React from "react";
-import { motion } from "framer-motion";
-import { Target, Eye } from "lucide-react";
+
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Target, Eye, X } from "lucide-react";
 
 import Navigation from "@/Landing/Navigation";
 import Footer from "@/Landing/Footer";
 import CTASection from "@/Landing/Contact";
 
 const AboutUsPage = () => {
+  const [selectedMember, setSelectedMember] = useState(null);
+
   const teamMembers1 = [
     {
       name: "Sagar Shah",
-      position: "CEO",
+      position: "Chief Executive Officer (CEO)",
       experience:
         "With over 31 years of experience, Sagar leads with a vision for innovative solutions.",
       image:
         "https://res.cloudinary.com/dsvfcckqy/image/upload/v1754928794/WhatsApp_Image_2025-07-28_at_15.43.58_rmkh15.jpg",
       description:
-        "Former co-founder at multiple water tech startups. Expert in sustainable water treatment systems.",
+        'With over 31 years of diverse industry experience, Sagar Shah leads LifeFirst Concepts & Technologies Pvt. Ltd.with a clear vision for innovation, sustainability, and global impact. Throughout his career, he has been driven by a deep passion for solving complex water, wastewater, and sanitation challenges through cutting-edge technologies and practical, cost-effective solutions. Under his leadership, LifeFirst has grown from a promising start-up into a rapidly expanding company, delivering world-class water and wastewater treatment systems, bio-digesters, and hydration monitoring solutions across India, Africa, and the Middle East. His strategic foresight has paved the way for global collaborations, exports, and joint ventures, positioning the company as a trusted partner in achieving water security and environmental sustainability. Known for his hands-on approach and visionary mindset, Sagar emphasizes integrity, customer focus, and continuous innovation as the cornerstones of the organization. Beyond business growth, he strongly advocates for "Make in India" technologies, promoting eco-friendly solutions that contribute to a greener planet while meeting international quality standards. Sagar Shah\'s journey reflects a rare blend of entrepreneurial drive, technical expertise, and ethical leadership, inspiring his team to push boundaries and create meaningful impact globally.',
     },
     {
       name: "Gajanan Ghule",
-      position: "COO",
+      position: "Chief Operation Officer (COO)",
       experience:
         "Gajanan, our Technical Head, transforms innovation into sustainable and cost-effective solutions.",
       image:
         "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755361767/WhatsApp_Image_2025-07-28_at_15.41.57_sooibr_w9s67f.jpg",
       description:
-        "Lead engineering teams at major water treatment facilities. Specialist in process optimization.",
+        "As the Chief Operating Officer and Technical Head of LifeFirst Concepts & Technologies Pvt. Ltd., Gajanan Ghule brings a unique blend of technical expertise and strategic execution to the organization. With years of experience in water, wastewater, and environmental engineering, he has been instrumental in translating innovative concepts into practical, sustainable, and cost-effective solutions that address real-world challenges. Gajanan leads the company's technical design, project execution, and operational excellence initiatives, ensuring that every solution delivered meets the highest standards of quality, safety, and efficiency. His deep understanding of process engineering, plant design, automation, and energy optimization has helped LifeFirst develop cutting-edge technologies tailored for diverse sectors, including municipalities, industries, healthcare, mining, and infrastructure projects. Known for his hands-on leadership style and commitment to continuous innovation, Gajanan plays a pivotal role in driving research and development, nurturing cross-functional teams, and ensuring that every project aligns with the company's vision for sustainability and global impact. Through his technical acumen and dedication, Gajanan Ghule has become the backbone of LifeFirst's engineering excellence, helping the organization deliver future-ready, eco-friendly solutions across India and international markets.",
     },
   ];
 
@@ -35,45 +38,247 @@ const AboutUsPage = () => {
     {
       name: "Dattaram Rane",
       position: "VP Global Sales & Projects",
-      experience:
-        "Dattaram holds a Diploma and B.E. in Chemical Engineering, is DNV-certified in Risk Assessment, and brings 12 years of global expertise in the Water Treatment Industry.",
+      experience: "12+ years of global experience in Water Treatment Industry.",
       image:
         "https://res.cloudinary.com/dsvfcckqy/image/upload/v1754928788/WhatsApp_Image_2025-07-28_at_12.08.47_r5kpst.jpg",
       description:
-        "Founding sales team at major industrial water companies. Expert in global market expansion.",
+        "Dattaram Rane, Vice President – Global Projects at LifeFirst Concepts & Technologies Pvt. Ltd., brings over 15 years of rich international experience in the Water and Wastewater Treatment Industry. Holding both a B.E. and Diploma in Chemical Engineering, along with DNV certification in Risk Assessment, Dattaram combines strong technical expertise with a sharp strategic outlook to lead global projects from concept to successful execution.",
     },
     {
       name: "Supriya Sathe",
       position: "Global Business Head Marketing & Sales",
       experience:
-        "Supriya, with a B.E. in Computer Science and an MBA in HR, is a Certified CSR Practitioner who brings a unique blend of strategy, innovation, and purpose-driven leadership.",
+        "Certified CSR Practitioner with 8+ years of experience in Marketing & Sales.",
       image:
         "https://res.cloudinary.com/dsvfcckqy/image/upload/v1754928788/WhatsApp_Image_2025-07-28_at_11.39.26_xcakld.jpg",
       description:
-        "Former marketing director for sustainable technology companies. Specialist in corporate strategy.",
+        "Supriya Sathe leads the Global Marketing & Sales initiatives at LifeFirst Concepts & Technologies Pvt. Ltd., bringing a powerful combination of technical expertise, strategic insight, and purpose-driven leadership. With a B.E. in Computer Science and an MBA in Human Resources, Supriya offers a multidisciplinary perspective that blends technology, people management, and business strategy seamlessly.",
     },
     {
       name: "Shashank More",
       position: "Manager Projects",
       experience:
-        "Shashank, a B.E. in Civil Engineering, brings 8 years of expertise in executing water and wastewater projects with a strong focus on quality, efficiency, reliability, and timely delivery.",
+        "8+ years of experience in executing water and wastewater projects.",
       image:
         "https://res.cloudinary.com/dsvfcckqy/image/upload/v1754928789/WhatsApp_Image_2025-07-28_at_12.40.01_eg2zec.jpg",
       description:
-        "Former project manager at leading infrastructure firms. Expert in large-scale water projects.",
+        "Shashank More, Manager – Projects at LifeFirst Concepts & Technologies Pvt. Ltd., brings 10 years of specialized experience in executing water and wastewater treatment projects with precision and excellence. Holding a B.E. in Civil Engineering, Shashank has developed a strong foundation in project planning, structural design, and site execution, enabling him to deliver solutions that consistently meet client expectations. Throughout his career, Shashank has demonstrated a keen eye for quality, efficiency, and reliability, ensuring that every project adheres to the highest technical standards while maintaining strict timelines and budgets. His expertise spans municipal, industrial, and commercial installations, where he has successfully managed multidisciplinary teams and coordinated with clients, consultants, and vendors to ensure smooth project execution from start to finish. Known for his problem solving abilities and commitment to innovation, Shashank continuously adopts modern construction methodologies and digital tools to enhance project productivity and accuracy. His dedication to timely delivery and customer satisfaction has earned him recognition as a dependable leader within the LifeFirst project team. By combining technical expertise with a results driven approach, Shashank More plays a pivotal role in strengthening LifeFirst’s reputation as a trusted partner for sustainable water and wastewater infrastructure solutions.",
+    },
+    {
+      name: "Vinishka Srilakshmi",
+      position: "Head, Strategic Partnerships & Business Growth",
+      experience:
+        "5+ years of experience in project management and operations.",
+      image:
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/v1754928789/WhatsApp_Image_2025-07-28_at_12.40.01_eg2zec.jpg",
+      description:
+        "Vinishka Srilakshmi, Head of Strategic Partnerships & Business Growth at LifeFirst Concepts & Technologies Pvt. Ltd., brings over 10 years of experience in building high impact partnerships and driving sustainable business growth across diverse markets. A Commerce graduate with a sharp business acumen, Srilakshmi has been instrumental in shaping the company’s global expansion strategy through innovative market development initiatives and strategic collaborations. Her expertise lies in identifying new business opportunities, fostering long-term alliances, and creating win-win partnerships with governments, institutions, and private sector stakeholders. By combining market intelligence, relationship management, and strategic negotiation skills, Srilakshmi has successfully accelerated LifeFirst’s presence across India, the Middle East, and Africa. Known for her forward-thinking approach and results-driven mindset, she continuously explores new revenue streams, funding models, and market-entry strategies, aligning them with the company’s vision of delivering sustainable water, wastewater, and sanitation solutions globally. Srilakshmi’s leadership ensures that LifeFirst remains at the forefront of innovative collaborations and global business growth.",
     },
   ];
+
+  const teamMembers3 = [
+    {
+      name: "Ravi Chavan",
+      position: "Position Title", // Add actual position
+      image:
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/v1754928789/WhatsApp_Image_2025-07-28_at_12.40.01_eg2zec.jpg", // Placeholder image
+      description:
+        "Brief one-liner description about Ravi's role and expertise.", // Add actual description
+    },
+    {
+      name: "Sarika Thalkari",
+      position: "Position Title", // Add actual position
+      image:
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/v1754928789/WhatsApp_Image_2025-07-28_at_12.40.01_eg2zec.jpg", // Placeholder image
+      description:
+        "Brief one-liner description about Sarika's role and expertise.", // Add actual description
+    },
+    {
+      name: "Manisha Walde",
+      position: "Position Title", // Add actual position
+      image:
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/v1754928789/WhatsApp_Image_2025-07-28_at_12.40.01_eg2zec.jpg", // Placeholder image
+      description:
+        "Brief one-liner description about Manisha's role and expertise.", // Add actual description
+    },
+    {
+      name: "Payal",
+      position: "Position Title", // Add actual position
+      image:
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/v1754928789/WhatsApp_Image_2025-07-28_at_12.40.01_eg2zec.jpg", // Placeholder image
+      description:
+        "Brief one-liner description about Payal's role and expertise.", // Add actual description
+    },
+    {
+      name: "Rupesh Ingale",
+      position: "Position Title", // Add actual position
+      image:
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/v1754928789/WhatsApp_Image_2025-07-28_at_12.40.01_eg2zec.jpg", // Placeholder image
+      description:
+        "Brief one-liner description about Rupesh's role and expertise.", // Add actual description
+    },
+    {
+      name: "Amol Sanap",
+      position: "Position Title", // Add actual position
+      image:
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/v1754928789/WhatsApp_Image_2025-07-28_at_12.40.01_eg2zec.jpg", // Placeholder image
+      description:
+        "Brief one-liner description about Amol's role and expertise.", // Add actual description
+    },
+    {
+      name: "Subham Shivarkar",
+      position: "Position Title", // Add actual position
+      image:
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/v1754928789/WhatsApp_Image_2025-07-28_at_12.40.01_eg2zec.jpg", // Placeholder image
+      description:
+        "Brief one-liner description about Subham's role and expertise.", // Add actual description
+    },
+    {
+      name: "Swaraj Sobale",
+      position: "Position Title", // Add actual position
+      image:
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/v1754928789/WhatsApp_Image_2025-07-28_at_12.40.01_eg2zec.jpg", // Placeholder image
+      description:
+        "Brief one-liner description about Swaraj's role and expertise.", // Add actual description
+    },
+    {
+      name: "Madhav More",
+      position: "Position Title", // Add actual position
+      image:
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/v1754928789/WhatsApp_Image_2025-07-28_at_12.40.01_eg2zec.jpg", // Placeholder image
+      description:
+        "Brief one-liner description about Madhav's role and expertise.", // Add actual description
+    },
+  ];
+
+  // Split teamMembers3 into two rows: first 5, then remaining 4
+  const firstRowMembers = teamMembers3.slice(0, 5);
+  const secondRowMembers = teamMembers3.slice(5, 9);
+
+  const TeamMemberCard = ({ member, index, onClick }) => (
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, delay: index * 0.1 }}
+      viewport={{ once: true }}
+      className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+    >
+      <div className="flex flex-col h-full">
+        {/* Member Image - Clickable */}
+        <div
+          className="relative cursor-pointer group"
+          onClick={() => onClick(member)}
+        >
+          <div className="w-full h-64 bg-gray-200 overflow-hidden">
+            <img
+              src={member.image}
+              alt={member.name}
+              className="w-full h-full object-cover transition-all duration-300 group-hover:scale-105 group-hover:brightness-75"
+            />
+          </div>
+
+          {/* Overlay with click hint */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+            <div className="mt-2 text-xs text-white/80 bg-white/20 backdrop-blur-sm px-2 py-1 rounded-full w-fit">
+              Click to read more
+            </div>
+          </div>
+        </div>
+
+        {/* Member Info */}
+        <div className="p-3 flex flex-col justify-center flex-grow">
+          <h3 className="text-xl font-bold text-gray-800 mb-1 text-center">
+            {member.name}
+          </h3>
+          <p className="text-blue-600 font-semibold text-sm text-center">
+            {member.position}
+          </p>
+        </div>
+      </div>
+    </motion.div>
+  );
+  const MemberModal = ({ member, onClose }) => (
+    <AnimatePresence>
+      {member && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm"
+          onClick={onClose}
+        >
+          <motion.div
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            exit={{ scale: 0.8, opacity: 0 }}
+            transition={{ type: "spring", damping: 25, stiffness: 300 }}
+            className="bg-white rounded-3xl overflow-hidden shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Close Button */}
+            <button
+              onClick={onClose}
+              className="absolute top-4 right-4 z-10 bg-white/90 backdrop-blur-sm rounded-full p-2 hover:bg-white transition-colors duration-200 shadow-lg"
+            >
+              <X className="w-5 h-5 text-gray-600" />
+            </button>
+
+            <div className="flex flex-col lg:flex-row">
+              {/* Left side - Image */}
+              <div className="lg:w-2/5 relative">
+                <div className="h-64 lg:h-full bg-gray-200">
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+
+                {/* Name and Position Overlay */}
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-6">
+                  <h3 className="text-white font-bold text-2xl mb-1">
+                    {member.name}
+                  </h3>
+                  <p className="text-white/90 text-lg font-medium">
+                    {member.position}
+                  </p>
+                </div>
+              </div>
+
+              {/* Right side - Description */}
+              <div className="lg:w-5/8 p-6">
+                <div className="mb-6">
+                  <h4 className="text-xl font-semibold text-gray-800 mb-4">
+                    About {member.name.split(" ")[0]}
+                  </h4>
+                  <div className="prose prose-gray max-w-none">
+                    <p className="text-gray-700 leading-relaxed text-xs">
+                      {member.description}
+                    </p>
+                  </div>
+                </div>
+
+                {/* Key Highlights */}
+                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-4">
+                  <h5 className="font-semibold text-gray-800 mb-2">
+                    Key Expertise
+                  </h5>
+                  <p className="text-sm text-gray-600 italic">
+                    {member.experience}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </motion.div>
+      )}
+    </AnimatePresence>
+  );
 
   return (
     <>
       <Navigation />
-
-      {/* Hero Section */}
-      <div className="relative md:mt-26 mt-34 overflow-hidden">
-       
-      </div>
-
-      {/* Mission & Vision Section - Redesigned */}
+      <div className="relative md:mt-26 mt-34 overflow-hidden"></div>
       <div className="bg-white py-20">
         <div className="max-w-6xl mx-auto px-6">
           <motion.div
@@ -130,7 +335,6 @@ const AboutUsPage = () => {
                   <div className="w-3 h-3 bg-cyan-600 rounded-full mr-4"></div>
                   <p className="text-gray-600">Safety Standards</p>
                 </div>
-
                 <div className="flex items-center">
                   <div className="w-3 h-3 bg-cyan-600 rounded-full mr-4"></div>
                   <p className="text-gray-600">Production Facility</p>
@@ -171,7 +375,7 @@ const AboutUsPage = () => {
           </div>
         </div>
       </div>
-      {/* Team Section - Fixed Layout: 2 on top, 3 centered below */}
+
       <div className="bg-gray-50 py-20">
         <div className="max-w-[90rem] mx-auto px-6">
           <motion.div
@@ -197,102 +401,70 @@ const AboutUsPage = () => {
             <div className="flex justify-center mb-8">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl">
                 {teamMembers1.slice(0, 2).map((member, index) => (
-                  <motion.div
+                  <TeamMemberCard
                     key={member.name}
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                    className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
-                  >
-                    <div className="flex flex-col md:flex-row h-full">
-                      {/* Member Image */}
-                      <div className="relative md:w-2/5 flex-shrink-0">
-                        <div className="w-full h-64 md:h-full bg-gray-200 overflow-hidden">
-                          <img
-                            src={member.image}
-                            alt={member.name}
-                            className="w-[40rem] h-full object-cover transition-transform duration-300 hover:scale-105"
-                          />
-                        </div>
-                        <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-black/20 to-transparent"></div>
-                      </div>
-
-                      {/* Member Info */}
-                      <div className="p-6 md:w-3/5 flex flex-col justify-center">
-                        <h3 className="text-xl font-bold text-gray-800 mb-2">
-                          {member.name}
-                        </h3>
-                        <p className="text-blue-600 font-semibold text-sm mb-3">
-                          {member.position}
-                        </p>
-                        <p className="text-gray-600 text-sm leading-relaxed mb-4 flex-grow">
-                          {member.description}
-                        </p>
-
-                        {/* Experience Badge */}
-                        <div className="inline-flex items-center bg-blue-50 text-blue-700 text-xs px-3 py-1 rounded-full w-fit">
-                          <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
-                          LinkedIn
-                        </div>
-                      </div>
-                    </div>
-                  </motion.div>
+                    member={member}
+                    index={index}
+                    onClick={setSelectedMember}
+                  />
                 ))}
               </div>
             </div>
 
-            {/* Second Row - 3 members centered */}
-            <div className="flex justify-center">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl">
-                {teamMembers2.slice(0, 3).map((member, index) => (
-                  <motion.div
+            {/* Second Row - 4 members */}
+            <div className="flex justify-center mb-8">
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-4 max-w-6xl">
+                {teamMembers2.slice(0, 4).map((member, index) => (
+                  <TeamMemberCard
                     key={member.name}
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: (index + 2) * 0.1 }}
-                    viewport={{ once: true }}
-                    className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
-                  >
-                    <div className="flex flex-col md:flex-row h-full">
-                      {/* Member Image */}
-                      <div className="relative md:w-2/5 flex-shrink-0">
-                        <div className="w-full h-64 md:h-full bg-gray-200 overflow-hidden">
-                          <img
-                            src={member.image}
-                            alt={member.name}
-                            className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
-                          />
-                        </div>
-                        <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-black/20 to-transparent"></div>
-                      </div>
-
-                      {/* Member Info */}
-                      <div className="p-6 md:w-3/5 flex flex-col justify-center">
-                        <h3 className="text-xl font-bold text-gray-800 mb-2">
-                          {member.name}
-                        </h3>
-                        <p className="text-blue-600 font-semibold text-sm mb-3">
-                          {member.position}
-                        </p>
-                        <p className="text-gray-600 text-sm leading-relaxed mb-4 flex-grow">
-                          {member.description}
-                        </p>
-
-                        {/* Experience Badge */}
-                        <div className="inline-flex items-center bg-blue-50 text-blue-700 text-xs px-3 py-1 rounded-full w-fit">
-                          <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
-                          Expert
-                        </div>
-                      </div>
-                    </div>
-                  </motion.div>
+                    member={member}
+                    index={index + 2}
+                    onClick={setSelectedMember}
+                  />
                 ))}
+              </div>
+            </div>
+
+            <div className="max-w-6xl mx-auto">
+              {/* First Row - 5 members */}
+              <div className="mb-8">
+                <div className="grid grid-cols-1 md:grid-cols-5 gap-4 max-w-6xl mx-auto">
+                  {firstRowMembers.map((member, index) => (
+                    <TeamMemberCard
+                      key={member.name}
+                      member={member}
+                      index={index + 6}
+                      onClick={setSelectedMember}
+                    />
+                  ))}
+                </div>
+              </div>
+
+              {/* Second Row - 4 members centered */}
+              <div className="flex justify-center">
+                <div
+                  className="grid grid-cols-1 md:grid-cols-4 gap-4"
+                  style={{ maxWidth: "calc(80% of 6xl)" }}
+                >
+                  {secondRowMembers.map((member, index) => (
+                    <TeamMemberCard
+                      key={member.name}
+                      member={member}
+                      index={index + 11}
+                      onClick={setSelectedMember}
+                    />
+                  ))}
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+      {/* Team Member Modal */}
+      <MemberModal
+        member={selectedMember}
+        onClose={() => setSelectedMember(null)}
+      />
 
       <CTASection />
       <Footer />

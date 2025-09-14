@@ -1,13 +1,13 @@
 "use client";
 import React from "react";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
 const MeetTheTeam = () => {
   const teamMembers = [
     {
       name: "Sagar Shah",
-      position: "CEO",
+      position: "Chief Executive Officer (CEO)",
       image:
         "https://res.cloudinary.com/dsvfcckqy/image/upload/v1754928794/WhatsApp_Image_2025-07-28_at_15.43.58_rmkh15.jpg",
       description:
@@ -15,7 +15,7 @@ const MeetTheTeam = () => {
     },
     {
       name: "Gajanan Ghule",
-      position: "COO",
+      position: "Chief Operations Officer (COO)",
       image:
         "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755361767/WhatsApp_Image_2025-07-28_at_15.41.57_sooibr_w9s67f.jpg",
       description:
@@ -39,7 +39,7 @@ const MeetTheTeam = () => {
     },
   ];
 
-  const cardVariants = {
+  const cardVariants: Variants = {
     offscreen: {
       y: 50,
       opacity: 0,
@@ -65,7 +65,7 @@ const MeetTheTeam = () => {
           viewport={{ once: true, amount: 0.5 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold text-gray-800 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
             Meet Our Leadership Team
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -86,7 +86,6 @@ const MeetTheTeam = () => {
             >
               {/* This is where you would use Shadcn Card component */}
               <div className="relative w-full h-64 overflow-hidden rounded-t-xl">
-                {/* This is where you might use a Shadcn Avatar or just a simple image tag */}
                 <img
                   src={member.image}
                   alt={member.name}
@@ -97,12 +96,10 @@ const MeetTheTeam = () => {
                 <h3 className="text-xl font-semibold text-gray-800 mb-1">
                   {member.name}
                 </h3>
-                <p className="text-blue-600 font-medium mb-3">
+                <p className="text-blue-600 font-medium mb-3 md:h-[7vh] md:w-[30vh] md:px-3 text-center">
                   {member.position}
                 </p>
-                <p className="text-gray-600 text-sm mb-4">
-                  {member.description}
-                </p>
+
                 <a
                   href="/about-us"
                   className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-800 transition-colors"

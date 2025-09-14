@@ -6,6 +6,7 @@ import {
   useScroll,
   useTransform,
   AnimatePresence,
+  Variants,
 } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ChevronRight, ArrowDown, Pause, Play } from "lucide-react";
@@ -66,7 +67,7 @@ const HeroSection = () => {
     },
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { y: 40, opacity: 0 },
     visible: {
       y: 0,
@@ -79,7 +80,7 @@ const HeroSection = () => {
     },
   };
 
-  const slideVariants = {
+  const slideVariants: Variants = {
     enter: {
       y: "100%",
       opacity: 1,
@@ -192,7 +193,7 @@ const HeroSection = () => {
             >
               <motion.div variants={itemVariants} className="space-y-6">
                 <h1 className="md:text-5xl text-4xl font-bold leading-tight text-white">
-                  <span className="block text-gray-200 mb-2 font-medium">
+                  <span className="block text-gray-200 mb-2 font-medium uppercase">
                     Sustainable Water, Wastewater <br /> & Sanitation Solutions
                   </span>
                 </h1>

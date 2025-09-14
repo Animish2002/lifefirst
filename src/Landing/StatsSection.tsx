@@ -85,7 +85,7 @@ export default function App() {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.3 }}
-      className="py-16 px-4 md:px-8 bg-slate-50 rounded-2xl shadow-inner border border-slate-100"
+      className="py-8 px-4 md:px-8 bg-slate-50 rounded-2xl shadow-inner border border-slate-100"
     >
       <div className="max-w-6xl mx-auto">
         <motion.div
