@@ -125,6 +125,8 @@ const navLinks: NavLink[] = [
       { name: "Brochures", path: "/company-brochures" },
       { name: "Case Studies", path: "/case-studies" },
       { name: "Gallery", path: "/gallery" },
+      // { name: "Blogs", path: "/blog" },
+      { name: "Recognitions", path: "/recognitions" },
     ],
   },
 ];
