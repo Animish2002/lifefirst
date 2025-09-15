@@ -96,7 +96,7 @@ const MeetTheTeam = () => {
                 <h3 className="text-xl font-semibold text-gray-800 mb-1">
                   {member.name}
                 </h3>
-                <p className="text-blue-600 font-medium mb-3 md:h-[7vh] md:w-[30vh] md:px-3 text-center">
+                <p className="text-blue-600 font-medium mb-3 md:h-[7vh] md:flex md:items-center md:justify-center px-2">
                   {member.position}
                 </p>
 
