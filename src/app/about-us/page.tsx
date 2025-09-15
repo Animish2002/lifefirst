@@ -216,7 +216,7 @@ const AboutUsPage: React.FC = () => {
       experience:
         "5+ years of experience in project management and operations.",
       image:
-        "https://res.cloudinary.com/dsvfcckqy/image/upload/v1754928789/WhatsApp_Image_2025-07-28_at_12.40.01_eg2zec.jpg",
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/v1757938131/imgi_2_fb-storyfb_647_011616110611_d6eolt.jpg",
       description:
         "Vinishka Srilakshmi, Head of Strategic Partnerships & Business Growth at LifeFirst Concepts & Technologies Pvt. Ltd., brings over 10 years of experience in building high impact partnerships and driving sustainable business growth across diverse markets. A Commerce graduate with a sharp business acumen, Srilakshmi has been instrumental in shaping the company’s global expansion strategy through innovative market development initiatives and strategic collaborations. Her expertise lies in identifying new business opportunities, fostering long-term alliances, and creating win-win partnerships with governments, institutions, and private sector stakeholders. By combining market intelligence, relationship management, and strategic negotiation skills, Srilakshmi has successfully accelerated LifeFirst’s presence across India, the Middle East, and Africa. Known for her forward-thinking approach and results-driven mindset, she continuously explores new revenue streams, funding models, and market-entry strategies, aligning them with the company’s vision of delivering sustainable water, wastewater, and sanitation solutions globally. Srilakshmi’s leadership ensures that LifeFirst remains at the forefront of innovative collaborations and global business growth.",
     },
@@ -227,7 +227,7 @@ const AboutUsPage: React.FC = () => {
       name: "Ravi Chavan",
       position: "Position Title", // Add actual position
       image:
-        "https://res.cloudinary.com/dsvfcckqy/image/upload/v1754928789/WhatsApp_Image_2025-07-28_at_12.40.01_eg2zec.jpg", // Placeholder image
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/v1757938131/imgi_2_fb-storyfb_647_011616110611_d6eolt.jpg", // Placeholder image
       description:
         "Brief one-liner description about Ravi's role and expertise.", // Add actual description
     },
@@ -235,7 +235,7 @@ const AboutUsPage: React.FC = () => {
       name: "Sarika Thalkari",
       position: "Position Title", // Add actual position
       image:
-        "https://res.cloudinary.com/dsvfcckqy/image/upload/v1754928789/WhatsApp_Image_2025-07-28_at_12.40.01_eg2zec.jpg", // Placeholder image
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/v1757938131/imgi_2_fb-storyfb_647_011616110611_d6eolt.jpg", // Placeholder image
       description:
         "Brief one-liner description about Sarika's role and expertise.", // Add actual description
     },
@@ -243,7 +243,7 @@ const AboutUsPage: React.FC = () => {
       name: "Manisha Walde",
       position: "Position Title", // Add actual position
       image:
-        "https://res.cloudinary.com/dsvfcckqy/image/upload/v1754928789/WhatsApp_Image_2025-07-28_at_12.40.01_eg2zec.jpg", // Placeholder image
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/v1757938131/imgi_2_fb-storyfb_647_011616110611_d6eolt.jpg", // Placeholder image
       description:
         "Brief one-liner description about Manisha's role and expertise.", // Add actual description
     },
@@ -251,7 +251,7 @@ const AboutUsPage: React.FC = () => {
       name: "Payal",
       position: "Position Title", // Add actual position
       image:
-        "https://res.cloudinary.com/dsvfcckqy/image/upload/v1754928789/WhatsApp_Image_2025-07-28_at_12.40.01_eg2zec.jpg", // Placeholder image
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/v1757938131/imgi_2_fb-storyfb_647_011616110611_d6eolt.jpg", // Placeholder image
       description:
         "Brief one-liner description about Payal's role and expertise.", // Add actual description
     },
@@ -259,7 +259,7 @@ const AboutUsPage: React.FC = () => {
       name: "Rupesh Ingale",
       position: "Position Title", // Add actual position
       image:
-        "https://res.cloudinary.com/dsvfcckqy/image/upload/v1754928789/WhatsApp_Image_2025-07-28_at_12.40.01_eg2zec.jpg", // Placeholder image
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/v1757938131/imgi_2_fb-storyfb_647_011616110611_d6eolt.jpg", // Placeholder image
       description:
         "Brief one-liner description about Rupesh's role and expertise.", // Add actual description
     },
@@ -267,7 +267,7 @@ const AboutUsPage: React.FC = () => {
       name: "Amol Sanap",
       position: "Position Title", // Add actual position
       image:
-        "https://res.cloudinary.com/dsvfcckqy/image/upload/v1754928789/WhatsApp_Image_2025-07-28_at_12.40.01_eg2zec.jpg", // Placeholder image
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/v1757938131/imgi_2_fb-storyfb_647_011616110611_d6eolt.jpg", // Placeholder image
       description:
         "Brief one-liner description about Amol's role and expertise.", // Add actual description
     },
@@ -275,7 +275,7 @@ const AboutUsPage: React.FC = () => {
       name: "Subham Shivarkar",
       position: "Position Title", // Add actual position
       image:
-        "https://res.cloudinary.com/dsvfcckqy/image/upload/v1754928789/WhatsApp_Image_2025-07-28_at_12.40.01_eg2zec.jpg", // Placeholder image
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/v1757938131/imgi_2_fb-storyfb_647_011616110611_d6eolt.jpg", // Placeholder image
       description:
         "Brief one-liner description about Subham's role and expertise.", // Add actual description
     },
@@ -283,7 +283,7 @@ const AboutUsPage: React.FC = () => {
       name: "Swaraj Sobale",
       position: "Position Title", // Add actual position
       image:
-        "https://res.cloudinary.com/dsvfcckqy/image/upload/v1754928789/WhatsApp_Image_2025-07-28_at_12.40.01_eg2zec.jpg", // Placeholder image
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/v1757938131/imgi_2_fb-storyfb_647_011616110611_d6eolt.jpg", // Placeholder image
       description:
         "Brief one-liner description about Swaraj's role and expertise.", // Add actual description
     },
@@ -291,7 +291,7 @@ const AboutUsPage: React.FC = () => {
       name: "Madhav More",
       position: "Position Title", // Add actual position
       image:
-        "https://res.cloudinary.com/dsvfcckqy/image/upload/v1754928789/WhatsApp_Image_2025-07-28_at_12.40.01_eg2zec.jpg", // Placeholder image
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/v1757938131/imgi_2_fb-storyfb_647_011616110611_d6eolt.jpg", // Placeholder image
       description:
         "Brief one-liner description about Madhav's role and expertise.", // Add actual description
     },
@@ -340,7 +340,7 @@ const AboutUsPage: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, ease: "easeOut" }}
-              className="bg-white p-10 rounded-3xl shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100"
+              className="bg-white p-5 md:p-10 rounded-3xl shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100"
             >
               <div className="flex items-center mb-8">
                 <div className="bg-gradient-to-r from-blue-100 to-cyan-100 p-4 rounded-2xl mr-6">
@@ -370,7 +370,7 @@ const AboutUsPage: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, ease: "easeOut" }}
-              className="bg-white p-10 rounded-3xl shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100"
+              className="bg-white p-5 md:p-10 rounded-3xl shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100"
             >
               <div className="flex items-center mb-8">
                 <div className="bg-gradient-to-r from-green-100 to-emerald-100 p-4 rounded-2xl mr-6">
@@ -521,7 +521,7 @@ const AboutUsPage: React.FC = () => {
             transition={{ duration: 0.5, ease: "easeOut" }}
             className="mt-10 text-center"
           >
-            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-100 to-green-100 px-6 py-3 rounded-full">
+            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-100 to-green-100 px-6 md:py-3 py-1 rounded-full">
               <Leaf className="w-5 h-5 text-green-600" />
               <span className="text-gray-700 font-medium">
                 Sustainable • Innovative • Reliable
@@ -580,10 +580,12 @@ const AboutUsPage: React.FC = () => {
               </div>
             </div>
 
-            <div className="max-w-6xl mx-auto">
               {/* Third Row - 5 members */}
-              <div className="mb-8">
-                <div className="grid grid-cols-1 md:grid-cols-5 gap-4 max-w-6xl mx-auto">
+              <div className="flex justify-center mb-8">
+                <div
+                  className="grid grid-cols-2 md:grid-cols-5 gap-4"
+                  style={{ maxWidth: "calc(80% of 6xl)" }}
+                >
                   {firstRowMembers.map((member, index) => (
                     <TeamMemberCard
                       key={member.name}
@@ -598,7 +600,7 @@ const AboutUsPage: React.FC = () => {
               {/* Fourth Row - 4 members centered */}
               <div className="flex justify-center">
                 <div
-                  className="grid grid-cols-1 md:grid-cols-4 gap-4"
+                  className="grid grid-cols-2 md:grid-cols-4 gap-4"
                   style={{ maxWidth: "calc(80% of 6xl)" }}
                 >
                   {secondRowMembers.map((member, index) => (
@@ -611,7 +613,7 @@ const AboutUsPage: React.FC = () => {
                   ))}
                 </div>
               </div>
-            </div>
+    
           </div>
         </div>
       </div>

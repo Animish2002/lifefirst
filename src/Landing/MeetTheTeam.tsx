@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { motion, Variants } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ExternalLink } from "lucide-react";
 
 const MeetTheTeam = () => {
   const teamMembers = [
@@ -89,23 +89,24 @@ const MeetTheTeam = () => {
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-full  object-cover transition-transform duration-500 group-hover:scale-110"
                 />
               </div>
-              <div className="p-6 text-center">
+              <div className="md:p-6 p-2 text-center">
                 <h3 className="text-xl font-semibold text-gray-800 mb-1">
                   {member.name}
                 </h3>
-                <p className="text-blue-600 font-medium mb-3 md:h-[7vh] md:flex md:items-center md:justify-center px-2">
+                <p className="text-blue-600 font-medium md:mb-3 md:h-[7vh] md:flex md:items-center md:justify-center px-2">
                   {member.position}
                 </p>
 
                 <a
                   href="/about-us"
-                  className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-800 transition-colors"
+                  className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-800 text-xs transition-colors"
                 >
-                  Learn More
-                  <ArrowRight className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" />
+                  Click to Learn More
+                  <ExternalLink className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" />
+                  
                 </a>
               </div>
             </motion.div>
