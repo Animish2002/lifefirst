@@ -357,9 +357,9 @@ const AboutUsPage: React.FC = () => {
               </p>
               <div className="bg-gradient-to-r from-blue-50 to-cyan-50 p-6 rounded-2xl border-l-4 border-blue-400">
                 <p className="text-gray-700 italic leading-relaxed text-sm">
-                  "We envision a future where every drop is valued, ecosystems
-                  are protected, and communities thrive through smart,
-                  efficient, and eco-friendly treatment solutions."
+                  &quot;We envision a future where every drop is valued,
+                  ecosystems are protected, and communities thrive through
+                  smart, efficient, and eco-friendly treatment solutions.&quot;
                 </p>
               </div>
             </motion.div>
