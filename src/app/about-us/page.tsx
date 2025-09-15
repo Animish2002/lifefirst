@@ -7,7 +7,6 @@ import Navigation from "@/Landing/Navigation";
 import Footer from "@/Landing/Footer";
 import CTASection from "@/Landing/Contact";
 
-
 interface TeamMember {
   name: string;
   position: string;
@@ -188,7 +187,7 @@ const AboutUsPage: React.FC = () => {
       image:
         "https://res.cloudinary.com/dsvfcckqy/image/upload/v1754928788/WhatsApp_Image_2025-07-28_at_12.08.47_r5kpst.jpg",
       description:
-        "Dattaram Rane, Vice President – Global Projects at LifeFirst Concepts & Technologies Pvt. Ltd., brings over 15 years of rich international experience in the Water and Wastewater Treatment Industry. Holding both a B.E. and Diploma in Chemical Engineering, along with DNV certification in Risk Assessment, Dattaram combines strong technical expertise with a sharp strategic outlook to lead global projects from concept to successful execution.",
+        "Dattaram Rane, Vice President – Global Projects at Life First Concepts & Technologies Pvt. Ltd., brings over 15 years of rich international experience in the Water and Wastewater Treatment Industry. Holding both a B.E. and Diploma in Chemical Engineering, along with DNV certification in Risk Assessment, Dattaram combines strong technical expertise with a sharp strategic outlook to lead global projects from concept to successful execution. With his in-depth knowledge of process engineering, risk management, and compliance standards, Dattaram has spearheaded numerous industrial, municipal, and commercial water treatment initiatives across India, the Middle East, and Africa. His ability to integrate cutting-edge technologies with practical, cost-effective designs ensures that Life First delivers world-class, sustainable solutions tailored to diverse client needs. Known for his meticulous planning and collaborative leadership style, Dattaram excels in coordinating multi-disciplinary teams, managing complex stakeholder requirements, and ensuring timely, quality-driven project deliveries. His expertise in risk assessment and safety compliance also strengthens the organization’s commitment to operational excellence and environmental responsibility. Through his global perspective and technical acumen, Dattaram plays a crucial role in advancing LifeFirst’s vision of sustainable growth and international expansion, making a meaningful impact on communities and industries worldwide.",
     },
     {
       name: "Supriya Sathe",
@@ -198,7 +197,7 @@ const AboutUsPage: React.FC = () => {
       image:
         "https://res.cloudinary.com/dsvfcckqy/image/upload/v1754928788/WhatsApp_Image_2025-07-28_at_11.39.26_xcakld.jpg",
       description:
-        "Supriya Sathe leads the Global Marketing & Sales initiatives at LifeFirst Concepts & Technologies Pvt. Ltd., bringing a powerful combination of technical expertise, strategic insight, and purpose-driven leadership. With a B.E. in Computer Science and an MBA in Human Resources, Supriya offers a multidisciplinary perspective that blends technology, people management, and business strategy seamlessly.",
+        "Supriya Sathe leads the Global Marketing & Sales initiatives at LifeFirst Concepts & Technologies Pvt. Ltd., bringing a powerful combination of technical expertise, strategic insight, and purpose-driven leadership. With a B.E. in Computer Science and an MBA in Human Resources, Supriya offers a multidisciplinary perspective that blends technology, people management, and business strategy seamlessly. As a Certified CSR Practitioner, she is deeply committed to aligning business growth with sustainability, social impact, and ethical practices. Supriya has played a pivotal role in positioning LifeFirst as a global brand, spearheading marketing campaigns, international collaborations, and customer engagement initiatives that have expanded the company’s footprint across India, the Middle East, and Africa. Her approach combines data-driven strategies with innovative storytelling, ensuring that the company’s mission of “Make in India for the World” resonates across diverse markets. Beyond driving revenue and partnerships, Supriya champions women leadership in technology and advocates for inclusive growth and responsible business practices. With her visionary outlook and collaborative leadership style, Supriya Sathe continues to shape LifeFirst’s journey toward becoming a global leader in sustainable water, wastewater, and sanitation solutions. ",
     },
     {
       name: "Shashank More",
@@ -296,7 +295,6 @@ const AboutUsPage: React.FC = () => {
         "Brief one-liner description about Madhav's role and expertise.", // Add actual description
     },
   ];
-
 
   const firstRowMembers = teamMembers3.slice(0, 5);
   const secondRowMembers = teamMembers3.slice(5, 9);
