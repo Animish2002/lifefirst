@@ -149,19 +149,19 @@ const socialLinks: SocialLink[] = [
     icon: <Facebook size={18} />,
     href: "https://facebook.com/lifefirsttech",
     label: "Investors",
-    color: "hover:text-blue-600",
+    color: "hover:text-blue-800",
   },
   {
     icon: <Twitter size={18} />,
     href: "https://twitter.com/lifefirsttech",
     label: "Twitter",
-    color: "hover:text-sky-500",
+    color: "hover:text-sky-800",
   },
   {
     icon: <Linkedin size={18} />,
     href: "https://linkedin.com/company/lifefirsttech",
     label: "LinkedIn",
-    color: "hover:text-blue-700",
+    color: "hover:text-blue-900",
   },
 ];
 
@@ -453,7 +453,7 @@ const Navigation: React.FC = () => {
       animate={{ y: 0 }}
       className="fixed top-0 w-full z-40 bg-white/95 backdrop-blur-xl border-b border-blue-100 shadow-sm"
     >
-      <div className="bg-gradient-to-tl from-slate-800 via-slate-900 to-blue-900 text-white">
+      <div className="bg-zinc-200 text-zinc-900">
         <div className="max-w-6xl mx-auto px-2 sm:px-4 lg:px-8 py-1">
           <div className="flex items-center justify-between py-1.5">
             {/* Left Side - Contact Information */}
@@ -463,9 +463,9 @@ const Navigation: React.FC = () => {
                   {item.href ? (
                     <Link
                       href={item.href}
-                      className="flex items-center space-x-2 text-slate-300 hover:text-white transition-colors duration-200 text-sm"
+                      className="flex items-center space-x-2 text-slate-800 hover:text-blue-900 transition-colors duration-200 text-sm"
                     >
-                      <span className="text-slate-400 h-4 w-4">
+                      <span className="text-slate-900 h-4 w-4">
                         {item.icon}
                       </span>
                       <span className="hidden sm:inline text-sm">
@@ -473,7 +473,7 @@ const Navigation: React.FC = () => {
                       </span>
                     </Link>
                   ) : (
-                    <div className="flex items-center space-x-2 text-slate-300 text-sm">
+                    <div className="flex items-center space-x-2 text-slate-700 text-sm">
                       <span className="text-slate-400">{item.icon}</span>
                       <span className="hidden sm:inline text-sm">
                         {item.text}
@@ -496,7 +496,7 @@ const Navigation: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={social.label}
-                  className={`h-4 w-4 ml-3 text-slate-400 hover:bg-slate-800 transition-all duration-200 ${social.color} rounded items-center justify-center hidden sm:flex`}
+                  className={`h-4 w-4 ml-3 text-slate-800 hover:bg-slate-100 transition-all duration-200 ${social.color} rounded items-center justify-center hidden sm:flex`}
                 >
                   {social.icon}
                 </Link>
