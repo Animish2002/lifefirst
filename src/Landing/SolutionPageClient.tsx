@@ -130,11 +130,11 @@ const ContactFormPopup = ({
               <p className="text-green-600 font-medium">{submitMessage}</p>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className="space-y-2 px-4">
+            <form onSubmit={handleSubmit} className="space-y-1 px-4">
               <div>
                 <label
                   htmlFor="name"
-                  className="block text-sm font-medium text-gray-700 mb-1"
+                  className="block text-sm font-medium text-gray-700 mb-0.5"
                 >
                   Full Name *
                 </label>
@@ -153,7 +153,7 @@ const ContactFormPopup = ({
               <div>
                 <label
                   htmlFor="email"
-                  className="block text-sm font-medium text-gray-700 mb-1"
+                  className="block text-sm font-medium text-gray-700 mb-0.5"
                 >
                   Email Address *
                 </label>
@@ -172,7 +172,7 @@ const ContactFormPopup = ({
               <div>
                 <label
                   htmlFor="phone"
-                  className="block text-sm font-medium text-gray-700 mb-1"
+                  className="block text-sm font-medium text-gray-700 mb-0.5"
                 >
                   Phone Number
                 </label>
@@ -190,7 +190,7 @@ const ContactFormPopup = ({
               <div>
                 <label
                   htmlFor="company"
-                  className="block text-sm font-medium text-gray-700 mb-1"
+                  className="block text-sm font-medium text-gray-700 mb-0.5"
                 >
                   Company
                 </label>
@@ -208,7 +208,7 @@ const ContactFormPopup = ({
               <div>
                 <label
                   htmlFor="message"
-                  className="block text-sm font-medium text-gray-700 mb-1"
+                  className="block text-sm font-medium text-gray-700 mb-0.5"
                 >
                   Message
                 </label>

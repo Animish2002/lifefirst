@@ -6,6 +6,7 @@ import { Target, Eye, X } from "lucide-react";
 import Navigation from "@/Landing/Navigation";
 import Footer from "@/Landing/Footer";
 import CTASection from "@/Landing/Contact";
+import { Shield, Award, Factory, Leaf } from "lucide-react";
 
 interface TeamMember {
   name: string;
@@ -303,116 +304,246 @@ const AboutUsPage: React.FC = () => {
     <>
       <Navigation />
       <div className="relative md:mt-26 mt-34 overflow-hidden"></div>
-      <div className="bg-white py-20">
-        <div className="max-w-6xl mx-auto px-6">
+
+      <div className="bg-gray-50 py-8">
+        <div className="max-w-7xl mx-auto px-6 md-px-8">
+          {/* Header Section */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+            className="text-center mb-14"
           >
-            <h2 className="text-4xl font-bold text-gray-800 mb-4">
-              Our Vision and Values
+            <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-3 tracking-tight">
+              Our Vision & Values
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="md:text-base text-sm text-gray-600 max-w-4xl mx-auto leading-relaxed">
               Driven by innovation, integrity, and sustainability to deliver
-              world-class water and sanitation solutions.
+              world-class water and sanitation solutions
             </p>
           </motion.div>
 
-          <div className="grid lg:grid-cols-2 gap-12">
-            {/* Mission Card */}
+          {/* Vision and Value Statements */}
+          <motion.div
+            initial={{}}
+            whileInView={{
+              transition: {
+                staggerChildren: 0.1,
+              },
+            }}
+            className="grid lg:grid-cols-2 gap-4 mb-10 max-w-6xl mx-auto"
+          >
+            {/* Vision Statement */}
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="bg-gradient-to-br from-blue-50 to-cyan-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+              className="bg-white p-10 rounded-3xl shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100"
             >
-              <div className="flex items-center mb-6">
-                <div className="bg-blue-100 p-4 rounded-full mr-4">
-                  <Target className="w-8 h-8 text-blue-600" />
+              <div className="flex items-center mb-8">
+                <div className="bg-gradient-to-r from-blue-100 to-cyan-100 p-4 rounded-2xl mr-6">
+                  <Eye className="w-4 h-4 text-blue-600" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-800">
+                <h3 className="text-2xl font-bold text-gray-900">
+                  Vision Statement
+                </h3>
+              </div>
+              <p className="text-gray-700 leading-relaxed text-md mb-6">
+                To be a leader in innovative & sustainable decentralised
+                wastewater treatment, transforming waste into a resource and
+                ensuring clean water access for all.
+              </p>
+              <div className="bg-gradient-to-r from-blue-50 to-cyan-50 p-6 rounded-2xl border-l-4 border-blue-400">
+                <p className="text-gray-700 italic leading-relaxed text-sm">
+                  "We envision a future where every drop is valued, ecosystems
+                  are protected, and communities thrive through smart,
+                  efficient, and eco-friendly treatment solutions."
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Value Statement */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+              className="bg-white p-10 rounded-3xl shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100"
+            >
+              <div className="flex items-center mb-8">
+                <div className="bg-gradient-to-r from-green-100 to-emerald-100 p-4 rounded-2xl mr-6">
+                  <Target className="w-4 h-4 text-green-600" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900">
                   Value Statement
                 </h3>
               </div>
-              <p className="text-gray-700 leading-relaxed mb-6 text-lg">
+              <p className="text-gray-700 leading-relaxed text-md">
                 We are committed to delivering sustainable, reliable, and
                 innovative wastewater treatment solutions that protect the
                 environment, support public health, and empower communities.
                 Through quality engineering and responsible practices, we strive
                 to conserve water, reduce pollution, and create a cleaner, more
-                resilient future
+                resilient future.
               </p>
-              <div className="space-y-3">
-                <div className="flex items-center">
-                  <div className="w-3 h-3 bg-blue-600 rounded-full mr-4"></div>
-                  <p className="text-gray-600">Commitment to Quality</p>
+            </motion.div>
+          </motion.div>
+
+          {/* Commitment to Quality Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+            className="mb-12 px-6 md:px-8"
+          >
+            <h3 className="text-3xl md:text-4xl font-semibold text-gray-900 text-center mb-3">
+              Commitment to Quality
+            </h3>
+            <p className="md:text-base text-sm text-gray-600 text-center max-w-3xl mx-auto mb-3">
+              Our unwavering dedication to excellence drives every aspect of our
+              operations
+            </p>
+          </motion.div>
+
+          {/* Quality Commitment Grid */}
+          <motion.div
+            initial={{}}
+            whileInView={{
+              transition: {
+                staggerChildren: 0.1,
+              },
+            }}
+            className="grid md:grid-cols-4 lg:grid-cols-4 gap-4 max-w-6xl mx-auto"
+          >
+            {/* Quality Assurance */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+              className="bg-white p-5 rounded-3xl shadow-sm hover:shadow-lg transition-all duration-300 border border-blue-200 group hover:scale-105"
+            >
+              <div className="flex items-start mb-6">
+                <div className="bg-blue-100 p-4 rounded-2xl mr-6 group-hover:scale-110 transition-transform duration-300">
+                  <Award className="w-4 h-4 text-blue-600" />
                 </div>
-                <div className="flex items-center">
-                  <div className="w-3 h-3 bg-green-600 rounded-full mr-4"></div>
-                  <p className="text-gray-600">Quality Assurance</p>
-                </div>
-                <div className="flex items-center">
-                  <div className="w-3 h-3 bg-cyan-600 rounded-full mr-4"></div>
-                  <p className="text-gray-600">Safety Standards</p>
-                </div>
-                <div className="flex items-center">
-                  <div className="w-3 h-3 bg-cyan-600 rounded-full mr-4"></div>
-                  <p className="text-gray-600">Production Facility</p>
-                </div>
+                <h4 className="text-xl font-semibold text-gray-900 mt-2">
+                  Quality Assurance
+                </h4>
               </div>
+              <p className="text-gray-700 leading-relaxed text-sm">
+                We adhere to stringent quality control measures at every stage
+                of production, ensuring that our clients receive the best
+                possible service and results.
+              </p>
             </motion.div>
 
-            {/* Vision Card */}
+            {/* Safety Standards */}
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="bg-gradient-to-br from-green-50 to-blue-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+              className="bg-white p-5 rounded-3xl shadow-sm hover:shadow-lg transition-all duration-300 border border-green-200 group hover:scale-105"
             >
-              <div className="flex items-center mb-6">
-                <div className="bg-green-100 p-4 rounded-full mr-4">
-                  <Eye className="w-8 h-8 text-green-600" />
+              <div className="flex items-start mb-6">
+                <div className="bg-green-100 p-4 rounded-2xl mr-6 group-hover:scale-110 transition-transform duration-300">
+                  <Shield className="w-4 h-4 text-green-600" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-800">
-                  Vision Statement
-                </h3>
+                <h4 className="text-xl font-semibold text-gray-900 mt-2">
+                  Safety Standards
+                </h4>
               </div>
-              <p className="text-gray-700 leading-relaxed mb-6 text-lg">
-                To be the global leader in water and sanitation technology,
-                setting the standard for innovation, quality, and environmental
-                stewardship.
+              <p className="text-gray-700 leading-relaxed text-sm">
+                Safety is our top priority. We conduct regular training and
+                strictly adhere to all safety regulations on-site, ensuring a
+                secure environment for our workers and clients.
               </p>
-              <div className="bg-white bg-opacity-50 p-4 rounded-xl">
-                <p className="text-gray-600 italic">
-                  &quot;We envision a future where clean water is a fundamental
-                  right, accessible to every community, and where our technology
-                  contributes to a sustainable planet for future
-                  generations.&quot;
-                </p>
-              </div>
             </motion.div>
-          </div>
+
+            {/* Production Facility */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+              className="bg-white p-5 rounded-3xl shadow-sm hover:shadow-lg transition-all duration-300 border border-cyan-200 group hover:scale-105"
+            >
+              <div className="flex items-start mb-6">
+                <div className="bg-cyan-100 p-4 rounded-2xl mr-6 group-hover:scale-110 transition-transform duration-300">
+                  <Factory className="w-4 h-4 text-cyan-600" />
+                </div>
+                <h4 className="text-xl font-semibold text-gray-900 mt-2">
+                  Production Facility
+                </h4>
+              </div>
+              <p className="text-gray-700 leading-relaxed text-sm">
+                Our state-of-the-art production facility spans 40,000 sq. feet
+                and operates entirely on solar energy. Every drop of rainwater
+                is harvested, stored in underground tanks, and recharged into
+                the ground to ensure sustainable water management.
+              </p>
+            </motion.div>
+
+            {/* Zero Liquid Discharge */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+              className="bg-white p-5 rounded-3xl shadow-sm hover:shadow-lg transition-all duration-300 border border-emerald-200 group hover:scale-105"
+            >
+              <div className="flex items-start mb-6">
+                <div className="bg-emerald-100 p-4 rounded-2xl mr-6 group-hover:scale-110 transition-transform duration-300">
+                  <Leaf className="w-4 h-4 text-emerald-600" />
+                </div>
+                <h4 className="text-xl font-semibold text-gray-900 mt-2">
+                  Zero Liquid Discharge
+                </h4>
+              </div>
+              <p className="text-gray-700 leading-relaxed text-sm">
+                With a strict Zero Liquid Discharge policy, all wastewater is
+                treated and reused to nourish our lush green gardens, which are
+                home to native fruit and flowering plants. We compost kitchen
+                waste and green waste into high-quality organic manure.
+              </p>
+            </motion.div>
+          </motion.div>
+
+          {/* Bottom accent */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+            className="mt-10 text-center"
+          >
+            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-100 to-green-100 px-6 py-3 rounded-full">
+              <Leaf className="w-5 h-5 text-green-600" />
+              <span className="text-gray-700 font-medium">
+                Sustainable • Innovative • Reliable
+              </span>
+              <Leaf className="w-5 h-5 text-blue-600" />
+            </div>
+          </motion.div>
         </div>
       </div>
-
-      <div className="bg-gray-50 py-20">
+      <div className="bg-gray-50 py-0">
         <div className="max-w-[90rem] mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center mb-8"
           >
-            <h2 className="text-4xl font-bold text-gray-800 mb-4">
+            <h2 className="text-3xl md:text-4xl font-semibold text-gray-800 mb-4">
               Meet Our Team
             </h2>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+            <p className="md:text-md text-sm text-gray-600 max-w-4xl mx-auto">
               Our team comprises seasoned engineers across Chemical, Mechanical,
               Civil, Electrical, and Instrumentation disciplines, supported by
               experienced project managers and skilled technicians all committed
@@ -489,7 +620,6 @@ const AboutUsPage: React.FC = () => {
         member={selectedMember}
         onClose={() => setSelectedMember(null)}
       />
-
       <CTASection />
       <Footer />
     </>
