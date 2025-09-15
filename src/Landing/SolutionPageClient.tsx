@@ -76,7 +76,7 @@ const ContactFormPopup = ({
     <div className="fixed inset-0 bg-opacity-50 backdrop-blur-md flex items-center justify-center z-50 p-4 transition-all duration-300">
       <div className="bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl max-h-[84vh] w-[30rem] overflow-y-auto transform transition-all duration-300 scale-100 border border-white/20">
         {/* Header */}
-        <div className="bg-zinc-100 text-zinc-800 p-2 rounded-t-2xl">
+        <div className="bg-zinc-100 text-zinc-800 rounded-t-2xl">
           <div className="flex justify-between items-start border-b border-zinc-200 p-4">
             <div>
               <h3 className="text-md font-bold mb-1">
@@ -109,7 +109,7 @@ const ContactFormPopup = ({
         </div>
 
         {/* Form */}
-        <div className="py-2 px-4">
+        <div className="py-4 px-4">
           {submitMessage ? (
             <div className="text-center py-2">
               <div className=" bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">

@@ -121,8 +121,9 @@ const Gallery = () => {
 
   return (
     <>
+      <div className="relative md:mt-26 mt-24 overflow-hidden"></div>
       <Navigation />
-      <section className="py-20 bg-gradient-to-br from-slate-50 to-blue-50 px-10 mt-27">
+      <section className="py-20 bg-gradient-to-br from-slate-50 to-blue-50  ">
         <div className="max-w-6xl mx-auto px-8">
           {/* Header */}
           <div className="text-center mb-8">

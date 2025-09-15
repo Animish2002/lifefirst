@@ -303,7 +303,7 @@ const AboutUsPage: React.FC = () => {
   return (
     <>
       <Navigation />
-      <div className="relative md:mt-26 mt-34 overflow-hidden"></div>
+      <div className="relative md:mt-26 mt-24 overflow-hidden"></div>
 
       <div className="bg-gray-50 py-8">
         <div className="max-w-7xl mx-auto px-6 md-px-8">

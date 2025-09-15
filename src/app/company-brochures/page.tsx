@@ -69,9 +69,9 @@ const DownloadBrochurespage = () => {
   return (
     <>
       <Navigation />
-
+      <div className="relative md:mt-26 mt-24 overflow-hidden"></div>
       {/* Hero Section */}
-      <section className="relative text-white py-10 px-4 overflow-hidden mt-34 md:mt-24 h-[35vh]">
+      <section className="relative text-white py-10 px-4 overflow-hidden h-[35vh]">
         {/* Background Pattern */}
         <div className="absolute inset-0 bg-black bg-opacity-20">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-transparent"></div>

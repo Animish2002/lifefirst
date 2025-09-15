@@ -104,9 +104,9 @@ const Page = () => {
   return (
     <div className="bg-gray-50 text-gray-800 font-sans">
       <Navigation />
-
+      <div className="relative md:mt-26 mt-24 overflow-hidden"></div>
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-24 px-4 sm:px-6 lg:px-8 mt-34 md:mt-24 h-[35vh]">
+      <section className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-18 px-4 sm:px-6 lg:px-8 ">
         <div className="max-w-6xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-4">
             Join Our Team
@@ -214,8 +214,8 @@ const Page = () => {
             Ready to Join Us?
           </h2>
           <p className="text-lg text-gray-600 mb-8">
-            If you don&apos;t see an opening that fits your skills, we&apos;d still love
-            to hear from you.
+            If you don&apos;t see an opening that fits your skills, we&apos;d
+            still love to hear from you.
           </p>
           <a
             href="#"

@@ -44,15 +44,15 @@ const SolutionPage = ({ params }: PageProps) => {
       <main className="flex-grow">
         {/* Hero Section */}
         <div
-          className="relative h-[30vh] bg-cover bg-center overflow-hidden shadow-xl md:mt-24 mt-34"
+          className="relative h-[33vh] bg-cover bg-center overflow-hidden shadow-xl md:mt-24 mt-25"
           style={{ backgroundImage: `url(${solution.heroImage})` }}
         >
           <div className="absolute inset-0 bg-gray-900 bg-opacity-70 flex items-center justify-center p-8">
             <div className="text-center text-white max-w-4xl">
-              <h1 className="text-4xl md:text-6xl font-extrabold mb-4 drop-shadow-lg">
+              <h1 className="text-3xl md:text-5xl font-extrabold mb-4 drop-shadow-lg">
                 {solution.title}
               </h1>
-              <p className="text-xl md:text-2xl font-light drop-shadow-md">
+              <p className="text-md md:text-lg font-light drop-shadow-md">
                 {solution.subtitle}
               </p>
             </div>
