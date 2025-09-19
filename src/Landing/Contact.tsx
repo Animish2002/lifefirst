@@ -108,8 +108,8 @@ const CTASection: React.FC = () => {
           name: "Corporate Office & Factory",
           address:
             "Gat. No 1086, Next to Wadki Timber Market, Pune Saswad Road, Wadki, Pune - 412308, Maharashtra, India",
-          phone: "+91 96073 77277",
-          email: "coo@life-first.in",
+          phone: "+91 9011 677 277",
+          email: "sales@life-first.in",
           website: "www.life-first.in",
         },
         {
@@ -131,23 +131,12 @@ const CTASection: React.FC = () => {
       title: "International Offices",
       locations: [
         {
-          name: "Dubai Office",
-          address: "Business Bay, Dubai, UAE",
-          phone: "+971 4 123 4567",
-          email: "dubai@life-first.com",
+          name: "LifeFirst Concepts & Technologies (Private) Limited",
+          address: "29 College Road, New Alexandra Park, Harare, ZIMBABWE",
+          phone: "9876543210",
+          email: "sales@life-first.in",
         },
-        {
-          name: "Singapore Office",
-          address: "Marina Bay Financial Centre, Singapore",
-          phone: "+65 6789 0123",
-          email: "singapore@life-first.com",
-        },
-        {
-          name: "California Office",
-          address: "Silicon Valley, California, USA",
-          phone: "+1 650 123 4567",
-          email: "california@life-first.com",
-        },
+    
       ],
     },
   };
