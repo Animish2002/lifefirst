@@ -2,7 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
-import { Target, Globe, Zap, Award, Shield } from "lucide-react";
+import { Target, Globe, Zap, Award, Shield, ExternalLink } from "lucide-react";
 
 const visionPoints = [
   {
@@ -52,30 +52,26 @@ const AboutSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <Card className="bg-white/90 backdrop-blur-sm border-blue-200 shadow-lg rounded-2xl overflow-hidden py-0 md:h-[60vh]">
-            <CardContent className="p-0">
-              <div className="grid md:grid-cols-3 gap-0">
+          <Card className="bg-white/90 backdrop-blur-sm border-blue-200 shadow-lg rounded-2xl overflow-hidden py-0 h-auto">
+            <CardContent className="p-4">
+              <div className="grid md:grid-cols-2 gap-0">
                 {/* Image Section */}
                 <div className="md:col-span-1">
-                  <div className="relative ">
-                    <motion.img
-                      src="https://res.cloudinary.com/dsvfcckqy/image/upload/v1754928781/20250802_153036_k6qhoj.jpg"
-                      alt="Company Facility"
-                      className="w-full h-full object-cover"
-                      initial={{ scale: 1 }}
-                      whileHover={{ scale: 1.02 }}
-                      transition={{ duration: 0.5 }}
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-                  </div>
+                  <motion.img
+                    src="https://res.cloudinary.com/dsvfcckqy/image/upload/v1755028853/lifefirst_logo_jpg_fpmkho.jpg"
+                    alt="Company Facility"
+                    className="w-[32em] h-full object-fit rounded-2xl p-6"
+                    initial={{ scale: 1 }}
+                    whileHover={{ scale: 1.02 }}
+                    transition={{ duration: 0.5 }}
+                  />
                 </div>
 
                 {/* Content Section */}
-                <div className="md:col-span-2 p-6">
+                <div className="py-4 relative">
                   {/* Mission */}
                   <div className="mb-5">
                     <h3 className="text-2xl font-bold text-slate-800 mb-2 flex items-center">
-                    
                       About Lifefirst
                     </h3>
                     <p className="text-slate-600 text-sm leading-relaxed">
@@ -128,6 +124,12 @@ const AboutSection = () => {
                       ))}
                     </div>
                   </div>
+                  <span className="absolute bottom-4 left-1/2 transform -translate-x-1/2 hover:underline hover:text-blue-600">
+                    <a href="/about-us" className="text-xs">
+                      Click to learn more
+                      <ExternalLink className="inline w-4 h-4 mb-1" />
+                    </a>
+                  </span>
                 </div>
               </div>
             </CardContent>
