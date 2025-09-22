@@ -313,10 +313,41 @@ const AboutUsPage: React.FC = () => {
       description:
         "A seasoned professional with over 10 years of expertise in project installation and plumbing solutions for water and wastewater projects. Skilled in overseeing end-to-end installation processes, ensuring quality, safety, and timely execution across diverse project environments.", // Add actual description
     },
+    {
+      name: "Chetan K. Bawane",
+      position: "Water Infrastructure Project Specialist", // Add actual position
+      experience:
+        "Electrical Technician with 5+ Years of Experience.",
+      image:
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/v1758548404/Chetan_Bawane_foggrl.jpg", // Placeholder image
+      description:
+        "A highly adaptable professional with over 8 years of experience in executing and managing water supply schemes, water treatment plants (WTPs), sewage treatment plants (STPs), and lift irrigation projects. Known for strong project management and team leadership skills, ensuring timely delivery, quality execution, and operational efficiency across all phases of infrastructure projects.", // Add actual description
+    },
+    {
+      name: "Ravindra Darade",
+      position: "Manufacturing & Operations Professional", // Add actual position
+      experience:
+        "Electrical Technician with 5+ Years of Experience.",
+      image:
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/v1758548403/Ravindra_Darade_zteu2r.jpg", // Placeholder image
+      description:
+        "A highly adaptable professional with over 2 years of experience in manufacturing and operations, demonstrating the ability to deliver results under pressure while ensuring efficiency and quality standards. Skilled in leveraging advanced tools such as Computer-Aided Design (CAD) and CATIA to optimize processes and drive operational excellence.", // Add actual description
+    },
+    {
+      name: "Atish Kamble",
+      position: "Water Infrastructure Project Engineer", // Add actual position
+      experience:
+        "Electrical Technician with 5+ Years of Experience.",
+      image:
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/v1758548402/Atish_Kamble_yukqpg.jpg", // Placeholder image
+      description:
+        "A highly adaptable professional with over 5 years of experience in executing and managing water supply schemes, water treatment plants (WTPs), sewage treatment plants (STPs), and lift irrigation projects. Recognized for strong team leadership and project management skills, ensuring quality execution, timely delivery, and operational efficiency across all stages of infrastructure projects." // Add actual description
+    },
+    
   ];
 
   const firstRowMembers = teamMembers3.slice(0, 5);
-  const secondRowMembers = teamMembers3.slice(5, 9);
+  const secondRowMembers = teamMembers3.slice(5, );
 
   return (
     <>
@@ -616,9 +647,9 @@ const AboutUsPage: React.FC = () => {
               </div>
 
               {/* Fourth Row - 4 members centered */}
-              <div className="flex justify-center">
+              <div className="flex justify-center items-center">
                 <div
-                  className="grid grid-cols-2 md:grid-cols-4 gap-4"
+                  className="grid grid-cols-2 md:grid-cols-5 gap-4"
                   style={{ maxWidth: "calc(80% of 6xl)" }}
                 >
                   {secondRowMembers.map((member, index) => (
