@@ -110,9 +110,7 @@ const HeroSection = () => {
     setCurrentSlide(index);
   };
 
-  const togglePlayPause = () => {
-    setIsPlaying(!isPlaying);
-  };
+ 
 
   return (
     <section
@@ -147,20 +145,6 @@ const HeroSection = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30" />
           </motion.div>
         </AnimatePresence>
-      </div>
-
-      {/* Play/Pause Button */}
-      <div className="absolute top-6 right-6 z-20">
-        <button
-          onClick={togglePlayPause}
-          className="p-3 rounded-full bg-white/20 backdrop-blur-sm hover:bg-white/30 transition-colors text-white"
-        >
-          {isPlaying ? (
-            <Pause className="w-4 h-4" />
-          ) : (
-            <Play className="w-4 h-4" />
-          )}
-        </button>
       </div>
 
       {/* Carousel Indicators */}
