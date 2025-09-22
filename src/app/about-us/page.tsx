@@ -216,7 +216,7 @@ const AboutUsPage: React.FC = () => {
       experience:
         "5+ years of experience in project management and operations.",
       image:
-        "https://res.cloudinary.com/dsvfcckqy/image/upload/v1757938131/imgi_2_fb-storyfb_647_011616110611_d6eolt.jpg",
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/v1758548984/Vinishka_Srilakshmi_zuepn3.jpg",
       description:
         "Vinishka Srilakshmi, Head of Strategic Partnerships & Business Growth at LifeFirst Concepts & Technologies Pvt. Ltd., brings over 10 years of experience in building high impact partnerships and driving sustainable business growth across diverse markets. A Commerce graduate with a sharp business acumen, Srilakshmi has been instrumental in shaping the company’s global expansion strategy through innovative market development initiatives and strategic collaborations. Her expertise lies in identifying new business opportunities, fostering long-term alliances, and creating win-win partnerships with governments, institutions, and private sector stakeholders. By combining market intelligence, relationship management, and strategic negotiation skills, Srilakshmi has successfully accelerated LifeFirst’s presence across India, the Middle East, and Africa. Known for her forward-thinking approach and results-driven mindset, she continuously explores new revenue streams, funding models, and market-entry strategies, aligning them with the company’s vision of delivering sustainable water, wastewater, and sanitation solutions globally. Srilakshmi’s leadership ensures that LifeFirst remains at the forefront of innovative collaborations and global business growth.",
     },
@@ -225,75 +225,93 @@ const AboutUsPage: React.FC = () => {
   const teamMembers3: TeamMember[] = [
     {
       name: "Ravi Chavan",
-      position: "Position Title", // Add actual position
+      position: "Electrical Technician",
+      experience:
+        "Electrical Technician with 5+ Years of Experience.",
       image:
-        "https://res.cloudinary.com/dsvfcckqy/image/upload/v1757938131/imgi_2_fb-storyfb_647_011616110611_d6eolt.jpg", // Placeholder image
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/v1758548403/Ravi_Chavan_lxfmjs.jpg", // Placeholder image
       description:
-        "Brief one-liner description about Ravi's role and expertise.", // Add actual description
+        "An experienced Electrical Technician with over 5 years of expertise in diagnosing, repairing, and maintaining complex electrical systems. Highly skilled in utilizing advanced diagnostic equipment and tools to ensure operational efficiency while maintaining strict quality and safety standards. Dedicated to delivering reliable solutions and minimizing downtime through precise troubleshooting and preventive maintenance practices.", // Add actual description
     },
     {
       name: "Sarika Thalkari",
-      position: "Position Title", // Add actual position
+      position: "Finance & Accounting Specialist", // Add actual position
+      experience:
+        "Finance & Accounting Specialist with 14+ Years of Expertise",
       image:
-        "https://res.cloudinary.com/dsvfcckqy/image/upload/v1757938131/imgi_2_fb-storyfb_647_011616110611_d6eolt.jpg", // Placeholder image
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/v1758548404/Sarika_Thalkari_gztjb9.jpg", // Placeholder image
       description:
-        "Brief one-liner description about Sarika's role and expertise.", // Add actual description
+        "A detail-oriented and results-driven finance professional with over 14 years of hands-on experience in journal entries, account reconciliation, and financial reporting. Recognized for strong analytical skills, quick adaptability, and effective communication, with proven expertise in supporting month-end close processes, maintaining robust internal controls, and assisting with financial analysis and ad hoc reporting. Dedicated to delivering accuracy and efficiency in a structured, fast-paced environment while driving value for the finance and accounting function.", // Add actual description
     },
     {
       name: "Manisha Walde",
-      position: "Position Title", // Add actual position
+      position: "Project Proposal & Estimation Engineer", // Add actual position
+      experience:
+        "Electrical Technician with 5+ Years of Experience.",
       image:
-        "https://res.cloudinary.com/dsvfcckqy/image/upload/v1757938131/imgi_2_fb-storyfb_647_011616110611_d6eolt.jpg", // Placeholder image
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/v1758548403/Manisha_Walde_fifdf2.jpg", // Placeholder image
       description:
-        "Brief one-liner description about Manisha's role and expertise.", // Add actual description
+        "A results-driven professional with over 2 years of experience in preparing project proposals and cost estimations for water supply schemes, water treatment plants (WTPs), and sewage treatment plant (STP) projects. Skilled in delivering accurate, cost-effective, and technically sound solutions to support successful project execution.", // Add actual description
     },
     {
-      name: "Payal",
-      position: "Position Title", // Add actual position
+      name: "Payal Bhosale",
+      position: "HR–Finance Associate", // Add actual position
+      experience:
+        "Electrical Technician with 5+ Years of Experience.",
       image:
-        "https://res.cloudinary.com/dsvfcckqy/image/upload/v1757938131/imgi_2_fb-storyfb_647_011616110611_d6eolt.jpg", // Placeholder image
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/v1758548403/Payal_Bhosale_jh77yc.jpg", // Placeholder image
       description:
-        "Brief one-liner description about Payal's role and expertise.", // Add actual description
+        "An HR–Finance professional with expertise in employee onboarding, payroll processing, HR documentation, and supporting organizational HR functions, along with financial accounting tasks such as journal entries, reconciliations, and reporting. Adept in Tally and Microsoft Excel, ensuring seamless integration of HR and finance operations.", // Add actual description
     },
     {
       name: "Rupesh Ingale",
-      position: "Position Title", // Add actual position
+      position: "Water Infrastructure Project Specialist", // Add actual position
+      experience:
+        "Electrical Technician with 5+ Years of Experience.",
       image:
-        "https://res.cloudinary.com/dsvfcckqy/image/upload/v1757938131/imgi_2_fb-storyfb_647_011616110611_d6eolt.jpg", // Placeholder image
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/v1758548404/Rupesh_Ingle_xpbjs8.jpg", // Placeholder image
       description:
-        "Brief one-liner description about Rupesh's role and expertise.", // Add actual description
+        "A highly adaptable professional with over 5 years of experience in managing water supply schemes, water treatment plants (WTPs), sewage treatment plants (STPs), and water supply projects. Known for strong project execution skills and effective team leadership, ensuring timely delivery, operational efficiency, and high-quality outcomes across all project phases.", // Add actual description
     },
     {
       name: "Amol Sanap",
-      position: "Position Title", // Add actual position
+      position: "Dedicated Civil Engineer", // Add actual position
+      experience:
+        "Electrical Technician with 5+ Years of Experience.",
       image:
-        "https://res.cloudinary.com/dsvfcckqy/image/upload/v1757938131/imgi_2_fb-storyfb_647_011616110611_d6eolt.jpg", // Placeholder image
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/v1758548403/Amol_Sanap_rrdwne.jpg", // Placeholder image
       description:
-        "Brief one-liner description about Amol's role and expertise.", // Add actual description
+        "A highly skilled civil engineer with over eight years of diverse experience in water and wastewater infrastructure projects. Specialized in Water Audits, GIS Mapping for water supply and sewerage networks, and the preparation of comprehensive Feasibility Reports. Proficient in Liquid Waste Management with hands-on expertise in preparing Detailed Project Reports (DPRs) for both LWMS  under the SBM 2.0 (G) initiative. Additionally, well-versed in Estimation and Tendering for sewage treatment plants and a wide range of civil infrastructure projects, ensuring technical precision and cost-effectiveness at every stage.", // Add actual description
     },
     {
       name: "Subham Shivarkar",
-      position: "Position Title", // Add actual position
+      position: "CAD Engineer", // Add actual position
+      experience:
+        "Electrical Technician with 5+ Years of Experience.",
       image:
-        "https://res.cloudinary.com/dsvfcckqy/image/upload/v1757938131/imgi_2_fb-storyfb_647_011616110611_d6eolt.jpg", // Placeholder image
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/v1758548405/Shubham_Shivarkar_owxfzt.jpg", // Placeholder image
       description:
-        "Brief one-liner description about Subham's role and expertise.", // Add actual description
+        "A highly motivated CAD Engineer with over 2 years of experience in developing innovative designs, leading projects from concept to completion, and contributing to successful team collaborations. Skilled in translating ideas into practical engineering solutions while ensuring precision, quality, and timely delivery.", // Add actual description
     },
     {
       name: "Swaraj Sobale",
-      position: "Position Title", // Add actual position
+      position: "Specialist in Purchase & Supply Chain Management", // Add actual position
+      experience:
+        "Electrical Technician with 5+ Years of Experience.",
       image:
-        "https://res.cloudinary.com/dsvfcckqy/image/upload/v1757938131/imgi_2_fb-storyfb_647_011616110611_d6eolt.jpg", // Placeholder image
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/v1758548406/Swaraj_Sobale_2_onemqr.png", // Placeholder image
       description:
-        "Brief one-liner description about Swaraj's role and expertise.", // Add actual description
+        "An accomplished professional with expertise in Purchase and Supply Chain Management, bringing strong capabilities in Data Analysis, Supplier Evaluation and Selection, Cost Management and Savings, Market Research, and End-to-End Supply Chain Optimization. Adept at driving process efficiency, strategic sourcing, and innovative solutions to ensure cost-effective and seamless operations across the procurement and supply chain lifecycle.", // Add actual description
     },
     {
       name: "Madhav More",
-      position: "Position Title", // Add actual position
+      position: "Project Installation & Plumbing Specialist", // Add actual position
+      experience:
+        "Electrical Technician with 5+ Years of Experience.",
       image:
-        "https://res.cloudinary.com/dsvfcckqy/image/upload/v1757938131/imgi_2_fb-storyfb_647_011616110611_d6eolt.jpg", // Placeholder image
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/v1758548406/Mahadev_More_n9nqra.jpg", // Placeholder image
       description:
-        "Brief one-liner description about Madhav's role and expertise.", // Add actual description
+        "A seasoned professional with over 10 years of expertise in project installation and plumbing solutions for water and wastewater projects. Skilled in overseeing end-to-end installation processes, ensuring quality, safety, and timely execution across diverse project environments.", // Add actual description
     },
   ];
 
