@@ -2,7 +2,7 @@
 
 import React, { useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronDown, Menu, X, Plus, Minus } from "lucide-react";
+import { ChevronDown, Menu, X, Plus, Minus, Youtube, Instagram, InstagramIcon } from "lucide-react";
 import { Phone, Mail, Facebook, Twitter, Linkedin } from "lucide-react";
 import Link from "next/link";
 
@@ -149,20 +149,32 @@ const contactInfo: ContactInfo[] = [
 const socialLinks: SocialLink[] = [
   {
     icon: <Facebook size={18} />,
-    href: "https://facebook.com/lifefirsttech",
-    label: "Investors",
+    href: "https://www.facebook.com/share/14HnstPQUQW/?mibextid=wwXIfr",
+    label: "Facebook",
     color: "hover:text-blue-800",
   },
   {
+    icon: <Instagram size={18} />,
+    href: "https://www.instagram.com/lifefirstconcepts?igsh=azBxOTd1emxvbTBu",
+    label: "Instagram",
+    color: "hover:text-blue-900",
+  },
+  {
     icon: <Twitter size={18} />,
-    href: "https://twitter.com/lifefirsttech",
-    label: "Twitter",
+    href: "https://x.com/lifefirstindia?s=11",
+    label: "X (formerly known as Twitter)",
     color: "hover:text-sky-800",
   },
   {
     icon: <Linkedin size={18} />,
     href: "https://linkedin.com/company/lifefirsttech",
     label: "LinkedIn",
+    color: "hover:text-blue-900",
+  },
+  {
+    icon: <Youtube size={18} />,
+    href: "https://youtube.com/@lifefirstindia?si=XV4tWlGlcqzvhxeQ",
+    label: "YouTube",
     color: "hover:text-blue-900",
   },
 ];
