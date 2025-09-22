@@ -148,15 +148,9 @@ const contactInfo: ContactInfo[] = [
 
 const socialLinks: SocialLink[] = [
   {
-    icon: <Facebook size={18} />,
-    href: "https://www.facebook.com/share/14HnstPQUQW/?mibextid=wwXIfr",
-    label: "Facebook",
-    color: "hover:text-blue-800",
-  },
-  {
-    icon: <Instagram size={18} />,
-    href: "https://www.instagram.com/lifefirstconcepts?igsh=azBxOTd1emxvbTBu",
-    label: "Instagram",
+    icon: <Linkedin size={18} />,
+    href: "https://linkedin.com/company/lifefirsttech",
+    label: "LinkedIn",
     color: "hover:text-blue-900",
   },
   {
@@ -166,14 +160,22 @@ const socialLinks: SocialLink[] = [
     color: "hover:text-sky-800",
   },
   {
-    icon: <Linkedin size={18} />,
-    href: "https://linkedin.com/company/lifefirsttech",
-    label: "LinkedIn",
-    color: "hover:text-blue-900",
+    icon: <Facebook size={18} />,
+    href: "https://www.facebook.com/share/14HnstPQUQW/?mibextid=wwXIfr",
+    label: "Facebook",
+    color: "hover:text-blue-800",
   },
   {
+    icon: <Instagram size={18} />,
+    href: "https://www.instagram.com/lifefirstconcepts",
+    label: "Instagram",
+    color: "hover:text-blue-900",
+  },
+  
+  
+  {
     icon: <Youtube size={18} />,
-    href: "https://youtube.com/@lifefirstindia?si=XV4tWlGlcqzvhxeQ",
+    href: "https://www.youtube.com/@lifefirstindia",
     label: "YouTube",
     color: "hover:text-blue-900",
   },

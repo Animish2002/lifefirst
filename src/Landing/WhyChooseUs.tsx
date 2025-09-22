@@ -71,7 +71,7 @@ const items = [
   {
     title: "Global Standards",
     description:
-      "ISO 9001:2015 certified and compliant with CPCB, SPCB, and ZLD norms — ready for global deployment.",
+      "ISO 9001:2015 & CE certified and compliant with CPCB, MPCB, and ZLD norms, ready for global deployment.",
     icon: <IconWorldCheck className="h-10 w-10 text-green-600" />,
   },
   {
@@ -83,7 +83,7 @@ const items = [
   {
     title: "Proven Track Record",
     description:
-      "500+ projects executed and 50 million+ litres treated per day across diverse industries.",
+      "500+ projects executed and 50+ million litres treated per day across diverse sectors.",
     icon: <IconCertificate className="h-10 w-10 text-amber-600" />,
   },
   {
@@ -101,7 +101,7 @@ const items = [
   {
     title: "Innovative Technology",
     description:
-      "IoT-enabled systems, smart meters, and real-time monitoring ensure smarter water management.",
+      "IoT-enabled systems, smart meters, and real-time monitoring ensure smarter system management.",
     icon: <IconCpu className="h-10 w-10 text-purple-600" />,
   },
   {

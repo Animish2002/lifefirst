@@ -12,6 +12,7 @@ import {
   Droplets,
   
   ExternalLink,
+  Youtube,
 } from "lucide-react";
 
 const Footer = () => {
@@ -26,31 +27,38 @@ const Footer = () => {
   const solutions = [
     "Water Treatment",
     "Wastewater Treatment",
-    "Sanitation",
-    "Hydration Monitoring",
+    "Sanitation Solutions",
+    "Hydration Monitoring Systems",
   ];
 
   const socialLinks = [
     {
       icon: <Linkedin className="w-5 h-5" />,
-      href: "#",
+      href: "https://linkedin.com/company/lifefirsttech",
       color: "hover:text-blue-600",
     },
     {
       icon: <Twitter className="w-5 h-5" />,
-      href: "#",
+      href: "https://x.com/lifefirstindia?s=11",
       color: "hover:text-blue-400",
     },
     {
       icon: <Facebook className="w-5 h-5" />,
-      href: "#",
+      href: "https://www.facebook.com/share/14HnstPQUQW/?mibextid=wwXIfr",
       color: "hover:text-blue-700",
     },
     {
       icon: <Instagram className="w-5 h-5" />,
+      href: "https://www.instagram.com/lifefirstconcepts",
+      color: "hover:text-pink-600",
+    },
+    {
+      icon: <Youtube className="w-5 h-5" />,
       href: "#",
       color: "hover:text-pink-600",
     },
+    
+    
   ];
 
   return (
@@ -227,7 +235,7 @@ const Footer = () => {
         <div className="max-w-6xl mx-auto px-6 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-slate-200 font-medium text-md mb-4 md:mb-0">
-              <p>&copy; 2025 Life First Technologies. All rights reserved.</p>
+              <p>&copy; 2025 LifeFirst Technologies. All rights reserved.</p>
             </div>
 
             <div className="flex space-x-6 text-md">

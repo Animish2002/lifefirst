@@ -133,8 +133,8 @@ const CTASection: React.FC = () => {
         {
           name: "LifeFirst Concepts & Technologies (Private) Limited",
           address: "29 College Road, New Alexandra Park, Harare, ZIMBABWE",
-          phone: "9876543210",
-          email: "sales@life-first.in",
+          phone: "+91 8806 977 277 ",
+          email: "export@life-first.in",
         },
     
       ],
@@ -174,7 +174,7 @@ const CTASection: React.FC = () => {
               <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
                 <div className="bg-gray-50 px-6 py-2 border-b border-gray-200">
                   <h4 className="font-semibold text-gray-900">
-                    Find Our Main Office
+                    Corporate Office & Factory
                   </h4>
                 </div>
                 <div className="h-64">
@@ -305,7 +305,7 @@ const CTASection: React.FC = () => {
             {/* Contact Form */}
             <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                Send us a message
+                How Can We Help?
               </h3>
 
               <form className="space-y-4" onSubmit={handleSubmit}>
@@ -420,7 +420,7 @@ const CTASection: React.FC = () => {
                     required
                     rows={4}
                     className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
-                    placeholder="Tell us about your water treatment requirements..."
+                    placeholder="Let us know your requirement"
                   />
                 </div>
 

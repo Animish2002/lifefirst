@@ -21,6 +21,32 @@ const visionPoints = [
     description: "",
   },
 ];
+const logos = [
+  {
+    src: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1758575749/Make_in_India_kgecqj.png",
+    alt: "Make in India",
+  },
+  {
+    src: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1758575748/msme_lvs2fb.png",
+    alt: "MSME Ministry",
+  },
+  {
+    src: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1758575748/DPIIT-logo-trans_tpztkv.png",
+    alt: "DPIIT",
+  },
+  {
+    src: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1758575747/iso_qqjfzt.jpg",
+    alt: "ISO 9001:2015",
+  },
+  {
+    src: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1758575755/sal_nkdhzh.png",
+    alt: "Scotland Approved",
+  },
+  {
+    src: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1758575747/ce_approved_wut8xj.jpg",
+    alt: "CE Approved",
+  },
+];
 
 const AboutSection = () => {
   return (
@@ -72,57 +98,55 @@ const AboutSection = () => {
                   {/* Mission */}
                   <div className="mb-5">
                     <h3 className="text-2xl font-bold text-slate-800 mb-2 flex items-center">
-                      About Lifefirst
+                      About LifeFirst
                     </h3>
                     <p className="text-slate-600 text-sm leading-relaxed">
-                      We pioneer sustainable water treatment solutions,
-                      combining decades of experience with innovative technology
-                      for comprehensive water management systems.
+                      Founded in 2019, LifeFirst Concepts & Technologies emerged
+                      from a shared vision between Sagar Shah and Gajanan Ghule
+                      to redefine the wastewater treatment landscape. With a
+                      passion for excellence and a commitment to quality, our
+                      founders recognized a gap in the market for reliable,
+                      innovative company that prioritize client satisfaction and
+                      community enhancement.
                     </p>
                   </div>
-
-                  {/* Certifications */}
-                  <div className="mb-5">
-                    <div className="flex flex-wrap gap-2">
-                      {[
-                        "Government Certified",
-                        "ISO Certified",
-                        "Expert Team",
-                      ].map((cert, index) => (
-                        <span
+                  <style>
+                    {`
+          @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+          }
+          .animate-marquee {
+            animation: marquee 30s linear infinite;
+          }
+        `}
+                  </style>
+                  <div className="mt-8 overflow-hidden">
+                    <div className="flex animate-marquee">
+                      {/* Logos */}
+                      {logos.map((logo, index) => (
+                        <img
                           key={index}
-                          className="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-1 rounded-full flex items-center"
-                        >
-                          <Award className="w-3 h-3 mr-1" />
-                          {cert}
-                        </span>
+                          src={logo.src}
+                          alt={logo.alt}
+                          className="h-12 inline-block mx-4"
+                        />
+                      ))}
+                      {/* Duplicated logos for a seamless loop */}
+                      {logos.map((logo, index) => (
+                        <img
+                          key={`duplicate-${index}`}
+                          src={logo.src}
+                          alt={logo.alt}
+                          className="h-12 inline-block mx-4"
+                        />
                       ))}
                     </div>
                   </div>
 
                   {/* Vision Points */}
                   <div>
-                    <h4 className="text-sm font-semibold text-slate-700 mb-3">
-                      Our Focus Areas
-                    </h4>
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                      {visionPoints.map((point, index) => (
-                        <motion.div
-                          key={index}
-                          className="flex items-center bg-gradient-to-r from-cyan-50 to-blue-50 p-3 rounded-lg border border-cyan-100"
-                          initial={{ opacity: 0, x: -10 }}
-                          whileInView={{ opacity: 1, x: 0 }}
-                          viewport={{ once: true }}
-                          transition={{ delay: index * 0.1 + 0.3 }}
-                          whileHover={{ scale: 1.02 }}
-                        >
-                          <div className="mr-2">{point.icon}</div>
-                          <span className="text-slate-700 text-xs font-medium leading-tight">
-                            {point.text}
-                          </span>
-                        </motion.div>
-                      ))}
-                    </div>
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-3"></div>
                   </div>
                   <span className="absolute bottom-4 left-1/2 transform -translate-x-1/2 hover:underline hover:text-blue-600">
                     <a href="/about-us" className="text-xs">

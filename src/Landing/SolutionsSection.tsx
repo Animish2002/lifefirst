@@ -8,25 +8,26 @@ const SolutionsSection = () => {
   const [hoveredCard, setHoveredCard] = useState<string | null>(null);
   const router = useRouter();
   const solutions = [
-    {
-      id: "wastewater",
-      title: "Wastewater Treatment Plants",
-      description:
-        "Advanced wastewater treatment solutions for industrial and municipal applications",
-      imageurl:
-        "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755164884/wastewater_treatment_plant_yvyzlo.jpg",
-      features: ["Eco-friendly", "Energy Efficient", "Low Maintenance"],
-      url: "/solutions/wastewater-treatment",
-    },
+    
     {
       id: "water",
-      title: "Water Treatment Plants",
+      title: "Water Treatment",
       description:
         "Comprehensive water purification systems for clean and safe drinking water",
       imageurl:
         "https://res.cloudinary.com/dsvfcckqy/image/upload/v1754928781/ChatGPT_Image_Aug_2_2025_at_05_22_38_PM_o2nny8.png",
       features: ["High Quality", "Reliable", "Cost Effective"],
       url: "/solutions/water-treatment",
+    },
+    {
+      id: "wastewater",
+      title: "Wastewater Treatment",
+      description:
+        "Advanced wastewater treatment solutions for industrial and municipal applications",
+      imageurl:
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755164884/wastewater_treatment_plant_yvyzlo.jpg",
+      features: ["Eco-friendly", "Energy Efficient", "Low Maintenance"],
+      url: "/solutions/wastewater-treatment",
     },
     {
       id: "sanitation",
@@ -40,7 +41,7 @@ const SolutionsSection = () => {
     },
     {
       id: "hydration",
-      title: "Hydration Monitoring",
+      title: "Hydration Monitoring Systems",
       description:
         "Smart monitoring systems for real-time water quality control",
       imageurl:
@@ -75,7 +76,7 @@ const SolutionsSection = () => {
             Our Solutions
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Innovative water, wastewater, and sanitation solutions for a
+            Innovative Water, Wastewater, and Sanitation Solutions for a
             sustainable future.
           </p>
         </motion.div>

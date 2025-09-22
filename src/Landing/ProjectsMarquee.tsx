@@ -360,7 +360,7 @@ const ProjectsMarquee = () => {
         >
           {title}
         </h2>
-        <p className="text-gray-600 text-sm">{subtitle}</p>
+        <p className="text-gray-600 text-l">{subtitle}</p>
       </div>
 
       {/* Marquee */}
@@ -403,7 +403,7 @@ const ProjectsMarquee = () => {
         <h1 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-4">
           Trusted By
         </h1>
-        <p className="text-gray-600 text-xs">
+        <p className="text-gray-600 text-xl">
           Driving Excellence in Both Government and Private Sectors
         </p>
       </div>
