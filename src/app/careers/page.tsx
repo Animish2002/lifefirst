@@ -173,7 +173,7 @@ const Page = () => {
                 Growth & Development
               </h3>
               <p className="text-gray-500">
-                We invest in our employees' professional growth through
+                We invest in our employees&apos; professional growth through
                 mentorship and continuous learning.
               </p>
             </div>
