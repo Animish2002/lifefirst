@@ -9,7 +9,7 @@ import {
   Variants,
 } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ChevronRight, ArrowDown, Pause, Play } from "lucide-react";
+import { ChevronRight, ArrowDown } from "lucide-react";
 import Link from "next/link";
 
 // Sample carousel data - replace with your actual data
@@ -114,15 +114,15 @@ const HeroSection = () => {
   return (
     <section
       id="hero"
-      className="relative min-h-screen overflow-hidden bg-slate-900 "
+      className="relative md:min-h-screen overflow-hidden bg-slate-900 md:mt-0 mt-24"
     >
-      <div className="absolute inset-0 bg-slate-900">
+      <div className="absolute inset-0 bg-slate-900 ">
         {/* Blurred backdrop for smooth transitions */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20 transition-all duration-1000"
           style={{
             backgroundImage: `url(${carouselData[currentSlide].image})`,
-            filter: "blur(30px) brightness(0.4)",
+            filter: "blur(30px) brightness(0.1)",
           }}
         />
 
@@ -147,7 +147,7 @@ const HeroSection = () => {
       </div>
 
       {/* Carousel Indicators */}
-      <div className="absolute bottom-24 left-1/2 transform -translate-x-1/2 z-20">
+      {/* <div className="absolute bottom-24 left-1/2 transform -translate-x-1/2 z-20">
         <div className="flex space-x-3">
           {carouselData.map((_, index: number) => (
             <button
@@ -161,21 +161,21 @@ const HeroSection = () => {
             />
           ))}
         </div>
-      </div>
+      </div> */}
 
       {/* Main Content */}
       <motion.div className="relative z-10 pt-24 pb-16" style={{ y: yContent }}>
         <div className="max-w-6xl mx-auto px-8">
-          <div className="grid items-center min-h-[80vh]">
+          <div className="grid items-center md:min-h-[80vh]">
             {/* Left Content - Static */}
             <motion.div
-              className="lg:col-span-7 space-y-8"
+              className="lg:col-span-7 space-y-4"
               initial="hidden"
               animate="visible"
               variants={containerVariants}
             >
               <motion.div variants={itemVariants} className="space-y-6">
-                <h1 className="md:text-5xl text-4xl font-bold leading-tight text-white">
+                <h1 className="md:text-5xl text-2xl font-bold leading-tight text-white">
                   <span className="block text-gray-200 mb-2 font-medium">
                     Sustainable Water, Wastewater <br /> & Sanitation Solutions
                   </span>
@@ -184,7 +184,7 @@ const HeroSection = () => {
 
               <motion.p
                 variants={itemVariants}
-                className="text-lg text-gray-200 leading-relaxed max-w-2xl"
+                className="md:text-lg text-sm text-gray-200 leading-relaxed md:max-w-2xl max-w-58"
               >
                 Turning Water & Wastewater Challenges in to clean water
                 solutions
@@ -197,7 +197,6 @@ const HeroSection = () => {
                 <Link href="/contact">
                   <Button
                     variant="outline"
-                    size="lg"
                     className="border-2 cursor-pointer border-white/30 text-white bg-white/10 backdrop-blur-sm hover:bg-white/20 px-8 py-4 text-lg group transition-all duration-300"
                   >
                     Start Your Project
