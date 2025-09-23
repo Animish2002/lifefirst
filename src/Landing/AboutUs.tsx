@@ -99,7 +99,7 @@ const AboutSection = () => {
                     transition={{ duration: 0.5 }}
                   />
 
-                  <span className="mx-auto">Water, Wastewater & Sanitation Solution Company</span>
+                  <span className="mx-auto text-center md:text-md text-xs text-gray-600">Water, Wastewater & Sanitation Solution Company</span>
                 </div>
 
                 {/* Text */}
