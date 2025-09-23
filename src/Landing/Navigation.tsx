@@ -10,7 +10,6 @@ import {
   Minus,
   Youtube,
   Instagram,
-  InstagramIcon,
 } from "lucide-react";
 import { Phone, Mail, Facebook, Twitter, Linkedin } from "lucide-react";
 import Link from "next/link";
