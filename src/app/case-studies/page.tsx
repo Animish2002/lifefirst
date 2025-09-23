@@ -27,7 +27,7 @@ import StatsSection from "@/Landing/StatsSection";
 const CaseStudiesPage = () => {
   const caseStudiesData = [
     {
-      title: "Industrial Wastewater Treatment Plant",
+      title: "Water Treatment Plant ",
       client: "ABC Manufacturing Ltd.",
       location: "Mumbai, Maharashtra",
       date: "2023",
@@ -44,7 +44,7 @@ const CaseStudiesPage = () => {
       category: "Industrial",
     },
     {
-      title: "Municipal Water Treatment System",
+      title: "Wastewater Treatment Plant ",
       client: "Pune Municipal Corporation",
       location: "Pune, Maharashtra",
       date: "2023",
@@ -61,7 +61,7 @@ const CaseStudiesPage = () => {
       category: "Municipal",
     },
     {
-      title: "Rural Sanitation Program",
+      title: "Effluent Treatment Plant ",
       client: "Rural Development Authority",
       location: "Nashik District, Maharashtra",
       date: "2024",
@@ -78,7 +78,7 @@ const CaseStudiesPage = () => {
       category: "Rural Development",
     },
     {
-      title: "Pharmaceutical Plant Water Treatment",
+      title: "Bio-Toilets ",
       client: "PharmaCorp Industries",
       location: "Aurangabad, Maharashtra",
       date: "2023",
@@ -95,7 +95,24 @@ const CaseStudiesPage = () => {
       category: "Pharmaceutical",
     },
     {
-      title: "Hotel Chain Water Management",
+      title: "Bio-Digester",
+      client: "PharmaCorp Industries",
+      location: "Aurangabad, Maharashtra",
+      date: "2023",
+      description:
+        "High-precision water treatment system for pharmaceutical manufacturing with stringent quality requirements.",
+      results: [
+        "99.9% purity standards achieved",
+        "FDA compliance certification",
+        "30% reduction in production costs",
+      ],
+      icon: <Droplets className="w-12 h-12 text-purple-600" />,
+      image:
+        "https://images.unsplash.com/photo-1582719508461-905c673771fd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      category: "Pharmaceutical",
+    },
+    {
+      title: "Hydration Monitoring System",
       client: "Luxury Resorts Group",
       location: "Goa",
       date: "2024",
@@ -110,23 +127,6 @@ const CaseStudiesPage = () => {
       image:
         "https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       category: "Hospitality",
-    },
-    {
-      title: "Educational Institution Project",
-      client: "Tech University Campus",
-      location: "Bangalore, Karnataka",
-      date: "2024",
-      description:
-        "Campus-wide water treatment and management system serving 15,000 students and staff members.",
-      results: [
-        "15,000 people served daily",
-        "Smart monitoring system installed",
-        "50% maintenance cost reduction",
-      ],
-      icon: <Users className="w-12 h-12 text-red-600" />,
-      image:
-        "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      category: "Education",
     },
   ];
 
@@ -225,8 +225,7 @@ const CaseStudiesPage = () => {
                 viewport={{ once: true }}
               >
                 <Card className="h-full transform transition-all duration-300 hover:scale-105 hover:shadow-xl border-0 shadow-lg overflow-hidden group">
-                  {/* Card Image */}
-                  <div className="relative h-48 overflow-hidden">
+                  {/* <div className="relative h-48 overflow-hidden">
                     <img
                       src={study.image}
                       alt={study.title}
@@ -240,13 +239,13 @@ const CaseStudiesPage = () => {
                     <div className="absolute top-4 right-4 bg-white/90 p-2 rounded-full">
                       {study.icon}
                     </div>
-                  </div>
+                  </div> */}
 
                   <CardHeader className="p-6">
                     <CardTitle className="text-xl font-semibold text-slate-800 mb-2">
                       {study.title}
                     </CardTitle>
-                    <div className="space-y-1 text-sm text-slate-500 mb-3">
+                    {/* <div className="space-y-1 text-sm text-slate-500 mb-3">
                       <div className="flex items-center">
                         <Building2 className="w-4 h-4 mr-2" />
                         {study.client}
@@ -259,13 +258,13 @@ const CaseStudiesPage = () => {
                         <Calendar className="w-4 h-4 mr-2" />
                         {study.date}
                       </div>
-                    </div>
-                    <CardDescription className="text-slate-600 leading-relaxed">
+                    </div> */}
+                    {/* <CardDescription className="text-slate-600 leading-relaxed">
                       {study.description}
-                    </CardDescription>
+                    </CardDescription> */}
                   </CardHeader>
 
-                  <CardContent className="p-2 pt-0">
+                  {/* <CardContent className="p-2 pt-0">
                     <div className="space-y-2 mb-6">
                       <h4 className="font-semibold text-slate-800">
                         Key Results:
@@ -284,7 +283,7 @@ const CaseStudiesPage = () => {
                       Read Full Case Study
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </Button>
-                  </CardContent>
+                  </CardContent> */}
                 </Card>
               </motion.div>
             ))}
