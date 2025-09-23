@@ -14,22 +14,145 @@ const investorNews = [
     id: "item-1",
     title: "Company Reports for Financial Year 2025–26",
     date: "September 23, 2025",
-    description:
-      "LifeFirst Concepts & Technologies Pvt. Ltd. is committed to maintaining transparency, accountability, and strong corporate governance as we continue to expand our footprint in India, Africa, and beyond. The Company Reports for the financial year 2025–26 will provide our investors with: Comprehensive Financial Insights, Strategic Progress Updates, Project Performance & Impact, and Forward-Looking Strategy. These reports are designed to ensure clarity, confidence, and alignment with LifeFirst’s mission of creating sustainable infrastructure solutions while delivering consistent value and returns.",
+    description: (
+      <>
+        <p>
+          LifeFirst Concepts & Technologies Pvt. Ltd. is committed to
+          maintaining transparency, accountability, and strong corporate
+          governance as we continue to expand our footprint in India, Africa,
+          and beyond. The Company Reports for the financial year 2025–26 will
+          provide our investors with:
+        </p>
+        <ul className="list-disc list-inside space-y-2 mt-4">
+          <li>
+            <strong>Comprehensive Financial Insights:</strong> Detailed analysis
+            of revenue growth, profitability, and key financial metrics to
+            showcase the company's financial health.
+          </li>
+          <li>
+            <strong>Strategic Progress Updates:</strong> Highlights of
+            milestones achieved, including new joint ventures, market
+            expansions, and technology innovations undertaken during the year.
+          </li>
+          <li>
+            <strong>Project Performance & Impact:</strong> Overview of major
+            projects executed across water, wastewater treatment, and hydration
+            monitoring solutions, emphasizing both economic value and
+            sustainability impact.
+          </li>
+          <li>
+            <strong>Forward-Looking Strategy:</strong> Insights into growth
+            plans, market opportunities, and future investments that align with
+            LifeFirst's long-term vision for scaling operations across multiple
+            geographies.
+          </li>
+        </ul>
+        <p className="mt-4">
+          For investors, these reports are designed to ensure clarity,
+          confidence, and alignment with LifeFirst's mission of creating
+          sustainable infrastructure solutions while delivering consistent value
+          and returns.
+        </p>
+      </>
+    ),
   },
   {
     id: "item-2",
     title: "LifeFirst Signs Joint Venture Agreement with Tech-Aeon, Zimbabwe",
     date: "September 22, 2025",
-    description:
-      "LifeFirst Concepts & Technologies Pvt. Ltd. is proud to announce the signing of a Joint Venture (JV) Agreement with Tech-Aeon Pvt. Ltd., a leading Zimbabwe-based engineering and infrastructure solutions company. Under this JV, LifeFirst and Tech-Aeon will jointly establish a state-of-the-art manufacturing unit in Zimbabwe to produce FRP Bio-Digesters and Containerized Water & Wastewater Treatment Plants. This facility will cater to the broader African continent, delivering 'Make-in-Africa' solutions. From an investor’s perspective, this JV provides a Regional Manufacturing Footprint, Scalable Market Access, and Strategic Growth & Partnerships.",
+    description: (
+      <>
+        <p>
+          LifeFirst Concepts & Technologies Pvt. Ltd. is proud to announce the
+          signing of a Joint Venture (JV) Agreement with Tech-Aeon Pvt. Ltd., a
+          leading Zimbabwe-based engineering and infrastructure solutions
+          company. Under this JV, LifeFirst and Tech-Aeon will jointly establish
+          a state-of-the-art manufacturing unit in Zimbabwe to produce FRP
+          Bio-Digesters and Containerized Water & Wastewater Treatment Plants.
+          This facility will cater not only to Zimbabwe but also to the broader
+          African continent, delivering Make-in-Africa solutions that are
+          cost-effective, sustainable, and customized for local needs.
+        </p>
+        <p className="mt-4">
+          From an investor's perspective, this JV provides:
+        </p>
+        <ul className="list-disc list-inside space-y-2 mt-4">
+          <li>
+            <strong>Regional Manufacturing Footprint:</strong> Reduces shipping
+            costs, lead times, and import dependencies by enabling local
+            production for African markets.
+          </li>
+          <li>
+            <strong>Scalable Market Access:</strong> Positions LifeFirst at the
+            heart of Africa's growing demand for water, sanitation, and
+            environmental infrastructure solutions.
+          </li>
+          <li>
+            <strong>Strategic Growth & Partnerships:</strong> Opens doors for
+            collaborations with governments, NGOs, and private sector players
+            across multiple African countries.
+          </li>
+          <li>
+            <strong>High-Impact Sustainability Projects:</strong> Aligns with
+            Africa's clean water, sanitation, and climate resilience goals,
+            creating opportunities for both economic and social returns.
+          </li>
+        </ul>
+        <p className="mt-4">
+          This milestone marks a pivotal step in LifeFirst's Africa growth
+          strategy, strengthening its commitment to sustainable infrastructure
+          and investor value creation.
+        </p>
+      </>
+    ),
   },
   {
     id: "item-3",
     title: "Signing of Letter of Intent with CHAK",
     date: "August 22, 2025",
-    description:
-      "We are delighted to announce that LifeFirst Concepts & Technologies Pvt. Ltd. has signed a Letter of Intent (LoI) with the Christian Health Association of Kenya (CHAK)—the leading faith-based health network in Kenya, representing over 600 health facilities. This collaboration will enable LifeFirst to bring its advanced water and wastewater treatment solutions as well as hydration monitoring systems to CHAK’s vast healthcare network. From an investor’s perspective, this LoI represents Market Expansion, Social Impact + Business Growth, and Strategic Partnerships.",
+    description: (
+      <>
+        <p>
+          We are delighted to announce that LifeFirst Concepts & Technologies
+          Pvt. Ltd. has signed a Letter of Intent (Lol) with the Christian
+          Health Association of Kenya (CHAK)—the leading faith-based health
+          network in Kenya, representing over 600 health facilities including
+          hospitals, health centers, and community programs across the country.
+          This collaboration will enable LifeFirst to bring its advanced water
+          and wastewater treatment solutions as well as hydration monitoring
+          systems to CHAK's vast healthcare network, supporting safe water
+          access, sustainable sanitation, and improved healthcare infrastructure
+          in Kenya.
+        </p>
+        <p className="mt-4">
+          From an investor's perspective, this Lol represents:
+        </p>
+        <ul className="list-disc list-inside space-y-2 mt-4">
+          <li>
+            <strong>Market Expansion:</strong> Direct access to a large,
+            organized healthcare network in one of Africa's fastest-growing
+            economies.
+          </li>
+          <li>
+            <strong>Social Impact + Business Growth:</strong> Aligns LifeFirst
+            with critical health and sustainability initiatives, creating
+            opportunities for high-impact, revenue-generating projects.
+          </li>
+          <li>
+            <strong>Strategic Partnerships:</strong> Strengthens LifeFirst's
+            position in Africa as a trusted partner for government agencies,
+            NGOs, and private stakeholders seeking world-class water and
+            sanitation solutions.
+          </li>
+        </ul>
+        <p className="mt-4">
+          This milestone marks a significant step toward scalable growth in
+          Africa's healthcare and infrastructure sector while reinforcing
+          LifeFirst's commitment to sustainability, innovation, and public
+          health improvement.
+        </p>
+      </>
+    ),
   },
   {
     id: "item-4",
@@ -84,7 +207,8 @@ const Page = () => {
                   </div>
                 </AccordionTrigger>
                 <AccordionContent>
-                  <p className="text-gray-700">{news.description}</p>
+                  {/* Corrected this line: removed the extra <p> tag */}
+                  <div className="text-gray-700">{news.description}</div>
                 </AccordionContent>
               </AccordionItem>
             ))}
