@@ -78,10 +78,13 @@ const CTASection: React.FC = () => {
     service: "",
   });
 
+  const [loading, setLoading] = useState<boolean>(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [activeOffice, setActiveOffice] = useState<"india" | "overseas">(
     "india"
   );
+
+  const FORMSPREE_ENDPOINT = "https://formspree.io/f/mdkwokql";
 
   const handleInputChange = (
     e: React.ChangeEvent<
@@ -93,11 +96,39 @@ const CTASection: React.FC = () => {
       [e.target.name]: e.target.value,
     });
   };
-
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    setIsModalOpen(true);
+    setLoading(true);
+
+    try {
+      const response = await fetch(FORMSPREE_ENDPOINT, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setIsModalOpen(true);
+        setFormData({
+          name: "",
+          email: "",
+          company: "",
+          website: "",
+          phone: "",
+          message: "",
+          service: "",
+        });
+      } else {
+        alert("Something went wrong. Please try again later.");
+      }
+    } catch (error) {
+      console.error("Formspree error:", error);
+      alert("Error submitting form. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   const offices: Offices = {
@@ -136,7 +167,6 @@ const CTASection: React.FC = () => {
           phone: "+91 8806 977 277 ",
           email: "export@life-first.in",
         },
-    
       ],
     },
   };
@@ -426,10 +456,15 @@ const CTASection: React.FC = () => {
 
                 <button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-3 px-6 rounded-md hover:from-blue-700 hover:to-cyan-700 transition-all duration-200 font-medium flex items-center justify-center"
+                  disabled={loading}
+                  className={`w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-3 px-6 rounded-md font-medium flex items-center justify-center transition-all duration-200 ${
+                    loading
+                      ? "opacity-70 cursor-not-allowed"
+                      : "hover:from-blue-700 hover:to-cyan-700"
+                  }`}
                 >
-                  Send Message
-                  <Send className="ml-2 w-4 h-4" />
+                  {loading ? "Sending..." : "Send Message"}
+                  {!loading && <Send className="ml-2 w-4 h-4" />}
                 </button>
               </form>
             </div>
