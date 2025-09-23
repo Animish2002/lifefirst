@@ -97,8 +97,8 @@
         "Built with FRP, SS, or MS powder‑coated frames for durability and corrosion resistance."
       ]
     },
-    "ctaText": "Talk to an expert about our RO system capabilities.",
-    "ctasubText": "Learn more about our bio-digester technology."
+    "ctaText": "Find out if RO is the right solution for your needs.",
+    "ctasubText": "Our experts are ready to help you find the perfect solution. Request for a details technical data sheet or a quote for customized RO System. "
   },
   {
     "slug": "pressure-sand-filters",
@@ -110,8 +110,8 @@
       "paragraph": "A Pressure Sand Filter is a widely used filtration system designed to remove suspended solids, turbidity, and particulate matter from water. It operates under pressure, forcing water through multiple layers of quartz sand and gravel media to trap impurities. PSFs are commonly used in water treatment plants, industrial processes, and commercial applications as a pre-treatment step before disinfection or further purification. Known for their simplicity, efficiency, and low maintenance, these filters help ensure consistent water quality and protect downstream equipment.",
       "points": []
     },
-    "ctaText": "Request a quote for a pressure sand filter.",
-    "ctasubText": "Learn more about our bio-digester technology."
+    "ctaText": "Find out multiple options and capacities for PSF",
+    "ctasubText": "Our experts are ready to help you find the perfect solution. Request for a details technical data sheet or a quote for customized PSF System."
   },
   {
     "slug": "activated-carbon-filters",
@@ -124,7 +124,7 @@
       "points": []
     },
     "ctaText": "Explore the benefits of activated carbon filtration.",
-    "ctasubText": "Learn more about our bio-digester technology."
+    "ctasubText": "Our experts are ready to help you find the perfect solution. Request for a details technical data sheet or a quote for customized ACF System."
   },
   {
     "slug": "lamella-clarifier",
@@ -144,8 +144,8 @@
         "Space-Saving Solution."
       ]
     },
-    "ctaText": "Get a quote for a compact lamella clarifier.",
-    "ctasubText": "Learn more about our bio-digester technology."
+    "ctaText": "Find out if Lamela Clarifier is the right solution for your needs.",
+    "ctasubText": "Our experts are ready to help you find the perfect solution. Request for a details technical data sheet or a quote for customized Lamela Clarifier System."
   },
   {
     "slug": "clarifier-mechanism",
@@ -163,12 +163,12 @@
         "Reduces chemical dosing requirements when paired with tube settlers."
       ]
     },
-    "ctaText": "Consult with an expert on our clarifier mechanisms.",
-    "ctasubText": "Learn more about our bio-digester technology."
+    "ctaText": "Get your clarifier mechanism designed from our experts",
+    "ctasubText": "Our experts are ready to help you find the perfect solution. Request for a details technical data sheet or a quote for customized Clarifier Mechanism System."
   },
   {
     "slug": "tube-settlers",
-    "title": "Tube Settlers",
+    "title": "Tube Settler",
     "subtitle": "Increase the settling capacity of clarification tanks.",
     "heroImage": "https://placehold.co/1200x600/a855f7/ffffff?text=Tube+Settlers",
     "infoTitle": "Enhancing Settling Efficiency",
@@ -183,12 +183,12 @@
         "Customization & Scalability: Available in various module sizes and inclinations (commonly 60°), these systems can be scaled from small industrial plants to large municipal facilities."
       ]
     },
-    "ctaText": "Learn how tube settlers can boost your plant's efficiency.",
-    "ctasubText": "Learn more about our bio-digester technology."
+    "ctaText": "Learn how tube settler can boost your plant's efficiency",
+    "ctasubText": "Our experts are ready to help you find the perfect solution. Request for a details technical data sheet or a quote for customized Tube Settler."
   },
   {
     "slug": "water-softeners",
-    "title": "Water Softeners",
+    "title": "Water Softener",
     "subtitle": "Eliminate hard water issues for improved performance.",
     "heroImage": "https://placehold.co/1200x600/f472b6/ffffff?text=Water+Softeners",
     "infoTitle": "Solving Hard Water Problems",
@@ -202,12 +202,12 @@
         "Meets industry norms for process and utility water requirements."
       ]
     },
-    "ctaText": "Find the perfect water softener for your home or business.",
-    "ctasubText": "Learn more about our bio-digester technology."
+    "ctaText": "Find the perfect water softener for your home or business",
+    "ctasubText": "Our experts are ready to help you find the perfect solution. Request for a details technical data sheet or a quote for customized water softener."
   },
   {
     "slug": "demineralization",
-    "title": "Demineralization Systems (DM)",
+    "title": "Demineralization System (DM)",
     "subtitle": "Produce high-purity water for critical applications.",
     "heroImage": "https://placehold.co/1200x600/7c3aed/ffffff?text=DM+Systems",
     "infoTitle": "Achieve Ultimate Water Purity",
@@ -223,12 +223,12 @@
         "Compliance & Quality Assurance"
       ]
     },
-    "ctaText": "Get a quote for a demineralization system.",
-    "ctasubText": "Learn more about our bio-digester technology."
+    "ctaText": "Learn how Demineralization System will help you remove dissolved salts & minerals",
+    "ctasubText": "Our experts are ready to help you find the perfect solution. Request for a details technical data sheet or a quote for customized Demineralization System."
   },
   {
     "slug": "chemical-dosing",
-    "title": "Chemical Dosing Systems",
+    "title": "Chemical Dosing System",
     "subtitle": "Precise and automated chemical delivery for water treatment.",
     "heroImage": "https://placehold.co/1200x600/d946ef/ffffff?text=Chemical+Dosing",
     "infoTitle": "Automated and Accurate Dosing",
@@ -245,8 +245,8 @@
         "Customization & Scalability"
       ]
     },
-    "ctaText": "Discover our range of chemical dosing solutions.",
-    "ctasubText": "Learn more about our bio-digester technology."
+    "ctaText": "Discover our range of  Chemical Dosing Systems ",
+    "ctasubText": "Our experts are ready to help you find the perfect solution. Request for a details technical data sheet or quote for Chemical dosing system."
   },
   {
     "slug": "bio-digesters",
