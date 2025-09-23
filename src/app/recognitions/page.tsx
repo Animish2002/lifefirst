@@ -1,4 +1,6 @@
 import React from "react";
+import Navigation from "@/Landing/Navigation";
+import Footer from "@/Landing/Footer";
 
 const certificationsAndClients = [
   {
@@ -58,6 +60,7 @@ const certificationsAndClients = [
 const page = () => {
   return (
     <>
+      <Navigation />
       <div className="relative md:mt-26 mt-24 overflow-hidden"></div>
 
       <section className="py-16 bg-gray-100">
@@ -86,6 +89,7 @@ const page = () => {
           </div>
         </div>
       </section>
+      <Footer />
     </>
   );
 };
