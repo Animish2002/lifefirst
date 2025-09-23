@@ -17,6 +17,7 @@ interface Solution {
   infoTitle: string;
   infoContent: string | InfoContentObject;
   ctaText: string;
+  ctasubText: string;
 }
 
 interface PageProps {
@@ -88,7 +89,7 @@ const SolutionPage = ({ params }: PageProps) => {
                         </p>
                       )}
                       {solution.infoContent.points && (
-                        <ul className="list-disc list-inside space-y-2 text-gray-600 text-md font-medium">
+                        <ul className="list-disc list-outside space-y-2 text-gray-600 text-md font-medium">
                           {solution.infoContent.points.map((point, idx) => (
                             <li key={idx}>{point}</li>
                           ))}
@@ -106,8 +107,7 @@ const SolutionPage = ({ params }: PageProps) => {
                             {solution.ctaText}
                           </p>
                           <p className="text-blue-600/80 text-sm mt-2 font-sm">
-                            Our experts are ready to help you find the perfect
-                            solution.
+                            {solution.ctasubText}
                           </p>
                         </div>
                       </div>

@@ -2,7 +2,16 @@
 
 import React, { useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronDown, Menu, X, Plus, Minus, Youtube, Instagram, InstagramIcon } from "lucide-react";
+import {
+  ChevronDown,
+  Menu,
+  X,
+  Plus,
+  Minus,
+  Youtube,
+  Instagram,
+  InstagramIcon,
+} from "lucide-react";
 import { Phone, Mail, Facebook, Twitter, Linkedin } from "lucide-react";
 import Link from "next/link";
 
@@ -86,6 +95,29 @@ const navLinks: NavLink[] = [
     path: "/",
     subItems: [
       {
+        name: "Pressure Sand Filters (PSF)",
+        path: "/solutions/pressure-sand-filters",
+      },
+      {
+        name: "Activated Carbon Filters (ACF)",
+        path: "/solutions/activated-carbon-filters",
+      },
+      { name: "Lamella Clarifier", 
+        path: "/solutions/lamella-clarifier" 
+      },
+      { name: "Tube Settler", path: "/solutions/tube-settlers" },
+      {
+        name: "Clarifier Mechanism",
+        path: "/solutions/clarifier-mechanism",
+      },
+      {
+        name: "Chemical Dosing Systems",
+        path: "/solutions/chemical-dosing",
+      },
+      
+      
+      { name: "Water Softeners", path: "/solutions/water-softeners" },
+      {
         name: "Ultrafiltration Systems (UF)",
         path: "/solutions/ultrafiltration",
       },
@@ -94,28 +126,10 @@ const navLinks: NavLink[] = [
         path: "/solutions/reverse-osmosis",
       },
       {
-        name: "Pressure Sand Filters (PSF)",
-        path: "/solutions/pressure-sand-filters",
-      },
-      {
-        name: "Activated Carbon Filters (ACF)",
-        path: "/solutions/activated-carbon-filters",
-      },
-      { name: "Lamella Clarifier", path: "/solutions/lamella-clarifier" },
-      {
-        name: "Clarifier Mechanism",
-        path: "/solutions/clarifier-mechanism",
-      },
-      { name: "Tube Settlers", path: "/solutions/tube-settlers" },
-      { name: "Water Softeners", path: "/solutions/water-softeners" },
-      {
         name: "Demineralization Systems (DM)",
         path: "/solutions/demineralization",
       },
-      {
-        name: "Chemical Dosing Systems",
-        path: "/solutions/chemical-dosing",
-      },
+      
     ],
   },
   {
@@ -171,8 +185,7 @@ const socialLinks: SocialLink[] = [
     label: "Instagram",
     color: "hover:text-blue-900",
   },
-  
-  
+
   {
     icon: <Youtube size={18} />,
     href: "https://www.youtube.com/@lifefirstindia",

@@ -2,7 +2,7 @@
   {
     "slug": "wastewater-treatment",
     "title": "Prefabricated Containerised Wastewater Treatment Plants",
-    "subtitle": "Modular and scalable solutions for industrial wastewater.",
+    "subtitle": "Decentralized Wastewater Treatment Solutions",
     "heroImage": "https://placehold.co/1200x600/22c55e/ffffff?text=Wastewater+Treatment",
     "infoTitle": "Eco-Friendly Wastewater Solutions",
     "infoContent": {
@@ -18,7 +18,8 @@
         "Perfect for Modern Infrastructure: Meets the growing demand for smart, decentralized sanitation systems."
       ]
     },
-    "ctaText": "Request a quote for a custom wastewater treatment plant."
+    "ctaText": "Request for a details technical data sheet or a quote for a customized wastewater treatment plant.",
+    "ctasubText": "Learn more about our bio-digester technology."
   },
   {
     "slug": "effluent-treatment",
@@ -27,7 +28,7 @@
     "heroImage": "https://placehold.co/1200x600/f59e0b/ffffff?text=Effluent+Treatment",
     "infoTitle": "Efficient Effluent Management",
     "infoContent": {
-      "paragraph": "Our Prefabricated Effluent Treatment Plant is designed to efficiently treat industrial effluent, turning it into reusable, clean water. With a compact and modular design, it can be easily integrated into existing processes.",
+      "paragraph": "Our Prefabricated Effluent Treatment Plants (ETPs) are engineered to efficiently treat industrial effluents and transform them into reusable, clean water—supporting sustainability and resource conservation. Designed with a compact, modular, and plug-and-play architecture, these systems integrate seamlessly into existing operations with minimal disruption in Manufacturing & Process Industries (automotive, chemical, textile, plastics, pharmaceuticals), Hospitals & Healthcare Institutions & Food & Beverage Processing Units.",
       "points": [
         "Plug & Play Design: Factory-built, ready-to-install units.",
         "Quick Installation: Minimal civil work and reduced setup time.",
@@ -38,7 +39,8 @@
         "Versatile Applications: Suitable for residential, commercial, and industrial needs."
       ]
     },
-    "ctaText": "Learn how to improve your effluent treatment process."
+    "ctaText": "Learn how to improve your effluent treatment process.",
+    "ctasubText": "Learn more about our bio-digester technology."
   },
   {
     "slug": "water-treatment",
@@ -58,7 +60,8 @@
         "Versatile Applications: Suitable for residential, commercial, and industrial needs."
       ]
     },
-    "ctaText": "Get a consultation for a packaged water treatment system."
+    "ctaText": "Get a consultation for a packaged water treatment system.",
+    "ctasubText": "Learn more about our bio-digester technology."
   },
   {
     "slug": "ultrafiltration",
@@ -76,7 +79,8 @@
         "High-Quality Treated WaterSkid mounted, prefabricated units for easy installation and relocation."
       ]
     },
-    "ctaText": "Find out if UF is the right solution for your needs."
+    "ctaText": "Find out if UF is the right solution for your needs.",
+    "ctasubText": "Our experts are ready to help you find the perfect solution. Request for a details technical data sheet or a quote for customized UF System."
   },
   {
     "slug": "reverse-osmosis",
@@ -93,7 +97,8 @@
         "Built with FRP, SS, or MS powder‑coated frames for durability and corrosion resistance."
       ]
     },
-    "ctaText": "Talk to an expert about our RO system capabilities."
+    "ctaText": "Talk to an expert about our RO system capabilities.",
+    "ctasubText": "Learn more about our bio-digester technology."
   },
   {
     "slug": "pressure-sand-filters",
@@ -105,7 +110,8 @@
       "paragraph": "A Pressure Sand Filter is a widely used filtration system designed to remove suspended solids, turbidity, and particulate matter from water. It operates under pressure, forcing water through multiple layers of quartz sand and gravel media to trap impurities. PSFs are commonly used in water treatment plants, industrial processes, and commercial applications as a pre-treatment step before disinfection or further purification. Known for their simplicity, efficiency, and low maintenance, these filters help ensure consistent water quality and protect downstream equipment.",
       "points": []
     },
-    "ctaText": "Request a quote for a pressure sand filter."
+    "ctaText": "Request a quote for a pressure sand filter.",
+    "ctasubText": "Learn more about our bio-digester technology."
   },
   {
     "slug": "activated-carbon-filters",
@@ -117,7 +123,8 @@
       "paragraph": "Activated Carbon Filters are essential in water and wastewater treatment for removing organic compounds, chlorine, odor, color, and residual chemicals. These filters use high-grade activated carbon media with a large surface area that adsorbs impurities as water passes through. Commonly used after Pressure Sand Filters, ACFs improve taste, reduce harmful contaminants, and prepare water for safe discharge or reuse. They are ideal for residential, commercial, and industrial applications requiring high water quality standards.",
       "points": []
     },
-    "ctaText": "Explore the benefits of activated carbon filtration."
+    "ctaText": "Explore the benefits of activated carbon filtration.",
+    "ctasubText": "Learn more about our bio-digester technology."
   },
   {
     "slug": "lamella-clarifier",
@@ -137,7 +144,8 @@
         "Space-Saving Solution."
       ]
     },
-    "ctaText": "Get a quote for a compact lamella clarifier."
+    "ctaText": "Get a quote for a compact lamella clarifier.",
+    "ctasubText": "Learn more about our bio-digester technology."
   },
   {
     "slug": "clarifier-mechanism",
@@ -152,11 +160,11 @@
         "Available in MS, MSRL, or SS materials for long service life.",
         "Handles high hydraulic and organic loads efficiently.",
         "Low-maintenance gear and bearing assemblies.",
-        "Reduces chemical dosing requirements when paired with tube settlers."  
-
+        "Reduces chemical dosing requirements when paired with tube settlers."
       ]
     },
-    "ctaText": "Consult with an expert on our clarifier mechanisms."
+    "ctaText": "Consult with an expert on our clarifier mechanisms.",
+    "ctasubText": "Learn more about our bio-digester technology."
   },
   {
     "slug": "tube-settlers",
@@ -173,11 +181,10 @@
         "Low Operation & Maintenance: With minimal mechanical parts, these systems are easy to clean and maintain, providing a long service life with reduced downtime.",
         "Industry Applications: Municipal Water & Sewage Treatment Plants, Food & Beverage Industry, Textile & Dyeing, Sugar & Distilleries, Pharmaceutical & Chemical Industries, Mining & Metal Processing",
         "Customization & Scalability: Available in various module sizes and inclinations (commonly 60°), these systems can be scaled from small industrial plants to large municipal facilities."
-      
-      
       ]
     },
-    "ctaText": "Learn how tube settlers can boost your plant's efficiency."
+    "ctaText": "Learn how tube settlers can boost your plant's efficiency.",
+    "ctasubText": "Learn more about our bio-digester technology."
   },
   {
     "slug": "water-softeners",
@@ -193,10 +200,10 @@
         "Skid‑mounted units for quick installation and minimal civil work.",
         "Wide Industrial & Commercial Applications.",
         "Meets industry norms for process and utility water requirements."
-
       ]
     },
-    "ctaText": "Find the perfect water softener for your home or business."
+    "ctaText": "Find the perfect water softener for your home or business.",
+    "ctasubText": "Learn more about our bio-digester technology."
   },
   {
     "slug": "demineralization",
@@ -216,7 +223,8 @@
         "Compliance & Quality Assurance"
       ]
     },
-    "ctaText": "Get a quote for a demineralization system."
+    "ctaText": "Get a quote for a demineralization system.",
+    "ctasubText": "Learn more about our bio-digester technology."
   },
   {
     "slug": "chemical-dosing",
@@ -235,10 +243,10 @@
         "Operational Efficiency",
         "Safety & Compliance",
         "Customization & Scalability"
-
       ]
     },
-    "ctaText": "Discover our range of chemical dosing solutions."
+    "ctaText": "Discover our range of chemical dosing solutions.",
+    "ctasubText": "Learn more about our bio-digester technology."
   },
   {
     "slug": "bio-digesters",
@@ -253,9 +261,11 @@
         "Eco-Friendly Sanitation Solutions: Treats human and organic waste through anaerobic bacterial digestion to produce pathogen-free water suitable for gardening, flushing, or safe discharge. This process also reduces foul odors, sludge, and the need for frequent desludging.",
         "Compact & Modular Designs: Capacities range from 500 Liters to 10,000 Liters and are available in rectangular and customized shapes. They are easy to transport, install, and integrate into both remote and urban locations.",
         "Applications Across Sectors: Ideal for areas without sewer infrastructure or with limited water supply, and suitable for residential colonies, schools, hospitals, defense camps, railway coaches, rural sanitation projects, and community toilets.",
-        "Sustainability & Compliance: Aligns with global SDG sanitation goals and promotes zero discharge, water conservation, and environmental protection."      ]
+        "Sustainability & Compliance: Aligns with global SDG sanitation goals and promotes zero discharge, water conservation, and environmental protection."
+      ]
     },
-    "ctaText": "Learn more about our bio-digester technology."
+    "ctaText": "Learn more about our bio-digester technology.",
+    "ctasubText": "Request for a details technical data sheet or a quote for a Bio-Digester Systems. "
   },
   {
     "slug": "bio-toilets",
@@ -270,7 +280,8 @@
         "Hygienic Sanitation: Ensures hygienic sanitation facilities in construction sites, public events, and disaster relief zones."
       ]
     },
-    "ctaText": "Request information on our bio-toilet models."
+    "ctaText": "Request information on our bio-toilet models.",
+    "ctasubText": "Request for a details technical data sheet or a quote for a Bio-Toilets. "
   },
   {
     "slug": "inflow-system",
@@ -285,9 +296,10 @@
         "Key Features: This first-of-its-kind, patent-backed device is compact, hygienic, and touch-free, and it measures hydration levels within seconds.",
         "Health & Performance Benefits: This device supports preventive healthcare by detecting early signs of imbalance, which helps prevent the risks of dehydration and over-hydration and improves workplace safety, athletic performance, and patient care.",
         "Technology & Innovation: Based on proprietary light spectrum analysis, the device uses reflectance spectroscopy and proprietary algorithms, making it energy-efficient with low maintenance requirements.",
-        "Applications Across Sectors: Used in hospitals and clinics for patient hydration monitoring to ensure faster recovery, in sports and fitness to optimize athlete performance and recovery, in workplaces and industries to enhance worker safety and productivity, and in defense and aviation for critical hydration monitoring in high-stress environments." 
+        "Applications Across Sectors: Used in hospitals and clinics for patient hydration monitoring to ensure faster recovery, in sports and fitness to optimize athlete performance and recovery, in workplaces and industries to enhance worker safety and productivity, and in defense and aviation for critical hydration monitoring in high-stress environments."
       ]
     },
-    "ctaText": "Get more details on the InFlow monitoring system."
+    "ctaText": "Get more details on the InFlow monitoring system.",
+    "ctasubText": "Request for a details technical data sheet or a quote for a Hydration Monitoring Systems."
   }
 ]
