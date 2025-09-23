@@ -278,7 +278,7 @@ const CaseStudiesPage = () => {
                     </CardDescription>
                   </CardHeader>
 
-                  <CardContent className="p-6 pt-0">
+                  <CardContent className="p-2 pt-0">
                     <div className="space-y-2 mb-6">
                       <h4 className="font-semibold text-slate-800">
                         Key Results:

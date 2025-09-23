@@ -19,46 +19,54 @@ import {
 import { Button } from "@/components/ui/button";
 import Navigation from "@/Landing/Navigation";
 import Footer from "@/Landing/Footer";
+import { BorderBeam } from "@/components/ui/border-beam";
 
 const DownloadBrochurespage = () => {
   const brochuresData = [
     {
-      title: "Wastewater Treatment Systems",
+      title: "Company Profile ",
       description:
         "A detailed overview of our industrial wastewater treatment solutions and advanced filtration technologies.",
       icon: <Settings className="w-12 h-12 text-blue-600" />,
       link: "#",
     },
     {
-      title: "Sustainable Water Practices",
+      title: "Water Treatment System ",
       description:
         "Learn how our technologies contribute to a more sustainable future and environmental protection.",
       icon: <Globe className="w-12 h-12 text-green-600" />,
       link: "#",
     },
     {
-      title: "Product Catalog 2024",
+      title: "Wastewater Treatment Systems ",
       description:
         "Our complete catalog of products and services for comprehensive water management solutions.",
       icon: <Book className="w-12 h-12 text-orange-600" />,
       link: "#",
     },
     {
-      title: "Technical Specifications",
+      title: "Effluent Treatment System ",
       description:
         "Detailed technical documentation and specifications for all our water treatment equipment.",
       icon: <FileText className="w-12 h-12 text-purple-600" />,
       link: "#",
     },
     {
-      title: "Installation Guide",
+      title: "General product offerings ",
       description:
         "Step-by-step installation procedures and maintenance guidelines for optimal system performance.",
       icon: <Clipboard className="w-12 h-12 text-cyan-600" />,
       link: "#",
     },
     {
-      title: "Case Studies & Solutions",
+      title: "Bio-Digester & Bio-Toilets ",
+      description:
+        "Real-world applications and success stories showcasing our water treatment implementations.",
+      icon: <FileText className="w-12 h-12 text-red-600" />,
+      link: "#",
+    },
+    {
+      title: "Hydration Monitoring System  ",
       description:
         "Real-world applications and success stories showcasing our water treatment implementations.",
       icon: <FileText className="w-12 h-12 text-red-600" />,
@@ -109,7 +117,7 @@ const DownloadBrochurespage = () => {
 
       {/* Brochures Section */}
       <div className="min-h-screen bg-gray-50 py-8">
-        <div className="max-w-6xl mx-auto px-6">
+        <div className="max-w-5xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -135,19 +143,19 @@ const DownloadBrochurespage = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className="h-full transform transition-all duration-300 hover:scale-105 hover:shadow-xl border-0 shadow-lg group">
-                  <CardHeader className="flex flex-col items-center text-center p-6">
+                <Card className="h-full relative overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl border-0 shadow-lg group py-3">
+                  <CardHeader className="flex flex-col items-center text-center p-4">
                     <div className="bg-gradient-to-r from-blue-50 to-cyan-50 p-4 rounded-full mb-4 group-hover:scale-110 transition-transform duration-300">
                       {brochure.icon}
                     </div>
-                    <CardTitle className="text-2xl font-semibold text-slate-800 mb-2">
+                    <CardTitle className="text-lg font-semibold text-slate-800 mb-2">
                       {brochure.title}
                     </CardTitle>
-                    <CardDescription className="text-lg text-slate-600 leading-relaxed">
+                    <CardDescription className="text-md text-slate-600 leading-relaxed">
                       {brochure.description}
                     </CardDescription>
                   </CardHeader>
-                  <CardContent className="p-6 pt-0">
+                  <CardContent className="px-4 pt-0">
                     <Button
                       className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-xl"
                       onClick={() => window.open(brochure.link, "_blank")}
@@ -156,6 +164,18 @@ const DownloadBrochurespage = () => {
                       Download Brochure
                     </Button>
                   </CardContent>
+                  <BorderBeam
+                    duration={6}
+                    size={400}
+                    className="from-transparent via-red-500 to-transparent"
+                  />
+                  <BorderBeam
+                    duration={6}
+                    delay={3}
+                    size={400}
+                    borderWidth={2}
+                    className="from-transparent via-blue-500 to-transparent"
+                  />
                 </Card>
               </motion.div>
             ))}
