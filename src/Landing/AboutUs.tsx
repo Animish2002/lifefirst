@@ -86,18 +86,20 @@ const AboutSection = () => {
           transition={{ duration: 0.8 }}
         >
           <Card className="bg-white/90 backdrop-blur-sm border-blue-200 shadow-lg rounded-2xl overflow-hidden">
-            <CardContent className="p-4 md:p-6">
+            <CardContent className="p-4 md:p-4">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-0 items-center">
                 {/* Image */}
-                <div className="flex justify-center">
+                <div className="flex justify-center items-center flex-col  space-y-2">
                   <motion.img
                     src="https://res.cloudinary.com/dsvfcckqy/image/upload/v1755028853/lifefirst_logo_jpg_fpmkho.jpg"
                     alt="Company Facility"
-                    className="w-52 sm:w-64 md:w-[26rem] object-cover"
+                    className="w-52 sm:w-64 md:w-[18rem] object-cover"
                     initial={{ scale: 1 }}
                     whileHover={{ scale: 1.02 }}
                     transition={{ duration: 0.5 }}
                   />
+
+                  <span>Water, Wastewater & Sanitation Solution Company</span>
                 </div>
 
                 {/* Text */}
@@ -129,7 +131,7 @@ const AboutSection = () => {
                       }
                     `}
                   </style>
-                  <div className="mt-6 overflow-hidden">
+                  <div className="mt-6 overflow-hidden ">
                     <div className="animate-marquee">
                       {logos.concat(logos).map((logo, i) => (
                         <img
