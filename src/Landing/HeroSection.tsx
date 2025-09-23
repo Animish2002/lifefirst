@@ -17,19 +17,19 @@ const carouselData = [
   {
     id: 1,
     image:
-      "https://res.cloudinary.com/dsvfcckqy/image/upload/v1757067608/1_wq9mmx.jpg",
+      "https://res.cloudinary.com/dsvfcckqy/image/upload/v1758647110/herosection_l1njsy.jpg",
     title: "Advanced Water Treatment",
     subtitle: "Revolutionary filtration technology",
     description: "Cutting-edge solutions for industrial water processing",
   },
-  {
-    id: 2,
-    image:
-      "https://res.cloudinary.com/dsvfcckqy/image/upload/v1757067608/2_lguy1a.jpg",
-    subtitle: "Sustainable Engineering",
-    title: "Eco-Friendly Systems",
-    description: "Environmental protection through innovative design",
-  },
+  // {
+  //   id: 2,
+  //   image:
+  //     "https://res.cloudinary.com/dsvfcckqy/image/upload/v1757067608/2_lguy1a.jpg",
+  //   subtitle: "Sustainable Engineering",
+  //   title: "Eco-Friendly Systems",
+  //   description: "Environmental protection through innovative design",
+  // },
   // {
   //   id: 3,
   //   image:
