@@ -85,7 +85,7 @@ const MeetTheTeam = () => {
               className="bg-white rounded-xl shadow-lg overflow-hidden group"
             >
               {/* This is where you would use Shadcn Card component */}
-              <div className="relative w-full h-72 overflow-hidden rounded-t-xl">
+              <div className="relative w-full md:h-[18rem] overflow-hidden rounded-t-xl">
                 <img
                   src={member.image}
                   alt={member.name}
