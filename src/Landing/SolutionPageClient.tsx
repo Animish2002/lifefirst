@@ -44,15 +44,20 @@ const ContactFormPopup = ({
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
     try {
-      // Replace this with your actual form submission logic
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+      const response = await fetch("https://formspree.io/f/mdkwokql", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          ...formData,
+          solution: solutionTitle, // include solution title in submission
+        }),
+      });
 
-      setSubmitMessage("Thank you! We'll get back to you soon.");
-
-      // Reset form after 2 seconds and close popup
-      setTimeout(() => {
+      if (response.ok) {
+        setSubmitMessage("Thank you! We'll get back to you soon.");
         setFormData({
           name: "",
           email: "",
@@ -60,9 +65,14 @@ const ContactFormPopup = ({
           company: "",
           message: "",
         });
-        setSubmitMessage("");
-        onClose();
-      }, 2000);
+
+        setTimeout(() => {
+          setSubmitMessage("");
+          onClose();
+        }, 2000);
+      } else {
+        setSubmitMessage("Something went wrong. Please try again.");
+      }
     } catch (error) {
       setSubmitMessage("Something went wrong. Please try again.");
     } finally {
@@ -251,11 +261,11 @@ const ContactFormPopup = ({
 const SolutionPageClient = ({ solutionTitle }: { solutionTitle: string }) => {
   const [showContactForm, setShowContactForm] = useState(false);
 
-  // Timer for showing contact form popup after 10 seconds
+  // Timer for showing contact form popup after 3 seconds
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowContactForm(true);
-    }, 3000); // 10 seconds
+    }, 3000);
 
     return () => clearTimeout(timer);
   }, []);
