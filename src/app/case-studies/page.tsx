@@ -189,19 +189,6 @@ const CaseStudiesPage = () => {
                   </span>
                 </h1>
               </motion.div>
-              {/* 
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                className="text-sm md:text-lg text-blue-100 mb-8 leading-relaxed"
-              >
-                Discover how our innovative water treatment solutions <br />{" "}
-                have transformed communities and industries across <br />
-                <span className="font-bold bg-gradient-to-r from-blue-500 via-cyan-400 via-green-400 via-blue-400 via-indigo-500 to-orange-400 bg-clip-text text-transparent">
-                  India and beyond.
-                </span>
-              </motion.p> */}
             </div>
           </div>
         </div>
@@ -210,19 +197,19 @@ const CaseStudiesPage = () => {
       <StatsSection />
 
       {/* Case Studies Section */}
-      <div className="min-h-screen bg-gray-50 py-8">
+      <div className="min-h-screen bg-gray-50">
         <div className="max-w-6xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center mb-6"
           >
-            <h2 className="text-5xl font-bold text-slate-800 mb-6">
+            <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 p-2 mb-2">
               Our Success Stories
             </h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+            <p className="text-lg text-gray-600 mx-auto max-w-2xl ">
               Explore detailed case studies showcasing our innovative solutions
               and the measurable impact we&apos;ve created for our clients.
             </p>
