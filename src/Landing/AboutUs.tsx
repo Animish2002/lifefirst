@@ -3,6 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { ExternalLink } from "lucide-react";
+import { Target, Globe, Zap } from "lucide-react";
 
 const logos = [
   {
@@ -28,6 +29,29 @@ const logos = [
   {
     src: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1758575747/ce_approved_wut8xj.jpg",
     alt: "CE Approved",
+  },
+];
+
+const focusedAreas = [
+  {
+    icon: <Target className="w-5 h-5 text-orange-500" />,
+    text: "Water Treatment",
+  },
+  {
+    icon: <Globe className="w-5 h-5 text-green-500" />,
+    text: "Wastewater Treatment",
+  },
+  {
+    icon: <Zap className="w-5 h-5 text-blue-500" />,
+    text: "Sanitation Solutions",
+  },
+  {
+    icon: <Zap className="w-5 h-5 text-blue-500" />,
+    text: "Hydration",
+  },
+  {
+    icon: <Zap className="w-5 h-5 text-blue-500" />,
+    text: "Monitoring Systems",
   },
 ];
 

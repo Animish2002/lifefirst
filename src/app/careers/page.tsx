@@ -4,7 +4,7 @@ import { ComponentProps } from "react";
 import Navigation from "@/Landing/Navigation";
 import Footer from "@/Landing/Footer";
 
-// Assuming these icons are available or can be replaced with SVG/Lucide icons
+// Icons (keep or replace with your preferred icons)
 const JobIcon = ({ className }: ComponentProps<"svg">) => (
   <svg
     className={className}
@@ -67,67 +67,85 @@ const LightbulbIcon = ({ className }: ComponentProps<"svg">) => (
   </svg>
 );
 
-const jobs = [
+type Job = {
+  id: number;
+  title: string;
+  department: string;
+  location: string;
+};
+
+const jobs: Job[] = [
   {
     id: 1,
-    title: "Senior Software Engineer",
+    title: "Factory Manager",
     department: "Engineering",
-    location: "Remote",
+    location: "Harare, Zimbabwe",
   },
   {
     id: 2,
-    title: "Product Manager",
-    department: "Product",
-    location: "New York, NY",
+    title: "Project Engineer",
+    department: "Projects",
+    location: "Harare, Zimbabwe",
   },
   {
     id: 3,
-    title: "Marketing Specialist",
+    title: "Marketing Executive",
     department: "Marketing",
-    location: "Remote",
-  },
-  {
-    id: 4,
-    title: "Data Analyst",
-    department: "Analytics",
-    location: "San Francisco, CA",
+    location: "Harare, Zimbabwe",
   },
 ];
 
+// Note: Adjust the imports to match your project’s actual UI components.
+// The following uses a Shadcn-like pattern (Card, Button, Dialog).
+// Ensure you have these components available in your codebase.
+
+import { Card, CardHeader, CardFooter } from "@/components/ui/card";
+import { CardTitle, CardDescription } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+
 const Page = () => {
-  const [openJobId, setOpenJobId] = useState<number | null>(null);
-
-  const toggleJobDescription = (id: number) => {
-    setOpenJobId(openJobId === id ? null : id);
-  };
-
+  // No global state needed; each card handles its own dialog
   return (
     <div className="bg-gray-50 text-gray-800 font-sans">
       <Navigation />
       <div className="relative md:mt-26 mt-24 overflow-hidden"></div>
+
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-18 px-4 sm:px-6 lg:px-8 ">
-        <div className="max-w-6xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-4">
+      <section className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-12 px-4 sm:px-6 lg:px-8 ">
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-3xl md:text-5xl font-extrabold mb-4 drop-shadow-lg">
             Join Our Team
           </h1>
-          <p className="text-lg sm:text-xl lg:text-2xl font-light max-w-2xl mx-auto">
+          <p className="text-md md:text-lg font-light drop-shadow-md max-w-2xl mx-auto">
             We&apos;re building the future, and we need your help. Explore our
             open roles and find your next opportunity.
           </p>
         </div>
       </section>
 
-      {/* Why Join Us Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      {/* Why Join Us Section (two centered sentences) */}
+      <section className="py-8 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">
+          <h2 className="text-2xl font-semibold text-gray-900 mb-2">
             Why Work With Us?
           </h2>
-          <p className="text-lg text-gray-600 mb-12 max-w-3xl mx-auto">
-            We believe in a culture that fosters growth, innovation, and
-            collaboration. Our team is our greatest asset.
-          </p>
+          <div className="mx-auto max-w-md space-y-2 mb-6">
+            <p className="text-lg text-gray-600 mx-auto">
+              We believe in a culture that fosters growth, innovation, and
+              collaboration.
+            </p>
+            <p className="text-lg text-gray-600 mx-auto">
+              Our team is our greatest asset.
+            </p>
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white p-8 rounded-xl shadow-lg transform transition-transform duration-300 hover:scale-105">
               <LightbulbIcon className="w-12 h-12 text-blue-500 mx-auto mb-4" />
@@ -155,7 +173,7 @@ const Page = () => {
                 Growth & Development
               </h3>
               <p className="text-gray-500">
-                We invest in our employees professional growth through
+                We invest in our employees' professional growth through
                 mentorship and continuous learning.
               </p>
             </div>
@@ -163,57 +181,91 @@ const Page = () => {
         </div>
       </section>
 
-      {/* Job Listings Section */}
+      {/* Job Listings Section (Modern cards with Apply popups) */}
       <section className="bg-white py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl sm:text-4xl font-extrabold text-center text-gray-900 mb-12">
             Current Openings
           </h2>
-          <ul className="divide-y divide-gray-200">
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {jobs.map((job) => (
-              <li
-                key={job.id}
-                className="py-6 cursor-pointer"
-                onClick={() => toggleJobDescription(job.id)}
-              >
-                <div className="flex items-center justify-between">
-                  <div>
-                    <h3 className="text-xl font-semibold text-gray-900">
-                      {job.title}
-                    </h3>
-                    <p className="text-gray-500">
-                      {job.department} | {job.location}
-                    </p>
-                  </div>
-                  <button className="text-blue-600 font-medium hover:text-blue-800 transition-colors">
-                    {openJobId === job.id ? "Close" : "View Details"}
-                  </button>
-                </div>
-                {openJobId === job.id && (
-                  <div className="mt-4 p-4 rounded-lg bg-gray-100 border-l-4 border-blue-500 text-gray-700">
-                    <h4 className="font-bold mb-2">Job Description</h4>
-                    <p>
-                      This is a placeholder for the full job description. We are
-                      seeking a passionate and talented individual to join our
-                      team. You will be responsible for a range of tasks, from
-                      collaborating with cross-functional teams to developing
-                      new features.
-                    </p>
-                  </div>
-                )}
-              </li>
+              <Card key={job.id} className="flex flex-col gap-2 py-2">
+                <CardHeader className="p-4">
+                  <CardTitle className="text-lg font-semibold">
+                    {job.title}
+                  </CardTitle>
+                  <CardDescription className="text-sm text-gray-600">
+                    {job.department} • <br /> {job.location}
+                  </CardDescription>
+                </CardHeader>
+
+                <CardFooter className="p-4 pt-0">
+                  <Dialog>
+                    <DialogTrigger asChild>
+                      <Button
+                        className="w-full cursor-pointer"
+                        variant="outline"
+                      >
+                        View Details & Apply
+                      </Button>
+                    </DialogTrigger>
+                    <DialogContent className="sm:max-w-[520px]">
+                      <DialogHeader className="mb-2">
+                        <DialogTitle>Apply for {job.title}</DialogTitle>
+                      </DialogHeader>
+                      <form
+                        action="https://formspree.io/f/your-form-id" // Replace with your FormSpree form ID
+                        method="POST"
+                        className="space-y-4"
+                      >
+                        <input type="hidden" name="job" value={job.title} />
+                        <label className="block">
+                          <span className="text-sm">Full Name</span>
+                          <input
+                            name="name"
+                            type="text"
+                            required
+                            className="mt-1 block w-full rounded-md border border-gray-300 p-2"
+                          />
+                        </label>
+                        <label className="block">
+                          <span className="text-sm">Email</span>
+                          <input
+                            name="email"
+                            type="email"
+                            required
+                            className="mt-1 block w-full rounded-md border border-gray-300 p-2"
+                          />
+                        </label>
+                        <label className="block">
+                          <span className="text-sm">Cover Letter</span>
+                          <textarea
+                            name="message"
+                            rows={4}
+                            className="mt-1 block w-full rounded-md border border-gray-300 p-2"
+                          ></textarea>
+                        </label>
+                        <Button type="submit" className="w-full cursor-pointer">
+                          Submit Application
+                        </Button>
+                      </form>
+                    </DialogContent>
+                  </Dialog>
+                </CardFooter>
+              </Card>
             ))}
-          </ul>
+          </div>
         </div>
       </section>
 
       {/* Call to Action Section */}
-      <section className="bg-gray-100 py-16 px-4 sm:px-6 lg:px-8">
+      <section className="bg-gray-100 py-8 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">
             Ready to Join Us?
           </h2>
-          <p className="text-lg text-gray-600 mb-8">
+          <p className="text-lg text-gray-600 mb-2">
             If you don&apos;t see an opening that fits your skills, we&apos;d
             still love to hear from you.
           </p>
