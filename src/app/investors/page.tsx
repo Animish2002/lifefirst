@@ -2,35 +2,41 @@
 import Footer from "@/Landing/Footer";
 import Navigation from "@/Landing/Navigation";
 import React, { useState } from "react";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const investorNews = [
   {
-    id: 1,
-    title: "Company Reports Strong Q4 2023 Results",
-    date: "January 25, 2024",
+    id: "item-1",
+    title: "Company Reports for Financial Year 2025–26",
+    date: "September 23, 2025",
     description:
-      "Our company announced its financial results for the fourth quarter of fiscal year 2023, showcasing significant growth in key market segments and exceeding revenue expectations. The report highlights strategic investments in technology and global expansion efforts.",
+      "LifeFirst Concepts & Technologies Pvt. Ltd. is committed to maintaining transparency, accountability, and strong corporate governance as we continue to expand our footprint in India, Africa, and beyond. The Company Reports for the financial year 2025–26 will provide our investors with: Comprehensive Financial Insights, Strategic Progress Updates, Project Performance & Impact, and Forward-Looking Strategy. These reports are designed to ensure clarity, confidence, and alignment with LifeFirst’s mission of creating sustainable infrastructure solutions while delivering consistent value and returns.",
   },
   {
-    id: 2,
-    title: "Leadership Team Welcomes New Chief Financial Officer",
-    date: "February 10, 2024",
+    id: "item-2",
+    title: "LifeFirst Signs Joint Venture Agreement with Tech-Aeon, Zimbabwe",
+    date: "September 22, 2025",
     description:
-      "We are pleased to announce the appointment of Jane Doe as the new Chief Financial Officer. With over 20 years of experience in the technology sector, Jane will be instrumental in guiding our financial strategy for future growth.",
+      "LifeFirst Concepts & Technologies Pvt. Ltd. is proud to announce the signing of a Joint Venture (JV) Agreement with Tech-Aeon Pvt. Ltd., a leading Zimbabwe-based engineering and infrastructure solutions company. Under this JV, LifeFirst and Tech-Aeon will jointly establish a state-of-the-art manufacturing unit in Zimbabwe to produce FRP Bio-Digesters and Containerized Water & Wastewater Treatment Plants. This facility will cater to the broader African continent, delivering 'Make-in-Africa' solutions. From an investor’s perspective, this JV provides a Regional Manufacturing Footprint, Scalable Market Access, and Strategic Growth & Partnerships.",
   },
   {
-    id: 3,
-    title: "Partnership with Global Tech Firm Announced",
-    date: "March 1, 2024",
+    id: "item-3",
+    title: "Signing of Letter of Intent with CHAK",
+    date: "August 22, 2025",
     description:
-      "We have entered a strategic partnership with a leading global technology firm to accelerate product development and market reach. This collaboration is expected to create synergies and deliver innovative solutions to our customers worldwide.",
+      "We are delighted to announce that LifeFirst Concepts & Technologies Pvt. Ltd. has signed a Letter of Intent (LoI) with the Christian Health Association of Kenya (CHAK)—the leading faith-based health network in Kenya, representing over 600 health facilities. This collaboration will enable LifeFirst to bring its advanced water and wastewater treatment solutions as well as hydration monitoring systems to CHAK’s vast healthcare network. From an investor’s perspective, this LoI represents Market Expansion, Social Impact + Business Growth, and Strategic Partnerships.",
   },
   {
-    id: 4,
-    title: "Annual Shareholder Meeting Scheduled for April",
-    date: "March 15, 2024",
+    id: "item-4",
+    title: "Starting office & factory in Africa (Zimbabwe)",
+    date: "August 27, 2025",
     description:
-      "The annual shareholder meeting will be held on April 20, 2024, at our corporate headquarters. Shareholders will be invited to discuss the company's performance and future outlook. A live webcast will also be available for remote attendees.",
+      "Details regarding the start of our new office and factory in Zimbabwe, along with the attached company registration and tax certificates.",
   },
 ];
 
@@ -46,12 +52,12 @@ const Page = () => {
       <Navigation />
       <div className="relative md:mt-26 mt-24 overflow-hidden"></div>
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-18 px-4 sm:px-6 lg:px-8 ">
-        <div className="max-w-6xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-4">
+      <section className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-12 px-4 sm:px-6 lg:px-8 ">
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-3xl md:text-5xl font-extrabold mb-4 drop-shadow-lg">
             Investor News
           </h1>
-          <p className="text-lg sm:text-xl lg:text-2xl font-light max-w-2xl mx-auto">
+          <p className="text-md md:text-lg font-light drop-shadow-md max-w-2xl mx-auto">
             Stay up-to-date with our latest financial reports, press releases,
             and corporate announcements.
           </p>
@@ -59,37 +65,30 @@ const Page = () => {
       </section>
 
       {/* News Listings Section */}
-      <section className="bg-white py-20 px-4 sm:px-6 lg:px-8">
+      <section className="bg-white py-8 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl sm:text-4xl font-extrabold text-center text-gray-900 mb-12">
             Latest Updates
           </h2>
-          <ul className="divide-y divide-gray-200">
+          <Accordion type="single" collapsible className="w-full">
             {investorNews.map((news) => (
-              <li
-                key={news.id}
-                className="py-6 cursor-pointer"
-                onClick={() => toggleNews(news.id)}
-              >
-                <div className="flex items-center justify-between">
-                  <div>
-                    <h3 className="text-xl font-semibold text-gray-900">
+              <AccordionItem key={news.id} value={news.id}>
+                <AccordionTrigger>
+                  <div className="flex flex-col items-start">
+                    <h3 className="text-xl font-semibold text-gray-900 text-left">
                       {news.title}
                     </h3>
-                    <p className="text-gray-500">{news.date}</p>
+                    <p className="text-sm text-gray-500 text-left">
+                      {news.date}
+                    </p>
                   </div>
-                  <button className="text-blue-600 font-medium hover:text-blue-800 transition-colors">
-                    {openNewsId === news.id ? "Close" : "Read More"}
-                  </button>
-                </div>
-                {openNewsId === news.id && (
-                  <div className="mt-4 p-4 rounded-lg bg-gray-100 border-l-4 border-blue-500 text-gray-700">
-                    <p>{news.description}</p>
-                  </div>
-                )}
-              </li>
+                </AccordionTrigger>
+                <AccordionContent>
+                  <p className="text-gray-700">{news.description}</p>
+                </AccordionContent>
+              </AccordionItem>
             ))}
-          </ul>
+          </Accordion>
         </div>
       </section>
 

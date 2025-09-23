@@ -226,8 +226,7 @@ const AboutUsPage: React.FC = () => {
     {
       name: "Ravi Chavan",
       position: "Electrical Technician",
-      experience:
-        "Electrical Technician with 5+ Years of Experience.",
+      experience: "Electrical Technician with 5+ Years of Experience.",
       image:
         "https://res.cloudinary.com/dsvfcckqy/image/upload/v1758548403/Ravi_Chavan_lxfmjs.jpg", // Placeholder image
       description:
@@ -236,8 +235,7 @@ const AboutUsPage: React.FC = () => {
     {
       name: "Sarika Thalkari",
       position: "Finance & Accounting Specialist", // Add actual position
-      experience:
-        "Finance & Accounting Specialist with 14+ Years of Expertise",
+      experience: "Finance & Accounting Specialist with 14+ Years of Expertise",
       image:
         "https://res.cloudinary.com/dsvfcckqy/image/upload/v1758548404/Sarika_Thalkari_gztjb9.jpg", // Placeholder image
       description:
@@ -246,8 +244,7 @@ const AboutUsPage: React.FC = () => {
     {
       name: "Manisha Walde",
       position: "Project Proposal & Estimation Engineer", // Add actual position
-      experience:
-        "Electrical Technician with 5+ Years of Experience.",
+      experience: "Electrical Technician with 5+ Years of Experience.",
       image:
         "https://res.cloudinary.com/dsvfcckqy/image/upload/v1758548403/Manisha_Walde_fifdf2.jpg", // Placeholder image
       description:
@@ -256,8 +253,7 @@ const AboutUsPage: React.FC = () => {
     {
       name: "Payal Bhosale",
       position: "HR–Finance Associate", // Add actual position
-      experience:
-        "Electrical Technician with 5+ Years of Experience.",
+      experience: "Electrical Technician with 5+ Years of Experience.",
       image:
         "https://res.cloudinary.com/dsvfcckqy/image/upload/v1758548403/Payal_Bhosale_jh77yc.jpg", // Placeholder image
       description:
@@ -266,8 +262,7 @@ const AboutUsPage: React.FC = () => {
     {
       name: "Rupesh Ingale",
       position: "Water Infrastructure Project Specialist", // Add actual position
-      experience:
-        "Electrical Technician with 5+ Years of Experience.",
+      experience: "Electrical Technician with 5+ Years of Experience.",
       image:
         "https://res.cloudinary.com/dsvfcckqy/image/upload/v1758548404/Rupesh_Ingle_xpbjs8.jpg", // Placeholder image
       description:
@@ -276,8 +271,7 @@ const AboutUsPage: React.FC = () => {
     {
       name: "Amol Sanap",
       position: "Dedicated Civil Engineer", // Add actual position
-      experience:
-        "Electrical Technician with 5+ Years of Experience.",
+      experience: "Electrical Technician with 5+ Years of Experience.",
       image:
         "https://res.cloudinary.com/dsvfcckqy/image/upload/v1758548403/Amol_Sanap_rrdwne.jpg", // Placeholder image
       description:
@@ -286,8 +280,7 @@ const AboutUsPage: React.FC = () => {
     {
       name: "Subham Shivarkar",
       position: "CAD Engineer", // Add actual position
-      experience:
-        "Electrical Technician with 5+ Years of Experience.",
+      experience: "Electrical Technician with 5+ Years of Experience.",
       image:
         "https://res.cloudinary.com/dsvfcckqy/image/upload/v1758548405/Shubham_Shivarkar_owxfzt.jpg", // Placeholder image
       description:
@@ -296,8 +289,7 @@ const AboutUsPage: React.FC = () => {
     {
       name: "Swaraj Sobale",
       position: "Specialist in Purchase & Supply Chain Management", // Add actual position
-      experience:
-        "Electrical Technician with 5+ Years of Experience.",
+      experience: "Electrical Technician with 5+ Years of Experience.",
       image:
         "https://res.cloudinary.com/dsvfcckqy/image/upload/v1758548406/Swaraj_Sobale_2_onemqr.png", // Placeholder image
       description:
@@ -306,8 +298,7 @@ const AboutUsPage: React.FC = () => {
     {
       name: "Madhav More",
       position: "Project Installation & Plumbing Specialist", // Add actual position
-      experience:
-        "Electrical Technician with 5+ Years of Experience.",
+      experience: "Electrical Technician with 5+ Years of Experience.",
       image:
         "https://res.cloudinary.com/dsvfcckqy/image/upload/v1758548406/Mahadev_More_n9nqra.jpg", // Placeholder image
       description:
@@ -316,8 +307,7 @@ const AboutUsPage: React.FC = () => {
     {
       name: "Chetan K. Bawane",
       position: "Water Infrastructure Project Specialist", // Add actual position
-      experience:
-        "Electrical Technician with 5+ Years of Experience.",
+      experience: "Electrical Technician with 5+ Years of Experience.",
       image:
         "https://res.cloudinary.com/dsvfcckqy/image/upload/v1758548404/Chetan_Bawane_foggrl.jpg", // Placeholder image
       description:
@@ -326,8 +316,7 @@ const AboutUsPage: React.FC = () => {
     {
       name: "Ravindra Darade",
       position: "Manufacturing & Operations Professional", // Add actual position
-      experience:
-        "Electrical Technician with 5+ Years of Experience.",
+      experience: "Electrical Technician with 5+ Years of Experience.",
       image:
         "https://res.cloudinary.com/dsvfcckqy/image/upload/v1758548403/Ravindra_Darade_zteu2r.jpg", // Placeholder image
       description:
@@ -336,18 +325,16 @@ const AboutUsPage: React.FC = () => {
     {
       name: "Atish Kamble",
       position: "Water Infrastructure Project Engineer", // Add actual position
-      experience:
-        "Electrical Technician with 5+ Years of Experience.",
+      experience: "Electrical Technician with 5+ Years of Experience.",
       image:
         "https://res.cloudinary.com/dsvfcckqy/image/upload/v1758548402/Atish_Kamble_yukqpg.jpg", // Placeholder image
       description:
-        "A highly adaptable professional with over 5 years of experience in executing and managing water supply schemes, water treatment plants (WTPs), sewage treatment plants (STPs), and lift irrigation projects. Recognized for strong team leadership and project management skills, ensuring quality execution, timely delivery, and operational efficiency across all stages of infrastructure projects." // Add actual description
+        "A highly adaptable professional with over 5 years of experience in executing and managing water supply schemes, water treatment plants (WTPs), sewage treatment plants (STPs), and lift irrigation projects. Recognized for strong team leadership and project management skills, ensuring quality execution, timely delivery, and operational efficiency across all stages of infrastructure projects.", // Add actual description
     },
-    
   ];
 
   const firstRowMembers = teamMembers3.slice(0, 5);
-  const secondRowMembers = teamMembers3.slice(5, );
+  const secondRowMembers = teamMembers3.slice(5);
 
   return (
     <>
@@ -408,7 +395,7 @@ const AboutUsPage: React.FC = () => {
                 <p className="text-gray-700 italic leading-relaxed text-sm">
                   &quot;We envision a future where every drop is valued,
                   ecosystems are protected, and communities thrive through
-                  smart, efficient, and eco-friendly treatment solutions.&quot;
+                  smart, efficient, and eco-friendly treatment solutions.
                 </p>
               </div>
             </motion.div>
@@ -429,14 +416,19 @@ const AboutUsPage: React.FC = () => {
                   Value Statement
                 </h3>
               </div>
-              <p className="text-gray-700 leading-relaxed text-md">
+              <p className="text-gray-700 leading-relaxed text-md mb-6">
                 We are committed to delivering sustainable, reliable, and
                 innovative wastewater treatment solutions that protect the
                 environment, support public health, and empower communities.
-                Through quality engineering and responsible practices, we strive
-                to conserve water, reduce pollution, and create a cleaner, more
-                resilient future.
               </p>
+
+              <div className="bg-gradient-to-r from-blue-50 to-cyan-50 p-6 rounded-2xl border-l-4 border-blue-400">
+                <p className="text-gray-700 italic leading-relaxed text-sm">
+                   &quot;Through quality engineering and responsible
+                  practices, we strive to conserve water, reduce pollution, and
+                  create a cleaner, more resilient future.&quot;
+                </p>
+              </div>
             </motion.div>
           </motion.div>
 
@@ -629,40 +621,39 @@ const AboutUsPage: React.FC = () => {
               </div>
             </div>
 
-              {/* Third Row - 5 members */}
-              <div className="flex justify-center mb-8">
-                <div
-                  className="grid grid-cols-2 md:grid-cols-5 gap-4"
-                  style={{ maxWidth: "calc(80% of 6xl)" }}
-                >
-                  {firstRowMembers.map((member, index) => (
-                    <TeamMemberCard
-                      key={member.name}
-                      member={member}
-                      index={index + 6}
-                      onClick={setSelectedMember}
-                    />
-                  ))}
-                </div>
+            {/* Third Row - 5 members */}
+            <div className="flex justify-center mb-8">
+              <div
+                className="grid grid-cols-2 md:grid-cols-5 gap-4"
+                style={{ maxWidth: "calc(80% of 6xl)" }}
+              >
+                {firstRowMembers.map((member, index) => (
+                  <TeamMemberCard
+                    key={member.name}
+                    member={member}
+                    index={index + 6}
+                    onClick={setSelectedMember}
+                  />
+                ))}
               </div>
+            </div>
 
-              {/* Fourth Row - 4 members centered */}
-              <div className="flex justify-center items-center">
-                <div
-                  className="grid grid-cols-2 md:grid-cols-5 gap-4"
-                  style={{ maxWidth: "calc(80% of 6xl)" }}
-                >
-                  {secondRowMembers.map((member, index) => (
-                    <TeamMemberCard
-                      key={member.name}
-                      member={member}
-                      index={index + 11}
-                      onClick={setSelectedMember}
-                    />
-                  ))}
-                </div>
+            {/* Fourth Row - 4 members centered */}
+            <div className="flex justify-center items-center">
+              <div
+                className="grid grid-cols-2 md:grid-cols-5 gap-4"
+                style={{ maxWidth: "calc(80% of 6xl)" }}
+              >
+                {secondRowMembers.map((member, index) => (
+                  <TeamMemberCard
+                    key={member.name}
+                    member={member}
+                    index={index + 11}
+                    onClick={setSelectedMember}
+                  />
+                ))}
               </div>
-    
+            </div>
           </div>
         </div>
       </div>
