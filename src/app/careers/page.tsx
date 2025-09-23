@@ -133,11 +133,11 @@ const Page = () => {
       {/* Why Join Us Section (two centered sentences) */}
       <section className="py-8 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-2xl font-semibold text-gray-900 mb-2">
+          <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 p-2 mb-2">
             Why Work With Us?
           </h2>
-          <div className="mx-auto max-w-md space-y-2 mb-6">
-            <p className="text-lg text-gray-600 mx-auto">
+          <div className="mb-8">
+            <p className="text-lg text-gray-600 max-w-6xl mx-auto">
               We believe in a culture that fosters growth, innovation, and
               collaboration.
             </p>
@@ -146,7 +146,7 @@ const Page = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-white p-8 rounded-xl shadow-lg transform transition-transform duration-300 hover:scale-105">
               <LightbulbIcon className="w-12 h-12 text-blue-500 mx-auto mb-4" />
               <h3 className="text-xl font-bold text-gray-900 mb-2">
@@ -184,7 +184,7 @@ const Page = () => {
       {/* Job Listings Section (Modern cards with Apply popups) */}
       <section className="bg-white py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-center text-gray-900 mb-12">
+          <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 p-2 mb-6 text-center">
             Current Openings
           </h2>
 
