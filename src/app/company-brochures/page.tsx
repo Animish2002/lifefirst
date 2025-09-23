@@ -80,7 +80,7 @@ const DownloadBrochurespage = () => {
         {/* Hero Image */}
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+            src="https://res.cloudinary.com/dsvfcckqy/image/upload/v1758622999/organised-documents-references_t7bf44.jpg"
             alt="Technical documents and brochures"
             className="w-full h-full object-cover opacity-60"
           />
@@ -95,26 +95,13 @@ const DownloadBrochurespage = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
               >
-                <h1 className="text-3xl md:text-5xl font-semibold text-white leading-tight mb-6">
+                <h1 className="text-3xl md:text-5xl font-extrabold mb-4 drop-shadow-lg">
                   Comprehensive Resource
                   <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent block">
                     Documentation Center
                   </span>
                 </h1>
               </motion.div>
-
-              {/* <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                className="text-sm md:text-lg text-blue-100 mb-8 leading-relaxed"
-              >
-                Access our complete library of technical brochures, <br />{" "}
-                product catalogs, and detailed documentation to <br />
-                <span className="font-bold bg-gradient-to-r from-blue-500 via-cyan-400 via-green-400 via-blue-400 via-indigo-500 to-orange-400 bg-clip-text text-transparent">
-                  explore our water treatment solutions.
-                </span>
-              </motion.p> */}
             </div>
           </div>
         </div>
@@ -128,12 +115,12 @@ const DownloadBrochurespage = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center mb-6"
           >
-            <h2 className="text-5xl font-bold text-slate-800 mb-6">
+            <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 p-2 mb-2">
               Download Our Brochures
             </h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+            <p className="text-lg text-gray-600 mx-auto max-w-4xl">
               Explore our range of solutions and products with our detailed
               technical documentation and comprehensive resource materials.
             </p>
