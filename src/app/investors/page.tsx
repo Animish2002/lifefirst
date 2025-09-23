@@ -17,7 +17,7 @@ const investorNews = [
     description: (
       <>
         <p>
-          LifeFirst Concepts & Technologies Pvt. Ltd. is committed to
+          <b>LifeFirst Concepts & Technologies Pvt.</b> Ltd. is committed to
           maintaining transparency, accountability, and strong corporate
           governance as we continue to expand our footprint in India, Africa,
           and beyond. The Company Reports for the financial year 2025–26 will
