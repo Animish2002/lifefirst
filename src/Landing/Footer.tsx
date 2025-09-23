@@ -80,16 +80,16 @@ const Footer = () => {
             transition={{ duration: 0.6 }}
             className="lg:col-span-1"
           >
-            <div className="flex items-center mb-6">
+            <div className="flex items-center justify-center mb-6">
               {/* Droplet Logo */}
               <img
                 src="https://res.cloudinary.com/dsvfcckqy/image/upload/v1755028854/lifefirst_logo_png_nb1cje.png"
                 alt="Droplet Logo"
-                className="w-40 mr-4"
+                className="w-48 "
               />
             </div>
 
-            <p className="text-slate-700 font-medium mb-6 leading-relaxed">
+            <p className="text-slate-700 font-medium mb-6 leading-relaxed text-center text-sm">
               Water, Wastewater & Sanitation Solution Company
             </p>
 
