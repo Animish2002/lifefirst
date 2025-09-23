@@ -10,6 +10,7 @@ import {
 } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ChevronRight, ArrowDown, Pause, Play } from "lucide-react";
+import Link from "next/link";
 
 // Sample carousel data - replace with your actual data
 const carouselData = [
@@ -110,8 +111,6 @@ const HeroSection = () => {
     setCurrentSlide(index);
   };
 
- 
-
   return (
     <section
       id="hero"
@@ -195,14 +194,16 @@ const HeroSection = () => {
                 variants={itemVariants}
                 className="flex flex-col sm:flex-row gap-4"
               >
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="border-2 border-white/30 text-white bg-white/10 backdrop-blur-sm hover:bg-white/20 px-8 py-4 text-lg group transition-all duration-300"
-                >
-                  Start Your Project
-                  <ChevronRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </Button>
+                <Link href="/contact">
+                  <Button
+                    variant="outline"
+                    size="lg"
+                    className="border-2 cursor-pointer border-white/30 text-white bg-white/10 backdrop-blur-sm hover:bg-white/20 px-8 py-4 text-lg group transition-all duration-300"
+                  >
+                    Start Your Project
+                    <ChevronRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                </Link>
               </motion.div>
             </motion.div>
           </div>

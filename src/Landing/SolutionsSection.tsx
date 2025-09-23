@@ -3,12 +3,12 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const SolutionsSection = () => {
   const [hoveredCard, setHoveredCard] = useState<string | null>(null);
   const router = useRouter();
   const solutions = [
-    
     {
       id: "water",
       title: "Water Treatment",
@@ -266,32 +266,34 @@ const SolutionsSection = () => {
                 Wastewater & Sanitation solutions to meet your specific
                 requirements.
               </p>
-              <motion.button
-                className="bg-white text-blue-600 text-sm px-8 py-3 rounded-xl font-medium shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-blue-50 relative overflow-hidden group"
-                whileHover={{
-                  scale: 1.05,
-                  transition: { type: "spring", stiffness: 400, damping: 25 },
-                }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <span className="relative z-10 flex items-center">
-                  Connect with us
-                  <motion.div
-                    whileHover={{ x: 3 }}
-                    transition={{ type: "spring", stiffness: 400 }}
-                  >
-                    <ArrowRight className="ml-2 w-4 h-4" />
-                  </motion.div>
-                </span>
+              <Link href="#contact" className="inline-block">
+                <motion.button
+                  className="bg-white cursor-pointer text-blue-600 text-sm px-8 py-3 rounded-xl font-medium shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-blue-50 relative overflow-hidden group"
+                  whileHover={{
+                    scale: 1.05,
+                    transition: { type: "spring", stiffness: 400, damping: 25 },
+                  }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <span className="relative z-10 flex items-center">
+                    Connect with us
+                    <motion.div
+                      whileHover={{ x: 3 }}
+                      transition={{ type: "spring", stiffness: 400 }}
+                    >
+                      <ArrowRight className="ml-2 w-4 h-4" />
+                    </motion.div>
+                  </span>
 
-                {/* Button hover effect */}
-                <motion.div
-                  className="absolute inset-0 bg-blue-100"
-                  initial={{ x: "-100%" }}
-                  whileHover={{ x: "0%" }}
-                  transition={{ duration: 0.3 }}
-                />
-              </motion.button>
+                  {/* Button hover effect */}
+                  <motion.div
+                    className="absolute inset-0 bg-blue-100"
+                    initial={{ x: "-100%" }}
+                    whileHover={{ x: "0%" }}
+                    transition={{ duration: 0.3 }}
+                  />
+                </motion.button>
+              </Link>
             </div>
           </motion.div>
         </motion.div>

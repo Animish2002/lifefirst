@@ -169,14 +169,14 @@ const Gallery = () => {
   return (
     <>
       <Navigation />
-      <section className="py-20 md:mt-26 mt-24 bg-gradient-to-br from-slate-50 to-blue-50">
-        <div className="max-w-6xl mx-auto px-8">
+      <section className="py-8 md:mt-26 mt-24 bg-gradient-to-br from-slate-50 to-blue-50">
+        <div className="max-w-6xl mx-auto px-4">
           {/* Header */}
           <div className="text-center mb-8">
-            <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 p-2 mb-2">
+            <h2 className="text-2xl md:text-4xl font-semibold text-gray-900 p-2 mb-2">
               Snapshots of Sustainability in Action
             </h2>
-            <p className="text-lg text-gray-600 max-w-xl mx-auto">
+            <p className="text-md text-gray-600 max-w-2xl mx-auto">
               A visual story of LifeFirst projects transforming water
               infrastructure and building a better future, one installation at a
               time.
@@ -188,7 +188,7 @@ const Gallery = () => {
             <h3 className="text-2xl font-bold text-gray-800 mb-6 flex items-center gap-2">
               <Image className="w-6 h-6" /> Images
             </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-6">
               {galleryData.images.map((item) => (
                 <div
                   key={item.id}
