@@ -210,7 +210,7 @@ const CaseStudiesPage = () => {
       <StatsSection />
 
       {/* Case Studies Section */}
-      <div className="min-h-screen bg-gray-50 py-20">
+      <div className="min-h-screen bg-gray-50 py-8">
         <div className="max-w-6xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

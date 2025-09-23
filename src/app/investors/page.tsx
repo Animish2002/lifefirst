@@ -27,7 +27,7 @@ const investorNews = [
           <li>
             <strong>Comprehensive Financial Insights:</strong> Detailed analysis
             of revenue growth, profitability, and key financial metrics to
-            showcase the company's financial health.
+            showcase the company&apos;s financial health.
           </li>
           <li>
             <strong>Strategic Progress Updates:</strong> Highlights of
@@ -43,13 +43,13 @@ const investorNews = [
           <li>
             <strong>Forward-Looking Strategy:</strong> Insights into growth
             plans, market opportunities, and future investments that align with
-            LifeFirst's long-term vision for scaling operations across multiple
-            geographies.
+            LifeFirst&apos;s long-term vision for scaling operations across
+            multiple geographies.
           </li>
         </ul>
         <p className="mt-4">
           For investors, these reports are designed to ensure clarity,
-          confidence, and alignment with LifeFirst's mission of creating
+          confidence, and alignment with LifeFirst&apos;s mission of creating
           sustainable infrastructure solutions while delivering consistent value
           and returns.
         </p>
@@ -74,7 +74,7 @@ const investorNews = [
           cost-effective, sustainable, and customized for local needs.
         </p>
         <p className="mt-4">
-          From an investor's perspective, this JV provides:
+          From an investor&apos;s perspective, this JV provides:
         </p>
         <ul className="list-disc list-inside space-y-2 mt-4">
           <li>
@@ -84,7 +84,7 @@ const investorNews = [
           </li>
           <li>
             <strong>Scalable Market Access:</strong> Positions LifeFirst at the
-            heart of Africa's growing demand for water, sanitation, and
+            heart of Africa&apos;s growing demand for water, sanitation, and
             environmental infrastructure solutions.
           </li>
           <li>
@@ -94,12 +94,12 @@ const investorNews = [
           </li>
           <li>
             <strong>High-Impact Sustainability Projects:</strong> Aligns with
-            Africa's clean water, sanitation, and climate resilience goals,
+            Africa&apos;s clean water, sanitation, and climate resilience goals,
             creating opportunities for both economic and social returns.
           </li>
         </ul>
         <p className="mt-4">
-          This milestone marks a pivotal step in LifeFirst's Africa growth
+          This milestone marks a pivotal step in LifeFirst&apos;s Africa growth
           strategy, strengthening its commitment to sustainable infrastructure
           and investor value creation.
         </p>
@@ -120,17 +120,17 @@ const investorNews = [
           hospitals, health centers, and community programs across the country.
           This collaboration will enable LifeFirst to bring its advanced water
           and wastewater treatment solutions as well as hydration monitoring
-          systems to CHAK's vast healthcare network, supporting safe water
+          systems to CHAK&apos;s vast healthcare network, supporting safe water
           access, sustainable sanitation, and improved healthcare infrastructure
           in Kenya.
         </p>
         <p className="mt-4">
-          From an investor's perspective, this Lol represents:
+          From an investor&apos;s perspective, this Lol represents:
         </p>
         <ul className="list-disc list-inside space-y-2 mt-4">
           <li>
             <strong>Market Expansion:</strong> Direct access to a large,
-            organized healthcare network in one of Africa's fastest-growing
+            organized healthcare network in one of Africa&apos;s fastest-growing
             economies.
           </li>
           <li>
@@ -139,16 +139,16 @@ const investorNews = [
             opportunities for high-impact, revenue-generating projects.
           </li>
           <li>
-            <strong>Strategic Partnerships:</strong> Strengthens LifeFirst's
-            position in Africa as a trusted partner for government agencies,
-            NGOs, and private stakeholders seeking world-class water and
-            sanitation solutions.
+            <strong>Strategic Partnerships:</strong> Strengthens
+            LifeFirst&apos;s position in Africa as a trusted partner for
+            government agencies, NGOs, and private stakeholders seeking
+            world-class water and sanitation solutions.
           </li>
         </ul>
         <p className="mt-4">
           This milestone marks a significant step toward scalable growth in
-          Africa's healthcare and infrastructure sector while reinforcing
-          LifeFirst's commitment to sustainability, innovation, and public
+          Africa&apos;s healthcare and infrastructure sector while reinforcing
+          LifeFirst&apos;s commitment to sustainability, innovation, and public
           health improvement.
         </p>
       </>
