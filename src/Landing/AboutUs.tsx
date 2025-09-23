@@ -2,25 +2,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
-import { Target, Globe, Zap, Award, Shield, ExternalLink } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 
-const visionPoints = [
-  {
-    icon: <Target className="w-5 h-5 text-orange-500" />,
-    text: "Sustainable Solutions",
-    description: "",
-  },
-  {
-    icon: <Globe className="w-5 h-5 text-green-500" />,
-    text: "Environmental Protection",
-    description: "",
-  },
-  {
-    icon: <Zap className="w-5 h-5 text-blue-500" />,
-    text: "Innovation Driven",
-    description: "",
-  },
-];
 const logos = [
   {
     src: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1758575749/Make_in_India_kgecqj.png",
@@ -51,109 +34,100 @@ const logos = [
 const AboutSection = () => {
   return (
     <motion.section
-      className="py-8 bg-gradient-to-br from-slate-50 via-blue-50 to-green-50 md:px-0 px-4"
+      className="py-10 bg-gradient-to-br from-slate-50 via-blue-50 to-green-50 px-4 md:px-6"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 0.8 }}
     >
-      <div className="max-w-6xl mx-auto ">
-        {/* Compact Title */}
+      <div className="max-w-6xl mx-auto">
+        {/* Title */}
         <motion.div
-          className="text-center mb-6"
+          className="text-center mb-8"
           initial={{ y: 20, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-2">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-gray-900">
             About the Company
           </h2>
         </motion.div>
 
-        {/* Main Content Card */}
+        {/* Card */}
         <motion.div
           initial={{ y: 30, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <Card className="bg-white/90 backdrop-blur-sm border-blue-200 shadow-lg rounded-2xl overflow-hidden py-0 h-auto">
-            <CardContent className="p-4">
-              <div className="grid md:grid-cols-2 gap-0">
-                {/* Image Section */}
-                <div className="md:col-span-1">
+          <Card className="bg-white/90 backdrop-blur-sm border-blue-200 shadow-lg rounded-2xl overflow-hidden">
+            <CardContent className="p-4 md:p-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-0 items-center">
+                {/* Image */}
+                <div className="flex justify-center">
                   <motion.img
                     src="https://res.cloudinary.com/dsvfcckqy/image/upload/v1755028853/lifefirst_logo_jpg_fpmkho.jpg"
                     alt="Company Facility"
-                    className="w-[32em] h-full object-fit rounded-2xl p-6"
+                    className="w-52 sm:w-64 md:w-[26rem] object-cover"
                     initial={{ scale: 1 }}
                     whileHover={{ scale: 1.02 }}
                     transition={{ duration: 0.5 }}
                   />
                 </div>
 
-                {/* Content Section */}
-                <div className="py-4 relative">
-                  {/* Mission */}
-                  <div className="mb-5">
-                    <h3 className="text-2xl font-bold text-slate-800 mb-2 flex items-center">
-                      About LifeFirst
-                    </h3>
-                    <p className="text-slate-600 text-sm leading-relaxed">
-                      Founded in 2019, LifeFirst Concepts & Technologies emerged
-                      from a shared vision between Sagar Shah and Gajanan Ghule
-                      to redefine the wastewater treatment landscape. With a
-                      passion for excellence and a commitment to quality, our
-                      founders recognized a gap in the market for reliable,
-                      innovative company that prioritize client satisfaction and
-                      community enhancement.
-                    </p>
-                  </div>
+                {/* Text */}
+                <div className="relative">
+                  <h3 className="text-xl sm:text-2xl font-bold text-slate-800 mb-3 text-center md:text-left">
+                    About LifeFirst
+                  </h3>
+                  <p className="text-slate-600 text-sm sm:text-base md:leading-relaxed text-center md:text-left">
+                    Founded in 2019, LifeFirst Concepts & Technologies emerged
+                    from a shared vision between Sagar Shah and Gajanan Ghule to
+                    redefine the wastewater treatment landscape. With a passion
+                    for excellence and a commitment to quality, our founders
+                    recognized a gap in the market for reliable, innovative
+                    company that prioritize client satisfaction and community
+                    enhancement.
+                  </p>
+
+                  {/* Logos - Auto Scroll */}
                   <style>
                     {`
-          @keyframes marquee {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-          }
-          .animate-marquee {
-            animation: marquee 30s linear infinite;
-          }
-        `}
+                      @keyframes marquee {
+                        0% { transform: translateX(0); }
+                        100% { transform: translateX(-50%); }
+                      }
+                      .animate-marquee {
+                        animation: marquee 20s linear infinite;
+                        display: flex;
+                        width: max-content;
+                      }
+                    `}
                   </style>
-                  <div className="mt-8 overflow-hidden">
-                    <div className="flex animate-marquee">
-                      {/* Logos */}
-                      {logos.map((logo, index) => (
+                  <div className="mt-6 overflow-hidden">
+                    <div className="animate-marquee">
+                      {logos.concat(logos).map((logo, i) => (
                         <img
-                          key={index}
+                          key={i}
                           src={logo.src}
                           alt={logo.alt}
-                          className="h-12 inline-block mx-4"
-                        />
-                      ))}
-                      {/* Duplicated logos for a seamless loop */}
-                      {logos.map((logo, index) => (
-                        <img
-                          key={`duplicate-${index}`}
-                          src={logo.src}
-                          alt={logo.alt}
-                          className="h-12 inline-block mx-4"
+                          className="h-10 sm:h-12 mx-3"
                         />
                       ))}
                     </div>
                   </div>
 
-                  {/* Vision Points */}
-                  <div>
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-3"></div>
-                  </div>
-                  <span className="absolute bottom-4 left-1/2 transform -translate-x-1/2 hover:underline hover:text-blue-600">
-                    <a href="/about-us" className="text-xs">
+                  {/* Learn More */}
+                  <div className="text-center md:text-left mt-6">
+                    <a
+                      href="/about-us"
+                      className="text-sm sm:text-base text-blue-600 hover:underline flex items-center justify-center md:justify-start"
+                    >
                       Click to learn more
-                      <ExternalLink className="inline w-4 h-4 mb-1" />
+                      <ExternalLink className="inline w-4 h-4 ml-1" />
                     </a>
-                  </span>
+                  </div>
                 </div>
               </div>
             </CardContent>
