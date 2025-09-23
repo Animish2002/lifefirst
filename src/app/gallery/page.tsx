@@ -12,9 +12,10 @@ import {
 import { Eye, Play, Image } from "lucide-react";
 import Navigation from "@/Landing/Navigation";
 import Footer from "@/Landing/Footer";
+import { motion } from "framer-motion";
+import Link from "next/link";
 
 const Gallery = () => {
-  
   const galleryData = {
     images: [
       {
@@ -276,12 +277,29 @@ const Gallery = () => {
           </div>
           {/* CTA Section */}
           <div className="text-center mt-12">
-            <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-              Join hundreds of satisfied clients who have revolutionized their
-              water, wastewater, and sanitation management with our cutting-edge
-              solutions. Connect with us today to explore how we can transform
-              your project.
-            </p>
+            {/* Additional Info Section */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="mt-16 bg-white p-8 rounded-xl shadow-lg text-center"
+            >
+              <h3 className="text-3xl font-bold text-blue-600 mb-4">
+                Transform Your Water Management Today
+              </h3>
+              <p className="text-lg text-slate-600 max-w-4xl mx-auto leading-relaxed mb-6">
+                Join hundreds of satisfied clients who have revolutionized their
+                water, wastewater, and sanitation management with our
+                cutting-edge solutions. Connect with us today to explore how we
+                can transform your project.
+              </p>
+              <Link href="/contact">
+                <Button className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-3 px-6 rounded-md font-medium cursor-pointer transition-all duration-200 hover:from-blue-700 hover:to-cyan-700">
+                  Get Expert Guidance
+                </Button>
+              </Link>
+            </motion.div>
           </div>
         </div>
       </section>

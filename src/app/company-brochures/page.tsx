@@ -20,6 +20,7 @@ import { Button } from "@/components/ui/button";
 import Navigation from "@/Landing/Navigation";
 import Footer from "@/Landing/Footer";
 import { BorderBeam } from "@/components/ui/border-beam";
+import Link from "next/link";
 
 const DownloadBrochurespage = () => {
   const brochuresData = [
@@ -197,9 +198,11 @@ const DownloadBrochurespage = () => {
               to your specific project requirements. Contact us for detailed
               specifications, custom solutions, and technical consultations.
             </p>
-            <Button className="bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl">
-              Request Custom Documentation
-            </Button>
+            <Link href="/contact">
+              <Button className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-3 px-6 rounded-md font-medium cursor-pointer transition-all duration-200 hover:from-blue-700 hover:to-cyan-700">
+                Get Expert Guidance
+              </Button>
+            </Link>
           </motion.div>
         </div>
       </div>
