@@ -84,7 +84,7 @@ const CTASection: React.FC = () => {
     "india"
   );
 
-  const FORMSPREE_ENDPOINT = "https://formspree.io/f/mdkwokql";
+  const FORMSPREE_ENDPOINT = "https://formspree.io/f/mjkavwqr";
 
   const handleInputChange = (
     e: React.ChangeEvent<
