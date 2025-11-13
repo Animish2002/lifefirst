@@ -58,7 +58,7 @@ const navLinks: NavLink[] = [
     path: "/solutions",
     subItems: [
       {
-        name: "Prefabricated Containerised Waste water treatment plants",
+        name: "Prefabricated Containerised Wastewater Treatment Plants",
         path: "/solutions/wastewater-treatment",
       },
       {

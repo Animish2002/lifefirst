@@ -40,7 +40,7 @@
       ]
     },
     "ctaText": "Learn how to improve your effluent treatment process.",
-    "ctasubText": "Learn more about our bio-digester technology."
+    "ctasubText": "Request for a details technical data sheet or a quote for a customized effluent treatment plant."
   },
   {
     "slug": "water-treatment",
@@ -49,7 +49,7 @@
     "heroImage": "https://placehold.co/1200x600/0ea5e9/ffffff?text=Water+Treatment",
     "infoTitle": "Clean Water, Simplified",
     "infoContent": {
-      "paragraph": "A Prefabricated Water Treatment Plant is a plug-and-play solution designed for quick deployment and efficient treatment of water and wastewater. Built in modular units, these plants require minimal civil work, reduce installation time, and ensure reliable performance — making them ideal for industries, institutions, residential complexes, and remote locations.",
+      "paragraph": "A Prefabricated Water Treatment Plant is a plug-and-play solution designed for quick deployment and efficient treatment of water and wastewater. Built in modular units, these plants require minimal civil work, reduce installation time, and ensure reliable performance and making them ideal for industries, institutions, residential complexes, and remote locations.",
       "points": [
         "Plug & Play Design: Factory-built, ready-to-install units.",
         "Quick Installation: Minimal civil work and reduced setup time.",
@@ -61,7 +61,7 @@
       ]
     },
     "ctaText": "Get a consultation for a packaged water treatment system.",
-    "ctasubText": "Learn more about our bio-digester technology."
+    "ctasubText": "Request for a details technical data sheet or a quote for a customized water treatment plant."
   },
   {
     "slug": "ultrafiltration",
@@ -80,12 +80,12 @@
       ]
     },
     "ctaText": "Find out if UF is the right solution for your needs.",
-    "ctasubText": "Our experts are ready to help you find the perfect solution. Request for a details technical data sheet or a quote for customized UF System."
+    "ctasubText": "We are here to ensure you find the solution that fits best. Request for a details technical data sheet or a quote for customized UF System."
   },
   {
     "slug": "reverse-osmosis",
     "title": "Reverse Osmosis Systems (RO)",
-    "subtitle": "The ultimate solution for demineralized, pure water.",
+    "subtitle": "The Ultimate Solution for Demineralized, Pure Water.",
     "heroImage": "https://placehold.co/1200x600/ec4899/ffffff?text=RO+Systems",
     "infoTitle": "Delivering Pure Water",
     "infoContent": {
@@ -270,7 +270,7 @@
   {
     "slug": "bio-toilets",
     "title": "Bio-Toilets",
-    "subtitle": "Eco-friendly, self-contained sanitation solutions.",
+    "subtitle": "Eco-friendly, self-contained Sanitation Solutions.",
     "heroImage": "https://placehold.co/1200x600/22c55e/ffffff?text=Bio-Toilets",
     "infoTitle": "Sanitation with Sustainability",
     "infoContent": {

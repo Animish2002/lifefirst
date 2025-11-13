@@ -290,7 +290,7 @@ const Gallery = () => {
               </h3>
               <p className="text-lg text-slate-600 max-w-4xl mx-auto leading-relaxed mb-6">
                 Join hundreds of satisfied clients who have revolutionized their
-                water, wastewater, and sanitation management with our
+                Water, Wastewater, and Sanitation Management with our
                 cutting-edge solutions. Connect with us today to explore how we
                 can transform your project.
               </p>

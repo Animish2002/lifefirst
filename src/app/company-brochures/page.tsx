@@ -53,7 +53,7 @@ const DownloadBrochurespage = () => {
       link: "#",
     },
     {
-      title: "General product offerings ",
+      title: "General Product Offerings ",
       description:
         "Step-by-step installation procedures and maintenance guidelines for optimal system performance.",
       icon: <Clipboard className="w-12 h-12 text-cyan-600" />,
@@ -126,7 +126,7 @@ const DownloadBrochurespage = () => {
             viewport={{ once: true }}
             className="text-center mb-6"
           >
-            <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 p-2 mb-2">
+            <h2 className="text-2xl md:text-3xl font-semibold text-gray-900 p-2 mb-2">
               Download Our Brochures
             </h2>
             <p className="text-lg text-gray-600 mx-auto max-w-4xl">
