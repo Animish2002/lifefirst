@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { motion, Variants } from "framer-motion";
-import { ArrowRight, ExternalLink } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 
 const MeetTheTeam = () => {
   const teamMembers1 = [
