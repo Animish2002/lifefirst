@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Funnel_Sans } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 
 const funnelSans = Funnel_Sans({
   variable: "--font-geist-sans",
@@ -21,7 +22,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={funnelSans.className}>{children}</body>
+      <body className={funnelSans.className}>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
