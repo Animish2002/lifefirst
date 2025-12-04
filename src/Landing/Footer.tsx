@@ -252,7 +252,7 @@ const Footer = () => {
                 Terms of Use
               </a>
               <a
-                href="#"
+                href="/sitemap.xml"
                 className="text-slate-200 font-medium hover:text-blue-400 transition-colors"
               >
                 Sitemap
@@ -261,14 +261,14 @@ const Footer = () => {
           </div>
           <div className="text-center text-slate-100 text-sm mt-4 font-light">
             <p>
-              Website designed & developed by{" "}
+              Website Designed & Developed by{" "}
               <a
                 href="https://www.thefortune.club/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-yellow-200 font-medium hover:text-yellow-400 transition-colors group"
               >
-                TheFortuneClub
+                The Fortune Club
                 <ExternalLink className="inline w-4 h-4 m-1 mb-2 opacity-0 group-hover:opacity-100 transition-opacity" />
               </a>
             </p>
