@@ -58,108 +58,194 @@ const investorNews = [
   },
   {
     id: "item-2",
-    title: "LifeFirst Signs Joint Venture Agreement with Tech-Aeon, Zimbabwe",
+    title: "Strategic MoU Signing with UTCO, Zimbabwe",
     date: "September 22, 2025",
     description: (
       <>
         <p>
           LifeFirst Concepts & Technologies Pvt. Ltd. is proud to announce the
-          signing of a Joint Venture (JV) Agreement with Tech-Aeon Pvt. Ltd., a
-          leading Zimbabwe-based engineering and infrastructure solutions
-          company. Under this JV, LifeFirst and Tech-Aeon will jointly establish
-          a state-of-the-art manufacturing unit in Zimbabwe to produce FRP
-          Bio-Digesters and Containerized Water & Wastewater Treatment Plants.
-          This facility will cater not only to Zimbabwe but also to the broader
-          African continent, delivering Make-in-Africa solutions that are
-          cost-effective, sustainable, and customized for local needs.
+          signing of a strategic <strong>Memorandum of Understanding (MoU)</strong> with <strong>UTCO</strong>, a
+          fully owned subsidiary of the EXODUS Group, Zimbabwe.
         </p>
-        <p className="mt-4">
-          From an investor&apos;s perspective, this JV provides:
+        <p className="mt-2">
+          <strong>EXODUS</strong> is one of Zimbabwe&apos;s most respected and fast-growing
+          infrastructure companies, engaged in <strong>large-scale construction, civil
+          engineering, mining services, housing development, and road
+          infrastructure projects.</strong> With a strong track record of delivering
+          complex projects across the country, EXODUS has earned a reputation
+          for technical capability, reliability, and a deep commitment to
+          national development. UTCO, as its execution arm, brings strong
+          operational efficiencies and on-ground project management strength.
+        </p>
+        <p className="mt-2">
+          This MoU brings together the strengths of both organizations to
+          jointly deliver cutting-edge <strong>Water, Wastewater, and Sanitation
+          solutions</strong> throughout Zimbabwe and the region.
+        </p>
+        <p className="mt-2">
+          Through this collaboration, LifeFirst and UTCO will work jointly on:
         </p>
         <ul className="list-disc list-inside space-y-2 mt-4">
           <li>
-            <strong>Regional Manufacturing Footprint:</strong> Reduces shipping
-            costs, lead times, and import dependencies by enabling local
-            production for African markets.
+            <strong>
+              Rehabilitation and modernization of Water & Wastewater Treatment
+              Plants
+            </strong>
           </li>
           <li>
-            <strong>Scalable Market Access:</strong> Positions LifeFirst at the
-            heart of Africa&apos;s growing demand for water, sanitation, and
-            environmental infrastructure solutions.
+            <strong>
+              Deployment of prefabricated and containerized STPs, ETPs, and
+              Biodigesters
+            </strong>
           </li>
           <li>
-            <strong>Strategic Growth & Partnerships:</strong> Opens doors for
-            collaborations with governments, NGOs, and private sector players
-            across multiple African countries.
+            <strong>
+              Engineering services, O&M support, and technical capacity-building
+            </strong>
           </li>
           <li>
-            <strong>High-Impact Sustainability Projects:</strong> Aligns with
-            Africa&apos;s clean water, sanitation, and climate resilience goals,
-            creating opportunities for both economic and social returns.
+            <strong>
+              Supporting municipal councils, industries, institutions, and
+              communities with sustainable solutions
+            </strong>
+          </li>
+          <li>
+            <strong>
+              Creating scalable, future-ready project models that attract
+              investment and strengthen infrastructure resilience
+            </strong>
           </li>
         </ul>
         <p className="mt-4">
-          This milestone marks a pivotal step in LifeFirst&apos;s Africa growth
-          strategy, strengthening its commitment to sustainable infrastructure
-          and investor value creation.
+          This partnership reinforces LifeFirst&apos;s commitment to supporting
+          Zimbabwe&apos;s water and sanitation transformation, while opening
+          meaningful opportunities for{" "}
+          <strong>
+            joint execution, technology integration, and regional expansion.
+          </strong>
         </p>
       </>
     ),
   },
   {
     id: "item-3",
-    title: "Signing of Letter of Intent with CHAK",
+    title:
+      "Strategic MoU Signing with ZINWA – Managing 534 National Water Assets Across Zimbabwe",
     date: "August 22, 2025",
     description: (
       <>
         <p>
-          We are delighted to announce that LifeFirst Concepts & Technologies
-          Pvt. Ltd. has signed a Letter of Intent (Lol) with the Christian
-          Health Association of Kenya (CHAK)—the leading faith-based health
-          network in Kenya, representing over 600 health facilities including
-          hospitals, health centers, and community programs across the country.
-          This collaboration will enable LifeFirst to bring its advanced water
-          and wastewater treatment solutions as well as hydration monitoring
-          systems to CHAK&apos;s vast healthcare network, supporting safe water
-          access, sustainable sanitation, and improved healthcare infrastructure
-          in Kenya.
+          LifeFirst Concepts & Technologies Pvt. Ltd. is proud to announce the
+          signing of a major <strong> Memorandum of Understanding (MoU) </strong> 
+           with the <strong>Zimbabwe National Water Authority (ZINWA)</strong>,
+          the central authority responsible for national water supply, water
+          treatment, and water resources management.
         </p>
-        <p className="mt-4">
-          From an investor&apos;s perspective, this Lol represents:
+        <p className="mt-2">
+          This landmark partnership positions LifeFirst as a key technology and
+          implementation partner in strengthening Zimbabwe&apos;s water
+          infrastructure. Under this MoU, LifeFirst and ZINWA will jointly
+          collaborate on the{" "}
+          <strong>
+            assessment, rehabilitation, modernization, and long-term management
+            of all 534 national water assets,
+          </strong>{" "}
+          which include:
         </p>
         <ul className="list-disc list-inside space-y-2 mt-4">
           <li>
-            <strong>Market Expansion:</strong> Direct access to a large,
-            organized healthcare network in one of Africa&apos;s fastest-growing
-            economies.
+            <strong>Water Treatment Plants (WTPs)</strong>
           </li>
           <li>
-            <strong>Social Impact + Business Growth:</strong> Aligns LifeFirst
-            with critical health and sustainability initiatives, creating
-            opportunities for high-impact, revenue-generating projects.
+            <strong>Sewage Treatment Plants (STPs)</strong>
           </li>
           <li>
-            <strong>Strategic Partnerships:</strong> Strengthens
-            LifeFirst&apos;s position in Africa as a trusted partner for
-            government agencies, NGOs, and private stakeholders seeking
-            world-class water and sanitation solutions.
+            <strong>Raw water & clear water pumping stations</strong>
+          </li>
+          <li>
+            <strong>Transmission and distribution systems</strong>
           </li>
         </ul>
-        <p className="mt-4">
-          This milestone marks a significant step toward scalable growth in
-          Africa&apos;s healthcare and infrastructure sector while reinforcing
-          LifeFirst&apos;s commitment to sustainability, innovation, and public
-          health improvement.
+
+        <p className="mt-2">
+          <strong>Scope of Collaboration</strong>
+        </p>
+
+        <p className="mt-2">
+          Through this MoU, LifeFirst will support ZINWA in:
+        </p>
+        <ul className="list-disc list-inside space-y-2 mt-2">
+          <li>
+            <strong>
+              Conducting detailed technical assessments for all water and
+              wastewater assets
+            </strong>
+          </li>
+          <li>
+            <strong>Rehabilitating and modernizing aged infrastructure</strong>
+          </li>
+          <li>
+            <strong>
+              Introducing prefabricated & containerized treatment solutions
+              where required
+            </strong>
+          </li>
+          <li>
+            <strong>
+              Implementing automation, SCADA, and energy-efficient pumping
+              systems
+            </strong>
+          </li>
+          <li>
+            <strong>
+              Deploying decentralized STPs, ETPs, and Biodigesters
+            </strong>
+          </li>
+          <li>
+            <strong>
+              Enhancing operational efficiency and reducing downtime
+            </strong>
+          </li>
+          <li>
+            <strong>
+              Providing training, O&M support, and capacity-building for ZINWA
+              teams
+            </strong>
+          </li>
+        </ul>
+
+        <p className="mt-2">
+          <strong>A National-Scale Initiative for Water Security</strong>
+        </p>
+
+        <p className="mt-2">
+          This collaboration represents one of Zimbabwe&apos;s most
+          comprehensive water-sector modernization initiatives. It combines
+          ZINWA&apos;s national mandate with LifeFirst&apos;s advanced
+          technologies and engineering expertise to ensure:
+        </p>
+        <ul className="list-disc list-inside space-y-2 mt-2">
+          <li>
+            <strong>Improved Water Quality</strong>
+          </li>
+          <li>
+            <strong>Reliable Supply</strong>
+          </li>
+          <li>
+            <strong>Reduced non-revenue water</strong>
+          </li>
+          <li>
+            <strong>Sustainable long-term infrastructure development</strong>
+          </li>
+        </ul>
+
+        <p className="mt-2">
+          LifeFirst is honoured to be entrusted with this responsibility and
+          remains committed to contributing meaningfully to Zimbabwe&apos;s <strong>water
+          security, resilience, and sustainable growth.</strong>
         </p>
       </>
     ),
-  },
-  {
-    id: "item-4",
-    title: "Starting office & factory in Africa (Zimbabwe)",
-    date: "August 27, 2025",
-    description:
-      "Details regarding the start of our new office and factory in Zimbabwe, along with the attached company registration and tax certificates.",
   },
 ];
 

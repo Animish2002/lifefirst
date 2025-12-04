@@ -25,36 +25,41 @@ const certificationsAndClients = [
   },
   {
     title: "MJP",
-    imageUrl: "https://via.placeholder.com/150",
+    imageUrl:
+      "https://res.cloudinary.com/dsvfcckqy/image/upload/f_webp/v1764879630/mjp_xbwsxo.png",
   },
   {
     title: "PWD",
-    imageUrl: "https://via.placeholder.com/150",
+    imageUrl:
+      "https://res.cloudinary.com/dsvfcckqy/image/upload/f_webp/v1764879630/pwd_gnabq8.jpg",
   },
   {
     title: "SKOCH",
-    imageUrl: "https://via.placeholder.com/150",
+    imageUrl:
+      "https://res.cloudinary.com/dsvfcckqy/image/upload/f_webp/v1764879630/skoch_c7kbao.png",
   },
   {
     title: "India Achievers",
-    imageUrl: "https://via.placeholder.com/150",
+    imageUrl:
+      "https://res.cloudinary.com/dsvfcckqy/image/upload/f_webp/v1764879630/india_achievers_sojonp.png",
   },
   {
     title: "Swift N Lift",
-    imageUrl: "https://via.placeholder.com/150",
+    imageUrl:
+      "https://res.cloudinary.com/dsvfcckqy/image/upload/f_webp/v1764879630/swift_n_lift_lid9bg.png",
   },
   {
     title: "Collector Latur",
-    imageUrl: "https://via.placeholder.com/150",
+    imageUrl: "https://res.cloudinary.com/dsvfcckqy/image/upload/f_webp/v1764880330/collector_latur_and_nanded_sfamuc.jpg",
   },
   {
     title: "Collector Nanded",
-    imageUrl: "https://via.placeholder.com/150",
+    imageUrl: "https://res.cloudinary.com/dsvfcckqy/image/upload/f_webp/v1764880330/collector_latur_and_nanded_sfamuc.jpg",
   },
-  {
-    title: "Clients Testimonies",
-    imageUrl: "https://via.placeholder.com/150",
-  },
+  // {
+  //   title: "Clients Testimonies",
+  //   imageUrl: "https://via.placeholder.com/150",
+  // },
 ];
 
 const page = () => {
@@ -72,16 +77,18 @@ const page = () => {
             {certificationsAndClients.map((item, index) => (
               <div
                 key={index}
-                className="flex flex-col items-center justify-between bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 p-6 h-64"
+                className="flex flex-col bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 p-4"
               >
-                <div className="flex-grow flex items-center justify-center p-4">
+                {/* Reduced height from h-40 to h-32 */}
+                <div className="h-32 flex items-center justify-center mb-3">
                   <img
                     src={item.imageUrl}
                     alt={item.title}
-                    className="w-full h-full object-contain rounded-lg"
+                    className="max-w-full max-h-full object-contain"
                   />
                 </div>
-                <h3 className="text-lg font-semibold text-gray-800 mt-auto">
+                {/* Smaller text */}
+                <h3 className="text-base font-semibold text-gray-800 text-center">
                   {item.title}
                 </h3>
               </div>

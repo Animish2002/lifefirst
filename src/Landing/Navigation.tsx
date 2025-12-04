@@ -101,9 +101,7 @@ const navLinks: NavLink[] = [
         name: "Activated Carbon Filters (ACF)",
         path: "/solutions/activated-carbon-filters",
       },
-      { name: "Lamella Clarifier", 
-        path: "/solutions/lamella-clarifier" 
-      },
+      { name: "Lamella Clarifier", path: "/solutions/lamella-clarifier" },
       { name: "Tube Settler", path: "/solutions/tube-settlers" },
       {
         name: "Clarifier Mechanism",
@@ -113,8 +111,7 @@ const navLinks: NavLink[] = [
         name: "Chemical Dosing Systems",
         path: "/solutions/chemical-dosing",
       },
-      
-      
+
       { name: "Water Softeners", path: "/solutions/water-softeners" },
       {
         name: "Ultrafiltration Systems (UF)",
@@ -128,7 +125,6 @@ const navLinks: NavLink[] = [
         name: "Demineralization Systems (DM)",
         path: "/solutions/demineralization",
       },
-      
     ],
   },
   {
@@ -285,27 +281,31 @@ const Navigation: React.FC = () => {
                       <h3 className="font-semibold text-slate-800 text-md uppercase tracking-wide mb-3 pb-2 border-b border-blue-100">
                         CORE SOLUTIONS
                       </h3>
-                      <div className="space-y-2">
-                        {item.subItems.slice(0, 3).map((subItem) => (
-                          <Link href={subItem.path} key={subItem.name}>
-                            <motion.div
-                              className="text-slate-600 hover:text-blue-600 transition-colors cursor-pointer text-md leading-relaxed flex items-start"
-                              whileHover={{ x: 4, color: "#2563eb" }}
-                            >
-                              <span className="text-blue-400 mr-2 mt-0.5 text-sm">
-                                •
-                              </span>
-                              {subItem.name}
-                            </motion.div>
-                          </Link>
-                        ))}
+                      <div className="mb-4">
+                        <h3 className="font-semibold text-slate-700 text-sm uppercase tracking-wide mb-2">
+                          STP/ETP/WTP
+                        </h3>
+                        <div className="space-y-2">
+                          {item.subItems.slice(0, 3).map((subItem) => (
+                            <Link href={subItem.path} key={subItem.name}>
+                              <motion.div
+                                className="text-slate-600 hover:text-blue-600 transition-colors cursor-pointer text-md leading-relaxed flex items-start"
+                                whileHover={{ x: 4, color: "#2563eb" }}
+                              >
+                                <span className="text-blue-400 mr-2 mt-0.5 text-sm">
+                                  •
+                                </span>
+                                {subItem.name}
+                              </motion.div>
+                            </Link>
+                          ))}
+                        </div>
                       </div>
                     </div>
-
                     {/* Sustainable Technologies Column */}
                     <div>
                       <h3 className="font-semibold text-slate-800 text-md uppercase tracking-wide mb-3 pb-2 border-b border-blue-100">
-                        SUSTAINABLE TECHNOLOGIES
+                        SUSTAINABLE TECHNOLOGIES  
                       </h3>
 
                       <div className="space-y-1.5">
