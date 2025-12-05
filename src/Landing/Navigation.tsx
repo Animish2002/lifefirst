@@ -282,7 +282,7 @@ const Navigation: React.FC = () => {
                         CORE SOLUTIONS
                       </h3>
                       <div className="mb-4">
-                        <h3 className="font-semibold text-slate-700 text-sm uppercase tracking-wide mb-2">
+                        <h3 className="font-medium text-slate-700 text-md uppercase tracking-wide mb-1.5">
                           STP/ETP/WTP
                         </h3>
                         <div className="space-y-2">
