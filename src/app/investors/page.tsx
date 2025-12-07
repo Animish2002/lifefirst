@@ -10,8 +10,44 @@ import {
 } from "@/components/ui/accordion";
 
 const investorNews = [
+  
   {
     id: "item-1",
+    title: "Starting office and factory in Africa (Zimbabwe)",
+    date: "August 27, 2025",
+    description: (
+      <>
+        <strong>LifeFirst Expands to Zimbabwe</strong>
+        <p>
+          LifeFirst Concepts & Technologies (Private) Limited is proud to
+          announce the launch of its operations in Zimbabwe. Through this
+          expansion, LifeFirst aims to bring world-class sustainable water,
+          wastewater, and sanitation solutions to support the country&apos;s growing
+          infrastructure and environmental needs. Our Zimbabwe office will serve
+          as a regional hub to collaborate with government bodies, private
+          institutions, and development partners—delivering innovative, modular,
+          and eco-efficient systems designed to improve community health, water
+          security, and environmental resilience.
+        </p>
+
+        {/* Image Gallery */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+        <img
+          src="https://res.cloudinary.com/dsvfcckqy/image/upload/f_webp/v1765113551/investor_item_4_1_nijuwo.png"
+          alt="LifeFirst Zimbabwe Office"
+          className="w-full h-auto rounded-lg shadow-md object-cover"
+        />
+        <img
+          src="https://res.cloudinary.com/dsvfcckqy/image/upload/f_webp/v1765113551/investor_item_4_2_cl4gnp.png"
+          alt="LifeFirst Zimbabwe Factory"
+          className="w-full h-auto rounded-lg shadow-md object-cover"
+        />
+      </div>
+      </>
+    ),
+  },
+  {
+    id: "item-2",
     title: "Company Reports for Financial Year 2025–26",
     date: "September 23, 2025",
     description: (
@@ -57,30 +93,36 @@ const investorNews = [
     ),
   },
   {
-    id: "item-2",
+    id: "item-3",
     title: "Strategic MoU Signing with UTCO, Zimbabwe",
-    date: "September 22, 2025",
+    date: "November 14, 2025",
     description: (
       <>
         <p>
           LifeFirst Concepts & Technologies Pvt. Ltd. is proud to announce the
-          signing of a strategic <strong>Memorandum of Understanding (MoU)</strong> with <strong>UTCO</strong>, a
-          fully owned subsidiary of the EXODUS Group, Zimbabwe.
+          signing of a strategic{" "}
+          <strong>Memorandum of Understanding (MoU)</strong> with{" "}
+          <strong>UTCO</strong>, a fully owned subsidiary of the EXODUS Group,
+          Zimbabwe.
         </p>
         <p className="mt-2">
-          <strong>EXODUS</strong> is one of Zimbabwe&apos;s most respected and fast-growing
-          infrastructure companies, engaged in <strong>large-scale construction, civil
-          engineering, mining services, housing development, and road
-          infrastructure projects.</strong> With a strong track record of delivering
-          complex projects across the country, EXODUS has earned a reputation
-          for technical capability, reliability, and a deep commitment to
-          national development. UTCO, as its execution arm, brings strong
-          operational efficiencies and on-ground project management strength.
+          <strong>EXODUS</strong> is one of Zimbabwe&apos;s most respected and
+          fast-growing infrastructure companies, engaged in{" "}
+          <strong>
+            large-scale construction, civil engineering, mining services,
+            housing development, and road infrastructure projects.
+          </strong>{" "}
+          With a strong track record of delivering complex projects across the
+          country, EXODUS has earned a reputation for technical capability,
+          reliability, and a deep commitment to national development. UTCO, as
+          its execution arm, brings strong operational efficiencies and
+          on-ground project management strength.
         </p>
         <p className="mt-2">
           This MoU brings together the strengths of both organizations to
-          jointly deliver cutting-edge <strong>Water, Wastewater, and Sanitation
-          solutions</strong> throughout Zimbabwe and the region.
+          jointly deliver cutting-edge{" "}
+          <strong>Water, Wastewater, and Sanitation solutions</strong>{" "}
+          throughout Zimbabwe and the region.
         </p>
         <p className="mt-2">
           Through this collaboration, LifeFirst and UTCO will work jointly on:
@@ -124,20 +166,29 @@ const investorNews = [
             joint execution, technology integration, and regional expansion.
           </strong>
         </p>
+        {/* Image Gallery */}
+      <div className="flex flex-wrap justify-center gap-4 mt-6">
+        <img
+          src="https://res.cloudinary.com/dsvfcckqy/image/upload/f_webp/v1765114102/investor_item_2_jgwzbi.jpg"
+          alt="MOU Signed between LifeFirst and UTCO"
+          className="w-full sm:w-[calc(50%-0.5rem)] max-w-md h-auto rounded-lg shadow-md object-cover"
+        />
+      </div>
       </>
     ),
   },
   {
-    id: "item-3",
+    id: "item-4",
     title:
       "Strategic MoU Signing with ZINWA – Managing 534 National Water Assets Across Zimbabwe",
-    date: "August 22, 2025",
+    date: "November 26, 2025",
     description: (
       <>
         <p>
           LifeFirst Concepts & Technologies Pvt. Ltd. is proud to announce the
-          signing of a major <strong> Memorandum of Understanding (MoU) </strong> 
-           with the <strong>Zimbabwe National Water Authority (ZINWA)</strong>,
+          signing of a major{" "}
+          <strong> Memorandum of Understanding (MoU) </strong>
+          with the <strong>Zimbabwe National Water Authority (ZINWA)</strong>,
           the central authority responsible for national water supply, water
           treatment, and water resources management.
         </p>
@@ -241,9 +292,18 @@ const investorNews = [
 
         <p className="mt-2">
           LifeFirst is honoured to be entrusted with this responsibility and
-          remains committed to contributing meaningfully to Zimbabwe&apos;s <strong>water
-          security, resilience, and sustainable growth.</strong>
+          remains committed to contributing meaningfully to Zimbabwe&apos;s{" "}
+          <strong>water security, resilience, and sustainable growth.</strong>
         </p>
+        {/* Image Gallery */}
+      <div className="flex flex-wrap justify-center gap-4 mt-6">
+        <img
+          src="https://res.cloudinary.com/dsvfcckqy/image/upload/f_webp/v1765113771/investor_item_3_zhnzfl.jpg"
+          alt="MOU Signed between LifeFirst and Zinwa"
+          className="w-full sm:w-[calc(50%-0.5rem)] max-w-md h-auto rounded-lg shadow-md object-cover"
+        />
+        
+      </div>
       </>
     ),
   },
@@ -326,3 +386,5 @@ const Page = () => {
 };
 
 export default Page;
+
+
