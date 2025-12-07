@@ -164,7 +164,7 @@ const AboutUsPage: React.FC = () => {
       experience:
         "With over 31 years of experience, Sagar leads with a vision for innovative solutions.",
       image:
-        "https://res.cloudinary.com/dsvfcckqy/image/upload/f_webp/v1754928794/WhatsApp_Image_2025-07-28_at_15.43.58_rmkh15.jpg",
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1754928794/WhatsApp_Image_2025-07-28_at_15.43.58_rmkh15.jpg",
       description:
         "With over 31 years of diverse industry experience, Sagar Shah leads LifeFirst Concepts & Technologies Pvt. Ltd.with a clear vision for innovation, sustainability, and global impact. Throughout his career, he has been driven by a deep passion for solving complex water, wastewater, and sanitation challenges through cutting-edge technologies and practical, cost-effective solutions. Under his leadership, LifeFirst has grown from a promising start-up into a rapidly expanding company, delivering world-class water and wastewater treatment systems, bio-digesters, and hydration monitoring solutions across India, Africa, and the Middle East. His strategic foresight has paved the way for global collaborations, exports, and joint ventures, positioning the company as a trusted partner in achieving water security and environmental sustainability. Known for his hands-on approach and visionary mindset, Sagar emphasizes integrity, customer focus, and continuous innovation as the cornerstones of the organization. Beyond business growth, he strongly advocates for 'Make in India' technologies, promoting eco-friendly solutions that contribute to a greener planet while meeting international quality standards. Sagar Shah's journey reflects a rare blend of entrepreneurial drive, technical expertise, and ethical leadership, inspiring his team to push boundaries and create meaningful impact globally.",
     },
@@ -174,7 +174,7 @@ const AboutUsPage: React.FC = () => {
       experience:
         "Gajanan, our Technical Head, transforms innovation into sustainable and cost-effective solutions.",
       image:
-        "https://res.cloudinary.com/dsvfcckqy/image/upload/f_webp/v1755361767/WhatsApp_Image_2025-07-28_at_15.41.57_sooibr_w9s67f.jpg",
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1755361767/WhatsApp_Image_2025-07-28_at_15.41.57_sooibr_w9s67f.jpg",
       description:
         "As the Chief Operating Officer and Technical Head of LifeFirst Concepts & Technologies Pvt. Ltd., Gajanan Ghule brings a unique blend of technical expertise and strategic execution to the organization. With years of experience in water, wastewater, and environmental engineering, he has been instrumental in translating innovative concepts into practical, sustainable, and cost-effective solutions that address real-world challenges. Gajanan leads the company's technical design, project execution, and operational excellence initiatives, ensuring that every solution delivered meets the highest standards of quality, safety, and efficiency. His deep understanding of process engineering, plant design, automation, and energy optimization has helped LifeFirst develop cutting-edge technologies tailored for diverse sectors, including municipalities, industries, healthcare, mining, and infrastructure projects. Known for his hands-on leadership style and commitment to continuous innovation, Gajanan plays a pivotal role in driving research and development, nurturing cross-functional teams, and ensuring that every project aligns with the company's vision for sustainability and global impact. Through his technical acumen and dedication, Gajanan Ghule has become the backbone of LifeFirst's engineering excellence, helping the organization deliver future-ready, eco-friendly solutions across India and international markets.",
     },
@@ -187,7 +187,7 @@ const AboutUsPage: React.FC = () => {
       experience:
         "25+ Years Leading ICT & Engineering Solutions Across Mining, Agriculture, and Industrial Operations",
       image:
-        "https://res.cloudinary.com/dsvfcckqy/image/upload/f_webp/v1764883732/albert_mnangagwa_ru5nu9.jpg",
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1764883732/albert_mnangagwa_ru5nu9.jpg",
       description:
         "Albert Mnangagwa is a seasoned ICT engineer with over 25 years of experience spanning mining, agriculture, heavy machinery, poultry operations, and engineering services. Throughout his career, he has led and executed complex technical projects, supported large-scale industrial operations, and earned a strong reputation for delivering reliable, innovative, and results-driven solutions. His deep multi-sector expertise and hands-on leadership make him a highly respected professional in the engineering and industrial ecosystem.",
     },
@@ -196,7 +196,7 @@ const AboutUsPage: React.FC = () => {
       position: "VP Global Sales & Projects",
       experience: "12+ years of global experience in Water Treatment Industry.",
       image:
-        "https://res.cloudinary.com/dsvfcckqy/image/upload/f_webp/v1754928788/WhatsApp_Image_2025-07-28_at_12.08.47_r5kpst.jpg",
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1754928788/WhatsApp_Image_2025-07-28_at_12.08.47_r5kpst.jpg",
       description:
         "Dattaram Rane, Vice President – Global Projects at Life First Concepts & Technologies Pvt. Ltd., brings over 15 years of rich international experience in the Water and Wastewater Treatment Industry. Holding both a B.E. and Diploma in Chemical Engineering, along with DNV certification in Risk Assessment, Dattaram combines strong technical expertise with a sharp strategic outlook to lead global projects from concept to successful execution. With his in-depth knowledge of process engineering, risk management, and compliance standards, Dattaram has spearheaded numerous industrial, municipal, and commercial water treatment initiatives across India, the Middle East, and Africa. His ability to integrate cutting-edge technologies with practical, cost-effective designs ensures that Life First delivers world-class, sustainable solutions tailored to diverse client needs. Known for his meticulous planning and collaborative leadership style, Dattaram excels in coordinating multi-disciplinary teams, managing complex stakeholder requirements, and ensuring timely, quality-driven project deliveries. His expertise in risk assessment and safety compliance also strengthens the organization’s commitment to operational excellence and environmental responsibility. Through his global perspective and technical acumen, Dattaram plays a crucial role in advancing LifeFirst’s vision of sustainable growth and international expansion, making a meaningful impact on communities and industries worldwide.",
     },
@@ -208,7 +208,7 @@ const AboutUsPage: React.FC = () => {
       experience:
         "Certified CSR Practitioner with 8+ years of experience in Marketing & Sales.",
       image:
-        "https://res.cloudinary.com/dsvfcckqy/image/upload/f_webp/v1754928788/WhatsApp_Image_2025-07-28_at_11.39.26_xcakld.jpg",
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1754928788/WhatsApp_Image_2025-07-28_at_11.39.26_xcakld.jpg",
       description:
         "Supriya Sathe leads the Global Marketing & Sales initiatives at LifeFirst Concepts & Technologies Pvt. Ltd., bringing a powerful combination of technical expertise, strategic insight, and purpose-driven leadership. With a B.E. in Computer Science and an MBA in Human Resources, Supriya offers a multidisciplinary perspective that blends technology, people management, and business strategy seamlessly. As a Certified CSR Practitioner, she is deeply committed to aligning business growth with sustainability, social impact, and ethical practices. Supriya has played a pivotal role in positioning LifeFirst as a global brand, spearheading marketing campaigns, international collaborations, and customer engagement initiatives that have expanded the company’s footprint across India, the Middle East, and Africa. Her approach combines data-driven strategies with innovative storytelling, ensuring that the company’s mission of “Make in India for the World” resonates across diverse markets. Beyond driving revenue and partnerships, Supriya champions women leadership in technology and advocates for inclusive growth and responsible business practices. With her visionary outlook and collaborative leadership style, Supriya Sathe continues to shape LifeFirst’s journey toward becoming a global leader in sustainable water, wastewater, and sanitation solutions. ",
     },
@@ -218,7 +218,7 @@ const AboutUsPage: React.FC = () => {
       experience:
         "8+ years of experience in executing water and wastewater projects.",
       image:
-        "https://res.cloudinary.com/dsvfcckqy/image/upload/f_webp/v1754928789/WhatsApp_Image_2025-07-28_at_12.40.01_eg2zec.jpg",
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1754928789/WhatsApp_Image_2025-07-28_at_12.40.01_eg2zec.jpg",
       description:
         "Shashank More, Manager – Projects at LifeFirst Concepts & Technologies Pvt. Ltd., brings 10 years of specialized experience in executing water and wastewater treatment projects with precision and excellence. Holding a B.E. in Civil Engineering, Shashank has developed a strong foundation in project planning, structural design, and site execution, enabling him to deliver solutions that consistently meet client expectations. Throughout his career, Shashank has demonstrated a keen eye for quality, efficiency, and reliability, ensuring that every project adheres to the highest technical standards while maintaining strict timelines and budgets. His expertise spans municipal, industrial, and commercial installations, where he has successfully managed multidisciplinary teams and coordinated with clients, consultants, and vendors to ensure smooth project execution from start to finish. Known for his problem solving abilities and commitment to innovation, Shashank continuously adopts modern construction methodologies and digital tools to enhance project productivity and accuracy. His dedication to timely delivery and customer satisfaction has earned him recognition as a dependable leader within the LifeFirst project team. By combining technical expertise with a results driven approach, Shashank More plays a pivotal role in strengthening LifeFirst’s reputation as a trusted partner for sustainable water and wastewater infrastructure solutions.",
     },
@@ -228,7 +228,7 @@ const AboutUsPage: React.FC = () => {
       experience:
         "5+ years of experience in project management and operations.",
       image:
-        "https://res.cloudinary.com/dsvfcckqy/image/upload/f_webp/v1758548984/Vinishka_Srilakshmi_zuepn3.jpg",
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1758548984/Vinishka_Srilakshmi_zuepn3.jpg",
       description:
         "Vinishka Srilakshmi, Head of Strategic Partnerships & Business Growth at LifeFirst Concepts & Technologies Pvt. Ltd., brings over 10 years of experience in building high impact partnerships and driving sustainable business growth across diverse markets. A Commerce graduate with a sharp business acumen, Srilakshmi has been instrumental in shaping the company’s global expansion strategy through innovative market development initiatives and strategic collaborations. Her expertise lies in identifying new business opportunities, fostering long-term alliances, and creating win-win partnerships with governments, institutions, and private sector stakeholders. By combining market intelligence, relationship management, and strategic negotiation skills, Srilakshmi has successfully accelerated LifeFirst’s presence across India, the Middle East, and Africa. Known for her forward-thinking approach and results-driven mindset, she continuously explores new revenue streams, funding models, and market-entry strategies, aligning them with the company’s vision of delivering sustainable water, wastewater, and sanitation solutions globally. Srilakshmi’s leadership ensures that LifeFirst remains at the forefront of innovative collaborations and global business growth.",
     },
@@ -241,7 +241,7 @@ const AboutUsPage: React.FC = () => {
       position: "Water Infrastructure Project Specialist", // Add actual position
       experience: "Electrical Technician with 5+ Years of Experience.",
       image:
-        "https://res.cloudinary.com/dsvfcckqy/image/upload/f_webp/v1758548404/Chetan_Bawane_foggrl.jpg", // Placeholder image
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1758548404/Chetan_Bawane_foggrl.jpg", // Placeholder image
       description:
         "A highly adaptable professional with over 8 years of experience in executing and managing water supply schemes, water treatment plants (WTPs), sewage treatment plants (STPs), and lift irrigation projects. Known for strong project management and team leadership skills, ensuring timely delivery, quality execution, and operational efficiency across all phases of infrastructure projects.", // Add actual description
     },
@@ -250,7 +250,7 @@ const AboutUsPage: React.FC = () => {
       position: "Water Infrastructure Project Engineer", // Add actual position
       experience: "Electrical Technician with 5+ Years of Experience.",
       image:
-        "https://res.cloudinary.com/dsvfcckqy/image/upload/f_webp/v1758548402/Atish_Kamble_yukqpg.jpg", // Placeholder image
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1758548402/Atish_Kamble_yukqpg.jpg", // Placeholder image
       description:
         "A highly adaptable professional with over 5 years of experience in executing and managing water supply schemes, water treatment plants (WTPs), sewage treatment plants (STPs), and lift irrigation projects. Recognized for strong team leadership and project management skills, ensuring quality execution, timely delivery, and operational efficiency across all stages of infrastructure projects.", // Add actual description
     },
@@ -259,7 +259,7 @@ const AboutUsPage: React.FC = () => {
       position: "Electrical Technician",
       experience: "Electrical Technician with 5+ Years of Experience.",
       image:
-        "https://res.cloudinary.com/dsvfcckqy/image/upload/f_webp/v1758548403/Ravi_Chavan_lxfmjs.jpg", // Placeholder image
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_autov1758548403/Ravi_Chavan_lxfmjs.jpg", // Placeholder image
       description:
         "An experienced Electrical Technician with over 5 years of expertise in diagnosing, repairing, and maintaining complex electrical systems. Highly skilled in utilizing advanced diagnostic equipment and tools to ensure operational efficiency while maintaining strict quality and safety standards. Dedicated to delivering reliable solutions and minimizing downtime through precise troubleshooting and preventive maintenance practices.", // Add actual description
     },
@@ -268,7 +268,7 @@ const AboutUsPage: React.FC = () => {
       position: "Dedicated Civil Engineer", // Add actual position
       experience: "Electrical Technician with 5+ Years of Experience.",
       image:
-        "https://res.cloudinary.com/dsvfcckqy/image/upload/f_webp/v1758548403/Amol_Sanap_rrdwne.jpg", // Placeholder image
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1758548403/Amol_Sanap_rrdwne.jpg", // Placeholder image
       description:
         "A highly skilled civil engineer with over eight years of diverse experience in water and wastewater infrastructure projects. Specialized in Water Audits, GIS Mapping for water supply and sewerage networks, and the preparation of comprehensive Feasibility Reports. Proficient in Liquid Waste Management with hands-on expertise in preparing Detailed Project Reports (DPRs) for both LWMS  under the SBM 2.0 (G) initiative. Additionally, well-versed in Estimation and Tendering for sewage treatment plants and a wide range of civil infrastructure projects, ensuring technical precision and cost-effectiveness at every stage.", // Add actual description
     },
@@ -277,7 +277,7 @@ const AboutUsPage: React.FC = () => {
       position: "Specialist in Purchase & Supply Chain Management", // Add actual position
       experience: "Electrical Technician with 5+ Years of Experience.",
       image:
-        "https://res.cloudinary.com/dsvfcckqy/image/upload/f_webp/v1758548406/Swaraj_Sobale_2_onemqr.png", // Placeholder image
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1758548406/Swaraj_Sobale_2_onemqr.png", // Placeholder image
       description:
         "An accomplished professional with expertise in Purchase and Supply Chain Management, bringing strong capabilities in Data Analysis, Supplier Evaluation and Selection, Cost Management and Savings, Market Research, and End-to-End Supply Chain Optimization. Adept at driving process efficiency, strategic sourcing, and innovative solutions to ensure cost-effective and seamless operations across the procurement and supply chain lifecycle.", // Add actual description
     },
@@ -286,7 +286,7 @@ const AboutUsPage: React.FC = () => {
       position: "Project Installation & Plumbing Specialist", // Add actual position
       experience: "Electrical Technician with 5+ Years of Experience.",
       image:
-        "https://res.cloudinary.com/dsvfcckqy/image/upload/f_webp/v1758548406/Mahadev_More_n9nqra.jpg", // Placeholder image
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1758548406/Mahadev_More_n9nqra.jpg", // Placeholder image
       description:
         "A seasoned professional with over 10 years of expertise in project installation and plumbing solutions for water and wastewater projects. Skilled in overseeing end-to-end installation processes, ensuring quality, safety, and timely execution across diverse project environments.", // Add actual description
     },
@@ -295,7 +295,7 @@ const AboutUsPage: React.FC = () => {
       position: "CAD Engineer", // Add actual position
       experience: "Electrical Technician with 5+ Years of Experience.",
       image:
-        "https://res.cloudinary.com/dsvfcckqy/image/upload/f_webp/v1758548405/Shubham_Shivarkar_owxfzt.jpg", // Placeholder image
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1758548405/Shubham_Shivarkar_owxfzt.jpg", // Placeholder image
       description:
         "A highly motivated CAD Engineer with over 2 years of experience in developing innovative designs, leading projects from concept to completion, and contributing to successful team collaborations. Skilled in translating ideas into practical engineering solutions while ensuring precision, quality, and timely delivery.", // Add actual description
     },
@@ -304,7 +304,7 @@ const AboutUsPage: React.FC = () => {
       position: "Finance & Accounting Specialist", // Add actual position
       experience: "Finance & Accounting Specialist with 14+ Years of Expertise",
       image:
-        "https://res.cloudinary.com/dsvfcckqy/image/upload/f_webp/v1758548404/Sarika_Thalkari_gztjb9.jpg", // Placeholder image
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1758548404/Sarika_Thalkari_gztjb9.jpg", // Placeholder image
       description:
         "A detail-oriented and results-driven finance professional with over 14 years of hands-on experience in journal entries, account reconciliation, and financial reporting. Recognized for strong analytical skills, quick adaptability, and effective communication, with proven expertise in supporting month-end close processes, maintaining robust internal controls, and assisting with financial analysis and ad hoc reporting. Dedicated to delivering accuracy and efficiency in a structured, fast-paced environment while driving value for the finance and accounting function.", // Add actual description
     },
@@ -313,7 +313,7 @@ const AboutUsPage: React.FC = () => {
       position: "Project Proposal & Estimation Engineer", // Add actual position
       experience: "Electrical Technician with 5+ Years of Experience.",
       image:
-        "https://res.cloudinary.com/dsvfcckqy/image/upload/f_webp/v1758548403/Manisha_Walde_fifdf2.jpg", // Placeholder image
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1758548403/Manisha_Walde_fifdf2.jpg", // Placeholder image
       description:
         "A results-driven professional with over 2 years of experience in preparing project proposals and cost estimations for water supply schemes, water treatment plants (WTPs), and sewage treatment plant (STP) projects. Skilled in delivering accurate, cost-effective, and technically sound solutions to support successful project execution.", // Add actual description
     },
@@ -322,7 +322,7 @@ const AboutUsPage: React.FC = () => {
       position: "HR–Finance Associate", // Add actual position
       experience: "Electrical Technician with 5+ Years of Experience.",
       image:
-        "https://res.cloudinary.com/dsvfcckqy/image/upload/f_webp/v1758548403/Payal_Bhosale_jh77yc.jpg", // Placeholder image
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1758548403/Payal_Bhosale_jh77yc.jpg", // Placeholder image
       description:
         "An HR–Finance professional with expertise in employee onboarding, payroll processing, HR documentation, and supporting organizational HR functions, along with financial accounting tasks such as journal entries, reconciliations, and reporting. Adept in Tally and Microsoft Excel, ensuring seamless integration of HR and finance operations.", // Add actual description
     },
@@ -331,7 +331,7 @@ const AboutUsPage: React.FC = () => {
       position: "Water Infrastructure Project Specialist", // Add actual position
       experience: "Electrical Technician with 5+ Years of Experience.",
       image:
-        "https://res.cloudinary.com/dsvfcckqy/image/upload/f_webp/v1758548404/Rupesh_Ingle_xpbjs8.jpg", // Placeholder image
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1758548404/Rupesh_Ingle_xpbjs8.jpg", // Placeholder image
       description:
         "A highly adaptable professional with over 5 years of experience in managing water supply schemes, water treatment plants (WTPs), sewage treatment plants (STPs), and water supply projects. Known for strong project execution skills and effective team leadership, ensuring timely delivery, operational efficiency, and high-quality outcomes across all project phases.", // Add actual description
     },
@@ -340,7 +340,7 @@ const AboutUsPage: React.FC = () => {
       position: "Manufacturing & Operations Professional", // Add actual position
       experience: "Electrical Technician with 5+ Years of Experience.",
       image:
-        "https://res.cloudinary.com/dsvfcckqy/image/upload/f_webp/v1758548403/Ravindra_Darade_zteu2r.jpg", // Placeholder image
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1758548403/Ravindra_Darade_zteu2r.jpg", // Placeholder image
       description:
         "A highly adaptable professional with over 2 years of experience in manufacturing and operations, demonstrating the ability to deliver results under pressure while ensuring efficiency and quality standards. Skilled in leveraging advanced tools such as Computer-Aided Design (CAD) and CATIA to optimize processes and drive operational excellence.", // Add actual description
     },

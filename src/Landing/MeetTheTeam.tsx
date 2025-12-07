@@ -28,7 +28,7 @@ const MeetTheTeam = () => {
       name: "Albert Mnangagwa",
       position: "Chairman (Zimbabwe)",
       image:
-        "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_autov1764883732/albert_mnangagwa_ru5nu9.jpg",
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1764883732/albert_mnangagwa_ru5nu9.jpg",
     },
     {
       name: "Dattaram Rane",
