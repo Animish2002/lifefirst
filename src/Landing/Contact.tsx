@@ -11,6 +11,8 @@ import {
   CheckCircle,
 } from "lucide-react";
 
+import TurnstileWidget from "../app/TurnstileWidget";
+
 type FormData = {
   name: string;
   email: string;
@@ -84,7 +86,8 @@ const CTASection: React.FC = () => {
     "india"
   );
 
-  const FORMSPREE_ENDPOINT = "https://formspree.io/f/mjkavwqr";
+  const FORMSPREE_ENDPOINT =
+    "https://form-service-worker.vrushabhskulkarni.workers.dev/api/submit/2e31dd54-a052-44cb-b950-7a171bb7f5e2";
 
   const handleInputChange = (
     e: React.ChangeEvent<
@@ -454,6 +457,7 @@ const CTASection: React.FC = () => {
                   />
                 </div>
 
+                <TurnstileWidget  />
                 <button
                   type="submit"
                   disabled={loading}

@@ -33,12 +33,12 @@ const investorNews = [
         {/* Image Gallery */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
         <img
-          src="https://res.cloudinary.com/dsvfcckqy/image/upload/f_webp/v1765113551/investor_item_4_1_nijuwo.png"
+          src="https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1765113551/investor_item_4_1_nijuwo.png"
           alt="LifeFirst Zimbabwe Office"
           className="w-full h-auto rounded-lg shadow-md object-cover"
         />
         <img
-          src="https://res.cloudinary.com/dsvfcckqy/image/upload/f_webp/v1765113551/investor_item_4_2_cl4gnp.png"
+          src="https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1765113551/investor_item_4_2_cl4gnp.png"
           alt="LifeFirst Zimbabwe Factory"
           className="w-full h-auto rounded-lg shadow-md object-cover"
         />
@@ -169,7 +169,7 @@ const investorNews = [
         {/* Image Gallery */}
       <div className="flex flex-wrap justify-center gap-4 mt-6">
         <img
-          src="https://res.cloudinary.com/dsvfcckqy/image/upload/f_webp/v1765114102/investor_item_2_jgwzbi.jpg"
+          src="https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1765114102/investor_item_2_jgwzbi.jpg"
           alt="MOU Signed between LifeFirst and UTCO"
           className="w-full sm:w-[calc(50%-0.5rem)] max-w-md h-auto rounded-lg shadow-md object-cover"
         />
@@ -298,7 +298,7 @@ const investorNews = [
         {/* Image Gallery */}
       <div className="flex flex-wrap justify-center gap-4 mt-6">
         <img
-          src="https://res.cloudinary.com/dsvfcckqy/image/upload/f_webp/v1765113771/investor_item_3_zhnzfl.jpg"
+          src="https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1765113771/investor_item_3_zhnzfl.jpg"
           alt="MOU Signed between LifeFirst and Zinwa"
           className="w-full sm:w-[calc(50%-0.5rem)] max-w-md h-auto rounded-lg shadow-md object-cover"
         />

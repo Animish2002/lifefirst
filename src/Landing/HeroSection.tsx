@@ -17,7 +17,7 @@ const carouselData = [
   {
     id: 1,
     image:
-      "https://res.cloudinary.com/dsvfcckqy/image/upload/v1758647110/herosection_l1njsy.jpg",
+      "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1758647110/herosection_l1njsy.jpg",
     title: "Advanced Water Treatment",
     subtitle: "Revolutionary filtration technology",
     description: "Cutting-edge solutions for industrial water processing",

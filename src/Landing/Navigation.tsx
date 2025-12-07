@@ -565,12 +565,12 @@ const Navigation: React.FC = () => {
           >
             <Link href="/" className="flex items-center space-x-2">
               <img
-                src="https://res.cloudinary.com/dsvfcckqy/image/upload/v1755163758/Logo_Mark_cxtx7h.png"
+                src="https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1755163758/Logo_Mark_cxtx7h.png"
                 alt="LifeFirst logo droplet"
                 className="w-auto h-13 md:h-12"
               />
               <img
-                src="https://res.cloudinary.com/dsvfcckqy/image/upload/v1755163758/Textmark_x3tms3.png"
+                src="https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1755163758/Textmark_x3tms3.png"
                 alt="logo mark"
                 className="w-auto h-9 md:h-9"
               />

@@ -15,7 +15,7 @@ const SolutionsSection = () => {
       description:
         "Comprehensive water purification systems for clean and safe drinking water",
       imageurl:
-        "https://res.cloudinary.com/dsvfcckqy/image/upload/v1754928781/ChatGPT_Image_Aug_2_2025_at_05_22_38_PM_o2nny8.png",
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1754928781/ChatGPT_Image_Aug_2_2025_at_05_22_38_PM_o2nny8.png",
       features: ["High Quality", "Reliable", "Cost Effective"],
       url: "/solutions/water-treatment",
     },
@@ -25,7 +25,7 @@ const SolutionsSection = () => {
       description:
         "Advanced wastewater treatment solutions for industrial and municipal applications",
       imageurl:
-        "https://res.cloudinary.com/dsvfcckqy/image/upload/v1755164884/wastewater_treatment_plant_yvyzlo.jpg",
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1755164884/wastewater_treatment_plant_yvyzlo.jpg",
       features: ["Eco-friendly", "Energy Efficient", "Low Maintenance"],
       url: "/solutions/wastewater-treatment",
     },
@@ -35,7 +35,7 @@ const SolutionsSection = () => {
       description:
         "Sustainable sanitation systems for environmental protection",
       imageurl:
-        "https://res.cloudinary.com/dsvfcckqy/image/upload/v1754928781/4b2fbe85-ab2c-4bd3-8370-8a9ef6dea608_rptfls.jpg",
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1754928781/4b2fbe85-ab2c-4bd3-8370-8a9ef6dea608_rptfls.jpg",
       features: ["Sustainable", "Eco-friendly", "Zero Waste"],
       url: "/solutions/bio-digesters",
     },
@@ -45,7 +45,7 @@ const SolutionsSection = () => {
       description:
         "Smart monitoring systems for real-time water quality control",
       imageurl:
-        "https://res.cloudinary.com/dsvfcckqy/image/upload/v1754928782/ChatGPT_Image_Aug_2_2025_at_05_05_56_PM_mxrymk.png",
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1754928782/ChatGPT_Image_Aug_2_2025_at_05_05_56_PM_mxrymk.png",
       features: ["Smart Technology", "Real-time", "Automated"],
       url: "/solutions/inflow-system",
     },

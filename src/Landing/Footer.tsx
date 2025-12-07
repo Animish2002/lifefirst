@@ -83,7 +83,7 @@ const Footer = () => {
             <div className="flex items-center justify-center mb-6">
               {/* Droplet Logo */}
               <img
-                src="https://res.cloudinary.com/dsvfcckqy/image/upload/v1755028854/lifefirst_logo_png_nb1cje.png"
+                src="https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1755028854/lifefirst_logo_png_nb1cje.png"
                 alt="Droplet Logo"
                 className="w-48 "
               />

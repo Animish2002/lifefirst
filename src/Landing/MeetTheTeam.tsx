@@ -9,7 +9,7 @@ const MeetTheTeam = () => {
       name: "Sagar Shah",
       position: "Chief Executive Officer",
       image:
-        "https://res.cloudinary.com/dsvfcckqy/image/upload/f_webp/v1754928794/WhatsApp_Image_2025-07-28_at_15.43.58_rmkh15.jpg",
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1754928794/WhatsApp_Image_2025-07-28_at_15.43.58_rmkh15.jpg",
       description:
         "A visionary leader with over 31 years of experience in the water technology industry.",
     },
@@ -17,7 +17,7 @@ const MeetTheTeam = () => {
       name: "Gajanan Ghule",
       position: "Chief Operations Officer",
       image:
-        "https://res.cloudinary.com/dsvfcckqy/image/upload/f_webp/v1755361767/WhatsApp_Image_2025-07-28_at_15.41.57_sooibr_w9s67f.jpg",
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1755361767/WhatsApp_Image_2025-07-28_at_15.41.57_sooibr_w9s67f.jpg",
       description:
         "Our technical expert, he transforms innovative ideas into sustainable, practical solutions.",
     },
@@ -28,31 +28,31 @@ const MeetTheTeam = () => {
       name: "Albert Mnangagwa",
       position: "Chairman (Zimbabwe)",
       image:
-        "https://res.cloudinary.com/dsvfcckqy/image/upload/f_webp/v1764883732/albert_mnangagwa_ru5nu9.jpg",
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_autov1764883732/albert_mnangagwa_ru5nu9.jpg",
     },
     {
       name: "Dattaram Rane",
       position: "VP Global Sales & Projects",
       image:
-        "https://res.cloudinary.com/dsvfcckqy/image/upload/f_webp/v1754928788/WhatsApp_Image_2025-07-28_at_12.08.47_r5kpst.jpg",
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1754928788/WhatsApp_Image_2025-07-28_at_12.08.47_r5kpst.jpg",
     },
     {
       name: "Supriya Sathe",
       position: "Global Business Head Marketing & Sales",
       image:
-        "https://res.cloudinary.com/dsvfcckqy/image/upload/f_webp/v1754928788/WhatsApp_Image_2025-07-28_at_11.39.26_xcakld.jpg",
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1754928788/WhatsApp_Image_2025-07-28_at_11.39.26_xcakld.jpg",
     },
     {
       name: "Shashank More",
       position: "Manager Projects",
       image:
-        "https://res.cloudinary.com/dsvfcckqy/image/upload/f_webp/v1754928789/WhatsApp_Image_2025-07-28_at_12.40.01_eg2zec.jpg",
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1754928789/WhatsApp_Image_2025-07-28_at_12.40.01_eg2zec.jpg",
     },
     {
       name: "Vinishka Srilakshmi",
       position: "Head, Strategic Partnerships",
       image:
-        "https://res.cloudinary.com/dsvfcckqy/image/upload/f_webp/v1758548984/Vinishka_Srilakshmi_zuepn3.jpg",
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1758548984/Vinishka_Srilakshmi_zuepn3.jpg",
     },
   ];
 
