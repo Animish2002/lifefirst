@@ -27,7 +27,7 @@ const page = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative text-white py-20 px-4 overflow-hidden mt-34 md:mt-32 h-[50vh]">
+      <section className="relative text-white py-20 px-4 overflow-hidden mt-34 md:mt-24 h-[35vh]">
         {/* Background Image */}
 
         <div className="absolute inset-0 z-0">
@@ -44,18 +44,18 @@ const page = () => {
         </div>
 
         <div className="relative z-10 max-w-6xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight mt-14">
             Our Solutions
           </h1>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          {/* <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="#contact"
               className="bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-300 shadow-lg"
             >
               Get Quote
             </Link>
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -112,8 +112,8 @@ const page = () => {
           </div>
         </div>
       </section>
-
-      <CTASection />
+{/* 
+      <CTASection /> */}
       <Footer />
     </div>
   );

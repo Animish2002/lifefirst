@@ -73,10 +73,10 @@ const page = () => {
         </div>
 
         <div className="relative z-10 max-w-6xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight mt-14">
             Our Solutions
           </h1>
-
+{/* 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="#contact"
@@ -84,7 +84,7 @@ const page = () => {
             >
               Get Quote
             </Link>
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -141,8 +141,8 @@ const page = () => {
           </div>
         </div>
       </section>
-
-      <CTASection />
+{/* 
+      <CTASection /> */}
       <Footer />
     </div>
   );

@@ -25,16 +25,16 @@ const MeetTheTeam = () => {
 
   const teamMembers2 = [
     {
-      name: "Dattaram Rane",
-      position: "VP Global Sales & Projects",
-      image:
-        "https://res.cloudinary.com/dsvfcckqy/image/upload/f_webp/v1754928788/WhatsApp_Image_2025-07-28_at_12.08.47_r5kpst.jpg",
-    },
-    {
       name: "Albert Mnangagwa",
       position: "Chairman (Zimbabwe)",
       image:
         "https://res.cloudinary.com/dsvfcckqy/image/upload/f_webp/v1764883732/albert_mnangagwa_ru5nu9.jpg",
+    },
+    {
+      name: "Dattaram Rane",
+      position: "VP Global Sales & Projects",
+      image:
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/f_webp/v1754928788/WhatsApp_Image_2025-07-28_at_12.08.47_r5kpst.jpg",
     },
     {
       name: "Supriya Sathe",
@@ -79,7 +79,7 @@ const MeetTheTeam = () => {
             Leadership Team
           </h2>
           <p className="mt-3 text-gray-600 text-lg mx-auto leading-relaxed">
-            Experienced leaders committed to innovation and sustainability.
+            Our experienced leaders are at the forefront of innovation, dedicated to shaping a sustainable future.
           </p>
         </motion.div>
 

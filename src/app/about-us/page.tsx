@@ -182,15 +182,6 @@ const AboutUsPage: React.FC = () => {
 
   const teamMembers2: TeamMember[] = [
     {
-      name: "Dattaram Rane",
-      position: "VP Global Sales & Projects",
-      experience: "12+ years of global experience in Water Treatment Industry.",
-      image:
-        "https://res.cloudinary.com/dsvfcckqy/image/upload/f_webp/v1754928788/WhatsApp_Image_2025-07-28_at_12.08.47_r5kpst.jpg",
-      description:
-        "Dattaram Rane, Vice President – Global Projects at Life First Concepts & Technologies Pvt. Ltd., brings over 15 years of rich international experience in the Water and Wastewater Treatment Industry. Holding both a B.E. and Diploma in Chemical Engineering, along with DNV certification in Risk Assessment, Dattaram combines strong technical expertise with a sharp strategic outlook to lead global projects from concept to successful execution. With his in-depth knowledge of process engineering, risk management, and compliance standards, Dattaram has spearheaded numerous industrial, municipal, and commercial water treatment initiatives across India, the Middle East, and Africa. His ability to integrate cutting-edge technologies with practical, cost-effective designs ensures that Life First delivers world-class, sustainable solutions tailored to diverse client needs. Known for his meticulous planning and collaborative leadership style, Dattaram excels in coordinating multi-disciplinary teams, managing complex stakeholder requirements, and ensuring timely, quality-driven project deliveries. His expertise in risk assessment and safety compliance also strengthens the organization’s commitment to operational excellence and environmental responsibility. Through his global perspective and technical acumen, Dattaram plays a crucial role in advancing LifeFirst’s vision of sustainable growth and international expansion, making a meaningful impact on communities and industries worldwide.",
-    },
-    {
       name: "Albert Mnangagwa",
       position: "Chairman (Zimbabwe)",
       experience:
@@ -200,6 +191,16 @@ const AboutUsPage: React.FC = () => {
       description:
         "Albert Mnangagwa is a seasoned ICT engineer with over 25 years of experience spanning mining, agriculture, heavy machinery, poultry operations, and engineering services. Throughout his career, he has led and executed complex technical projects, supported large-scale industrial operations, and earned a strong reputation for delivering reliable, innovative, and results-driven solutions. His deep multi-sector expertise and hands-on leadership make him a highly respected professional in the engineering and industrial ecosystem.",
     },
+    {
+      name: "Dattaram Rane",
+      position: "VP Global Sales & Projects",
+      experience: "12+ years of global experience in Water Treatment Industry.",
+      image:
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/f_webp/v1754928788/WhatsApp_Image_2025-07-28_at_12.08.47_r5kpst.jpg",
+      description:
+        "Dattaram Rane, Vice President – Global Projects at Life First Concepts & Technologies Pvt. Ltd., brings over 15 years of rich international experience in the Water and Wastewater Treatment Industry. Holding both a B.E. and Diploma in Chemical Engineering, along with DNV certification in Risk Assessment, Dattaram combines strong technical expertise with a sharp strategic outlook to lead global projects from concept to successful execution. With his in-depth knowledge of process engineering, risk management, and compliance standards, Dattaram has spearheaded numerous industrial, municipal, and commercial water treatment initiatives across India, the Middle East, and Africa. His ability to integrate cutting-edge technologies with practical, cost-effective designs ensures that Life First delivers world-class, sustainable solutions tailored to diverse client needs. Known for his meticulous planning and collaborative leadership style, Dattaram excels in coordinating multi-disciplinary teams, managing complex stakeholder requirements, and ensuring timely, quality-driven project deliveries. His expertise in risk assessment and safety compliance also strengthens the organization’s commitment to operational excellence and environmental responsibility. Through his global perspective and technical acumen, Dattaram plays a crucial role in advancing LifeFirst’s vision of sustainable growth and international expansion, making a meaningful impact on communities and industries worldwide.",
+    },
+    
     
     {
       name: "Supriya Sathe",
