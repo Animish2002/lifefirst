@@ -1,5 +1,6 @@
 "use client";
 
+import Turnstile from "@/app/TurnstileWidget";
 import { useState, useEffect } from "react";
 
 interface ContactFormData {
@@ -232,6 +233,8 @@ const ContactFormPopup = ({
                   placeholder="Tell us about your requirements..."
                 />
               </div>
+              
+              <Turnstile/>
 
               <div className="flex gap-3 pt-2">
                 <button
