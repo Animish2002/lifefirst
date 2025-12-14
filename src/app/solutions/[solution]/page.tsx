@@ -3,6 +3,8 @@ import Navigation from "@/Landing/Navigation";
 import Footer from "@/Landing/Footer";
 import solutionsData from "@/data/data.json";
 import SolutionPageClient from "@/Landing/SolutionPageClient";
+import Image from "next/image";
+import { Check } from "lucide-react";
 
 interface InfoContentObject {
   paragraph?: string;
@@ -16,6 +18,7 @@ interface Solution {
   heroImage: string;
   infoTitle: string;
   infoContent: string | InfoContentObject;
+  infoImage?: string; // Optional image for the info section
   ctaText: string;
   ctasubText: string;
 }
@@ -39,8 +42,11 @@ const SolutionPage = ({ params }: PageProps) => {
     notFound();
   }
 
+  // Check if solution has an info image
+  const hasInfoImage = Boolean(solution.infoImage);
+
   return (
-    <div className="flex flex-col min-h-screen bg-gray-100 font-sans antialiased">
+    <div className="flex flex-col min-h-screen bg-gray-50 font-sans antialiased">
       <Navigation />
       <main className="flex-grow">
         {/* Hero Section */}
@@ -60,64 +66,103 @@ const SolutionPage = ({ params }: PageProps) => {
           </div>
         </div>
 
-        {/* Content Section */}
-        <div className="container mx-auto px-6 py-16 lg:px-8">
-          <div className="grid lg:grid-cols-1 gap-4 items-start">
-            {/* Info Section */}
-            <div className="group relative overflow-hidden rounded-3xl shadow-2xl border border-gray-200/50 hover:shadow-3xl transition-all duration-500 transform hover:-translate-y-1">
-              <div className="relative p-10">
-                {/* Icon and Title */}
-                <div className="flex items-center mb-6">
-                  <div>
-                    <h2 className="text-2xl lg:text-3xl font-semibold bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
-                      {solution.infoTitle}
-                    </h2>
-                  </div>
+        {/* ====== REDESIGNED INFO / CONTENT SECTION (Version B - Check Icons) ====== */}
+        <section className="py-16 md:py-24 bg-white">
+          <div className="container mx-auto px-6 lg:px-8 max-w-7xl">
+            <div
+              className={`grid gap-12 lg:gap-16 items-start ${
+                hasInfoImage
+                  ? "lg:grid-cols-[1fr_0.67fr]"
+                  : "lg:grid-cols-1 max-w-4xl mx-auto"
+              }`}
+            >
+              {/* Left Column - Content */}
+              <div className="space-y-8">
+                {/* Section Title */}
+                <div className="space-y-1">
+                  <span className="text-sm font-medium text-blue-600 uppercase tracking-wider">
+                    Solution Overview
+                  </span>
+                  <h2 className="text-2xl md:text-3xl lg:text-[2rem] font-semibold text-gray-900 leading-tight tracking-tight">
+                    {solution.infoTitle}
+                  </h2>
                 </div>
 
-                {/* Content */}
+                {/* Content Body */}
                 <div className="space-y-6">
                   {typeof solution.infoContent === "string" ? (
-                    <p className="text-gray-600 leading-relaxed text-md font-medium">
+                    <p className="text-gray-600 leading-[1.8] text-base md:text-[17px]">
                       {solution.infoContent}
                     </p>
                   ) : (
                     <>
                       {solution.infoContent.paragraph && (
-                        <p className="text-gray-600 leading-relaxed text-md font-medium">
+                        <p className="text-gray-600 leading-[1.8] text-base md:text-[17px]">
                           {solution.infoContent.paragraph}
                         </p>
                       )}
-                      {solution.infoContent.points && (
-                        <ul className="list-disc list-outside space-y-2 text-gray-600 text-md font-medium">
-                          {solution.infoContent.points.map((point, idx) => (
-                            <li key={idx}>{point}</li>
-                          ))}
-                        </ul>
-                      )}
+                      {solution.infoContent.points &&
+                        solution.infoContent.points.length > 0 && (
+                          <ul className="space-y-4 pt-2">
+                            {solution.infoContent.points.map((point, idx) => (
+                              <li key={idx} className="flex items-start gap-3">
+                                <span className="flex-shrink-0 mt-0.5 w-5 h-5 rounded-full bg-blue-50 flex items-center justify-center">
+                                  <Check
+                                    className="w-3 h-3 text-blue-600"
+                                    strokeWidth={2.5}
+                                  />
+                                </span>
+                                <span className="text-gray-600 leading-relaxed text-base">
+                                  {point}
+                                </span>
+                              </li>
+                            ))}
+                          </ul>
+                        )}
                     </>
                   )}
+                </div>
 
-                  {/* Enhanced CTA */}
-                  <div className="relative overflow-hidden">
-                    <div className="relative bg-gradient-to-r from-blue-500/10 via-blue-500/5 to-indigo-500/10 rounded-2xl p-6 border border-blue-200/50 backdrop-blur-sm">
-                      <div className="flex items-start space-x-4">
-                        <div>
-                          <p className="font-semibold text-blue-800 text-lg leading-relaxed">
-                            {solution.ctaText}
-                          </p>
-                          <p className="text-blue-600/80 text-sm mt-2 font-sm">
-                            {solution.ctasubText}
-                          </p>
-                        </div>
-                      </div>
+                {/* CTA Section - Subtle Blue Accent */}
+                <div className="pt-4">
+                  <div className="bg-slate-50 border-l-4 border-blue-500 rounded-r-lg p-6 md:p-8">
+                    <div className="space-y-2">
+                      <p className="text-gray-800 font-medium text-base md:text-lg leading-relaxed">
+                        {solution.ctaText}
+                      </p>
+                      {solution.ctasubText && (
+                        <p className="text-gray-500 text-sm md:text-base">
+                          {solution.ctasubText}
+                        </p>
+                      )}
                     </div>
                   </div>
                 </div>
               </div>
+
+              {/* Right Column - Image (Conditional) */}
+              {hasInfoImage && (
+                <div className="lg:sticky lg:top-32">
+                  <div className="relative w-full">
+                    {/* Image Container - Universal aspect ratio handling */}
+                    <div className="relative w-full rounded-2xl overflow-hidden border border-gray-100 shadow-sm">
+                      {/* Wrapper that constrains height but allows natural width */}
+                      <div className="relative flex items-center justify-center p-4 md:p-6 min-h-[380px] max-h-[520px]">
+                        <img
+                          src={solution.infoImage!}
+                          alt={solution.infoTitle}
+                      
+                          className="max-w-full w-auto h-auto object-contain rounded-lg"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
-        </div>
+        </section>
+        {/* ====== END REDESIGNED SECTION ====== */}
       </main>
       <Footer />
 
