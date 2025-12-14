@@ -67,7 +67,7 @@ const SolutionPage = ({ params }: PageProps) => {
         </div>
 
         {/* ====== REDESIGNED INFO / CONTENT SECTION (Version B - Check Icons) ====== */}
-        <section className="py-16 md:py-24 bg-white">
+        <section className="py-14 bg-white">
           <div className="container mx-auto px-6 lg:px-8 max-w-7xl">
             <div
               className={`grid gap-12 lg:gap-16 items-start ${
