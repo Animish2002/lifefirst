@@ -24,15 +24,15 @@ interface Solution {
 }
 
 interface PageProps {
-  params: {
+  params: Promise<{
     solution: string;
-  };
-  searchParams?: { [key: string]: string | string[] | undefined };
+  }>;
+  searchParams?: Promise<{ [key: string]: string | string[] | undefined }>;
 }
 
 // Main Solution Page Component (Server Component)
-const SolutionPage = ({ params }: PageProps) => {
-  const { solution: solutionSlug } = params;
+const SolutionPage = async ({ params }: PageProps) => {
+  const { solution: solutionSlug } = await params;
 
   // Find the solution data based on the slug
   const solution = solutionsData.find((s: Solution) => s.slug === solutionSlug);
@@ -151,7 +151,6 @@ const SolutionPage = ({ params }: PageProps) => {
                         <img
                           src={solution.infoImage!}
                           alt={solution.infoTitle}
-                      
                           className="max-w-full w-auto h-auto object-contain rounded-lg"
                         />
                       </div>
@@ -183,7 +182,7 @@ export async function generateStaticParams() {
 
 // Generate metadata for each page
 export async function generateMetadata({ params }: PageProps) {
-  const { solution: solutionSlug } = params;
+  const { solution: solutionSlug } = await params;
   const solution = solutionsData.find((s: Solution) => s.slug === solutionSlug);
 
   if (!solution) {
