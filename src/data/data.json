@@ -5,7 +5,7 @@
     "subtitle": "Decentralized Wastewater Treatment Solutions",
     "heroImage": "https://placehold.co/1200x600/22c55e/ffffff?text=Wastewater+Treatment",
     "infoTitle": "Eco-Friendly Wastewater Solutions",
-    "infoImage": "https://res.cloudinary.com/dsvfcckqy/image/upload/v1754928782/IMG-20200706-WA0008_i0drpg.jpg",
+    "infoImage": "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1765872831/waste-water_pgmu3c.jpg",
     "infoContent": {
       "paragraph": "",
       "points": [
@@ -49,6 +49,7 @@
     "subtitle": "Compact, all-in-one solutions for potable water.",
     "heroImage": "https://placehold.co/1200x600/0ea5e9/ffffff?text=Water+Treatment",
     "infoTitle": "Clean Water, Simplified",
+    "infoImage" : "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1765872934/water-treatment_xpwjna.jpg",
     "infoContent": {
       "paragraph": "A Prefabricated Water Treatment Plant is a plug-and-play solution designed for quick deployment and efficient treatment of water and wastewater. Built in modular units, these plants require minimal civil work, reduce installation time, and ensure reliable performance and making them ideal for industries, institutions, residential complexes, and remote locations.",
       "points": [
@@ -70,6 +71,7 @@
     "subtitle": "High-performance membrane filtration for suspended solids.",
     "heroImage": "https://placehold.co/1200x600/6366f1/ffffff?text=UF+Systems",
     "infoTitle": "Advanced Filtration Technology",
+    "infoImage":"https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1765872027/uf_laabti.png",
     "infoContent": {
       "paragraph": "Ultrafiltration Plants use advanced membrane technology to remove suspended solids, bacteria, viruses, and high molecular weight contaminants from water. Operating under low pressure, UF systems offer superior filtration compared to conventional methods while retaining essential minerals. They are ideal for tertiary treatment, pre-treatment to RO systems, and in industrial, commercial, and municipal applications. Known for their high recovery rate, easy operation, and consistent output quality, UF plants are a reliable solution for producing clean and safe water.",
       "points": [
@@ -87,8 +89,9 @@
     "slug": "reverse-osmosis",
     "title": "Reverse Osmosis Systems (RO)",
     "subtitle": "The Ultimate Solution for Demineralized, Pure Water.",
-    "heroImage": "https://placehold.co/1200x600/ec4899/ffffff?text=RO+Systems",
+    "heroImage": "https://placehold.co/1200x600/0ea5e9/ffffff?text=Water+Treatment",
     "infoTitle": "Delivering Pure Water",
+    "infoImage":"https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1765872027/ro_iwfzkn.jpg",
     "infoContent": {
       "paragraph": "Reverse Osmosis (RO) plants use a semi-permeable membrane and high pressure to remove dissolved salts, minerals, heavy metals, and other impurities from water, making it safe for various applications after being used in conjunction with pre-treatment units like sand and carbon filters.",
       "points": [
@@ -107,6 +110,7 @@
     "subtitle": "Reliable and effective removal of suspended solids.",
     "heroImage": "https://placehold.co/1200x600/4ade80/ffffff?text=PSF",
     "infoTitle": "Robust Pre-Filtration",
+    "infoImage":"https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1765872027/psf_pyshj0.jpg",
     "infoContent": {
       "paragraph": "A Pressure Sand Filter is a widely used filtration system designed to remove suspended solids, turbidity, and particulate matter from water. It operates under pressure, forcing water through multiple layers of quartz sand and gravel media to trap impurities. PSFs are commonly used in water treatment plants, industrial processes, and commercial applications as a pre-treatment step before disinfection or further purification. Known for their simplicity, efficiency, and low maintenance, these filters help ensure consistent water quality and protect downstream equipment.",
       "points": []
@@ -120,6 +124,7 @@
     "subtitle": "Remove chlorine, odor, and organic compounds.",
     "heroImage": "https://placehold.co/1200x600/facc15/ffffff?text=ACF",
     "infoTitle": "Taste and Odor Improvement",
+    "infoImage": "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1765872026/acf_fprguc.jpg",
     "infoContent": {
       "paragraph": "Activated Carbon Filters are essential in water and wastewater treatment for removing organic compounds, chlorine, odor, color, and residual chemicals. These filters use high-grade activated carbon media with a large surface area that adsorbs impurities as water passes through. Commonly used after Pressure Sand Filters, ACFs improve taste, reduce harmful contaminants, and prepare water for safe discharge or reuse. They are ideal for residential, commercial, and industrial applications requiring high water quality standards.",
       "points": []
@@ -133,6 +138,7 @@
     "subtitle": "High-rate clarifiers for efficient solids separation.",
     "heroImage": "https://placehold.co/1200x600/a3e635/ffffff?text=Lamella+Clarifier",
     "infoTitle": "Compact and Powerful Clarification",
+    "infoImage": "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1765872027/lamella_zbakcd.jpg",
     "infoContent": {
       "paragraph": " A Lamella Clarifier, also known as a Inclined Plate Settler, is a compact sedimentation device used to efficiently remove suspended solids from wastewater. It uses a series of inclined plates to increase the settling surface area, allowing particles to settle faster and in a smaller footprint compared to traditional clarifiers. Lamella Clarifiers are ideal for space constrained sites and are commonly used in STPs, ETPs, and pre-treatment systems for high-efficiency solids removal with low maintenance.",
       "points": [
@@ -154,6 +160,7 @@
     "subtitle": "Advanced systems for sediment removal and clarification.",
     "heroImage": "https://placehold.co/1200x600/2dd4bf/ffffff?text=Clarifier+Mechanism",
     "infoTitle": "Reliable Clarification for Clean Water",
+    "infoImage":"https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1765872026/clarifier_lp8gua.jpg",
     "infoContent": {
       "paragraph": " A Clarifier Mechanism is a key component in wastewater treatment systems, designed to separate solid particles (sludge) from treated water through sedimentation. Installed within primary or secondary clarifiers, this mechanism typically includes a rotating scraper arm that gently moves settled sludge toward a central hopper for removal. Clarifiers help produce clear, low-turbidity water and improve the efficiency of downstream treatment processes. They are essential for maintaining consistent water quality in both Sewage and Effluent Treatment Plants",
       "points": [
@@ -173,6 +180,7 @@
     "subtitle": "Increase the settling capacity of clarification tanks.",
     "heroImage": "https://placehold.co/1200x600/a855f7/ffffff?text=Tube+Settlers",
     "infoTitle": "Enhancing Settling Efficiency",
+    "infoImage":"https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1765872026/tube-settler_oyaady.jpg",
     "infoContent": {
       "paragraph": " Tube Settlers are compact, high-efficiency sedimentation systems that use inclined tubular modules to increase the effective settling area for suspended solids. By allowing particles to settle quickly in a smaller footprint, they enhance clarification efficiency by up to 6–8 times compared to conventional basins. Prefabricated and easy to install, tube settlers are widely used in water treatment plants, sewage treatment plants, and industrial effluent systems to improve solid liquid separation, reduce turbidity, and optimize downstream treatment processes.",
       "points": [
@@ -193,6 +201,7 @@
     "subtitle": "Eliminate hard water issues for improved performance.",
     "heroImage": "https://placehold.co/1200x600/f472b6/ffffff?text=Water+Softeners",
     "infoTitle": "Solving Hard Water Problems",
+    "infoImage": "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1765872027/water-softener.jpg_x2us2t.png",
     "infoContent": {
       "paragraph": "Water Softeners are specialized treatment units designed to remove hardness-causing minerals like calcium and magnesium from water through an ion exchange process. These units help prevent scaling in pipelines, boilers, and appliances, improving their efficiency and lifespan. Commonly used in residential, commercial, and industrial setups, water softeners ensure smooth operation of equipment and enhance the effectiveness of soaps and detergents. They are an essential part of any water management system in areas with hard water supply.",
       "points": [
@@ -212,6 +221,7 @@
     "subtitle": "Produce high-purity water for critical applications.",
     "heroImage": "https://placehold.co/1200x600/7c3aed/ffffff?text=DM+Systems",
     "infoTitle": "Achieve Ultimate Water Purity",
+    "infoImage" : "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1765872027/demineralization_minisi.png",
     "infoContent": {
       "paragraph": "Demineralization Plants are specialized water treatment systems that remove dissolved salts and minerals through ion exchange technology, producing high purity water. Typically used in industries like pharmaceuticals, power plants, electronics, and laboratories, DM plants eliminate ions such as calcium, magnesium, sodium, chlorides, and sulfates. The process involves cation and anion exchange resins, and often includes a mixed bed for polishing. DM water is essential for applications where mineral-free, non-conductive water is required.",
       "points": [
@@ -233,6 +243,7 @@
     "subtitle": "Precise and automated chemical delivery for water treatment.",
     "heroImage": "https://placehold.co/1200x600/d946ef/ffffff?text=Chemical+Dosing",
     "infoTitle": "Automated and Accurate Dosing",
+    "infoImage":"https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1765872026/chemical-dosing_xnp1zk.jpg",
     "infoContent": {
       "paragraph": " Chemical Dosing Systems are precision-engineered units used to automatically dose specific quantities of chemicals into water or wastewater for effective treatment. Commonly used for pH correction, disinfection, coagulation, and scaling control, these systems ensure consistent dosing, reduce manual errors, and enhance treatment efficiency. Ideal for STPs, ETPs, RO plants, and cooling towers, they typically include a dosing pump, chemical storage tank, and control panel, and can be customized for both manual and automated operations.",
       "points": [
