@@ -10,19 +10,38 @@ import {
   Instagram,
   ChevronRight,
   Droplets,
-  
   ExternalLink,
   Youtube,
 } from "lucide-react";
 import { FaXTwitter } from "react-icons/fa6";
 
+interface QuickLink {
+  name: string;
+  href: string;
+}
+
 const Footer = () => {
-  const quickLinks = [
-    "About Us",
-    "Our Solutions",
-    "Case Studies",
-    "Careers",
-    "News & Updates",
+  const quickLinks: QuickLink[] = [
+    {
+      name: "About Us",
+      href: "/about-us",
+    },
+    {
+      name: "Our Solutions",
+      href: "/solutions",
+    },
+    {
+      name: "Case Studies",
+      href: "/case-studies",
+    },
+    {
+      name: "Careers",
+      href: "/careers",
+    },
+    {
+      name: "News & Updates",
+      href: "/news",
+    },
   ];
 
   const solutions = [
@@ -31,7 +50,7 @@ const Footer = () => {
     "Sanitation Solutions",
     "Hydration Monitoring Systems",
   ];
- 
+
   const socialLinks = [
     {
       icon: <Linkedin className="w-5 h-5" />,
@@ -39,7 +58,7 @@ const Footer = () => {
       color: "hover:text-blue-600",
     },
     {
-      icon: <FaXTwitter  className="w-5 h-5" />,
+      icon: <FaXTwitter className="w-5 h-5" />,
       href: "https://x.com/lifefirstindia?s=11",
       color: "hover:text-blue-400",
     },
@@ -58,8 +77,6 @@ const Footer = () => {
       href: "#",
       color: "hover:text-pink-600",
     },
-    
-    
   ];
 
   return (
@@ -122,12 +139,12 @@ const Footer = () => {
               {quickLinks.map((link, index) => (
                 <li key={index}>
                   <motion.a
-                    href="#"
+                    href={link.href}
                     className="text-slate-700 font-medium hover:text-blue-400 transition-colors duration-200 flex items-center group"
                     whileHover={{ x: 5 }}
                   >
                     <ChevronRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
-                    {link}
+                    {link.name}
                   </motion.a>
                 </li>
               ))}
