@@ -10,7 +10,6 @@ import {
 } from "@/components/ui/accordion";
 
 const investorNews = [
-  
   {
     id: "item-1",
     title: "Starting office and factory in Africa (Zimbabwe)",
@@ -22,32 +21,71 @@ const investorNews = [
           LifeFirst Concepts & Technologies (Private) Limited is proud to
           announce the launch of its operations in Zimbabwe. Through this
           expansion, LifeFirst aims to bring world-class sustainable water,
-          wastewater, and sanitation solutions to support the country&apos;s growing
-          infrastructure and environmental needs. Our Zimbabwe office will serve
-          as a regional hub to collaborate with government bodies, private
-          institutions, and development partners—delivering innovative, modular,
-          and eco-efficient systems designed to improve community health, water
-          security, and environmental resilience.
+          wastewater, and sanitation solutions to support the country&apos;s
+          growing infrastructure and environmental needs. Our Zimbabwe office
+          will serve as a regional hub to collaborate with government bodies,
+          private institutions, and development partners—delivering innovative,
+          modular, and eco-efficient systems designed to improve community
+          health, water security, and environmental resilience.
         </p>
 
         {/* Image Gallery */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
-        <img
-          src="https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1765113551/investor_item_4_1_nijuwo.png"
-          alt="LifeFirst Zimbabwe Office"
-          className="w-full h-auto rounded-lg shadow-md object-cover"
-        />
-        <img
-          src="https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1765113551/investor_item_4_2_cl4gnp.png"
-          alt="LifeFirst Zimbabwe Factory"
-          className="w-full h-auto rounded-lg shadow-md object-cover"
-        />
-      </div>
+        <div className="flex flex-wrap justify-center gap-4 mt-6">
+          <img
+            src="https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1765966671/investor_item_4_1_pd_1_wrayw9.png"
+            alt="LifeFirst Zimbabwe Office Certificate of Incorporation"
+            className="w-full sm:w-[calc(50%-0.5rem)] max-w-md h-auto rounded-lg shadow-md object-cover"
+          />
+        </div>
       </>
     ),
   },
   {
     id: "item-2",
+    title: "Zimbabwe Investment License (ZIDA)",
+    date: "September 12, 2025",
+    description: (
+      <>
+        <strong>Zimbabwe Investment License (ZIDA)</strong>
+        <p>
+          LifeFirst Concepts & Technologies (Private) Limited is a
+          <strong> registered and licensed entity in Zimbabwe </strong>
+          duly approved by the{" "}
+          <strong>Zimbabwe Investment and Development Agency (ZIDA) </strong>
+          under the Zimbabwe Investment and Development Agency Act [Chapter
+          14:38]. This license authorizes LifeFirst to{" "}
+          <strong>
+            {" "}
+            design, manufacture, supply, and install containerized water and
+            wastewater treatment and sanitation solutions{" "}
+          </strong>{" "}
+          within Zimbabwe.
+        </p>
+        <p>
+          The ZIDA registration reinforces LifeFirst&apos;s regulatory
+          compliance and commitment to delivering{" "}
+          <strong>
+            {" "}
+            sustainable, modular, and decentralized water and sanitation
+            infrastructure,{" "}
+          </strong>
+         supporting national development priorities and enabling trusted
+          partnerships across the public and private sectors.
+        </p>
+
+        {/* Image Gallery */}
+        <div className="flex flex-wrap justify-center gap-4 mt-6">
+          <img
+            src="https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1765967170/investor_item_2_zida_pyvqeu.png"
+            alt="ZIDA License LifeFirst"
+            className="w-full sm:w-[calc(50%-0.5rem)] max-w-md h-auto rounded-lg shadow-md object-cover"
+          />
+        </div>
+      </>
+    ),
+  },
+  {
+    id: "item-3",
     title: "Company Reports for Financial Year 2025–26",
     date: "September 23, 2025",
     description: (
@@ -93,7 +131,7 @@ const investorNews = [
     ),
   },
   {
-    id: "item-3",
+    id: "item-4",
     title: "Strategic MoU Signing with UTCO, Zimbabwe",
     date: "November 14, 2025",
     description: (
@@ -167,18 +205,18 @@ const investorNews = [
           </strong>
         </p>
         {/* Image Gallery */}
-      <div className="flex flex-wrap justify-center gap-4 mt-6">
-        <img
-          src="https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1765114102/investor_item_2_jgwzbi.jpg"
-          alt="MOU Signed between LifeFirst and UTCO"
-          className="w-full sm:w-[calc(50%-0.5rem)] max-w-md h-auto rounded-lg shadow-md object-cover"
-        />
-      </div>
+        <div className="flex flex-wrap justify-center gap-4 mt-6">
+          <img
+            src="https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1765114102/investor_item_2_jgwzbi.jpg"
+            alt="MOU Signed between LifeFirst and UTCO"
+            className="w-full sm:w-[calc(50%-0.5rem)] max-w-md h-auto rounded-lg shadow-md object-cover"
+          />
+        </div>
       </>
     ),
   },
   {
-    id: "item-4",
+    id: "item-5",
     title:
       "Strategic MoU Signing with ZINWA – Managing 534 National Water Assets Across Zimbabwe",
     date: "November 26, 2025",
@@ -296,14 +334,13 @@ const investorNews = [
           <strong>water security, resilience, and sustainable growth.</strong>
         </p>
         {/* Image Gallery */}
-      <div className="flex flex-wrap justify-center gap-4 mt-6">
-        <img
-          src="https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1765113771/investor_item_3_zhnzfl.jpg"
-          alt="MOU Signed between LifeFirst and Zinwa"
-          className="w-full sm:w-[calc(50%-0.5rem)] max-w-md h-auto rounded-lg shadow-md object-cover"
-        />
-        
-      </div>
+        <div className="flex flex-wrap justify-center gap-4 mt-6">
+          <img
+            src="https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1765113771/investor_item_3_zhnzfl.jpg"
+            alt="MOU Signed between LifeFirst and Zinwa"
+            className="w-full sm:w-[calc(50%-0.5rem)] max-w-md h-auto rounded-lg shadow-md object-cover"
+          />
+        </div>
       </>
     ),
   },
