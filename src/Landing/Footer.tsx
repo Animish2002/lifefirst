@@ -30,11 +30,11 @@ const Footer = () => {
     "Sanitation Solutions",
     "Hydration Monitoring Systems",
   ];
-
+ 
   const socialLinks = [
     {
       icon: <Linkedin className="w-5 h-5" />,
-      href: "https://linkedin.com/company/lifefirsttech",
+      href: "https://www.linkedin.com/company/lifefirstconceptsandtechnologies",
       color: "hover:text-blue-600",
     },
     {

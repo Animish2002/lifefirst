@@ -158,7 +158,7 @@ const contactInfo: ContactInfo[] = [
 const socialLinks: SocialLink[] = [
   {
     icon: <Linkedin size={18} />,
-    href: "https://linkedin.com/company/lifefirsttech",
+    href: "https://www.linkedin.com/company/lifefirstconceptsandtechnologies",
     label: "LinkedIn",
     color: "hover:text-blue-900",
   },
