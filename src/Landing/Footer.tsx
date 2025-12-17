@@ -14,6 +14,7 @@ import {
   ExternalLink,
   Youtube,
 } from "lucide-react";
+import { FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   const quickLinks = [
@@ -38,7 +39,7 @@ const Footer = () => {
       color: "hover:text-blue-600",
     },
     {
-      icon: <Twitter className="w-5 h-5" />,
+      icon: <FaXTwitter  className="w-5 h-5" />,
       href: "https://x.com/lifefirstindia?s=11",
       color: "hover:text-blue-400",
     },
