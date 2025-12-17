@@ -259,7 +259,7 @@ const AboutUsPage: React.FC = () => {
       position: "Electrical Technician",
       experience: "Electrical Technician with 5+ Years of Experience.",
       image:
-        "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_autov1758548403/Ravi_Chavan_lxfmjs.jpg", // Placeholder image
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1758548403/Ravi_Chavan_lxfmjs.jpg", // Placeholder image
       description:
         "An experienced Electrical Technician with over 5 years of expertise in diagnosing, repairing, and maintaining complex electrical systems. Highly skilled in utilizing advanced diagnostic equipment and tools to ensure operational efficiency while maintaining strict quality and safety standards. Dedicated to delivering reliable solutions and minimizing downtime through precise troubleshooting and preventive maintenance practices.", // Add actual description
     },
