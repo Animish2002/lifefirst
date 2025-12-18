@@ -5,7 +5,6 @@ import {
   Mail,
   MapPin,
   Linkedin,
-  Twitter,
   Facebook,
   Instagram,
   ChevronRight,
@@ -38,10 +37,7 @@ const Footer = () => {
       name: "Careers",
       href: "/careers",
     },
-    {
-      name: "News & Updates",
-      href: "/news",
-    },
+
   ];
 
   const solutions = [
@@ -75,7 +71,7 @@ const Footer = () => {
     {
       icon: <Youtube className="w-5 h-5" />,
       href: "#",
-      color: "hover:text-pink-600",
+      color: "hover:text-red-600",
     },
   ];
 

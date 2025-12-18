@@ -11,8 +11,9 @@ import {
   Youtube,
   Instagram,
 } from "lucide-react";
-import { Phone, Mail, Facebook, Twitter, Linkedin } from "lucide-react";
+import { Phone, Mail, Facebook, Linkedin } from "lucide-react";
 import Link from "next/link";
+import { FaXTwitter } from "react-icons/fa6";
 
 interface NavSubItem {
   name: string;
@@ -160,32 +161,32 @@ const socialLinks: SocialLink[] = [
     icon: <Linkedin size={18} />,
     href: "https://www.linkedin.com/company/lifefirstconceptsandtechnologies",
     label: "LinkedIn",
-    color: "hover:text-blue-900",
+    color: "hover:text-blue-600",
   },
   {
-    icon: <Twitter size={18} />,
+    icon: <FaXTwitter size={18} />,
     href: "https://x.com/lifefirstindia?s=11",
     label: "X (formerly known as Twitter)",
-    color: "hover:text-sky-800",
+    color: "hover:text-blue-400",
   },
   {
     icon: <Facebook size={18} />,
     href: "https://www.facebook.com/share/14HnstPQUQW/?mibextid=wwXIfr",
     label: "Facebook",
-    color: "hover:text-blue-800",
+    color: "hover:text-blue-700",
   },
   {
     icon: <Instagram size={18} />,
     href: "https://www.instagram.com/lifefirstconcepts",
     label: "Instagram",
-    color: "hover:text-blue-900",
+    color: "hover:text-pink-600",
   },
 
   {
     icon: <Youtube size={18} />,
     href: "https://www.youtube.com/@lifefirstindia",
     label: "YouTube",
-    color: "hover:text-blue-900",
+    color: "hover:text-red-600",
   },
 ];
 

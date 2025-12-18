@@ -90,10 +90,10 @@ const Gallery = () => {
     videos: [
       {
         id: 1,
-        title: "Corporate Video of LifeFirst",
+        title: "3MLD",
         category: "video",
         description: "An overview of our company's mission and vision.",
-        url: "https://www.youtube.com/embed/your-video-id-1",
+        url: "https://player.cloudinary.com/embed/?cloud_name=dsvfcckqy&public_id=3MLD_jftt8k&profile=cld-default",
         thumbnail:
           "https://img.youtube.com/vi/your-video-id-1/maxresdefault.jpg",
       },

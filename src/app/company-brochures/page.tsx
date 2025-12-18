@@ -36,14 +36,14 @@ const DownloadBrochurespage = () => {
       description:
         "Learn how our technologies contribute to a more sustainable future and environmental protection.",
       icon: <Globe className="w-12 h-12 text-green-600" />,
-      link: "https://pub-59dfadbc37c8415a99f8037d2f859b98.r2.dev/Hydratation%20Monitoring%20Systems.pdf",
+      link: "https://assets.life-first.in/Water_and_Wastewater.pdf",
     },
     {
       title: "Wastewater Treatment Systems ",
       description:
         "Our complete catalog of products and services for comprehensive water management solutions.",
       icon: <Book className="w-12 h-12 text-orange-600" />,
-      link: "https://pub-59dfadbc37c8415a99f8037d2f859b98.r2.dev/Hydratation%20Monitoring%20Systems.pdf",
+      link: "https://assets.life-first.in/Water_and_Wastewater.pdf",
     },
     {
       title: "Effluent Treatment System ",
@@ -64,14 +64,14 @@ const DownloadBrochurespage = () => {
       description:
         "Real-world applications and success stories showcasing our water treatment implementations.",
       icon: <FileText className="w-12 h-12 text-red-600" />,
-      link: "https://pub-59dfadbc37c8415a99f8037d2f859b98.r2.dev/Bio-Digester.pdf",
+      link: "https://assets.life-first.in/bio-digester.pdf",
     },
     {
       title: "Hydration Monitoring System  ",
       description:
         "Real-world applications and success stories showcasing our water treatment implementations.",
       icon: <FileText className="w-12 h-12 text-red-600" />,
-      link: "https://pub-59dfadbc37c8415a99f8037d2f859b98.r2.dev/Hydratation%20Monitoring%20Systems.pdf",
+      link: "https://assets.life-first.in/hydation-monitoring-system.pdf",
     },
   ];
 
