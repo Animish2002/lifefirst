@@ -91,7 +91,7 @@ const CTASection: React.FC = () => {
   
 
   const FORMSPREE_ENDPOINT =
-    "https://formflowapi.thefortune.club/api/submit/7c1f31d1-1b91-49f6-9060-c5a401cbc088";
+    "https://formflowapi.thefortune.club/api/submit/c4484888-d5d8-4385-ad6d-5d726a4cbf84";
 
   const handleInputChange = (
     e: React.ChangeEvent<
