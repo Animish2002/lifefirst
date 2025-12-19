@@ -87,7 +87,7 @@ const CTASection: React.FC = () => {
   );
 
   const FORMSPREE_ENDPOINT =
-    "https://form-service-worker.vrushabhskulkarni.workers.dev/api/submit/9a82c161-6646-4e7b-ba1a-c8780ddfcbd5";
+    "https://formflowapi.thefortune.club/api/submit/7c1f31d1-1b91-49f6-9060-c5a401cbc088";
 
   const handleInputChange = (
     e: React.ChangeEvent<
