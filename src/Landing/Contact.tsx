@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import {
   Phone,
   Mail,
@@ -11,7 +11,8 @@ import {
   CheckCircle,
 } from "lucide-react";
 
-import TurnstileWidget from "../app/TurnstileWidget";
+import TurnstileWidget, { TurnstileWidgetRef } from "../app/TurnstileWidget";
+
 
 type FormData = {
   name: string;
@@ -85,6 +86,9 @@ const CTASection: React.FC = () => {
   const [activeOffice, setActiveOffice] = useState<"india" | "overseas">(
     "india"
   );
+  const turnstileRef = useRef<TurnstileWidgetRef>(null);
+
+  
 
   const FORMSPREE_ENDPOINT =
     "https://formflowapi.thefortune.club/api/submit/7c1f31d1-1b91-49f6-9060-c5a401cbc088";
@@ -101,16 +105,28 @@ const CTASection: React.FC = () => {
   };
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    const turnstileToken = turnstileRef.current?.getToken();
+    
+    if (!turnstileToken) {
+      alert("Please complete the CAPTCHA verification");
+      return;
+    }
     setLoading(true);
 
-    try {
+   try {
       const response = await fetch(FORMSPREE_ENDPOINT, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          "cf-turnstile-response": turnstileToken, // Include the token
+        }),
       });
+
+      const data = await response.json();
 
       if (response.ok) {
         setIsModalOpen(true);
@@ -123,12 +139,17 @@ const CTASection: React.FC = () => {
           message: "",
           service: "",
         });
+        // Reset Turnstile widget for next submission
+        turnstileRef.current?.reset();
       } else {
-        alert("Something went wrong. Please try again later.");
+        alert(data.error || "Something went wrong. Please try again later.");
+        // Reset Turnstile on error
+        turnstileRef.current?.reset();
       }
     } catch (error) {
-      console.error("Formspree error:", error);
+      console.error("Form submission error:", error);
       alert("Error submitting form. Please try again.");
+      turnstileRef.current?.reset();
     } finally {
       setLoading(false);
     }
@@ -457,7 +478,7 @@ const CTASection: React.FC = () => {
                   />
                 </div>
 
-                <TurnstileWidget  />
+                  <TurnstileWidget ref={turnstileRef} />
                 <button
                   type="submit"
                   disabled={loading}
