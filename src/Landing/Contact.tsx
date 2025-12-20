@@ -90,8 +90,8 @@ const CTASection: React.FC = () => {
 
   
 
-  const FORMSPREE_ENDPOINT =
-    "https://formflowapi.thefortune.club/api/submit/c4484888-d5d8-4385-ad6d-5d726a4cbf84";
+  const FORMFLOW_ENDPOINT =
+    "https://formflowapi.thefortune.club/api/submit/74846bd6-89b6-4855-a70f-b91795fa0a71";
 
   const handleInputChange = (
     e: React.ChangeEvent<
@@ -115,7 +115,7 @@ const CTASection: React.FC = () => {
     setLoading(true);
 
    try {
-      const response = await fetch(FORMSPREE_ENDPOINT, {
+      const response = await fetch(FORMFLOW_ENDPOINT, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

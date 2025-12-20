@@ -21,6 +21,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import TurnstileWidget from "../TurnstileWidget";
 
 const Page = () => {
   const [openNewsId, setOpenNewsId] = useState<number | null>(null);
@@ -154,9 +155,9 @@ const Page = () => {
 
           <Button
             onClick={openRequestModal}
-            className="inline-flex items-center rounded-full px-8 py-3"
+            className="inline-flex items-center rounded-full px-8 py-3 bg-blue-600 hover:bg-blue-700"
           >
-            View Reports
+            Request Fillings
           </Button>
         </div>
       </section>
@@ -177,7 +178,7 @@ const Page = () => {
                 Request Financial Reports
               </DialogTitle>
               <DialogDescription className="">
-                Fill in your details and we’ll send the latest filings.
+                Fill in your details and we&apos;ll send the latest filings.
               </DialogDescription>
             </DialogHeader>
           </div>
@@ -241,6 +242,8 @@ const Page = () => {
                     required
                   />
                 </div>
+                
+                <TurnstileWidget/>
 
                 <div className="flex justify-end gap-3 pt-2">
                   <Button
@@ -255,11 +258,12 @@ const Page = () => {
                   <Button
                     type="submit"
                     disabled={submitting}
-                    className="rounded-full px-6"
+                    className="rounded-full px-6 bg-blue-600 hover:bg-blue-700"
                   >
                     {submitting ? "Submitting..." : "Send Request"}
                   </Button>
                 </div>
+
               </form>
             ) : (
               <div className="text-center py-6">
