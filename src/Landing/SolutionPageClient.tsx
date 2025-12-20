@@ -233,8 +233,8 @@ const ContactFormPopup = ({
                   placeholder="Tell us about your requirements..."
                 />
               </div>
-              
-              <Turnstile/>
+
+              <Turnstile />
 
               <div className="flex gap-3 pt-2">
                 <button
@@ -264,13 +264,21 @@ const ContactFormPopup = ({
 const SolutionPageClient = ({ solutionTitle }: { solutionTitle: string }) => {
   const [showContactForm, setShowContactForm] = useState(false);
 
-  // Timer for showing contact form popup after 3 seconds
   useEffect(() => {
-    const timer = setTimeout(() => {
+    // First popup after 3 seconds
+    const firstTimer = setTimeout(() => {
       setShowContactForm(true);
     }, 3000);
 
-    return () => clearTimeout(timer);
+    // Popup every 1 minute
+    const interval = setInterval(() => {
+      setShowContactForm(true);
+    }, 60000);
+
+    return () => {
+      clearTimeout(firstTimer);
+      clearInterval(interval);
+    };
   }, []);
 
   const handleCloseContactForm = () => {
