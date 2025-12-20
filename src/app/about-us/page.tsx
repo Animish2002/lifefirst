@@ -39,7 +39,7 @@ const TeamMemberCard: React.FC<TeamMemberCardProps> = ({
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.6, delay: index * 0.1 }}
     viewport={{ once: true }}
-    className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+    className=" rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
   >
     <div className="flex flex-col h-full">
       {/* Member Image - Clickable */}
@@ -47,11 +47,11 @@ const TeamMemberCard: React.FC<TeamMemberCardProps> = ({
         className="relative cursor-pointer group"
         onClick={() => onClick(member)}
       >
-        <div className="w-full h-64 bg-gray-200 overflow-hidden">
+        <div className="w-full md:h-64 overflow-hidden">
           <img
             src={member.image}
             alt={member.name}
-            className="w-full h-full object-cover transition-all duration-300 group-hover:scale-105 group-hover:brightness-75"
+            className="w-full h-full object-cover rounded-2xl transition-all duration-600  scale-90 group-hover:scale-100 group-hover:brightness-75"
           />
         </div>
 
@@ -200,8 +200,7 @@ const AboutUsPage: React.FC = () => {
       description:
         "Dattaram Rane, Vice President – Global Projects at Life First Concepts & Technologies Pvt. Ltd., brings over 15 years of rich international experience in the Water and Wastewater Treatment Industry. Holding both a B.E. and Diploma in Chemical Engineering, along with DNV certification in Risk Assessment, Dattaram combines strong technical expertise with a sharp strategic outlook to lead global projects from concept to successful execution. With his in-depth knowledge of process engineering, risk management, and compliance standards, Dattaram has spearheaded numerous industrial, municipal, and commercial water treatment initiatives across India, the Middle East, and Africa. His ability to integrate cutting-edge technologies with practical, cost-effective designs ensures that Life First delivers world-class, sustainable solutions tailored to diverse client needs. Known for his meticulous planning and collaborative leadership style, Dattaram excels in coordinating multi-disciplinary teams, managing complex stakeholder requirements, and ensuring timely, quality-driven project deliveries. His expertise in risk assessment and safety compliance also strengthens the organization’s commitment to operational excellence and environmental responsibility. Through his global perspective and technical acumen, Dattaram plays a crucial role in advancing LifeFirst’s vision of sustainable growth and international expansion, making a meaningful impact on communities and industries worldwide.",
     },
-    
-    
+
     {
       name: "Supriya Sathe",
       position: "Global Business Head Marketing & Sales",
@@ -232,7 +231,6 @@ const AboutUsPage: React.FC = () => {
       description:
         "Vinishka Srilakshmi, Head of Strategic Partnerships & Business Growth at LifeFirst Concepts & Technologies Pvt. Ltd., brings over 10 years of experience in building high impact partnerships and driving sustainable business growth across diverse markets. A Commerce graduate with a sharp business acumen, Srilakshmi has been instrumental in shaping the company’s global expansion strategy through innovative market development initiatives and strategic collaborations. Her expertise lies in identifying new business opportunities, fostering long-term alliances, and creating win-win partnerships with governments, institutions, and private sector stakeholders. By combining market intelligence, relationship management, and strategic negotiation skills, Srilakshmi has successfully accelerated LifeFirst’s presence across India, the Middle East, and Africa. Known for her forward-thinking approach and results-driven mindset, she continuously explores new revenue streams, funding models, and market-entry strategies, aligning them with the company’s vision of delivering sustainable water, wastewater, and sanitation solutions globally. Srilakshmi’s leadership ensures that LifeFirst remains at the forefront of innovative collaborations and global business growth.",
     },
-    
   ];
 
   const teamMembers3: TeamMember[] = [
@@ -344,7 +342,6 @@ const AboutUsPage: React.FC = () => {
       description:
         "A highly adaptable professional with over 2 years of experience in manufacturing and operations, demonstrating the ability to deliver results under pressure while ensuring efficiency and quality standards. Skilled in leveraging advanced tools such as Computer-Aided Design (CAD) and CATIA to optimize processes and drive operational excellence.", // Add actual description
     },
-    
   ];
 
   const firstRowMembers = teamMembers3.slice(0, 5);
@@ -438,9 +435,9 @@ const AboutUsPage: React.FC = () => {
 
               <div className="bg-gradient-to-r from-blue-50 to-cyan-50 p-6 rounded-2xl border-l-4 border-blue-400">
                 <p className="text-gray-700 italic leading-relaxed text-sm">
-                   &quot;Through quality engineering and responsible
-                  practices, we strive to conserve water, reduce pollution, and
-                  create a cleaner, more resilient future.&quot;
+                  &quot;Through quality engineering and responsible practices,
+                  we strive to conserve water, reduce pollution, and create a
+                  cleaner, more resilient future.&quot;
                 </p>
               </div>
             </motion.div>
@@ -606,10 +603,10 @@ const AboutUsPage: React.FC = () => {
             </p>
           </motion.div>
 
-          <div className="max-w-6xl mx-auto">
+          <div className="max-w-7xl mx-auto">
             {/* First Row - 2 members centered */}
             <div className="flex justify-center mb-8">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:max-w-4xl">
                 {teamMembers1.slice(0, 2).map((member, index) => (
                   <TeamMemberCard
                     key={member.name}
@@ -623,7 +620,7 @@ const AboutUsPage: React.FC = () => {
 
             {/* Second Row - 4 members */}
             <div className="flex justify-center mb-8">
-              <div className="grid grid-cols-1 md:grid-cols-5 gap-4 max-w-6xl">
+              <div className="grid grid-cols-1 md:grid-cols-5 gap-4 max-w-7xl">
                 {teamMembers2.slice(0, 5).map((member, index) => (
                   <TeamMemberCard
                     key={member.name}
