@@ -16,6 +16,62 @@ interface TeamMember {
   description?: string;
 }
 
+// Add this new component before the TeamMemberCard component
+interface TeamMemberCardSmallProps {
+  member: TeamMember;
+  index: number;
+  onClick: (member: TeamMember) => void;
+  imageHeight?: string;
+}
+
+const TeamMemberCardSmall: React.FC<TeamMemberCardSmallProps> = ({
+  member,
+  index,
+  onClick,
+  imageHeight = "h-40",
+}) => (
+  <motion.div
+    initial={{ opacity: 0, y: 30 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.6, delay: index * 0.1 }}
+    viewport={{ once: true }}
+    className="rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+  >
+    <div className="flex flex-col h-full">
+      {/* Member Image - Clickable */}
+      <div
+        className="relative cursor-pointer group"
+        onClick={() => onClick(member)}
+      >
+        <div className={`w-full ${imageHeight} overflow-hidden`}>
+          <img
+            src={member.image}
+            alt={member.name}
+            className="w-full h-full object-cover rounded-2xl transition-all duration-600 scale-90 group-hover:scale-100 group-hover:brightness-75"
+          />
+        </div>
+
+        {/* Overlay with click hint */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-3">
+          <div className="text-xs text-white/80 bg-white/20 backdrop-blur-sm px-2 py-1 rounded-full w-fit">
+            Click to read more
+          </div>
+        </div>
+      </div>
+
+      {/* Member Info */}
+      <div className="p-2 flex flex-col justify-center flex-grow">
+        <h3 className="text-lg font-bold text-gray-800 mb-1 text-center line-clamp-2">
+          {member.name}
+        </h3>
+        <p className="text-blue-600 font-semibold text-sm text-center line-clamp-2">
+          {member.position}
+        </p>
+      </div>
+    </div>
+  </motion.div>
+);
+
 // Define props for the TeamMemberCard component
 interface TeamMemberCardProps {
   member: TeamMember;
@@ -47,7 +103,7 @@ const TeamMemberCard: React.FC<TeamMemberCardProps> = ({
         className="relative cursor-pointer group"
         onClick={() => onClick(member)}
       >
-        <div className="w-full md:h-64 overflow-hidden">
+        <div className="w-full md:h-64  overflow-hidden">
           <img
             src={member.image}
             alt={member.name}
@@ -634,16 +690,14 @@ const AboutUsPage: React.FC = () => {
 
             {/* Third Row - 5 members */}
             <div className="flex justify-center mb-8">
-              <div
-                className="grid grid-cols-2 md:grid-cols-5 gap-4"
-                style={{ maxWidth: "calc(80% of 6xl)" }}
-              >
+              <div className="grid grid-cols-2 md:grid-cols-5 gap-3 w-full">
                 {firstRowMembers.map((member, index) => (
-                  <TeamMemberCard
+                  <TeamMemberCardSmall
                     key={member.name}
                     member={member}
                     index={index + 6}
                     onClick={setSelectedMember}
+                    imageHeight="h-60"
                   />
                 ))}
               </div>
@@ -651,16 +705,14 @@ const AboutUsPage: React.FC = () => {
 
             {/* Fourth Row - 4 members centered */}
             <div className="flex justify-center items-center">
-              <div
-                className="grid grid-cols-2 md:grid-cols-5 gap-4"
-                style={{ maxWidth: "calc(80% of 6xl)" }}
-              >
+              <div className="grid grid-cols-2 md:grid-cols-5 gap-3 w-full">
                 {secondRowMembers.map((member, index) => (
-                  <TeamMemberCard
+                  <TeamMemberCardSmall
                     key={member.name}
                     member={member}
                     index={index + 11}
                     onClick={setSelectedMember}
+                    imageHeight="h-60"
                   />
                 ))}
               </div>
