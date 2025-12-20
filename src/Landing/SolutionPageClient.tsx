@@ -100,7 +100,7 @@ const ContactFormPopup = ({
         // Reset Turnstile on error
         turnstileRef.current?.reset();
       }
-    } catch (error) {
+    } catch {
       setSubmitMessage("Something went wrong. Please try again.");
       // Reset Turnstile on error
       turnstileRef.current?.reset();

@@ -58,6 +58,13 @@ const TurnstileWidget = forwardRef<TurnstileWidgetRef, TurnstileWidgetProps>(
     const [isLoaded, setIsLoaded] = useState(false);
     const [token, setToken] = useState<string>();
 
+    // Check if script is already loaded (runs on mount and when isLoaded changes)
+    useEffect(() => {
+      if (typeof window !== "undefined" && window.turnstile && !isLoaded) {
+        setIsLoaded(true);
+      }
+    }, [isLoaded]);
+
     // Memoize callbacks to prevent unnecessary re-renders
     const handleVerify = useCallback(
       (newToken: string) => {
@@ -92,17 +99,35 @@ const TurnstileWidget = forwardRef<TurnstileWidgetRef, TurnstileWidgetProps>(
         return;
       }
 
-      // Render the widget
-      widgetIdRef.current = window.turnstile.render(widgetRef.current, {
-        sitekey,
-        theme,
-        callback: handleVerify,
-        "error-callback": handleError,
-        "expired-callback": handleExpire,
-      });
+      // Small delay to ensure container is fully mounted
+      const timer = setTimeout(() => {
+        if (!widgetRef.current || !window.turnstile) {
+          return;
+        }
+
+        // Remove any existing widget first
+        if (widgetIdRef.current) {
+          try {
+            window.turnstile.remove(widgetIdRef.current);
+          } catch (e) {
+            // Widget might already be removed
+          }
+          widgetIdRef.current = null;
+        }
+
+        // Render the widget
+        widgetIdRef.current = window.turnstile.render(widgetRef.current, {
+          sitekey,
+          theme,
+          callback: handleVerify,
+          "error-callback": handleError,
+          "expired-callback": handleExpire,
+        });
+      }, 50);
 
       // Cleanup function
       return () => {
+        clearTimeout(timer);
         if (widgetIdRef.current && window.turnstile) {
           try {
             window.turnstile.remove(widgetIdRef.current);

@@ -122,7 +122,7 @@ const CTASection: React.FC = () => {
         },
         body: JSON.stringify({
           ...formData,
-          "cf-turnstile-response": turnstileToken, // Include the token
+          turnstileToken: turnstileToken, // Include the token
         }),
       });
 

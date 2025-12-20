@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { ComponentProps } from "react";
 import Navigation from "@/Landing/Navigation";
 import Footer from "@/Landing/Footer";
@@ -177,9 +177,48 @@ const Page = () => {
   const [loading, setLoading] = useState(false);
   const [currentJobTitle, setCurrentJobTitle] = useState("");
   const [openDialogId, setOpenDialogId] = useState<number | null>(null);
+  const [selectedFileName, setSelectedFileName] = useState<string>("");
+  const [turnstileKey, setTurnstileKey] = useState(0);
   
   // Add Turnstile ref
   const turnstileRef = useRef<TurnstileWidgetRef>(null);
+
+  // Handle body scroll lock to prevent navbar shift
+  useEffect(() => {
+    const isDialogOpen = openDialogId !== null;
+    
+    if (isDialogOpen) {
+      // Calculate scrollbar width
+      const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+      
+      // Lock body scroll and compensate for scrollbar width
+      document.body.style.overflow = "hidden";
+      if (scrollbarWidth > 0) {
+        document.body.style.paddingRight = `${scrollbarWidth}px`;
+      }
+    } else {
+      // Restore body scroll
+      document.body.style.overflow = "";
+      document.body.style.paddingRight = "";
+    }
+    
+    return () => {
+      document.body.style.overflow = "";
+      document.body.style.paddingRight = "";
+    };
+  }, [openDialogId]);
+
+  // Reset Turnstile when form becomes visible
+  useEffect(() => {
+    if (showForm && openDialogId !== null) {
+      // Reset turnstile after form is fully mounted
+      setTimeout(() => {
+        if (turnstileRef.current) {
+          turnstileRef.current.reset();
+        }
+      }, 300);
+    }
+  }, [showForm, openDialogId, turnstileKey]);
 
   const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -214,6 +253,7 @@ const Page = () => {
         setShowForm(false);
         setOpenDialogId(null); // Close the dialog
         form.reset();
+        setSelectedFileName(""); // Reset file name
         // Reset Turnstile on success
         turnstileRef.current?.reset();
       } else {
@@ -324,10 +364,13 @@ const Page = () => {
                     open={openDialogId === job.id}
                     onOpenChange={(open) => {
                       setOpenDialogId(open ? job.id : null);
-                      if (!open) setShowForm(false);
-                      // Reset Turnstile when dialog opens
+                      if (!open) {
+                        setShowForm(false);
+                        setSelectedFileName(""); // Reset file name when dialog closes
+                      }
+                      // Force Turnstile re-render when dialog opens
                       if (open) {
-                        setTimeout(() => turnstileRef.current?.reset(), 100);
+                        setTurnstileKey(prev => prev + 1);
                       }
                     }}
                   >
@@ -338,6 +381,7 @@ const Page = () => {
                         onClick={() => {
                           setCurrentJobTitle(job.title);
                           setShowForm(false);
+                          setSelectedFileName(""); // Reset file name when opening dialog
                           setOpenDialogId(job.id);
                         }}
                       >
@@ -428,11 +472,31 @@ const Page = () => {
                                   type="file"
                                   name="resume"
                                   className="h-9"
+                                  accept=".pdf,.doc,.docx"
+                                  onChange={(e) => {
+                                    const file = e.target.files?.[0];
+                                    if (file) {
+                                      setSelectedFileName(file.name);
+                                    } else {
+                                      setSelectedFileName("");
+                                    }
+                                  }}
                                 />
+                                {selectedFileName && (
+                                  <p className="text-xs text-gray-600 mt-1 flex items-center gap-1">
+                                    <span className="text-green-600">✓</span>
+                                    Selected: <span className="font-medium">{selectedFileName}</span>
+                                  </p>
+                                )}
                               </div>
                               
                               {/* Turnstile Widget with ref */}
-                              <TurnstileWidget ref={turnstileRef} />
+                              <div className="py-3 min-h-[80px] flex items-center justify-center w-full overflow-visible">
+                                <TurnstileWidget 
+                                  key={`turnstile-${openDialogId}-${showForm}-${turnstileKey}`} 
+                                  ref={turnstileRef} 
+                                />
+                              </div>
                               
                               <Button
                                 className="w-full rounded-full h-9 bg-blue-600 hover:bg-blue-700"

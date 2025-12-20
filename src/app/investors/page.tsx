@@ -44,6 +44,12 @@ const Page = () => {
       // focus first input when dialog opens
       setTimeout(() => firstInputRef.current?.focus(), 50);
       document.body.style.overflow = "hidden";
+      // Reset turnstile after dialog is fully mounted
+      setTimeout(() => {
+        if (turnstileRef.current) {
+          turnstileRef.current.reset();
+        }
+      }, 300);
     } else {
       document.body.style.overflow = "";
     }
@@ -60,8 +66,6 @@ const Page = () => {
     setSubmitted(false);
     setForm({ name: "", email: "", phone: "", reason: "" });
     setIsDialogOpen(true);
-    // Reset turnstile when opening the dialog
-    setTimeout(() => turnstileRef.current?.reset(), 100);
   };
 
   const handleChange = (
@@ -195,27 +199,27 @@ const Page = () => {
 
       {/* Request Dialog */}
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
-        <DialogContent className="sm:max-w-xl w-full rounded-2xl border border-white/20 shadow-2xl p-0 overflow-hidden">
+        <DialogContent className="max-w-[95vw] sm:max-w-lg md:max-w-xl w-full max-h-[90vh] rounded-2xl border border-white/20 shadow-2xl p-0 overflow-y-auto">
           {/* Frosted Blur */}
           <div className="fixed inset-0 -z-10 backdrop-blur-md" />
 
           {/* Header */}
-          <div className="px-6 py-4">
+          <div className="px-4 sm:px-6 py-4 sticky top-0 bg-white z-10 border-b">
             <DialogHeader>
-              <DialogTitle className="text-2xl font-bold">
+              <DialogTitle className="text-xl sm:text-2xl font-bold">
                 Request Financial Reports
               </DialogTitle>
-              <DialogDescription className="">
+              <DialogDescription className="text-sm sm:text-base">
                 Fill in your details and we&apos;ll send the latest filings.
               </DialogDescription>
             </DialogHeader>
           </div>
 
           {/* Body */}
-          <div className="p-6">
+          <div className="p-4 sm:p-6">
             {!submitted ? (
-              <form onSubmit={handleSubmit} className="space-y-5">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <Label htmlFor="name">Full Name</Label>
                     <Input
@@ -272,14 +276,16 @@ const Page = () => {
                 </div>
 
                 {/* Turnstile Widget with ref */}
-                <TurnstileWidget ref={turnstileRef} />
+                <div className="py-3 sm:py-4 min-h-[80px] flex items-center justify-center w-full overflow-visible">
+                  <TurnstileWidget key={`turnstile-${isDialogOpen}`} ref={turnstileRef} />
+                </div>
 
-                <div className="flex justify-end gap-3 pt-2">
+                <div className="flex flex-col sm:flex-row justify-end gap-3 pt-2">
                   <Button
                     variant="outline"
                     type="button"
                     onClick={() => setIsDialogOpen(false)}
-                    className="rounded-full"
+                    className="rounded-full w-full sm:w-auto"
                   >
                     Cancel
                   </Button>
@@ -287,7 +293,7 @@ const Page = () => {
                   <Button
                     type="submit"
                     disabled={submitting}
-                    className="rounded-full px-6 bg-blue-600 hover:bg-blue-700"
+                    className="rounded-full px-6 bg-blue-600 hover:bg-blue-700 w-full sm:w-auto"
                   >
                     {submitting ? "Submitting..." : "Send Request"}
                   </Button>
