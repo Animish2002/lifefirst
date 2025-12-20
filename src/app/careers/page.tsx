@@ -1,8 +1,10 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { ComponentProps } from "react";
 import Navigation from "@/Landing/Navigation";
 import Footer from "@/Landing/Footer";
+import { CheckCircle } from "lucide-react";
+import TurnstileWidget, { TurnstileWidgetRef } from "../TurnstileWidget";
 
 // Icons (keep or replace with your preferred icons)
 const JobIcon = ({ className }: ComponentProps<"svg">) => (
@@ -67,6 +69,35 @@ const LightbulbIcon = ({ className }: ComponentProps<"svg">) => (
   </svg>
 );
 
+// Success Modal Component
+const MessageModal = ({
+  message,
+  onClose,
+}: {
+  message: string;
+  onClose: () => void;
+}) => {
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50">
+      <div className="bg-white p-6 rounded-lg shadow-xl max-w-md w-full">
+        <div className="flex items-center mb-4">
+          <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
+          <h3 className="text-lg font-semibold text-gray-900">
+            Application Submitted!
+          </h3>
+        </div>
+        <p className="text-gray-600 mb-6">{message}</p>
+        <button
+          onClick={onClose}
+          className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors"
+        >
+          Close
+        </button>
+      </div>
+    </div>
+  );
+};
+
 type Job = {
   id: number;
   title: string;
@@ -127,10 +158,6 @@ const jobs: Job[] = [
   },
 ];
 
-// Note: Adjust the imports to match your project’s actual UI components.
-// The following uses a Shadcn-like pattern (Card, Button, Dialog).
-// Ensure you have these components available in your codebase.
-
 import { Card, CardHeader, CardFooter } from "@/components/ui/card";
 import { CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -146,9 +173,64 @@ import { Input } from "@/components/ui/input";
 
 const Page = () => {
   const [showForm, setShowForm] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [currentJobTitle, setCurrentJobTitle] = useState("");
+  const [openDialogId, setOpenDialogId] = useState<number | null>(null);
+  
+  // Add Turnstile ref
+  const turnstileRef = useRef<TurnstileWidgetRef>(null);
 
+  const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
 
-  // No global state needed; each card handles its own dialog
+    // Get Turnstile token
+    const token = turnstileRef.current?.getToken();
+    if (!token) {
+      alert("Please complete the security verification.");
+      return;
+    }
+
+    setLoading(true);
+
+    // Store form reference before async operations
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    
+    // Add Turnstile token to FormData
+    formData.append("turnstileToken", token);
+
+    try {
+      const response = await fetch(
+        "https://formflowapi.thefortune.club/api/submit/2ddf5b7e-e0c6-4877-878f-584885823abe",
+        {
+          method: "POST",
+          body: formData,
+        }
+      );
+
+      if (response.ok) {
+        setIsModalOpen(true);
+        setShowForm(false);
+        setOpenDialogId(null); // Close the dialog
+        form.reset();
+        // Reset Turnstile on success
+        turnstileRef.current?.reset();
+      } else {
+        alert("Something went wrong. Please try again later.");
+        // Reset Turnstile on error
+        turnstileRef.current?.reset();
+      }
+    } catch (error) {
+      console.error("Form submission error:", error);
+      alert("Error submitting form. Please try again.");
+      // Reset Turnstile on error
+      turnstileRef.current?.reset();
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <div className="bg-gray-50 text-gray-800 font-sans">
       <Navigation />
@@ -238,11 +320,26 @@ const Page = () => {
                 </CardHeader>
 
                 <CardFooter className="p-4 pt-0">
-                  <Dialog>
+                  <Dialog
+                    open={openDialogId === job.id}
+                    onOpenChange={(open) => {
+                      setOpenDialogId(open ? job.id : null);
+                      if (!open) setShowForm(false);
+                      // Reset Turnstile when dialog opens
+                      if (open) {
+                        setTimeout(() => turnstileRef.current?.reset(), 100);
+                      }
+                    }}
+                  >
                     <DialogTrigger asChild>
                       <Button
                         className="w-full cursor-pointer"
                         variant="outline"
+                        onClick={() => {
+                          setCurrentJobTitle(job.title);
+                          setShowForm(false);
+                          setOpenDialogId(job.id);
+                        }}
                       >
                         View Details & Apply
                       </Button>
@@ -281,7 +378,7 @@ const Page = () => {
                           </a>
 
                           <Button
-                            className="rounded-full px-5 py-1.5 text-sm"
+                            className="rounded-full px-5 py-1.5 text-sm bg-blue-600 hover:bg-blue-700"
                             onClick={() => setShowForm(true)}
                           >
                             Apply Now
@@ -296,8 +393,7 @@ const Page = () => {
                             </h3>
 
                             <form
-                              action="https://formspree.io/f/your-form-id"
-                              method="POST"
+                              onSubmit={handleFormSubmit}
                               className="space-y-3"
                             >
                               <input
@@ -334,12 +430,16 @@ const Page = () => {
                                   className="h-9"
                                 />
                               </div>
-
+                              
+                              {/* Turnstile Widget with ref */}
+                              <TurnstileWidget ref={turnstileRef} />
+                              
                               <Button
-                                className="w-full rounded-full h-9"
+                                className="w-full rounded-full h-9 bg-blue-600 hover:bg-blue-700"
                                 type="submit"
+                                disabled={loading}
                               >
-                                Submit
+                                {loading ? "Submitting..." : "Submit"}
                               </Button>
                             </form>
                           </div>
@@ -354,26 +454,15 @@ const Page = () => {
         </div>
       </section>
 
-      {/* Call to Action Section */}
-      {/* <section className="bg-gray-100 py-8 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">
-            Ready to Join Us?
-          </h2>
-          <p className="text-lg text-gray-600 mb-2">
-            If you don&apos;t see an opening that fits your skills, we&apos;d
-            still love to hear from you.
-          </p>
-          <a
-            href="#"
-            className="inline-block bg-blue-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-blue-700 transition-colors duration-300"
-          >
-            Connect With Us
-          </a>
-        </div>
-      </section> */}
-
       <Footer />
+
+      {/* Success Modal */}
+      {isModalOpen && (
+        <MessageModal
+          message="Thank you for your application! We'll review your submission and get back to you soon."
+          onClose={() => setIsModalOpen(false)}
+        />
+      )}
     </div>
   );
 };

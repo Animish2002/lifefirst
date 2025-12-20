@@ -21,7 +21,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import TurnstileWidget from "../TurnstileWidget";
+import TurnstileWidget, { TurnstileWidgetRef } from "../TurnstileWidget";
 
 const Page = () => {
   const [openNewsId, setOpenNewsId] = useState<number | null>(null);
@@ -30,6 +30,7 @@ const Page = () => {
   const [submitted, setSubmitted] = useState(false);
 
   const firstInputRef = useRef<HTMLInputElement | null>(null);
+  const turnstileRef = useRef<TurnstileWidgetRef>(null);
 
   const [form, setForm] = useState({
     name: "",
@@ -59,6 +60,8 @@ const Page = () => {
     setSubmitted(false);
     setForm({ name: "", email: "", phone: "", reason: "" });
     setIsDialogOpen(true);
+    // Reset turnstile when opening the dialog
+    setTimeout(() => turnstileRef.current?.reset(), 100);
   };
 
   const handleChange = (
@@ -70,6 +73,7 @@ const Page = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
     if (
       !form.name.trim() ||
       !form.email.trim() ||
@@ -80,20 +84,45 @@ const Page = () => {
       return;
     }
 
+    // Get Turnstile token
+    const token = turnstileRef.current?.getToken();
+    if (!token) {
+      alert("Please complete the security verification.");
+      return;
+    }
+
     setSubmitting(true);
+
     try {
-      // simulate API call
-      await new Promise((r) => setTimeout(r, 900));
-      // replace with real API call:
-      // await fetch('/api/filing-requests', { method: 'POST', body: JSON.stringify(form) })
+      const res = await fetch("https://formflowapi.thefortune.club/api/submit/6c412278-0ba7-4b02-a9d0-47069fbf31a7", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          phone: form.phone,
+          reason: form.reason,
+          turnstileToken: token, // Include the Turnstile token
+        }),
+      });
+
+      if (!res.ok) {
+        throw new Error("Formflow submission failed");
+      }
+
       console.log("Submitted:", form);
       setSubmitted(true);
-      setSubmitting(false);
       setTimeout(() => setIsDialogOpen(false), 1200);
     } catch (err) {
       console.error(err);
-      setSubmitting(false);
       alert("Something went wrong. Please try again.");
+      // Reset Turnstile on error so user can try again
+      turnstileRef.current?.reset();
+    } finally {
+      setSubmitting(false);
     }
   };
 
@@ -164,7 +193,6 @@ const Page = () => {
 
       <Footer />
 
-      {/* shadcn Dialog */}
       {/* Request Dialog */}
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
         <DialogContent className="sm:max-w-xl w-full rounded-2xl border border-white/20 shadow-2xl p-0 overflow-hidden">
@@ -242,8 +270,9 @@ const Page = () => {
                     required
                   />
                 </div>
-                
-                <TurnstileWidget/>
+
+                {/* Turnstile Widget with ref */}
+                <TurnstileWidget ref={turnstileRef} />
 
                 <div className="flex justify-end gap-3 pt-2">
                   <Button
@@ -263,7 +292,6 @@ const Page = () => {
                     {submitting ? "Submitting..." : "Send Request"}
                   </Button>
                 </div>
-
               </form>
             ) : (
               <div className="text-center py-6">
@@ -274,7 +302,7 @@ const Page = () => {
                   Request submitted successfully!
                 </p>
                 <p className="text-sm text-gray-600 mt-1">
-                  We’ll get back to you shortly.
+                  We&apos;ll get back to you shortly.
                 </p>
               </div>
             )}
