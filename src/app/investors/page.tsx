@@ -1,366 +1,110 @@
 "use client";
 import Footer from "@/Landing/Footer";
 import Navigation from "@/Landing/Navigation";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { investorNews } from "@/data/investors";
 
-const investorNews = [
-  {
-    id: "item-1",
-    title: "Starting office and factory in Africa (Zimbabwe)",
-    date: "August 27, 2025",
-    description: (
-      <>
-        <strong>LifeFirst Expands to Zimbabwe</strong>
-        <p>
-          LifeFirst Concepts & Technologies (Private) Limited is proud to
-          announce the launch of its operations in Zimbabwe. Through this
-          expansion, LifeFirst aims to bring world-class sustainable water,
-          wastewater, and sanitation solutions to support the country&apos;s
-          growing infrastructure and environmental needs. Our Zimbabwe office
-          will serve as a regional hub to collaborate with government bodies,
-          private institutions, and development partners—delivering innovative,
-          modular, and eco-efficient systems designed to improve community
-          health, water security, and environmental resilience.
-        </p>
-
-        {/* Image Gallery */}
-        <div className="flex flex-wrap justify-center gap-4 mt-6">
-          <img
-            src="https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1765966671/investor_item_4_1_pd_1_wrayw9.png"
-            alt="LifeFirst Zimbabwe Office Certificate of Incorporation"
-            className="w-full sm:w-[calc(50%-0.5rem)] max-w-md h-auto rounded-lg shadow-md object-cover"
-          />
-        </div>
-      </>
-    ),
-  },
-  {
-    id: "item-2",
-    title: "Zimbabwe Investment License (ZIDA)",
-    date: "September 12, 2025",
-    description: (
-      <>
-        <strong>Zimbabwe Investment License (ZIDA)</strong>
-        <p>
-          LifeFirst Concepts & Technologies (Private) Limited is a
-          <strong> registered and licensed entity in Zimbabwe </strong>
-          duly approved by the{" "}
-          <strong>Zimbabwe Investment and Development Agency (ZIDA) </strong>
-          under the Zimbabwe Investment and Development Agency Act [Chapter
-          14:38]. This license authorizes LifeFirst to{" "}
-          <strong>
-            {" "}
-            design, manufacture, supply, and install containerized water and
-            wastewater treatment and sanitation solutions{" "}
-          </strong>{" "}
-          within Zimbabwe.
-        </p>
-        <p>
-          The ZIDA registration reinforces LifeFirst&apos;s regulatory
-          compliance and commitment to delivering{" "}
-          <strong>
-            {" "}
-            sustainable, modular, and decentralized water and sanitation
-            infrastructure,{" "}
-          </strong>
-         supporting national development priorities and enabling trusted
-          partnerships across the public and private sectors.
-        </p>
-
-        {/* Image Gallery */}
-        <div className="flex flex-wrap justify-center gap-4 mt-6">
-          <img
-            src="https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1765967170/investor_item_2_zida_pyvqeu.png"
-            alt="ZIDA License LifeFirst"
-            className="w-full sm:w-[calc(50%-0.5rem)] max-w-md h-auto rounded-lg shadow-md object-cover"
-          />
-        </div>
-      </>
-    ),
-  },
-  {
-    id: "item-3",
-    title: "Company Reports for Financial Year 2025–26",
-    date: "September 23, 2025",
-    description: (
-      <>
-        <p>
-          <b>LifeFirst Concepts & Technologies Pvt.</b> Ltd. is committed to
-          maintaining transparency, accountability, and strong corporate
-          governance as we continue to expand our footprint in India, Africa,
-          and beyond. The Company Reports for the financial year 2025–26 will
-          provide our investors with:
-        </p>
-        <ul className="list-disc list-inside space-y-2 mt-4">
-          <li>
-            <strong>Comprehensive Financial Insights:</strong> Detailed analysis
-            of revenue growth, profitability, and key financial metrics to
-            showcase the company&apos;s financial health.
-          </li>
-          <li>
-            <strong>Strategic Progress Updates:</strong> Highlights of
-            milestones achieved, including new joint ventures, market
-            expansions, and technology innovations undertaken during the year.
-          </li>
-          <li>
-            <strong>Project Performance & Impact:</strong> Overview of major
-            projects executed across water, wastewater treatment, and hydration
-            monitoring solutions, emphasizing both economic value and
-            sustainability impact.
-          </li>
-          <li>
-            <strong>Forward-Looking Strategy:</strong> Insights into growth
-            plans, market opportunities, and future investments that align with
-            LifeFirst&apos;s long-term vision for scaling operations across
-            multiple geographies.
-          </li>
-        </ul>
-        <p className="mt-4">
-          For investors, these reports are designed to ensure clarity,
-          confidence, and alignment with LifeFirst&apos;s mission of creating
-          sustainable infrastructure solutions while delivering consistent value
-          and returns.
-        </p>
-      </>
-    ),
-  },
-  {
-    id: "item-4",
-    title: "Strategic MoU Signing with UTCO, Zimbabwe",
-    date: "November 14, 2025",
-    description: (
-      <>
-        <p>
-          LifeFirst Concepts & Technologies Pvt. Ltd. is proud to announce the
-          signing of a strategic{" "}
-          <strong>Memorandum of Understanding (MoU)</strong> with{" "}
-          <strong>UTCO</strong>, a fully owned subsidiary of the EXODUS Group,
-          Zimbabwe.
-        </p>
-        <p className="mt-2">
-          <strong>EXODUS</strong> is one of Zimbabwe&apos;s most respected and
-          fast-growing infrastructure companies, engaged in{" "}
-          <strong>
-            large-scale construction, civil engineering, mining services,
-            housing development, and road infrastructure projects.
-          </strong>{" "}
-          With a strong track record of delivering complex projects across the
-          country, EXODUS has earned a reputation for technical capability,
-          reliability, and a deep commitment to national development. UTCO, as
-          its execution arm, brings strong operational efficiencies and
-          on-ground project management strength.
-        </p>
-        <p className="mt-2">
-          This MoU brings together the strengths of both organizations to
-          jointly deliver cutting-edge{" "}
-          <strong>Water, Wastewater, and Sanitation solutions</strong>{" "}
-          throughout Zimbabwe and the region.
-        </p>
-        <p className="mt-2">
-          Through this collaboration, LifeFirst and UTCO will work jointly on:
-        </p>
-        <ul className="list-disc list-inside space-y-2 mt-4">
-          <li>
-            <strong>
-              Rehabilitation and modernization of Water & Wastewater Treatment
-              Plants
-            </strong>
-          </li>
-          <li>
-            <strong>
-              Deployment of prefabricated and containerized STPs, ETPs, and
-              Biodigesters
-            </strong>
-          </li>
-          <li>
-            <strong>
-              Engineering services, O&M support, and technical capacity-building
-            </strong>
-          </li>
-          <li>
-            <strong>
-              Supporting municipal councils, industries, institutions, and
-              communities with sustainable solutions
-            </strong>
-          </li>
-          <li>
-            <strong>
-              Creating scalable, future-ready project models that attract
-              investment and strengthen infrastructure resilience
-            </strong>
-          </li>
-        </ul>
-        <p className="mt-4">
-          This partnership reinforces LifeFirst&apos;s commitment to supporting
-          Zimbabwe&apos;s water and sanitation transformation, while opening
-          meaningful opportunities for{" "}
-          <strong>
-            joint execution, technology integration, and regional expansion.
-          </strong>
-        </p>
-        {/* Image Gallery */}
-        <div className="flex flex-wrap justify-center gap-4 mt-6">
-          <img
-            src="https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1765114102/investor_item_2_jgwzbi.jpg"
-            alt="MOU Signed between LifeFirst and UTCO"
-            className="w-full sm:w-[calc(50%-0.5rem)] max-w-md h-auto rounded-lg shadow-md object-cover"
-          />
-        </div>
-      </>
-    ),
-  },
-  {
-    id: "item-5",
-    title:
-      "Strategic MoU Signing with ZINWA – Managing 534 National Water Assets Across Zimbabwe",
-    date: "November 26, 2025",
-    description: (
-      <>
-        <p>
-          LifeFirst Concepts & Technologies Pvt. Ltd. is proud to announce the
-          signing of a major{" "}
-          <strong> Memorandum of Understanding (MoU) </strong>
-          with the <strong>Zimbabwe National Water Authority (ZINWA)</strong>,
-          the central authority responsible for national water supply, water
-          treatment, and water resources management.
-        </p>
-        <p className="mt-2">
-          This landmark partnership positions LifeFirst as a key technology and
-          implementation partner in strengthening Zimbabwe&apos;s water
-          infrastructure. Under this MoU, LifeFirst and ZINWA will jointly
-          collaborate on the{" "}
-          <strong>
-            assessment, rehabilitation, modernization, and long-term management
-            of all 534 national water assets,
-          </strong>{" "}
-          which include:
-        </p>
-        <ul className="list-disc list-inside space-y-2 mt-4">
-          <li>
-            <strong>Water Treatment Plants (WTPs)</strong>
-          </li>
-          <li>
-            <strong>Sewage Treatment Plants (STPs)</strong>
-          </li>
-          <li>
-            <strong>Raw water & clear water pumping stations</strong>
-          </li>
-          <li>
-            <strong>Transmission and distribution systems</strong>
-          </li>
-        </ul>
-
-        <p className="mt-2">
-          <strong>Scope of Collaboration</strong>
-        </p>
-
-        <p className="mt-2">
-          Through this MoU, LifeFirst will support ZINWA in:
-        </p>
-        <ul className="list-disc list-inside space-y-2 mt-2">
-          <li>
-            <strong>
-              Conducting detailed technical assessments for all water and
-              wastewater assets
-            </strong>
-          </li>
-          <li>
-            <strong>Rehabilitating and modernizing aged infrastructure</strong>
-          </li>
-          <li>
-            <strong>
-              Introducing prefabricated & containerized treatment solutions
-              where required
-            </strong>
-          </li>
-          <li>
-            <strong>
-              Implementing automation, SCADA, and energy-efficient pumping
-              systems
-            </strong>
-          </li>
-          <li>
-            <strong>
-              Deploying decentralized STPs, ETPs, and Biodigesters
-            </strong>
-          </li>
-          <li>
-            <strong>
-              Enhancing operational efficiency and reducing downtime
-            </strong>
-          </li>
-          <li>
-            <strong>
-              Providing training, O&M support, and capacity-building for ZINWA
-              teams
-            </strong>
-          </li>
-        </ul>
-
-        <p className="mt-2">
-          <strong>A National-Scale Initiative for Water Security</strong>
-        </p>
-
-        <p className="mt-2">
-          This collaboration represents one of Zimbabwe&apos;s most
-          comprehensive water-sector modernization initiatives. It combines
-          ZINWA&apos;s national mandate with LifeFirst&apos;s advanced
-          technologies and engineering expertise to ensure:
-        </p>
-        <ul className="list-disc list-inside space-y-2 mt-2">
-          <li>
-            <strong>Improved Water Quality</strong>
-          </li>
-          <li>
-            <strong>Reliable Supply</strong>
-          </li>
-          <li>
-            <strong>Reduced non-revenue water</strong>
-          </li>
-          <li>
-            <strong>Sustainable long-term infrastructure development</strong>
-          </li>
-        </ul>
-
-        <p className="mt-2">
-          LifeFirst is honoured to be entrusted with this responsibility and
-          remains committed to contributing meaningfully to Zimbabwe&apos;s{" "}
-          <strong>water security, resilience, and sustainable growth.</strong>
-        </p>
-        {/* Image Gallery */}
-        <div className="flex flex-wrap justify-center gap-4 mt-6">
-          <img
-            src="https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1765113771/investor_item_3_zhnzfl.jpg"
-            alt="MOU Signed between LifeFirst and Zinwa"
-            className="w-full sm:w-[calc(50%-0.5rem)] max-w-md h-auto rounded-lg shadow-md object-cover"
-          />
-        </div>
-      </>
-    ),
-  },
-];
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+} from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
 
 const Page = () => {
   const [openNewsId, setOpenNewsId] = useState<number | null>(null);
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+
+  const firstInputRef = useRef<HTMLInputElement | null>(null);
+
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    reason: "",
+  });
+
+  useEffect(() => {
+    if (isDialogOpen) {
+      // focus first input when dialog opens
+      setTimeout(() => firstInputRef.current?.focus(), 50);
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isDialogOpen]);
 
   const toggleNews = (id: number) => {
     setOpenNewsId(openNewsId === id ? null : id);
   };
 
+  const openRequestModal = () => {
+    setSubmitted(false);
+    setForm({ name: "", email: "", phone: "", reason: "" });
+    setIsDialogOpen(true);
+  };
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setForm((p) => ({ ...p, [name]: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (
+      !form.name.trim() ||
+      !form.email.trim() ||
+      !form.phone.trim() ||
+      !form.reason.trim()
+    ) {
+      alert("Please fill in all fields.");
+      return;
+    }
+
+    setSubmitting(true);
+    try {
+      // simulate API call
+      await new Promise((r) => setTimeout(r, 900));
+      // replace with real API call:
+      // await fetch('/api/filing-requests', { method: 'POST', body: JSON.stringify(form) })
+      console.log("Submitted:", form);
+      setSubmitted(true);
+      setSubmitting(false);
+      setTimeout(() => setIsDialogOpen(false), 1200);
+    } catch (err) {
+      console.error(err);
+      setSubmitting(false);
+      alert("Something went wrong. Please try again.");
+    }
+  };
+
   return (
     <div className="bg-gray-50 text-gray-800 font-sans">
       <Navigation />
-      <div className="relative md:mt-26 mt-24 overflow-hidden"></div>
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-12 px-4 sm:px-6 lg:px-8 ">
+      <div className="relative md:mt-26 mt-24 overflow-hidden" />
+
+      {/* Hero */}
+      <section className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-3xl md:text-5xl font-extrabold mb-4 drop-shadow-lg">
+          <h1 className="text-2xl md:text-5xl font-extrabold mb-4 drop-shadow-lg">
             Investor News
           </h1>
           <p className="text-md md:text-lg font-light drop-shadow-md max-w-2xl mx-auto">
@@ -370,7 +114,7 @@ const Page = () => {
         </div>
       </section>
 
-      {/* News Listings Section */}
+      {/* News */}
       <section className="bg-white py-8 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl sm:text-4xl font-extrabold text-center text-gray-900 mb-12">
@@ -390,7 +134,6 @@ const Page = () => {
                   </div>
                 </AccordionTrigger>
                 <AccordionContent>
-                  {/* Corrected this line: removed the extra <p> tag */}
                   <div className="text-gray-700">{news.description}</div>
                 </AccordionContent>
               </AccordionItem>
@@ -399,7 +142,7 @@ const Page = () => {
         </div>
       </section>
 
-      {/* Call to Action Section */}
+      {/* CTA */}
       <section className="bg-gray-100 py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">
@@ -408,16 +151,132 @@ const Page = () => {
           <p className="text-lg text-gray-600 mb-8">
             Access our complete library of financial documents and reports.
           </p>
-          <a
-            href="#"
-            className="inline-block bg-blue-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-blue-700 transition-colors duration-300"
+
+          <Button
+            onClick={openRequestModal}
+            className="inline-flex items-center rounded-full px-8 py-3"
           >
             View Reports
-          </a>
+          </Button>
         </div>
       </section>
 
       <Footer />
+
+      {/* shadcn Dialog */}
+      {/* Request Dialog */}
+      <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
+        <DialogContent className="sm:max-w-xl w-full rounded-2xl border border-white/20 shadow-2xl p-0 overflow-hidden">
+          {/* Frosted Blur */}
+          <div className="fixed inset-0 -z-10 backdrop-blur-md" />
+
+          {/* Header */}
+          <div className="px-6 py-4">
+            <DialogHeader>
+              <DialogTitle className="text-2xl font-bold">
+                Request Financial Reports
+              </DialogTitle>
+              <DialogDescription className="">
+                Fill in your details and we’ll send the latest filings.
+              </DialogDescription>
+            </DialogHeader>
+          </div>
+
+          {/* Body */}
+          <div className="p-6">
+            {!submitted ? (
+              <form onSubmit={handleSubmit} className="space-y-5">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <Label htmlFor="name">Full Name</Label>
+                    <Input
+                      id="name"
+                      name="name"
+                      ref={firstInputRef}
+                      value={form.name}
+                      onChange={handleChange}
+                      className="mt-1"
+                      required
+                    />
+                  </div>
+
+                  <div>
+                    <Label htmlFor="phone">Phone number</Label>
+                    <Input
+                      id="phone"
+                      name="phone"
+                      type="tel"
+                      placeholder="+91 XXXXX XXXXX"
+                      value={form.phone}
+                      onChange={handleChange}
+                      className="mt-1"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <Label htmlFor="email">Email address</Label>
+                  <Input
+                    id="email"
+                    name="email"
+                    type="email"
+                    value={form.email}
+                    onChange={handleChange}
+                    className="mt-1"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <Label htmlFor="reason">Reason for Request</Label>
+                  <Textarea
+                    id="reason"
+                    name="reason"
+                    rows={4}
+                    className="mt-1"
+                    placeholder="Tell us what you need the reports for..."
+                    value={form.reason}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
+
+                <div className="flex justify-end gap-3 pt-2">
+                  <Button
+                    variant="outline"
+                    type="button"
+                    onClick={() => setIsDialogOpen(false)}
+                    className="rounded-full"
+                  >
+                    Cancel
+                  </Button>
+
+                  <Button
+                    type="submit"
+                    disabled={submitting}
+                    className="rounded-full px-6"
+                  >
+                    {submitting ? "Submitting..." : "Send Request"}
+                  </Button>
+                </div>
+              </form>
+            ) : (
+              <div className="text-center py-6">
+                <div className="mx-auto mb-3 h-12 w-12 rounded-full bg-green-100 flex items-center justify-center">
+                  <span className="text-green-600 text-2xl">✔</span>
+                </div>
+                <p className="text-green-600 font-semibold">
+                  Request submitted successfully!
+                </p>
+                <p className="text-sm text-gray-600 mt-1">
+                  We’ll get back to you shortly.
+                </p>
+              </div>
+            )}
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 };

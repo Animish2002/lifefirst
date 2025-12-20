@@ -56,7 +56,7 @@ const SolutionPage = async ({ params }: PageProps) => {
         >
           <div className="absolute inset-0 bg-gray-900 bg-opacity-70 flex items-center justify-center p-8">
             <div className="text-center text-white max-w-4xl">
-              <h1 className="text-3xl md:text-5xl font-extrabold mb-4 drop-shadow-lg">
+              <h1 className="text-2xl md:text-5xl font-extrabold mb-4 drop-shadow-lg">
                 {solution.title}
               </h1>
               <p className="text-md md:text-lg font-light drop-shadow-md">
@@ -68,7 +68,7 @@ const SolutionPage = async ({ params }: PageProps) => {
 
         {/* ====== REDESIGNED INFO / CONTENT SECTION (Version B - Check Icons) ====== */}
         <section className="py-14 bg-white">
-          <div className="container mx-auto px-6 lg:px-8 max-w-7xl">
+          <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
             <div
               className={`grid gap-12 lg:gap-16 items-start ${
                 hasInfoImage

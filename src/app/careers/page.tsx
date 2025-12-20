@@ -72,26 +72,58 @@ type Job = {
   title: string;
   department: string;
   location: string;
+  pdf: string;
 };
 
 const jobs: Job[] = [
   {
     id: 1,
-    title: "Factory Manager",
-    department: "Engineering",
-    location: "Harare, Zimbabwe",
+    title: "Project Engineer",
+    department: "Projects",
+    location: "Wadki",
+    pdf: "project-engineer.pdf",
   },
   {
     id: 2,
-    title: "Project Engineer",
-    department: "Projects",
-    location: "Harare, Zimbabwe",
+    title: "Process Design Engineer",
+    department: "Process Engineering",
+    location: "Wadki",
+    pdf: "process-design-engineer.pdf",
   },
   {
     id: 3,
-    title: "Marketing Executive",
-    department: "Marketing",
-    location: "Harare, Zimbabwe",
+    title: "Plumber",
+    department: "Maintenance / Projects",
+    location: "Wadki",
+    pdf: "plumber.pdf",
+  },
+  {
+    id: 4,
+    title: "Electromechanical Engineer",
+    department: "Engineering / Projects",
+    location: "Project Site / Wadki",
+    pdf: "electromechanical-engineer.pdf",
+  },
+  {
+    id: 5,
+    title: "Electrician",
+    department: "Electrical / Maintenance / Projects",
+    location: "Project Site / Wadki",
+    pdf: "electrician.pdf",
+  },
+  {
+    id: 6,
+    title: "Civil Engineer",
+    department: "Engineering / Projects",
+    location: "Project Site / Wadki",
+    pdf: "civil-engineer.pdf",
+  },
+  {
+    id: 7,
+    title: "HR & Admin Executive",
+    department: "HR & Admin",
+    location: "Wadki",
+    pdf: "hr-admin.pdf",
   },
 ];
 
@@ -109,8 +141,13 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import { Label } from "@/components/ui/label";
+import { Input } from "@/components/ui/input";
 
 const Page = () => {
+  const [showForm, setShowForm] = useState(false);
+
+
   // No global state needed; each card handles its own dialog
   return (
     <div className="bg-gray-50 text-gray-800 font-sans">
@@ -120,7 +157,7 @@ const Page = () => {
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-12 px-4 sm:px-6 lg:px-8 ">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-3xl md:text-5xl font-extrabold mb-4 drop-shadow-lg">
+          <h1 className="text-2xl md:text-5xl font-extrabold mb-4 drop-shadow-lg">
             Join Our Team
           </h1>
           <p className="text-md md:text-lg font-light drop-shadow-md max-w-2xl mx-auto">
@@ -210,46 +247,104 @@ const Page = () => {
                         View Details & Apply
                       </Button>
                     </DialogTrigger>
-                    <DialogContent className="sm:max-w-[520px]">
-                      <DialogHeader className="mb-2">
-                        <DialogTitle>Apply for {job.title}</DialogTitle>
-                      </DialogHeader>
-                      <form
-                        action="https://formspree.io/f/your-form-id" // Replace with your FormSpree form ID
-                        method="POST"
-                        className="space-y-4"
-                      >
-                        <input type="hidden" name="job" value={job.title} />
-                        <label className="block">
-                          <span className="text-sm">Full Name</span>
-                          <input
-                            name="name"
-                            type="text"
-                            required
-                            className="mt-1 block w-full rounded-md border border-gray-300 p-2"
+
+                    <DialogContent className="sm:max-w-[560px] rounded-2xl p-0 overflow-hidden max-h-[90vh] overflow-y-auto scrollbar-thin">
+                      {/* Header */}
+                      <div className=" px-5 py-3 ">
+                        <DialogHeader>
+                          <DialogTitle className="text-2xl font-bold">
+                            {job.title}
+                          </DialogTitle>
+                          <p className="text-sm ">
+                            {job.department} • {job.location}
+                          </p>
+                        </DialogHeader>
+                      </div>
+
+                      <div className="px-4 space-y-4">
+                        {/* Smaller PDF Viewer */}
+                        <div className="border rounded-xl overflow-hidden h-[320px]">
+                          <iframe
+                            src={`/pdfs/${job.pdf}`}
+                            className="w-full h-full"
                           />
-                        </label>
-                        <label className="block">
-                          <span className="text-sm">Email</span>
-                          <input
-                            name="email"
-                            type="email"
-                            required
-                            className="mt-1 block w-full rounded-md border border-gray-300 p-2"
-                          />
-                        </label>
-                        <label className="block">
-                          <span className="text-sm">Cover Letter</span>
-                          <textarea
-                            name="message"
-                            rows={4}
-                            className="mt-1 block w-full rounded-md border border-gray-300 p-2"
-                          ></textarea>
-                        </label>
-                        <Button type="submit" className="w-full cursor-pointer">
-                          Submit Application
-                        </Button>
-                      </form>
+                        </div>
+
+                        {/* Actions */}
+                        <div className="flex justify-between items-center px-4 py-4">
+                          <a
+                            href={`/pdfs/${job.pdf}`}
+                            download
+                            className="px-4 py-1.5 text-sm border rounded-full hover:bg-gray-100 transition"
+                          >
+                            Download JD
+                          </a>
+
+                          <Button
+                            className="rounded-full px-5 py-1.5 text-sm"
+                            onClick={() => setShowForm(true)}
+                          >
+                            Apply Now
+                          </Button>
+                        </div>
+
+                        {/* Apply Form (Small & Clean) */}
+                        {showForm && (
+                          <div className="border rounded-xl p-4 space-y-3 mb-4">
+                            <h3 className="text-sm font-semibold">
+                              Submit Application
+                            </h3>
+
+                            <form
+                              action="https://formspree.io/f/your-form-id"
+                              method="POST"
+                              className="space-y-3"
+                            >
+                              <input
+                                type="hidden"
+                                name="jobTitle"
+                                value={job.title}
+                              />
+
+                              <div className="space-y-1">
+                                <Label className="text-xs">Full Name</Label>
+                                <Input name="name" required className="h-9" />
+                              </div>
+
+                              <div className="space-y-1">
+                                <Label className="text-xs">Email</Label>
+                                <Input
+                                  name="email"
+                                  type="email"
+                                  required
+                                  className="h-9"
+                                />
+                              </div>
+
+                              <div className="space-y-1">
+                                <Label className="text-xs">Phone</Label>
+                                <Input name="phone" required className="h-9" />
+                              </div>
+
+                              <div className="space-y-1">
+                                <Label className="text-xs">Resume</Label>
+                                <Input
+                                  type="file"
+                                  name="resume"
+                                  className="h-9"
+                                />
+                              </div>
+
+                              <Button
+                                className="w-full rounded-full h-9"
+                                type="submit"
+                              >
+                                Submit
+                              </Button>
+                            </form>
+                          </div>
+                        )}
+                      </div>
                     </DialogContent>
                   </Dialog>
                 </CardFooter>
