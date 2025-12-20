@@ -81,49 +81,49 @@ const jobs: Job[] = [
     title: "Project Engineer",
     department: "Projects",
     location: "Wadki",
-    pdf: "project-engineer.pdf",
+    pdf: "https://careers.life-first.in/JD%20FOR%20PROJECT%20ENGINEER%20(1).pdf",
   },
   {
     id: 2,
     title: "Process Design Engineer",
     department: "Process Engineering",
     location: "Wadki",
-    pdf: "process-design-engineer.pdf",
+    pdf: "https://careers.life-first.in/JD%20FOR%20PROCESS%20DESIGN%20ENGINEER.pdf",
   },
   {
     id: 3,
     title: "Plumber",
     department: "Maintenance / Projects",
     location: "Wadki",
-    pdf: "plumber.pdf",
+    pdf: "https://careers.life-first.in/JD%20FOR%20PLUMBER.pdf",
   },
   {
     id: 4,
     title: "Electromechanical Engineer",
     department: "Engineering / Projects",
     location: "Project Site / Wadki",
-    pdf: "electromechanical-engineer.pdf",
+    pdf: "https://careers.life-first.in/JD%20FOR%20ELECTROMACHANICAL%20ENGINEER.pdf",
   },
   {
     id: 5,
     title: "Electrician",
     department: "Electrical / Maintenance / Projects",
     location: "Project Site / Wadki",
-    pdf: "electrician.pdf",
+    pdf: "https://careers.life-first.in/JD%20FOR%20ELECTRICIAN.pdf",
   },
   {
     id: 6,
     title: "Civil Engineer",
     department: "Engineering / Projects",
     location: "Project Site / Wadki",
-    pdf: "civil-engineer.pdf",
+    pdf: "https://careers.life-first.in/JD%20FOR%20CIVIL%20ENGINEER.pdf ",
   },
   {
     id: 7,
     title: "HR & Admin Executive",
     department: "HR & Admin",
     location: "Wadki",
-    pdf: "hr-admin.pdf",
+    pdf: "https://careers.life-first.in/JD%20FOR%20HR%20ADMIN.pdf",
   },
 ];
 
@@ -265,7 +265,7 @@ const Page = () => {
                         {/* Smaller PDF Viewer */}
                         <div className="border rounded-xl overflow-hidden h-[320px]">
                           <iframe
-                            src={`/pdfs/${job.pdf}`}
+                            src={`${job.pdf}`}
                             className="w-full h-full"
                           />
                         </div>
@@ -273,11 +273,11 @@ const Page = () => {
                         {/* Actions */}
                         <div className="flex justify-between items-center px-4 py-4">
                           <a
-                            href={`/pdfs/${job.pdf}`}
+                            href={`${job.pdf}`}
                             download
                             className="px-4 py-1.5 text-sm border rounded-full hover:bg-gray-100 transition"
                           >
-                            Download JD
+                            Download Job Description
                           </a>
 
                           <Button

@@ -132,11 +132,11 @@ const MeetTheTeam = () => {
                 viewport={{ once: true }}
                 className="flex flex-col cursor-pointer shadow-md hover:shadow-md transition-shadow duration-300 rounded-lg md:rounded-xl"
               >
-                <div className="w-full h-48 overflow-hidden rounded-t-lg md:rounded-t-xl">
+                <div className="w-full h-48 overflow-hidden rounded-t-lg md:rounded-t-xl bg-gray-100 flex items-center justify-center">
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain"
                   />
                 </div>
                 <div className="p-2 md:p-3 flex flex-col flex-grow justify-center">

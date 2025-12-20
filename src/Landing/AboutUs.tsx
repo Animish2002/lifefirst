@@ -148,7 +148,7 @@ const AboutSection = () => {
                   <div className="text-center md:text-left mt-6">
                     <a
                       href="/about-us"
-                      className="text-sm sm:text-base text-blue-600 hover:underline flex items-center justify-center md:justify-start"
+                      className="text-sm sm:text-base text-blue-600 hover:underline flex items-center justify-center md:justify-center"
                     >
                       Click to learn more
                       <ExternalLink className="inline w-4 h-4 ml-1" />
