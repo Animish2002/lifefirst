@@ -357,7 +357,7 @@ const CTASection: React.FC = () => {
             </div>
 
             {/* Contact Form */}
-            <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-8">
+            <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-4 md:p-6">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">
                 How Can We Help?
               </h3>
