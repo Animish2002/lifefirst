@@ -20,41 +20,41 @@ const Gallery = () => {
     images: [
       {
         id: 1,
-        title: "Factory",
+        title: "Effluent Treatment Plant",
         category: "image",
         description:
-          "A snapshot of our state-of-the-art manufacturing facility.",
-        url: "https://images.unsplash.com/photo-1579621970795-87facc2f976d?w=800&h=600&fit=crop",
+          "A snapshot of our state-of-the-art 75 KLD ETP",
+        url: "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1766269478/Screenshot_20250812_235526_Gallery_dmiay2.jpg",
       },
       {
         id: 2,
-        title: "Office",
+        title: "Sewage Treatment Plant",
         category: "image",
-        description: "Our corporate office where innovation begins.",
-        url: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1757938131/imgi_2_fb-storyfb_647_011616110611_d6eolt.jpg",
+        description: "150 KLD Sewage Treatment Plant",
+        url: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1766269466/Dist_Jail_150KLD_eqogap.jpg",
       },
       {
         id: 3,
-        title: "6th Annual General Meeting",
+        title: "50 KLD Sewage Treatment Plant",
         category: "image",
         description:
-          "Highlights from our annual general meeting with investors and stakeholders.",
-        url: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1757938131/imgi_2_fb-storyfb_647_011616110611_d6eolt.jpg",
+          "50 KLD Sewage Treatment Plant",
+        url: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1766269465/20251216_194910_1_o7uipk.jpg",
       },
       {
         id: 4,
-        title: "Water Treatment System",
+        title: "Lamella Clarifier and 75 KLD ETP",
         category: "image",
         description:
-          "An installed water treatment system in a rural community.",
-        url: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&h=600&fit=crop",
+          "Lamella Clarifier and 75 KLD ETP",
+        url: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1766269451/62440_xwgghp.jpg",
       },
       {
         id: 5,
         title: "Wastewater Treatment System",
         category: "image",
         description: "A large-scale wastewater treatment plant.",
-        url: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1757938131/imgi_2_fb-storyfb_647_011616110611_d6eolt.jpg",
+        url: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1766269453/20250706_164037_n4wcja.jpg",
       },
       {
         id: 6,

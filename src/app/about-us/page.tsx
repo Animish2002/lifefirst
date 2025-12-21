@@ -538,7 +538,7 @@ const AboutUsPage: React.FC = () => {
                 <div className="bg-blue-100 p-4 rounded-2xl mr-6 group-hover:scale-110 transition-transform duration-300">
                   <Award className="w-6 h-6 text-blue-600" />
                 </div>
-                <h4 className="text-xl font-semibold text-gray-900 mt-2">
+                <h4 className="text-xl font-semibold text-gray-900">
                   Quality Assurance
                 </h4>
               </div>
@@ -561,7 +561,7 @@ const AboutUsPage: React.FC = () => {
                 <div className="bg-green-100 p-4 rounded-2xl mr-6 group-hover:scale-110 transition-transform duration-300">
                   <Shield className="w-6 h-6 text-green-600" />
                 </div>
-                <h4 className="text-xl font-semibold text-gray-900 mt-2">
+                <h4 className="text-xl font-semibold text-gray-900">
                   Safety Standards
                 </h4>
               </div>
@@ -584,7 +584,7 @@ const AboutUsPage: React.FC = () => {
                 <div className="bg-cyan-100 p-4 rounded-2xl mr-6 group-hover:scale-110 transition-transform duration-300">
                   <Factory className="w-6 h-6 text-cyan-600" />
                 </div>
-                <h4 className="text-xl font-semibold text-gray-900 mt-2">
+                <h4 className="text-xl font-semibold text-gray-900">
                   Production Facility
                 </h4>
               </div>
@@ -608,7 +608,7 @@ const AboutUsPage: React.FC = () => {
                 <div className="bg-emerald-100 p-4 rounded-2xl mr-6 group-hover:scale-110 transition-transform duration-300">
                   <Leaf className="w-6 h-6 text-emerald-600" />
                 </div>
-                <h4 className="text-xl font-semibold text-gray-900 mt-2">
+                <h4 className="text-xl font-semibold text-gray-900 ">
                   Zero Liquid Discharge
                 </h4>
               </div>

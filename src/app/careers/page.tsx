@@ -1,8 +1,10 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { ComponentProps } from "react";
 import Navigation from "@/Landing/Navigation";
 import Footer from "@/Landing/Footer";
+import { CheckCircle } from "lucide-react";
+import TurnstileWidget, { TurnstileWidgetRef } from "../TurnstileWidget";
 
 // Icons (keep or replace with your preferred icons)
 const JobIcon = ({ className }: ComponentProps<"svg">) => (
@@ -67,6 +69,35 @@ const LightbulbIcon = ({ className }: ComponentProps<"svg">) => (
   </svg>
 );
 
+// Success Modal Component
+const MessageModal = ({
+  message,
+  onClose,
+}: {
+  message: string;
+  onClose: () => void;
+}) => {
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50">
+      <div className="bg-white p-6 rounded-lg shadow-xl max-w-md w-full">
+        <div className="flex items-center mb-4">
+          <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
+          <h3 className="text-lg font-semibold text-gray-900">
+            Application Submitted!
+          </h3>
+        </div>
+        <p className="text-gray-600 mb-6">{message}</p>
+        <button
+          onClick={onClose}
+          className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors"
+        >
+          Close
+        </button>
+      </div>
+    </div>
+  );
+};
+
 type Job = {
   id: number;
   title: string;
@@ -81,55 +112,51 @@ const jobs: Job[] = [
     title: "Project Engineer",
     department: "Projects",
     location: "Wadki",
-    pdf: "project-engineer.pdf",
+    pdf: "https://careers.life-first.in/JD%20FOR%20PROJECT%20ENGINEER%20(1).pdf",
   },
   {
     id: 2,
     title: "Process Design Engineer",
     department: "Process Engineering",
     location: "Wadki",
-    pdf: "process-design-engineer.pdf",
+    pdf: "https://careers.life-first.in/JD%20FOR%20PROCESS%20DESIGN%20ENGINEER.pdf",
   },
   {
     id: 3,
     title: "Plumber",
     department: "Maintenance / Projects",
     location: "Wadki",
-    pdf: "plumber.pdf",
+    pdf: "https://careers.life-first.in/JD%20FOR%20PLUMBER.pdf",
   },
   {
     id: 4,
     title: "Electromechanical Engineer",
     department: "Engineering / Projects",
     location: "Project Site / Wadki",
-    pdf: "electromechanical-engineer.pdf",
+    pdf: "https://careers.life-first.in/JD%20FOR%20ELECTROMACHANICAL%20ENGINEER.pdf",
   },
   {
     id: 5,
     title: "Electrician",
     department: "Electrical / Maintenance / Projects",
     location: "Project Site / Wadki",
-    pdf: "electrician.pdf",
+    pdf: "https://careers.life-first.in/JD%20FOR%20ELECTRICIAN.pdf",
   },
   {
     id: 6,
     title: "Civil Engineer",
     department: "Engineering / Projects",
     location: "Project Site / Wadki",
-    pdf: "civil-engineer.pdf",
+    pdf: "https://careers.life-first.in/JD%20FOR%20CIVIL%20ENGINEER.pdf ",
   },
   {
     id: 7,
     title: "HR & Admin Executive",
     department: "HR & Admin",
     location: "Wadki",
-    pdf: "hr-admin.pdf",
+    pdf: "https://careers.life-first.in/JD%20FOR%20HR%20ADMIN.pdf",
   },
 ];
-
-// Note: Adjust the imports to match your project’s actual UI components.
-// The following uses a Shadcn-like pattern (Card, Button, Dialog).
-// Ensure you have these components available in your codebase.
 
 import { Card, CardHeader, CardFooter } from "@/components/ui/card";
 import { CardTitle, CardDescription } from "@/components/ui/card";
@@ -146,9 +173,104 @@ import { Input } from "@/components/ui/input";
 
 const Page = () => {
   const [showForm, setShowForm] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [currentJobTitle, setCurrentJobTitle] = useState("");
+  const [openDialogId, setOpenDialogId] = useState<number | null>(null);
+  const [selectedFileName, setSelectedFileName] = useState<string>("");
+  const [turnstileKey, setTurnstileKey] = useState(0);
+  
+  // Add Turnstile ref
+  const turnstileRef = useRef<TurnstileWidgetRef>(null);
 
+  // Handle body scroll lock to prevent navbar shift
+  useEffect(() => {
+    const isDialogOpen = openDialogId !== null;
+    
+    if (isDialogOpen) {
+      // Calculate scrollbar width
+      const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+      
+      // Lock body scroll and compensate for scrollbar width
+      document.body.style.overflow = "hidden";
+      if (scrollbarWidth > 0) {
+        document.body.style.paddingRight = `${scrollbarWidth}px`;
+      }
+    } else {
+      // Restore body scroll
+      document.body.style.overflow = "";
+      document.body.style.paddingRight = "";
+    }
+    
+    return () => {
+      document.body.style.overflow = "";
+      document.body.style.paddingRight = "";
+    };
+  }, [openDialogId]);
 
-  // No global state needed; each card handles its own dialog
+  // Reset Turnstile when form becomes visible
+  useEffect(() => {
+    if (showForm && openDialogId !== null) {
+      // Reset turnstile after form is fully mounted
+      setTimeout(() => {
+        if (turnstileRef.current) {
+          turnstileRef.current.reset();
+        }
+      }, 300);
+    }
+  }, [showForm, openDialogId, turnstileKey]);
+
+  const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    // Get Turnstile token
+    const token = turnstileRef.current?.getToken();
+    if (!token) {
+      alert("Please complete the security verification.");
+      return;
+    }
+
+    setLoading(true);
+
+    // Store form reference before async operations
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    
+    // Add Turnstile token to FormData
+    formData.append("turnstileToken", token);
+
+    try {
+      const response = await fetch(
+        "https://formflowapi.thefortune.club/api/submit/2ddf5b7e-e0c6-4877-878f-584885823abe",
+        {
+          method: "POST",
+          body: formData,
+        }
+      );
+
+      if (response.ok) {
+        setIsModalOpen(true);
+        setShowForm(false);
+        setOpenDialogId(null); // Close the dialog
+        form.reset();
+        setSelectedFileName(""); // Reset file name
+        // Reset Turnstile on success
+        turnstileRef.current?.reset();
+      } else {
+        alert("Something went wrong. Please try again later.");
+        // Reset Turnstile on error
+        turnstileRef.current?.reset();
+      }
+    } catch (error) {
+      console.error("Form submission error:", error);
+      alert("Error submitting form. Please try again.");
+      // Reset Turnstile on error
+      turnstileRef.current?.reset();
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <div className="bg-gray-50 text-gray-800 font-sans">
       <Navigation />
@@ -238,11 +360,30 @@ const Page = () => {
                 </CardHeader>
 
                 <CardFooter className="p-4 pt-0">
-                  <Dialog>
+                  <Dialog
+                    open={openDialogId === job.id}
+                    onOpenChange={(open) => {
+                      setOpenDialogId(open ? job.id : null);
+                      if (!open) {
+                        setShowForm(false);
+                        setSelectedFileName(""); // Reset file name when dialog closes
+                      }
+                      // Force Turnstile re-render when dialog opens
+                      if (open) {
+                        setTurnstileKey(prev => prev + 1);
+                      }
+                    }}
+                  >
                     <DialogTrigger asChild>
                       <Button
                         className="w-full cursor-pointer"
                         variant="outline"
+                        onClick={() => {
+                          setCurrentJobTitle(job.title);
+                          setShowForm(false);
+                          setSelectedFileName(""); // Reset file name when opening dialog
+                          setOpenDialogId(job.id);
+                        }}
                       >
                         View Details & Apply
                       </Button>
@@ -265,7 +406,7 @@ const Page = () => {
                         {/* Smaller PDF Viewer */}
                         <div className="border rounded-xl overflow-hidden h-[320px]">
                           <iframe
-                            src={`/pdfs/${job.pdf}`}
+                            src={`${job.pdf}`}
                             className="w-full h-full"
                           />
                         </div>
@@ -273,15 +414,15 @@ const Page = () => {
                         {/* Actions */}
                         <div className="flex justify-between items-center px-4 py-4">
                           <a
-                            href={`/pdfs/${job.pdf}`}
+                            href={`${job.pdf}`}
                             download
                             className="px-4 py-1.5 text-sm border rounded-full hover:bg-gray-100 transition"
                           >
-                            Download JD
+                            Download Job Description
                           </a>
 
                           <Button
-                            className="rounded-full px-5 py-1.5 text-sm"
+                            className="rounded-full px-5 py-1.5 text-sm bg-blue-600 hover:bg-blue-700"
                             onClick={() => setShowForm(true)}
                           >
                             Apply Now
@@ -296,8 +437,7 @@ const Page = () => {
                             </h3>
 
                             <form
-                              action="https://formspree.io/f/your-form-id"
-                              method="POST"
+                              onSubmit={handleFormSubmit}
                               className="space-y-3"
                             >
                               <input
@@ -332,14 +472,38 @@ const Page = () => {
                                   type="file"
                                   name="resume"
                                   className="h-9"
+                                  accept=".pdf,.doc,.docx"
+                                  onChange={(e) => {
+                                    const file = e.target.files?.[0];
+                                    if (file) {
+                                      setSelectedFileName(file.name);
+                                    } else {
+                                      setSelectedFileName("");
+                                    }
+                                  }}
+                                />
+                                {selectedFileName && (
+                                  <p className="text-xs text-gray-600 mt-1 flex items-center gap-1">
+                                    <span className="text-green-600">✓</span>
+                                    Selected: <span className="font-medium">{selectedFileName}</span>
+                                  </p>
+                                )}
+                              </div>
+                              
+                              {/* Turnstile Widget with ref */}
+                              <div className="py-3 min-h-[80px] flex items-center justify-center w-full overflow-visible">
+                                <TurnstileWidget 
+                                  key={`turnstile-${openDialogId}-${showForm}-${turnstileKey}`} 
+                                  ref={turnstileRef} 
                                 />
                               </div>
-
+                              
                               <Button
-                                className="w-full rounded-full h-9"
+                                className="w-full rounded-full h-9 bg-blue-600 hover:bg-blue-700"
                                 type="submit"
+                                disabled={loading}
                               >
-                                Submit
+                                {loading ? "Submitting..." : "Submit"}
                               </Button>
                             </form>
                           </div>
@@ -354,26 +518,15 @@ const Page = () => {
         </div>
       </section>
 
-      {/* Call to Action Section */}
-      {/* <section className="bg-gray-100 py-8 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">
-            Ready to Join Us?
-          </h2>
-          <p className="text-lg text-gray-600 mb-2">
-            If you don&apos;t see an opening that fits your skills, we&apos;d
-            still love to hear from you.
-          </p>
-          <a
-            href="#"
-            className="inline-block bg-blue-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-blue-700 transition-colors duration-300"
-          >
-            Connect With Us
-          </a>
-        </div>
-      </section> */}
-
       <Footer />
+
+      {/* Success Modal */}
+      {isModalOpen && (
+        <MessageModal
+          message="Thank you for your application! We'll review your submission and get back to you soon."
+          onClose={() => setIsModalOpen(false)}
+        />
+      )}
     </div>
   );
 };

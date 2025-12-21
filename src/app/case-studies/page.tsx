@@ -23,6 +23,7 @@ import { Button } from "@/components/ui/button";
 import Navigation from "@/Landing/Navigation";
 import Footer from "@/Landing/Footer";
 import StatsSection from "@/Landing/StatsSection";
+import { useRouter } from "next/navigation";
 
 const CaseStudiesPage = () => {
   const caseStudiesData = [
@@ -129,6 +130,8 @@ const CaseStudiesPage = () => {
       category: "Hospitality",
     },
   ];
+
+  const router = useRouter();
 
   const stats = [
     {
@@ -306,12 +309,10 @@ const CaseStudiesPage = () => {
               your project today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button className="bg-white text-blue-600 hover:bg-blue-50 font-semibold py-3 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl">
+              <Button  onClick={() => router.push("/contact")} className="bg-white text-blue-600 hover:bg-blue-50 font-semibold py-3 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl">
                 Start Your Project
               </Button>
-              <Button className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold py-3 px-8 rounded-lg transition-all duration-300">
-                Schedule Consultation
-              </Button>
+              
             </div>
           </motion.div>
         </div>

@@ -1,6 +1,13 @@
 "use client";
 
-import { useEffect, useRef, useState, useImperativeHandle, forwardRef } from "react";
+import {
+  useEffect,
+  useRef,
+  useState,
+  useImperativeHandle,
+  forwardRef,
+  useCallback,
+} from "react";
 import Script from "next/script";
 
 interface TurnstileWidgetProps {
@@ -22,20 +29,12 @@ interface TurnstileRenderOptions {
   callback?: (token: string) => void;
   "error-callback"?: () => void;
   "expired-callback"?: () => void;
-  "timeout-callback"?: () => void;
-  size?: "normal" | "compact";
-  language?: string;
-  tabindex?: number;
-  "response-field"?: boolean;
-  "response-field-name"?: string;
-  retry?: "auto" | "never";
-  "retry-interval"?: number;
 }
 
 declare global {
   interface Window {
     turnstile: {
-      render: (element: string | HTMLElement, options: TurnstileRenderOptions) => string;
+      render: (element: HTMLElement, options: TurnstileRenderOptions) => string;
       reset: (widgetId: string) => void;
       remove: (widgetId: string) => void;
       getResponse: (widgetId: string) => string | undefined;
@@ -44,26 +43,49 @@ declare global {
 }
 
 const TurnstileWidget = forwardRef<TurnstileWidgetRef, TurnstileWidgetProps>(
-  ({ 
-    sitekey = "0x4AAAAAACFSNXQ8mz2Zw6sy",
-    theme = "light",
-    onVerify,
-    onError,
-    onExpire 
-  }, ref) => {
+  (
+    {
+      sitekey = "0x4AAAAAACFSNXQ8mz2Zw6sy",
+      theme = "light",
+      onVerify,
+      onError,
+      onExpire,
+    },
+    ref
+  ) => {
     const widgetRef = useRef<HTMLDivElement>(null);
     const widgetIdRef = useRef<string | null>(null);
     const [isLoaded, setIsLoaded] = useState(false);
-    const [token, setToken] = useState<string | undefined>(undefined);
+    const [token, setToken] = useState<string>();
+
+    // Check if script is already loaded (runs on mount and when isLoaded changes)
+    useEffect(() => {
+      if (typeof window !== "undefined" && window.turnstile && !isLoaded) {
+        setIsLoaded(true);
+      }
+    }, [isLoaded]);
+
+    // Memoize callbacks to prevent unnecessary re-renders
+    const handleVerify = useCallback(
+      (newToken: string) => {
+        setToken(newToken);
+        onVerify?.(newToken);
+      },
+      [onVerify]
+    );
+
+    const handleError = useCallback(() => {
+      setToken(undefined);
+      onError?.();
+    }, [onError]);
+
+    const handleExpire = useCallback(() => {
+      setToken(undefined);
+      onExpire?.();
+    }, [onExpire]);
 
     useImperativeHandle(ref, () => ({
-      getToken: () => {
-        if (widgetIdRef.current && window.turnstile) {
-          const currentToken = window.turnstile.getResponse(widgetIdRef.current);
-          return currentToken || token;
-        }
-        return token;
-      },
+      getToken: () => token,
       reset: () => {
         if (widgetIdRef.current && window.turnstile) {
           window.turnstile.reset(widgetIdRef.current);
@@ -73,41 +95,57 @@ const TurnstileWidget = forwardRef<TurnstileWidgetRef, TurnstileWidgetProps>(
     }));
 
     useEffect(() => {
-      if (isLoaded && widgetRef.current && !widgetIdRef.current) {
-        const renderOptions: TurnstileRenderOptions = {
-          sitekey,
-          theme: theme as "light" | "dark" | "auto",
-          callback: (newToken: string) => {
-            setToken(newToken);
-            if (onVerify) {
-              onVerify(newToken);
-            }
-          },
-        };
-        
-        if (onError) {
-          renderOptions["error-callback"] = () => {
-            setToken(undefined);
-            onError();
-          };
-        }
-        
-        if (onExpire) {
-          renderOptions["expired-callback"] = () => {
-            setToken(undefined);
-            onExpire();
-          };
-        }
-        
-        widgetIdRef.current = window.turnstile.render(widgetRef.current, renderOptions);
+      if (!isLoaded || !widgetRef.current || !window.turnstile) {
+        return;
       }
-    }, [isLoaded, sitekey, theme, onVerify, onError, onExpire]);
+
+      // Small delay to ensure container is fully mounted
+      const timer = setTimeout(() => {
+        if (!widgetRef.current || !window.turnstile) {
+          return;
+        }
+
+        // Remove any existing widget first
+        if (widgetIdRef.current) {
+          try {
+            window.turnstile.remove(widgetIdRef.current);
+          } catch (e) {
+            // Widget might already be removed
+          }
+          widgetIdRef.current = null;
+        }
+
+        // Render the widget
+        widgetIdRef.current = window.turnstile.render(widgetRef.current, {
+          sitekey,
+          theme,
+          callback: handleVerify,
+          "error-callback": handleError,
+          "expired-callback": handleExpire,
+        });
+      }, 50);
+
+      // Cleanup function
+      return () => {
+        clearTimeout(timer);
+        if (widgetIdRef.current && window.turnstile) {
+          try {
+            window.turnstile.remove(widgetIdRef.current);
+          } catch (e) {
+            // Widget might already be removed
+            console.warn("Failed to remove Turnstile widget:", e);
+          }
+          widgetIdRef.current = null;
+        }
+      };
+    }, [isLoaded, sitekey, theme, handleVerify, handleError, handleExpire]);
 
     return (
       <>
         <div className="flex justify-center">
-          <div ref={widgetRef} className="cf-turnstile"></div>
+          <div ref={widgetRef} />
         </div>
+
         <Script
           src="https://challenges.cloudflare.com/turnstile/v0/api.js"
           async
@@ -120,6 +158,4 @@ const TurnstileWidget = forwardRef<TurnstileWidgetRef, TurnstileWidgetProps>(
 );
 
 TurnstileWidget.displayName = "TurnstileWidget";
-
 export default TurnstileWidget;
-

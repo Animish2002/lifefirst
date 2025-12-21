@@ -91,7 +91,7 @@ const AboutSection = () => {
                 {/* Image */}
                 <div className="flex justify-center items-center flex-col  space-y-2">
                   <motion.img
-                    src="https://res.cloudinary.com/dsvfcckqy/image/upload/v1755028853/lifefirst_logo_jpg_fpmkho.jpg"
+                    src="https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1766260610/life-first-logo-and-text-mark-transparent_bvvdqo.png"
                     alt="Company Facility"
                     className="w-52 sm:w-64 md:w-[18rem] object-cover"
                     initial={{ scale: 1 }}
@@ -148,7 +148,7 @@ const AboutSection = () => {
                   <div className="text-center md:text-left mt-6">
                     <a
                       href="/about-us"
-                      className="text-sm sm:text-base text-blue-600 hover:underline flex items-center justify-center md:justify-start"
+                      className="text-sm sm:text-base text-blue-600 hover:underline flex items-center justify-center md:justify-center"
                     >
                       Click to learn more
                       <ExternalLink className="inline w-4 h-4 ml-1" />

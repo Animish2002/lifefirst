@@ -1,7 +1,7 @@
 "use client";
 
-import Turnstile from "@/app/TurnstileWidget";
-import { useState, useEffect } from "react";
+import TurnstileWidget, { TurnstileWidgetRef } from "@/app/TurnstileWidget";
+import { useState, useEffect, useRef } from "react";
 
 interface ContactFormData {
   name: string;
@@ -31,6 +31,16 @@ const ContactFormPopup = ({
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitMessage, setSubmitMessage] = useState("");
 
+  // Add Turnstile ref
+  const turnstileRef = useRef<TurnstileWidgetRef>(null);
+
+  // Reset Turnstile when popup opens
+  useEffect(() => {
+    if (isOpen) {
+      setTimeout(() => turnstileRef.current?.reset(), 100);
+    }
+  }, [isOpen]);
+
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -43,19 +53,31 @@ const ContactFormPopup = ({
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    // Get Turnstile token
+    const token = turnstileRef.current?.getToken();
+    if (!token) {
+      alert("Please complete the security verification.");
+      return;
+    }
+
     setIsSubmitting(true);
 
     try {
-      const response = await fetch("https://formspree.io/f/mjkavwqr", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          ...formData,
-          solution: solutionTitle, // include solution title in submission
-        }),
-      });
+      const response = await fetch(
+        "https://formflowapi.thefortune.club/api/submit/74846bd6-89b6-4855-a70f-b91795fa0a71",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            ...formData,
+            solution: solutionTitle, // include solution title in submission
+            turnstileToken: token, // Include the Turnstile token
+          }),
+        }
+      );
 
       if (response.ok) {
         setSubmitMessage("Thank you! We'll get back to you soon.");
@@ -66,6 +88,8 @@ const ContactFormPopup = ({
           company: "",
           message: "",
         });
+        // Reset Turnstile on success
+        turnstileRef.current?.reset();
 
         setTimeout(() => {
           setSubmitMessage("");
@@ -73,9 +97,13 @@ const ContactFormPopup = ({
         }, 2000);
       } else {
         setSubmitMessage("Something went wrong. Please try again.");
+        // Reset Turnstile on error
+        turnstileRef.current?.reset();
       }
-    } catch (error) {
+    } catch {
       setSubmitMessage("Something went wrong. Please try again.");
+      // Reset Turnstile on error
+      turnstileRef.current?.reset();
     } finally {
       setIsSubmitting(false);
     }
@@ -234,7 +262,8 @@ const ContactFormPopup = ({
                 />
               </div>
 
-              <Turnstile />
+              {/* Turnstile Widget with ref */}
+              <TurnstileWidget ref={turnstileRef} />
 
               <div className="flex gap-3 pt-2">
                 <button

@@ -21,6 +21,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import TurnstileWidget, { TurnstileWidgetRef } from "../TurnstileWidget";
 
 const Page = () => {
   const [openNewsId, setOpenNewsId] = useState<number | null>(null);
@@ -29,6 +30,7 @@ const Page = () => {
   const [submitted, setSubmitted] = useState(false);
 
   const firstInputRef = useRef<HTMLInputElement | null>(null);
+  const turnstileRef = useRef<TurnstileWidgetRef>(null);
 
   const [form, setForm] = useState({
     name: "",
@@ -42,6 +44,12 @@ const Page = () => {
       // focus first input when dialog opens
       setTimeout(() => firstInputRef.current?.focus(), 50);
       document.body.style.overflow = "hidden";
+      // Reset turnstile after dialog is fully mounted
+      setTimeout(() => {
+        if (turnstileRef.current) {
+          turnstileRef.current.reset();
+        }
+      }, 300);
     } else {
       document.body.style.overflow = "";
     }
@@ -69,6 +77,7 @@ const Page = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
     if (
       !form.name.trim() ||
       !form.email.trim() ||
@@ -79,20 +88,45 @@ const Page = () => {
       return;
     }
 
+    // Get Turnstile token
+    const token = turnstileRef.current?.getToken();
+    if (!token) {
+      alert("Please complete the security verification.");
+      return;
+    }
+
     setSubmitting(true);
+
     try {
-      // simulate API call
-      await new Promise((r) => setTimeout(r, 900));
-      // replace with real API call:
-      // await fetch('/api/filing-requests', { method: 'POST', body: JSON.stringify(form) })
+      const res = await fetch("https://formflowapi.thefortune.club/api/submit/6c412278-0ba7-4b02-a9d0-47069fbf31a7", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          phone: form.phone,
+          reason: form.reason,
+          turnstileToken: token, // Include the Turnstile token
+        }),
+      });
+
+      if (!res.ok) {
+        throw new Error("Formflow submission failed");
+      }
+
       console.log("Submitted:", form);
       setSubmitted(true);
-      setSubmitting(false);
       setTimeout(() => setIsDialogOpen(false), 1200);
     } catch (err) {
       console.error(err);
-      setSubmitting(false);
       alert("Something went wrong. Please try again.");
+      // Reset Turnstile on error so user can try again
+      turnstileRef.current?.reset();
+    } finally {
+      setSubmitting(false);
     }
   };
 
@@ -154,39 +188,38 @@ const Page = () => {
 
           <Button
             onClick={openRequestModal}
-            className="inline-flex items-center rounded-full px-8 py-3"
+            className="inline-flex items-center rounded-full px-8 py-3 bg-blue-600 hover:bg-blue-700"
           >
-            View Reports
+            Request Fillings
           </Button>
         </div>
       </section>
 
       <Footer />
 
-      {/* shadcn Dialog */}
       {/* Request Dialog */}
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
-        <DialogContent className="sm:max-w-xl w-full rounded-2xl border border-white/20 shadow-2xl p-0 overflow-hidden">
+        <DialogContent className="max-w-[95vw] sm:max-w-lg md:max-w-xl w-full max-h-[90vh] rounded-2xl border border-white/20 shadow-2xl p-0 overflow-y-auto">
           {/* Frosted Blur */}
           <div className="fixed inset-0 -z-10 backdrop-blur-md" />
 
           {/* Header */}
-          <div className="px-6 py-4">
+          <div className="px-4 sm:px-6 py-4 sticky top-0 bg-white z-10 border-b">
             <DialogHeader>
-              <DialogTitle className="text-2xl font-bold">
+              <DialogTitle className="text-xl sm:text-2xl font-bold">
                 Request Financial Reports
               </DialogTitle>
-              <DialogDescription className="">
-                Fill in your details and we’ll send the latest filings.
+              <DialogDescription className="text-sm sm:text-base">
+                Fill in your details and we&apos;ll send the latest filings.
               </DialogDescription>
             </DialogHeader>
           </div>
 
           {/* Body */}
-          <div className="p-6">
+          <div className="p-4 sm:p-6">
             {!submitted ? (
-              <form onSubmit={handleSubmit} className="space-y-5">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <Label htmlFor="name">Full Name</Label>
                     <Input
@@ -242,12 +275,17 @@ const Page = () => {
                   />
                 </div>
 
-                <div className="flex justify-end gap-3 pt-2">
+                {/* Turnstile Widget with ref */}
+                <div className="py-3 sm:py-4 min-h-[80px] flex items-center justify-center w-full overflow-visible">
+                  <TurnstileWidget key={`turnstile-${isDialogOpen}`} ref={turnstileRef} />
+                </div>
+
+                <div className="flex flex-col sm:flex-row justify-end gap-3 pt-2">
                   <Button
                     variant="outline"
                     type="button"
                     onClick={() => setIsDialogOpen(false)}
-                    className="rounded-full"
+                    className="rounded-full w-full sm:w-auto"
                   >
                     Cancel
                   </Button>
@@ -255,7 +293,7 @@ const Page = () => {
                   <Button
                     type="submit"
                     disabled={submitting}
-                    className="rounded-full px-6"
+                    className="rounded-full px-6 bg-blue-600 hover:bg-blue-700 w-full sm:w-auto"
                   >
                     {submitting ? "Submitting..." : "Send Request"}
                   </Button>
@@ -270,7 +308,7 @@ const Page = () => {
                   Request submitted successfully!
                 </p>
                 <p className="text-sm text-gray-600 mt-1">
-                  We’ll get back to you shortly.
+                  We&apos;ll get back to you shortly.
                 </p>
               </div>
             )}
