@@ -91,7 +91,7 @@ const AboutSection = () => {
                 {/* Image */}
                 <div className="flex justify-center items-center flex-col  space-y-2">
                   <motion.img
-                    src="https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1766260610/life-first-logo-and-text-mark-transparent_bvvdqo.png"
+                    src="https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1766260081/logo_and_text_mark_with_tm_mtomnl.png"
                     alt="Company Facility"
                     className="w-52 sm:w-64 md:w-[18rem] object-cover"
                     initial={{ scale: 1 }}

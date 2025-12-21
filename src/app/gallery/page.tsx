@@ -31,7 +31,7 @@ const Gallery = () => {
         title: "Sewage Treatment Plant",
         category: "image",
         description: "150 KLD Sewage Treatment Plant",
-        url: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1766269466/Dist_Jail_150KLD_eqogap.jpg",
+        url: "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1766269466/Dist_Jail_150KLD_eqogap.jpg",
       },
       {
         id: 3,
@@ -39,7 +39,7 @@ const Gallery = () => {
         category: "image",
         description:
           "50 KLD Sewage Treatment Plant",
-        url: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1766269465/20251216_194910_1_o7uipk.jpg",
+        url: "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1766269465/20251216_194910_1_o7uipk.jpg",
       },
       {
         id: 4,
@@ -47,21 +47,21 @@ const Gallery = () => {
         category: "image",
         description:
           "Lamella Clarifier and 75 KLD ETP",
-        url: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1766269451/62440_xwgghp.jpg",
+        url: "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1766269451/62440_xwgghp.jpg",
       },
       {
         id: 5,
         title: "Wastewater Treatment System",
         category: "image",
         description: "A large-scale wastewater treatment plant.",
-        url: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1766269453/20250706_164037_n4wcja.jpg",
+        url: "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1766269453/20250706_164037_n4wcja.jpg",
       },
       {
         id: 6,
         title: "Effluent Treatment System",
         category: "image",
         description: "An effluent treatment system for industrial use.",
-        url: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop",
+        url: "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1766269467/file_00000000b32461f491937f76ec1015e4_vtjqqa.jpg",
       },
       {
         id: 7,
@@ -69,14 +69,14 @@ const Gallery = () => {
         category: "image",
         description:
           "Showcasing our range of sustainable and eco-friendly products.",
-        url: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1757938131/imgi_2_fb-storyfb_647_011616110611_d6eolt.jpg",
+        url: "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1766269465/20251104_173856_lnqvmc.jpg",
       },
       {
         id: 8,
         title: "Bio-Digester & Bio-Toilets",
         category: "image",
         description: "Our innovative bio-digester and bio-toilet solutions.",
-        url: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1757938131/imgi_2_fb-storyfb_647_011616110611_d6eolt.jpg",
+        url: "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1766269460/20251120_164212_vuembb.jpg",
       },
       {
         id: 9,
@@ -84,7 +84,7 @@ const Gallery = () => {
         category: "image",
         description:
           "A close-up of our advanced hydration monitoring technology.",
-        url: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1757938131/imgi_2_fb-storyfb_647_011616110611_d6eolt.jpg",
+        url: "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1766269457/20250824_134527_phtwxh.jpg",
       },
     ],
     videos: [
