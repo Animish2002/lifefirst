@@ -403,26 +403,41 @@ const Page = () => {
                       </div>
 
                       <div className="px-4 space-y-4">
-                        {/* Smaller PDF Viewer */}
-                        <div className="border rounded-xl overflow-hidden h-[320px]">
+                        {/* Smaller PDF Viewer - Hidden on mobile */}
+                        <div className="hidden md:block border rounded-xl overflow-hidden h-[320px]">
                           <iframe
                             src={`${job.pdf}`}
                             className="w-full h-full"
                           />
                         </div>
 
+                        {/* View PDF Button - Only visible on mobile */}
+                        <div className="block md:hidden">
+                          <Button
+                            className="w-full rounded-full px-5 py-2.5 text-sm bg-gray-100 hover:bg-gray-200 text-gray-700 border border-gray-300"
+                            onClick={() => window.open(job.pdf, "_blank")}
+                          >
+                            View PDF
+                          </Button>
+                        </div>
+
                         {/* Actions */}
-                        <div className="flex justify-between items-center px-4 py-4">
-                          <a
-                            href={`${job.pdf}`}
-                            download
-                            className="px-4 py-1.5 text-sm border rounded-full hover:bg-gray-100 transition"
+                        <div className="flex flex-col sm:flex-row justify-between items-center gap-3 px-4 py-4">
+                          <Button
+                            variant="outline"
+                            className="w-full sm:w-auto rounded-full px-5 py-2.5 text-sm border-gray-300 hover:bg-gray-100 transition"
+                            onClick={() => {
+                              const link = document.createElement("a");
+                              link.href = job.pdf;
+                              link.download = "";
+                              link.click();
+                            }}
                           >
                             Download Job Description
-                          </a>
+                          </Button>
 
                           <Button
-                            className="rounded-full px-5 py-1.5 text-sm bg-blue-600 hover:bg-blue-700"
+                            className="w-full sm:w-auto rounded-full px-5 py-2.5 text-sm bg-blue-600 hover:bg-blue-700"
                             onClick={() => setShowForm(true)}
                           >
                             Apply Now
