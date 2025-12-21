@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -92,77 +92,69 @@ const Gallery = () => {
         id: 1,
         title: "3MLD",
         category: "video",
-        description: "An overview of our company's mission and vision.",
+        description: "3MLD in action",
         url: "https://player.cloudinary.com/embed/?cloud_name=dsvfcckqy&public_id=3MLD_jftt8k&profile=cld-default",
         thumbnail:
-          "https://img.youtube.com/vi/your-video-id-1/maxresdefault.jpg",
+          "https://res.cloudinary.com/dsvfcckqy/video/upload/so_0/3MLD_jftt8k.jpg",
       },
       {
         id: 2,
-        title: "6th Annual General Meeting",
+        title: "Project - 2000x1800mm Pressure Vessels Filters",
         category: "video",
         description:
-          "A summary of the key discussions and announcements from the AGM.",
-        url: "https://www.youtube.com/embed/your-video-id-2",
-        thumbnail:
-          "https://img.youtube.com/vi/your-video-id-2/maxresdefault.jpg",
+          "Dispatch of our 2000x1800mm Pressure Vessels Filters",
+        url: "https://player.cloudinary.com/embed/?cloud_name=dsvfcckqy&public_id=2000x1800mm_Filter_by_LFCT_h3og60&profile=cld-default",
+       thumbnail:
+          "https://res.cloudinary.com/dsvfcckqy/video/upload/so_0/2000x1800mm_Filter_by_LFCT_h3og60.jpg"
       },
       {
         id: 3,
-        title: "Water Treatment System",
+        title: "Diwali Celebrations at LifeFirst",
         category: "video",
-        description: "A demonstration of our water treatment system in action.",
-        url: "https://www.youtube.com/embed/your-video-id-3",
+        description: "Lighting up the world with one drop at a time",
+        url: "https://player.cloudinary.com/embed/?cloud_name=dsvfcckqy&public_id=LFCT_DIWALI_isivai&profile=cld-default",
         thumbnail:
-          "https://img.youtube.com/vi/your-video-id-3/maxresdefault.jpg",
+          "https://res.cloudinary.com/dsvfcckqy/video/upload/so_0/LFCT_DIWALI_isivai.jpg",
       },
       {
         id: 4,
-        title: "Wastewater Treatment System",
+        title: "Dussehra Celebrations at LifeFirst",
         category: "video",
-        description: "A detailed look at our wastewater treatment process.",
-        url: "https://www.youtube.com/embed/your-video-id-4",
+        description: "Celebrating Life's festivals with LifeFirst at our Factory",
+        url: "https://player.cloudinary.com/embed/?cloud_name=dsvfcckqy&public_id=EVENT_d7xjeb&profile=cld-default",
         thumbnail:
-          "https://img.youtube.com/vi/your-video-id-4/maxresdefault.jpg",
+          "https://res.cloudinary.com/dsvfcckqy/video/upload/so_0/EVENT_d7xjeb.jpg",
       },
       {
         id: 5,
-        title: "Effluent Treatment System",
+        title: "2MLD Water Treatment Plant Process Video",
         category: "video",
         description:
-          "Showcasing the efficiency of our industrial effluent treatment solutions.",
-        url: "https://www.youtube.com/embed/your-video-id-5",
+          "Showcasing the process and flow of our 2 millions Water Treatment Plant",
+        url: "https://player.cloudinary.com/embed/?cloud_name=dsvfcckqy&public_id=2MLD_WTP_1_1_vgk0lh&profile=cld-default",
         thumbnail:
-          "https://img.youtube.com/vi/your-video-id-5/maxresdefault.jpg",
+          "https://res.cloudinary.com/dsvfcckqy/video/upload/so_0/2MLD_WTP_1_1_vgk0lh.jpg",
       },
       {
         id: 6,
-        title: "Sustainable Products",
+        title: "120 KLD Sewage Treatment Plant Export Dispatch Activity - Kuwait",
         category: "video",
-        description: "An introduction to our eco-friendly product line.",
-        url: "https://www.youtube.com/embed/your-video-id-6",
+        description: "Export dispatch and logistics coordination for a 120 KLD sewage treatment plant supplied for a project in Kuwait.",
+        url: "https://player.cloudinary.com/embed/?cloud_name=dsvfcckqy&public_id=Kuwait_1_epe0pj&profile=cld-default",
         thumbnail:
-          "https://img.youtube.com/vi/your-video-id-6/maxresdefault.jpg",
+          "https://res.cloudinary.com/dsvfcckqy/video/upload/so_0/Kuwait_1_epe0pj.jpg",
       },
       {
         id: 7,
-        title: "Bio-Digester & Bio-Toilets",
+        title: "6th Anniversary celebration of LifeFirst",
         category: "video",
         description:
-          "Learn about the benefits of our bio-digester and bio-toilet technology.",
-        url: "https://www.youtube.com/embed/your-video-id-7",
+          "Commemorating six years of LifeFirst's growth, achievements, and continued commitment to excellence.",
+        url: "https://player.cloudinary.com/embed/?cloud_name=dsvfcckqy&public_id=LFCT_6th_Anniversary_1_glokhn&profile=cld-default",
         thumbnail:
-          "https://img.youtube.com/vi/your-video-id-7/maxresdefault.jpg",
+          "https://res.cloudinary.com/dsvfcckqy/video/upload/so_0/LFCT_6th_Anniversary_1_glokhn.jpg",
       },
-      {
-        id: 8,
-        title: "Hydration Monitoring System",
-        category: "video",
-        description: "A brief on how our hydration monitoring system works.",
-        url: "https://www.youtube.com/embed/your-video-id-8",
-        thumbnail:
-          "https://img.youtube.com/vi/your-video-id-8/maxresdefault.jpg",
-      },
+      
     ],
   };
 
@@ -207,8 +199,7 @@ const Gallery = () => {
                         </div>
                       </div>
                     </DialogTrigger>
-                    <DialogContent className="max-w-4xl p-0">
-                      {/* Added DialogHeader and DialogTitle for accessibility */}
+                    <DialogContent className="max-w-6xl p-0">
                       <DialogHeader className="p-4">
                         <DialogTitle>{item.title}</DialogTitle>
                         <DialogDescription>
@@ -251,22 +242,21 @@ const Gallery = () => {
                         </div>
                       </div>
                     </DialogTrigger>
-                    <DialogContent className="max-w-4xl p-0">
-                      {/* Added DialogHeader and DialogTitle for accessibility */}
-                      <DialogHeader className="p-4">
-                        <DialogTitle>{item.title}</DialogTitle>
-                        <DialogDescription>
+                    <DialogContent className="max-w-5xl w-[95vw] max-h-[90vh] p-0 overflow-hidden">
+                      <DialogHeader className="p-4 pb-2">
+                        <DialogTitle className="text-xl">{item.title}</DialogTitle>
+                        <DialogDescription className="text-sm">
                           {item.description}
                         </DialogDescription>
                       </DialogHeader>
-                      <div className="aspect-w-16 aspect-h-9">
+                      <div className="relative w-full pb-[56.25%]">
                         <iframe
                           src={`${item.url}?autoplay=1`}
                           title={item.title}
                           frameBorder="0"
                           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                           allowFullScreen
-                          className="w-full h-full"
+                          className="absolute top-0 left-0 w-full h-full"
                         ></iframe>
                       </div>
                     </DialogContent>
