@@ -77,7 +77,7 @@ const SolutionPage = async ({ params }: PageProps) => {
               }`}
             >
               {/* Left Column - Content */}
-              <div className="space-y-8">
+              <div className="space-y-8 order-2 lg:order-1">
                 {/* Section Title */}
                 <div className="space-y-1">
                   <span className="text-sm font-medium text-blue-600 uppercase tracking-wider">
@@ -142,12 +142,12 @@ const SolutionPage = async ({ params }: PageProps) => {
 
               {/* Right Column - Image (Conditional) */}
               {hasInfoImage && (
-                <div className="lg:sticky lg:top-32">
+                <div className="lg:sticky lg:top-32 order-1 lg:order-2">
                   <div className="relative w-full">
                     {/* Image Container - Universal aspect ratio handling */}
                     <div className="relative w-full rounded-2xl overflow-hidden border border-gray-100 shadow-sm">
                       {/* Wrapper that constrains height but allows natural width */}
-                      <div className="relative flex items-center justify-center p-4 md:p-6 min-h-[380px] max-h-[520px]">
+                      <div className="relative flex items-center justify-center p-4 md:p-6 lg:min-h-[380px] max-h-[520px]">
                         <img
                           src={solution.infoImage!}
                           alt={solution.infoTitle}
