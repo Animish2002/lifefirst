@@ -227,7 +227,7 @@ const Gallery = () => {
               {galleryData.videos.map((item) => (
                 <div
                   key={item.id}
-                  className="group overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+                  className="group overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 flex flex-col"
                 >
                   <Dialog>
                     <DialogTrigger asChild>
@@ -243,7 +243,7 @@ const Gallery = () => {
                       </div>
                     </DialogTrigger>
                     <DialogContent className="max-w-5xl w-[95vw] max-h-[90vh] p-0 overflow-hidden">
-                      <DialogHeader className="p-4 pb-2">
+                      <DialogHeader className="p-4 pb-4 bg-white">
                         <DialogTitle className="text-xl">{item.title}</DialogTitle>
                         <DialogDescription className="text-sm">
                           {item.description}
@@ -261,6 +261,11 @@ const Gallery = () => {
                       </div>
                     </DialogContent>
                   </Dialog>
+                  <div className="p-3 bg-white">
+                    <h4 className="text-sm font-semibold text-gray-800 line-clamp-2">
+                      {item.title}
+                    </h4>
+                  </div>
                 </div>
               ))}
             </div>
