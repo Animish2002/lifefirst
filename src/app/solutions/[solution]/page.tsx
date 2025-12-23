@@ -80,9 +80,6 @@ const SolutionPage = async ({ params }: PageProps) => {
               <div className="space-y-8 order-2 lg:order-1">
                 {/* Section Title */}
                 <div className="space-y-1">
-                  <span className="text-sm font-medium text-blue-600 uppercase tracking-wider">
-                    Solution Overview
-                  </span>
                   <h2 className="text-2xl md:text-3xl lg:text-[2rem] font-semibold text-gray-900 leading-tight tracking-tight">
                     {solution.infoTitle}
                   </h2>
