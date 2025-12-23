@@ -29,7 +29,7 @@ const DownloadBrochurespage = () => {
       description:
         "A detailed overview of our industrial wastewater treatment solutions and advanced filtration technologies.",
       icon: <Settings className="w-12 h-12 text-blue-600" />,
-      link: "#",
+      link: "https://assets.life-first.in/Water_and_Wastewater.pdf",
     },
     {
       title: "Water Treatment System ",
@@ -57,7 +57,7 @@ const DownloadBrochurespage = () => {
       description:
         "Step-by-step installation procedures and maintenance guidelines for optimal system performance.",
       icon: <Clipboard className="w-12 h-12 text-cyan-600" />,
-      link: "#",
+      link: "https://assets.life-first.in/Water_and_Wastewater.pdf",
     },
     {
       title: "Bio-Digester & Bio-Toilets ",
