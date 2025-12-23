@@ -48,14 +48,7 @@ const certificationsAndClients = [
     imageUrl:
       "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1764879630/swift_n_lift_lid9bg.png",
   },
-  {
-    title: "Collector Latur",
-    imageUrl: "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1764880330/collector_latur_and_nanded_sfamuc.jpg",
-  },
-  {
-    title: "Collector Nanded",
-    imageUrl: "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1764880330/collector_latur_and_nanded_sfamuc.jpg",
-  },
+  
   // {
   //   title: "Clients Testimonies",
   //   imageUrl: "https://via.placeholder.com/150",
