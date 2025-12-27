@@ -55,10 +55,13 @@ const certificationsAndClients: Certification[] = [
     ]
   },
   {
-    title: "MSME",
+    title: "MSME Udyam Registration",
     imageUrl:
       "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1758575748/msme_lvs2fb.png",
-    description: "MSME Registration Certificate",
+    description: "MSME Udyam Aadhar Registration Certificate",
+    media: [
+      { type: "image", url: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1766855756/Udyam_Registration_Certificate_1_schmdy.jpg", title: "MSME Udyam Aadhar Registration Certificate" },
+    ]
   },
   {
     title: "MJP",
