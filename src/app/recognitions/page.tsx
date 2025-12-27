@@ -60,7 +60,7 @@ const certificationsAndClients: Certification[] = [
       "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1758575748/msme_lvs2fb.png",
     description: "MSME Udyam Aadhar Registration Certificate",
     media: [
-      { type: "image", url: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1766855756/Udyam_Registration_Certificate_1_schmdy.jpg", title: "MSME Udyam Aadhar Registration Certificate" },
+      { type: "image", url: "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1766855756/Udyam_Registration_Certificate_1_schmdy.jpg", title: "MSME Udyam Aadhar Registration Certificate" },
     ]
   },
   {
@@ -120,7 +120,7 @@ const certificationsAndClients: Certification[] = [
       "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1766854565/nanded_municipal_corporation_rjvpjq.png",
     description: "Nanded Municipal Corporation Certificate of Appreciation",
     media: [
-      { type: "image", url: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1766854208/recognition_nanded_district_collector_zx2cxo.jpg", title: "Nanded Municipal Corporation Certificate of Appreciation" },
+      { type: "image", url: "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1766854208/recognition_nanded_district_collector_zx2cxo.jpg", title: "Nanded Municipal Corporation Certificate of Appreciation" },
     ]
   },
   {
