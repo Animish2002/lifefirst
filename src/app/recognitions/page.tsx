@@ -60,7 +60,7 @@ const certificationsAndClients: Certification[] = [
       "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1758575748/msme_lvs2fb.png",
     description: "MSME Udyam Aadhar Registration Certificate",
     media: [
-      { type: "image", url: "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1766855756/Udyam_Registration_Certificate_1_schmdy.jpg", title: "MSME Udyam Aadhar Registration Certificate" },
+      { type: "image", url: "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1766939303/LifeFirst_Udyam_Aadhar_page-0001_zr2cfe.jpg", title: "MSME Udyam Aadhar Registration Certificate" },
     ]
   },
   {
