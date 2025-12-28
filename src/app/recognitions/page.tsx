@@ -103,7 +103,10 @@ const certificationsAndClients: Certification[] = [
     title: "Swift N Lift",
     imageUrl:
       "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1764879630/swift_n_lift_lid9bg.png",
-    description: "Swift N Lift Certification",
+    description: "Swift N Lift Award",
+    media: [
+      { type: "image", url: "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1766930903/swft_1_ie5cbl.jpg", title: "Swift N Lift Award Felicitation"},
+    ]
   },
   {
     title: "Latur District",

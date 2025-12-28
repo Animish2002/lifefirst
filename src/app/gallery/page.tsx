@@ -199,6 +199,17 @@ const Gallery = () => {
         thumbnail:
           "https://res.cloudinary.com/dsvfcckqy/video/upload/so_0/LFCT_6th_Anniversary_1_glokhn.jpg",
       },
+      {
+        id: 8,
+        title: "Welcoming Mr. Albert Mnangagwa our Chairman at LifeFirst Factory",
+        category: "video",
+        subcategory: "Others",
+        description:
+          "LifeFirst Factory welcomes Chairman Mr. Albert Mnangagwa for a prestigious facility tour.",
+        url: "https://player.cloudinary.com/embed/?cloud_name=dsvfcckqy&public_id=LFCT_Zimbabwe__pina8g&profile=cld-default",
+        thumbnail:
+          "https://res.cloudinary.com/dsvfcckqy/video/upload/so_0/LFCT_Zimbabwe__pina8g.jpg",
+      },
       
     ],
   };
