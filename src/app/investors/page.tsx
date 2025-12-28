@@ -155,23 +155,31 @@ const Page = () => {
             Latest Updates
           </h2>
           <Accordion type="single" collapsible className="w-full">
-            {investorNews.map((news) => (
-              <AccordionItem key={news.id} value={news.id}>
-                <AccordionTrigger>
-                  <div className="flex flex-col items-start">
-                    <h3 className="text-xl font-semibold text-gray-900 text-left">
-                      {news.title}
-                    </h3>
-                    <p className="text-sm text-gray-500 text-left">
-                      {news.date}
-                    </p>
-                  </div>
-                </AccordionTrigger>
-                <AccordionContent>
-                  <div className="text-gray-700">{news.description}</div>
-                </AccordionContent>
-              </AccordionItem>
-            ))}
+            {[...investorNews]
+              .sort((a, b) => {
+                // Parse dates from strings like "August 27, 2025"
+                const dateA = new Date(a.date);
+                const dateB = new Date(b.date);
+                // Sort in descending order (latest first)
+                return dateB.getTime() - dateA.getTime();
+              })
+              .map((news) => (
+                <AccordionItem key={news.id} value={news.id}>
+                  <AccordionTrigger>
+                    <div className="flex flex-col items-start">
+                      <h3 className="text-xl font-semibold text-gray-900 text-left">
+                        {news.title}
+                      </h3>
+                      <p className="text-sm text-gray-500 text-left">
+                        {news.date}
+                      </p>
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    <div className="text-gray-700">{news.description}</div>
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
           </Accordion>
         </div>
       </section>
