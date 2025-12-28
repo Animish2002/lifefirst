@@ -5,6 +5,7 @@ import solutionsData from "@/data/data.json";
 import SolutionPageClient from "@/Landing/SolutionPageClient";
 import Image from "next/image";
 import { Check } from "lucide-react";
+import JsonLd from "@/components/JsonLd";
 
 interface InfoContentObject {
   paragraph?: string;
@@ -45,8 +46,58 @@ const SolutionPage = async ({ params }: PageProps) => {
   // Check if solution has an info image
   const hasInfoImage = Boolean(solution.infoImage);
 
+  const baseUrl = "https://life-first.in";
+  const solutionUrl = `${baseUrl}/solutions/${solutionSlug}`;
+
+  // Service Schema
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: solution.title,
+    description: solution.subtitle,
+    provider: {
+      "@type": "Organization",
+      name: "LifeFirst Concepts & Technologies Pvt. Ltd.",
+      url: baseUrl,
+    },
+    areaServed: {
+      "@type": "Place",
+      name: "India, Middle East, Africa",
+    },
+    serviceType: solution.title,
+    image: solution.heroImage,
+    url: solutionUrl,
+  };
+
+  // BreadcrumbList Schema
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: baseUrl,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Solutions",
+        item: `${baseUrl}/solutions`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: solution.title,
+        item: solutionUrl,
+      },
+    ],
+  };
+
   return (
     <div className="flex flex-col min-h-screen bg-gray-50 font-sans antialiased">
+      <JsonLd data={[serviceSchema, breadcrumbSchema]} />
       <Navigation />
       <main className="flex-grow">
         {/* Hero Section */}

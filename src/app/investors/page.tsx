@@ -9,6 +9,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { investorNews } from "@/data/investors";
+import JsonLd from "@/components/JsonLd";
 
 import {
   Dialog,
@@ -130,8 +131,83 @@ const Page = () => {
     }
   };
 
+  const baseUrl = "https://life-first.in";
+  const investorsUrl = `${baseUrl}/investors`;
+
+  // Convert React elements to plain text for description
+  const getPlainText = (element: React.ReactNode): string => {
+    if (typeof element === "string") return element;
+    if (typeof element === "number") return String(element);
+    if (!element) return "";
+    if (Array.isArray(element)) {
+      return element.map(getPlainText).join(" ");
+    }
+    if (
+      typeof element === "object" &&
+      element !== null &&
+      "props" in element
+    ) {
+      const props = (element as { props?: { children?: React.ReactNode } })
+        .props;
+      if (props?.children) {
+        return getPlainText(props.children);
+      }
+    }
+    return "";
+  };
+
+  // NewsArticle schemas for each news item
+  const newsArticleSchemas = investorNews.map((news) => {
+    const description = getPlainText(news.description);
+    const plainDescription = description
+      .replace(/<[^>]*>/g, "")
+      .substring(0, 200)
+      .trim();
+
+    return {
+      "@context": "https://schema.org",
+      "@type": "NewsArticle",
+      headline: news.title,
+      datePublished: news.date,
+      description: plainDescription,
+      publisher: {
+        "@type": "Organization",
+        name: "LifeFirst Concepts & Technologies Pvt. Ltd.",
+        logo: {
+          "@type": "ImageObject",
+          url: "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1766261038/life-first-logo-and-text-mark-transparent_lt25wu.png",
+        },
+      },
+      mainEntityOfPage: {
+        "@type": "WebPage",
+        "@id": investorsUrl,
+      },
+    };
+  });
+
+  // BreadcrumbList Schema
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: baseUrl,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Investors",
+        item: investorsUrl,
+      },
+    ],
+  };
+
   return (
     <div className="bg-gray-50 text-gray-800 font-sans">
+      <JsonLd data={[...newsArticleSchemas, breadcrumbSchema]} />
       <Navigation />
       <div className="relative md:mt-26 mt-24 overflow-hidden" />
 

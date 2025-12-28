@@ -7,6 +7,7 @@ import Navigation from "@/Landing/Navigation";
 import Footer from "@/Landing/Footer";
 import CTASection from "@/Landing/Contact";
 import { Shield, Award, Factory, Leaf } from "lucide-react";
+import JsonLd from "@/components/JsonLd";
 
 interface TeamMember {
   name: string;
@@ -403,8 +404,32 @@ const AboutUsPage: React.FC = () => {
   const firstRowMembers = teamMembers3.slice(0, 5);
   const secondRowMembers = teamMembers3.slice(5);
 
+  const baseUrl = "https://life-first.in";
+  const aboutUrl = `${baseUrl}/about-us`;
+
+  // BreadcrumbList Schema
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: baseUrl,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "About Us",
+        item: aboutUrl,
+      },
+    ],
+  };
+
   return (
     <>
+      <JsonLd data={breadcrumbSchema} />
       <Navigation />
       <div className="relative md:mt-26 mt-24 overflow-hidden"></div>
 
