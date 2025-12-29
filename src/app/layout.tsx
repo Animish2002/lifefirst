@@ -11,17 +11,73 @@ const funnelSans = Funnel_Sans({
 
 export const metadata: Metadata = {
   title:
-    "LifeFirst Concepts & Technologies Pvt. Ltd. | Water, Wastewater and Sanitation Solution Company",
+    "LifeFirst Concepts & Technologies Pvt. Ltd. | Water, Wastewater and Sanitation Solution Company",
   description:
-    "LifeFirst Concepts & Technologies Pvt. Ltd. is a leading provider of sustainable water and wastewater treatment solutions. Offering STP, ETP, water filtration systems, and turnkey environmental technologies for industries, communities, and global clients",
+    "LifeFirst Concepts & Technologies Pvt. Ltd. is a leading provider of sustainable water and wastewater treatment solutions. Offering STP, ETP, water filtration systems, and turnkey environmental technologies for industries, communities, and global clients",
+  keywords: [
+    "water treatment",
+    "wastewater treatment",
+    "STP",
+    "ETP",
+    "water filtration",
+    "sanitation solutions",
+    "environmental technologies",
+    "water management",
+    "sustainable water solutions",
+  ],
+  openGraph: {
+    title:
+      "LifeFirst Concepts & Technologies Pvt. Ltd. | Water, Wastewater and Sanitation Solution Company",
+    description:
+      "LifeFirst Concepts & Technologies Pvt. Ltd. is a leading provider of sustainable water and wastewater treatment solutions. Offering STP, ETP, water filtration systems, and turnkey environmental technologies for industries, communities, and global clients",
+    url: "https://www.life-first.in",
+    siteName: "LifeFirst",
+    type: "website",
+    locale: "en_US",
+    images: [
+      {
+        url: "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto,w_1200,h_630/v1755163758/Logo_Mark_cxx7hp.png",
+        width: 1200,
+        height: 630,
+        alt: "LifeFirst Concepts & Technologies - Water, Wastewater and Sanitation Solution Company",
+        type: "image/png",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title:
+      "LifeFirst Concepts & Technologies Pvt. Ltd. | Water, Wastewater and Sanitation Solution Company",
+    description:
+      "LifeFirst Concepts & Technologies Pvt. Ltd. is a leading provider of sustainable water and wastewater treatment solutions.",
+    images: [
+      "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto,w_1200,h_630/v1755163758/Logo_Mark_cxx7hp.png",
+    ],
+  },
+  alternates: {
+    canonical: "https://www.life-first.in",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };
+
+
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const baseUrl = "https://life-first.in";
+  const baseUrl = "https://www.life-first.in";
   const logoUrl =
     "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1766261038/life-first-logo-and-text-mark-transparent_lt25wu.png";
 
