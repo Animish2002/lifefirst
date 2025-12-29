@@ -132,9 +132,9 @@ const Gallery = () => {
         category: "video",
         subcategory: "Products & Services",
         description: "3MLD in action",
-        url: "https://player.cloudinary.com/embed/?cloud_name=dsvfcckqy&public_id=3MLD_jftt8k&profile=cld-default",
+        url: "https://gallery.life-first.in/3MLD_jftt8k.mp4",
         thumbnail:
-          "https://res.cloudinary.com/dsvfcckqy/video/upload/so_0/3MLD_jftt8k.jpg",
+          "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1767039653/3mld_q8gtjo.png",
       },
       {
         id: 2,
@@ -143,9 +143,9 @@ const Gallery = () => {
         subcategory: "Products & Services",
         description:
           "Dispatch of our 2000x1800mm Pressure Vessels Filters",
-        url: "https://player.cloudinary.com/embed/?cloud_name=dsvfcckqy&public_id=2000x1800mm_Filter_by_LFCT_h3og60&profile=cld-default",
+        url: "https://gallery.life-first.in/2000x1800mm_Filter_by_LFCT_h3og60.mp4",
        thumbnail:
-          "https://res.cloudinary.com/dsvfcckqy/video/upload/so_0/2000x1800mm_Filter_by_LFCT_h3og60.jpg"
+          "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1767040075/2000x1800mm_filter_fatpre.png"
       },
       {
         id: 3,
@@ -153,9 +153,9 @@ const Gallery = () => {
         category: "video",
         subcategory: "Others",
         description: "Lighting up the world with one drop at a time",
-        url: "https://player.cloudinary.com/embed/?cloud_name=dsvfcckqy&public_id=LFCT_DIWALI_isivai&profile=cld-default",
+        url: "https://gallery.life-first.in/others/LFCT_DIWALI_isivai.mp4",
         thumbnail:
-          "https://res.cloudinary.com/dsvfcckqy/video/upload/so_0/LFCT_DIWALI_isivai.jpg",
+          "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1767040876/lftct_diwal_yiyigr.png",
       },
       {
         id: 4,
@@ -163,9 +163,9 @@ const Gallery = () => {
         category: "video",
         subcategory: "Others",
         description: "Celebrating Life's festivals with LifeFirst at our Factory",
-        url: "https://player.cloudinary.com/embed/?cloud_name=dsvfcckqy&public_id=EVENT_d7xjeb&profile=cld-default",
+        url: "https://gallery.life-first.in/others/EVENT_d7xjeb.mp4",
         thumbnail:
-          "https://res.cloudinary.com/dsvfcckqy/video/upload/so_0/EVENT_d7xjeb.jpg",
+          "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1767041097/dussehra_lifefirst_ihgrek.png",
       },
       {
         id: 5,
@@ -174,9 +174,9 @@ const Gallery = () => {
         subcategory: "Products & Services",
         description:
           "Showcasing the process and flow of our 2 millions Water Treatment Plant",
-        url: "https://player.cloudinary.com/embed/?cloud_name=dsvfcckqy&public_id=2MLD_WTP_1_1_vgk0lh&profile=cld-default",
+        url: "https://gallery.life-first.in/2MLD_WTP_1_1_vgk0lh.mp4",
         thumbnail:
-          "https://res.cloudinary.com/dsvfcckqy/video/upload/so_0/2MLD_WTP_1_1_vgk0lh.jpg",
+          "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1767039654/2mld_water_treatment_plant_at_talegaon_dabhade_dnlbmk.png",
       },
       {
         id: 6,
@@ -184,9 +184,9 @@ const Gallery = () => {
         category: "video",
         subcategory: "Products & Services",
         description: "Export dispatch and logistics coordination for a 120 KLD sewage treatment plant supplied for a project in Kuwait.",
-        url: "https://player.cloudinary.com/embed/?cloud_name=dsvfcckqy&public_id=Kuwait_1_epe0pj&profile=cld-default",
+        url: "https://gallery.life-first.in/Kuwait_1_epe0pj.mp4",
         thumbnail:
-          "https://res.cloudinary.com/dsvfcckqy/video/upload/so_0/Kuwait_1_epe0pj.jpg",
+          "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1767040384/kuwait_international_dispatch_1_fio5un.png",
       },
       {
         id: 7,
@@ -195,9 +195,9 @@ const Gallery = () => {
         subcategory: "Others",
         description:
           "Commemorating six years of LifeFirst's growth, achievements, and continued commitment to excellence.",
-        url: "https://player.cloudinary.com/embed/?cloud_name=dsvfcckqy&public_id=LFCT_6th_Anniversary_1_glokhn&profile=cld-default",
+        url: "https://gallery.life-first.in/others/LFCT_6th_Anniversary_1_glokhn.mp4",
         thumbnail:
-          "https://res.cloudinary.com/dsvfcckqy/video/upload/so_0/LFCT_6th_Anniversary_1_glokhn.jpg",
+          "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1767041874/6_years_celebrations_n3sdcv.png",
       },
       {
         id: 8,
@@ -206,11 +206,76 @@ const Gallery = () => {
         subcategory: "Others",
         description:
           "LifeFirst Factory welcomes Chairman Mr. Albert Mnangagwa for a prestigious facility tour.",
-        url: "https://player.cloudinary.com/embed/?cloud_name=dsvfcckqy&public_id=LFCT_Zimbabwe__pina8g&profile=cld-default",
+        url: "https://gallery.life-first.in/others/LFCT_Zimbabwe__pina8g.mp4",
         thumbnail:
-          "https://res.cloudinary.com/dsvfcckqy/video/upload/so_0/LFCT_Zimbabwe__pina8g.jpg",
+          "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1767041564/albert_at_lifefirst_ofw2bg.png",
       },
-      
+      {
+        id: 9,
+        title: "Innovative Decentralized Liquid Waste Management System",
+        category: "video",
+        subcategory: "Products & Services",
+        description:
+          "Showcasing our waste management system installed in Nanded",
+        url: "https://gallery.life-first.in/innovative_decentralized_liquid_waste_management_system.mp4",
+        thumbnail:
+          "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1767035135/innovative_decentralized_liquid_waste_management_system_ozgg69.png",
+      },
+      {
+        id: 10,
+        title: "City Liquid Waste Management System (150KLD)",
+        category: "video",
+        subcategory: "Products & Services",
+        description:
+          "Showcasing our waste management system installed in Visava Garden, Nanded City to Shri. A. A. Shingare Member Secretary MPCB.",
+        url: "https://gallery.life-first.in/city_liquid_waste_management_system.mp4",
+        thumbnail:
+          "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1767037127/city_liquid_waste_management_system_zli5vk.png",
+      },
+      {
+        id: 11,
+        title: "Decentralized City Waste Management System Nanded City",
+        category: "video",
+        subcategory: "Products & Services",
+        description:
+          "Showcasing our waste management system installed in Nanded to Shri. Aadity Thackeray Hon. Minister of Tourism & Environment, Government of Maharashtra",
+        url: "https://gallery.life-first.in/decentralized_city_waste_management_system_nanded.mp4",
+        thumbnail:
+          "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1767037128/decentralized_city_waste_management_system_nanded_ud7cmp.png",
+      },
+      {
+        id: 12,
+        title: "Decentralized Prefabricated Hospital Liquid Management System",
+        category: "video",
+        subcategory: "Products & Services",
+        description:
+          "Inauguration of our HLWMS installed at Dr. Shankarrao Chavan Government Medical College & Hospital, Nanded",
+        url: "https://gallery.life-first.in/decentralized_prefabricated_hospital_liquid_management_system.mp4",
+        thumbnail:
+          "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1767037128/decentralized_prefabricated_hospital_liquid_management_system_wyxkkc.png",
+      },
+      {
+        id: 13,
+        title: "Packaged STP at Social Wellfare Department Office Nanded",
+        category: "video",
+        subcategory: "Products & Services",
+        description:
+          "Showcasing our Packaged Sewage Treatment Plant installed at Social Wellfare Department Office, Nanded to Shri. Dhananjay Munde Hon. Minister of Social Justice and Special Assistance, Government of Maharashtra and Shri. Sanjay Bansode Hon. Minister of State Environment, Government of Maharashtra",
+        url: "https://gallery.life-first.in/packaged_sewage_treatment_plant_at_social_wellfare_department_office_nanded.mp4",
+        thumbnail:
+          "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1767037134/packaged_stp_social_welfare_department_office_nanded_vmalnq.png",
+      },
+      {
+        id: 14,
+        title: "Wastewater Treatment Plant 4MLD installed at Chh. Sambhajinagar",
+        category: "video",
+        subcategory: "Products & Services",
+        description:
+          "Observations and Review by Shri G. Sreekanth, IAS, Municipal Commissioner and Administrator, Chhatrapathi Sambhajinagar City",
+        url: "https://gallery.life-first.in/wastewater_treatment_plants_sambhajinagar.mp4",
+        thumbnail:
+          "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1767037128/city_liquid_waste_management_system_sambhajinagar_tdxjxq.png",
+      },
     ],
   };
 
