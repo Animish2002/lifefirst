@@ -40,11 +40,23 @@ const Footer = () => {
 
   ];
 
-  const solutions = [
-    "Water Treatment",
-    "Wastewater Treatment",
-    "Sanitation Solutions",
-    "Hydration Monitoring Systems",
+  const solutions: QuickLink[] = [
+    {
+      name: "Water Treatment",
+      href: "/solutions/water-treatment",
+    },
+    {
+      name: "Wastewater Treatment",
+      href: "/solutions/wastewater-treatment",
+    },
+    {
+      name: "Sanitation Solutions",
+      href: "/solutions/sanitation",
+    },
+    {
+      name: "Hydration Monitoring Systems",
+      href: "/solutions/hydration-monitoring",
+    },
   ];
 
   const socialLinks = [
@@ -159,12 +171,12 @@ const Footer = () => {
               {solutions.map((solution, index) => (
                 <li key={index}>
                   <motion.a
-                    href="#"
+                    href={solution.href}
                     className="text-slate-700 font-medium hover:text-green-400 transition-colors duration-200 flex items-center group"
                     whileHover={{ x: 5 }}
                   >
                     <Droplets className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
-                    {solution}
+                    {solution.name}
                   </motion.a>
                 </li>
               ))}
