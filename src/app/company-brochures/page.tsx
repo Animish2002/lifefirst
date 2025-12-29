@@ -52,7 +52,7 @@ const DownloadBrochurespage = () => {
       description:
         "Detailed technical documentation and specifications for all our water treatment equipment.",
       icon: <Factory className="w-12 h-12 text-purple-600" />,
-      link: "#",
+      link: "https://assets.life-first.in/Water_and_Wastewater.pdf",
     },
     {
       title: "General Product Offerings ",
