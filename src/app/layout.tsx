@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     images: [
       {
-        url: "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto,w_1200,h_630/v1755163758/Logo_Mark_cxx7hp.png",
+        url: "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1766261038/life-first-logo-and-text-mark-transparent_lt25wu.png",
         width: 1200,
         height: 630,
         alt: "LifeFirst Concepts & Technologies - Water, Wastewater and Sanitation Solution Company",
