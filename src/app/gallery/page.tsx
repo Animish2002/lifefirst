@@ -275,6 +275,16 @@ const Gallery = () => {
         url: "https://gallery.life-first.in/wastewater_treatment_plants_sambhajinagar.mp4",
         thumbnail:
           "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1767037128/city_liquid_waste_management_system_sambhajinagar_tdxjxq.png",
+      },{
+        id: 15,
+        title: "Decentralized Water Treatment Plant",
+        category: "video",
+        subcategory: "Products & Services",
+        description:
+          "Showcasing our WTP process walkthrough by our CEO, Mr. Sagar Shah, at Chhatrapati Sambhajinagar, under the guidance of Shri G. Sreekanth, IAS, Municipal Commissioner and Administrator, Chhatrapati Sambhajinagar City.",
+        url: "https://gallery.life-first.in/Decentralized%20Wastewater%20Treatment%20Plant%20-Chhatrapati%20Sambhajinagar%20-%20Chhatrapati%20Sambhajinagar%20Mahapalika%20(1080p%2C%20h264).mp4",
+        thumbnail:
+          "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1767095896/decentralized_wtp_g_sreekanth_fbeij5.png",
       },
     ],
   };
