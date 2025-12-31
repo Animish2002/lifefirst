@@ -11,6 +11,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { ChevronRight, ArrowDown } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 // Sample carousel data - replace with your actual data
 const carouselData = [
@@ -116,15 +117,19 @@ const HeroSection = () => {
       id="hero"
       className="relative md:min-h-screen overflow-hidden bg-slate-900 md:mt-0 mt-24"
     >
-      <div className="absolute inset-0 bg-slate-900 ">
+      <div className="absolute inset-0 bg-slate-900">
         {/* Blurred backdrop for smooth transitions */}
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20 transition-all duration-1000"
-          style={{
-            backgroundImage: `url(${carouselData[currentSlide].image})`,
-            filter: "blur(30px) brightness(0.1)",
-          }}
-        />
+        <div className="absolute inset-0 opacity-20 transition-all duration-1000">
+          <Image
+            src={carouselData[currentSlide].image}
+            alt="Hero background"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-center"
+            style={{ filter: "blur(30px) brightness(0.1)" }}
+          />
+        </div>
 
         <AnimatePresence mode="popLayout">
           <motion.div
@@ -135,11 +140,13 @@ const HeroSection = () => {
             animate="center"
             exit="exit"
           >
-            <div
-              className="w-full h-full bg-cover bg-center bg-no-repeat"
-              style={{
-                backgroundImage: `url(${carouselData[currentSlide].image})`,
-              }}
+            <Image
+              src={carouselData[currentSlide].image}
+              alt="Hero background"
+              fill
+              priority
+              sizes="100vw"
+              className="object-cover object-center"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30" />
           </motion.div>

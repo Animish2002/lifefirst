@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 
 const SolutionsSection = () => {
   const [hoveredCard, setHoveredCard] = useState<string | null>(null);
@@ -14,12 +15,8 @@ const SolutionsSection = () => {
       title: "Water Treatment",
       description:
         "Comprehensive water purification systems for clean and safe drinking water",
-
-      // imageurl:
-      //   "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1754928781/ChatGPT_Image_Aug_2_2025_at_05_22_38_PM_o2nny8.png",
       imageurl:
         "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1766931600/Water_Treatment_acdkpg.png",
-
       features: ["High Quality", "Reliable", "Cost Effective"],
       url: "/solutions/water-treatment",
     },
@@ -28,8 +25,6 @@ const SolutionsSection = () => {
       title: "Wastewater Treatment",
       description:
         "Advanced wastewater treatment solutions for industrial and municipal applications",
-      // imageurl:
-      //   "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1755164884/wastewater_treatment_plant_yvyzlo.jpg",
       imageurl:
         "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1766931569/Wastewater_Treatment_m6qaaq.png",
       features: ["Eco-friendly", "Energy Efficient", "Low Maintenance"],
@@ -42,8 +37,6 @@ const SolutionsSection = () => {
         "Sustainable sanitation systems for environmental protection",
       imageurl:
         "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1766931569/Sanitation_Solution_sjcu94.png",
-      // imageurl:
-      //   "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1754928781/4b2fbe85-ab2c-4bd3-8370-8a9ef6dea608_rptfls.jpg",
       features: ["Sustainable", "Eco-friendly", "Zero Waste"],
       url: "/solutions/bio-digesters",
     },
@@ -54,8 +47,6 @@ const SolutionsSection = () => {
         "Smart monitoring systems for real-time water quality control",
       imageurl:
         "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1766931567/inflow1product_pwmpct.png",
-      // imageurl:
-      //   "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1754928782/ChatGPT_Image_Aug_2_2025_at_05_05_56_PM_mxrymk.png",
       features: ["Smart Technology", "Real-time", "Automated"],
       url: "/solutions/inflow-system",
     },
@@ -109,19 +100,22 @@ const SolutionsSection = () => {
                 transition: { type: "spring", stiffness: 300, damping: 25 },
               }}
               whileTap={{ scale: 0.98 }}
-              style={{
-                backgroundImage: `
-    ${
-      hoveredCard === solution.id
-        ? `url(${solution.imageurl})`
-        : `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url(${solution.imageurl})`
-    }
-  `,
-                backgroundSize: "contain",
-                backgroundPosition: "center",
-                backgroundRepeat: "no-repeat",
-              }}
             >
+              {/* Optimized background image */}
+              <Image
+                src={solution.imageurl}
+                alt={solution.title}
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                className="object-contain object-center transition-all duration-300"
+                loading={index < 2 ? "eager" : "lazy"}
+              />
+              {/* Overlay for text readability */}
+              <div
+                className="absolute inset-0 bg-gradient-to-t from-black/60 to-black/30 transition-all duration-300"
+                style={{ opacity: hoveredCard === solution.id ? 0.1 : 1 }}
+              />
+
               {/* Subtle hover overlay */}
               <motion.div
                 className="absolute inset-0 bg-black"
@@ -130,7 +124,7 @@ const SolutionsSection = () => {
                 transition={{ duration: 0.3 }}
               />
 
-              <div className="relative p-4 h-[40vh] md:[45vh] lg:h-[55vh] flex flex-col z-10">
+              <div className="relative p-4 h-[40vh] md:h-[45vh] lg:h-[55vh] flex flex-col z-10">
                 {/* Text Content with staggered animation */}
                 <motion.div
                   className="flex flex-col"
@@ -220,7 +214,7 @@ const SolutionsSection = () => {
                         whileHover={{ x: 3 }}
                         transition={{ type: "tween", stiffness: 600 }}
                       >
-                        <ArrowRight className="ml-2 w-4 h-4 " />
+                        <ArrowRight className="ml-2 w-4 h-4" />
                       </motion.div>
                     </motion.div>
                   )}
