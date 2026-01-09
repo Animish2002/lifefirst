@@ -14,6 +14,7 @@ import Navigation from "@/Landing/Navigation";
 import Footer from "@/Landing/Footer";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import HLSVideoPlayer from "@/components/HLSVideoPlayer";
 
 const Gallery = () => {
   React.useEffect(() => {
@@ -132,7 +133,7 @@ const Gallery = () => {
         category: "video",
         subcategory: "Products & Services",
         description: "3MLD in action",
-        url: "https://gallery.life-first.in/3MLD_jftt8k.mp4",
+        url: "https://gallery.life-first.in/hls/3MLD_jftt8k/3MLD_jftt8k.m3u8",
         thumbnail:
           "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1767039653/3mld_q8gtjo.png",
       },
@@ -143,7 +144,7 @@ const Gallery = () => {
         subcategory: "Products & Services",
         description:
           "Dispatch of our 2000x1800mm Pressure Vessels Filters",
-        url: "https://gallery.life-first.in/2000x1800mm_Filter_by_LFCT_h3og60.mp4",
+        url: "https://gallery.life-first.in/hls/2000x1800mm_Filter_by_LFCT_h3og60/2000x1800mm_Filter_by_LFCT_h3og60.m3u8",
        thumbnail:
           "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1767040075/2000x1800mm_filter_fatpre.png"
       },
@@ -153,7 +154,7 @@ const Gallery = () => {
         category: "video",
         subcategory: "Others",
         description: "Lighting up the world with one drop at a time",
-        url: "https://gallery.life-first.in/others/LFCT_DIWALI_isivai.mp4",
+        url: "https://gallery.life-first.in/hls/others/LFCT_DIWALI_isivai/LFCT_DIWALI_isivai.m3u8",
         thumbnail:
           "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1767040876/lftct_diwal_yiyigr.png",
       },
@@ -163,7 +164,7 @@ const Gallery = () => {
         category: "video",
         subcategory: "Others",
         description: "Celebrating Life's festivals with LifeFirst at our Factory",
-        url: "https://gallery.life-first.in/others/EVENT_d7xjeb.mp4",
+        url: "https://gallery.life-first.in/hls/others/EVENT_d7xjeb/EVENT_d7xjeb.m3u8",
         thumbnail:
           "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1767041097/dussehra_lifefirst_ihgrek.png",
       },
@@ -174,7 +175,7 @@ const Gallery = () => {
         subcategory: "Products & Services",
         description:
           "Showcasing the process and flow of our 2 millions Water Treatment Plant",
-        url: "https://gallery.life-first.in/2MLD_WTP_1_1_vgk0lh.mp4",
+        url: "https://gallery.life-first.in/hls/2MLD_WTP_1_1_vgk0lh/2MLD_WTP_1_1_vgk0lh.m3u8",
         thumbnail:
           "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1767039654/2mld_water_treatment_plant_at_talegaon_dabhade_dnlbmk.png",
       },
@@ -184,7 +185,7 @@ const Gallery = () => {
         category: "video",
         subcategory: "Products & Services",
         description: "Export dispatch and logistics coordination for a 120 KLD sewage treatment plant supplied for a project in Kuwait.",
-        url: "https://gallery.life-first.in/Kuwait_1_epe0pj.mp4",
+        url: "https://gallery.life-first.in/hls/Kuwait_1_epe0pj/Kuwait_1_epe0pj.m3u8",
         thumbnail:
           "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1767040384/kuwait_international_dispatch_1_fio5un.png",
       },
@@ -195,7 +196,7 @@ const Gallery = () => {
         subcategory: "Others",
         description:
           "Commemorating six years of LifeFirst's growth, achievements, and continued commitment to excellence.",
-        url: "https://gallery.life-first.in/others/LFCT_6th_Anniversary_1_glokhn.mp4",
+        url: "https://gallery.life-first.in/hls/others/LFCT_6th_Anniversary_1_glokhn/LFCT_6th_Anniversary_1_glokhn.m3u8",
         thumbnail:
           "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1767041874/6_years_celebrations_n3sdcv.png",
       },
@@ -206,7 +207,7 @@ const Gallery = () => {
         subcategory: "Others",
         description:
           "LifeFirst Factory welcomes Chairman Mr. Albert Mnangagwa for a prestigious facility tour.",
-        url: "https://gallery.life-first.in/others/LFCT_Zimbabwe__pina8g.mp4",
+        url: "https://gallery.life-first.in/hls/others/LFCT_Zimbabwe__pina8g/LFCT_Zimbabwe__pina8g.m3u8",
         thumbnail:
           "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1767041564/albert_at_lifefirst_ofw2bg.png",
       },
@@ -217,7 +218,7 @@ const Gallery = () => {
         subcategory: "Products & Services",
         description:
           "Showcasing our waste management system installed in Nanded",
-        url: "https://gallery.life-first.in/innovative_decentralized_liquid_waste_management_system.mp4",
+        url: "https://gallery.life-first.in/hls/innovative_decentralized_liquid_waste_management_system/innovative_decentralized_liquid_waste_management_system.m3u8",
         thumbnail:
           "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1767035135/innovative_decentralized_liquid_waste_management_system_ozgg69.png",
       },
@@ -228,7 +229,7 @@ const Gallery = () => {
         subcategory: "Products & Services",
         description:
           "Showcasing our waste management system installed in Visava Garden, Nanded City to Shri. A. A. Shingare Member Secretary MPCB.",
-        url: "https://gallery.life-first.in/city_liquid_waste_management_system.mp4",
+        url: "https://gallery.life-first.in/hls/city_liquid_waste_management_system/city_liquid_waste_management_system.m3u8",
         thumbnail:
           "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1767037127/city_liquid_waste_management_system_zli5vk.png",
       },
@@ -239,7 +240,7 @@ const Gallery = () => {
         subcategory: "Products & Services",
         description:
           "Showcasing our waste management system installed in Nanded to Shri. Aadity Thackeray Hon. Minister of Tourism & Environment, Government of Maharashtra",
-        url: "https://gallery.life-first.in/decentralized_city_waste_management_system_nanded.mp4",
+        url: "https://gallery.life-first.in/hls/decentralized_city_waste_management_system_nanded/decentralized_city_waste_management_system_nanded.m3u8",
         thumbnail:
           "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1767037128/decentralized_city_waste_management_system_nanded_ud7cmp.png",
       },
@@ -250,7 +251,7 @@ const Gallery = () => {
         subcategory: "Products & Services",
         description:
           "Inauguration of our HLWMS installed at Dr. Shankarrao Chavan Government Medical College & Hospital, Nanded",
-        url: "https://gallery.life-first.in/decentralized_prefabricated_hospital_liquid_management_system.mp4",
+        url: "https://gallery.life-first.in/hls/decentralized_prefabricated_hospital_liquid_management_system/decentralized_prefabricated_hospital_liquid_management_system.m3u8",
         thumbnail:
           "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1767037128/decentralized_prefabricated_hospital_liquid_management_system_wyxkkc.png",
       },
@@ -261,7 +262,7 @@ const Gallery = () => {
         subcategory: "Products & Services",
         description:
           "Showcasing our Packaged Sewage Treatment Plant installed at Social Wellfare Department Office, Nanded to Shri. Dhananjay Munde Hon. Minister of Social Justice and Special Assistance, Government of Maharashtra and Shri. Sanjay Bansode Hon. Minister of State Environment, Government of Maharashtra",
-        url: "https://gallery.life-first.in/packaged_sewage_treatment_plant_at_social_wellfare_department_office_nanded.mp4",
+        url: "https://gallery.life-first.in/hls/packaged_sewage_treatment_plant_at_social_wellfare_department_office_nanded/packaged_sewage_treatment_plant_at_social_wellfare_department_office_nanded.m3u8",
         thumbnail:
           "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1767037134/packaged_stp_social_welfare_department_office_nanded_vmalnq.png",
       },
@@ -272,7 +273,7 @@ const Gallery = () => {
         subcategory: "Products & Services",
         description:
           "Observations and Review by Shri G. Sreekanth, IAS, Municipal Commissioner and Administrator, Chhatrapathi Sambhajinagar City",
-        url: "https://gallery.life-first.in/wastewater_treatment_plants_sambhajinagar.mp4",
+        url: "https://gallery.life-first.in/hls/wastewater_treatment_plants_sambhajinagar/wastewater_treatment_plants_sambhajinagar.m3u8",
         thumbnail:
           "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1767037128/city_liquid_waste_management_system_sambhajinagar_tdxjxq.png",
       },{
@@ -282,7 +283,7 @@ const Gallery = () => {
         subcategory: "Products & Services",
         description:
           "Showcasing our WTP process walkthrough by our CEO, Mr. Sagar Shah, at Chhatrapati Sambhajinagar, under the guidance of Shri G. Sreekanth, IAS, Municipal Commissioner and Administrator, Chhatrapati Sambhajinagar City.",
-        url: "https://gallery.life-first.in/Decentralized%20Wastewater%20Treatment%20Plant%20-Chhatrapati%20Sambhajinagar%20-%20Chhatrapati%20Sambhajinagar%20Mahapalika%20(1080p%2C%20h264).mp4",
+        url: "https://gallery.life-first.in/hls/Decentralized%20Wastewater%20Treatment%20Plant%20-Chhatrapati%20Sambhajinagar%20-%20Chhatrapati%20Sambhajinagar%20Mahapalika%20(1080p%2C%20h264)/Decentralized%20Wastewater%20Treatment%20Plant%20-Chhatrapati%20Sambhajinagar%20-%20Chhatrapati%20Sambhajinagar%20Mahapalika%20(1080p%2C%20h264).m3u8",
         thumbnail:
           "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1767095896/decentralized_wtp_g_sreekanth_fbeij5.png",
       },
@@ -435,22 +436,21 @@ const Gallery = () => {
                             </div>
                           </div>
                         </DialogTrigger>
-                        <DialogContent className="max-w-5xl w-[95vw] max-h-[90vh] p-0 overflow-hidden">
-                          <DialogHeader className="p-4 pb-4 bg-white">
+                        <DialogContent className="max-w-5xl w-[95vw] max-h-[85vh] p-0 overflow-hidden flex flex-col">
+                          <DialogHeader className="p-4 pb-4 bg-white flex-shrink-0">
                             <DialogTitle className="text-xl">{item.title}</DialogTitle>
                             <DialogDescription className="text-sm">
                               {item.description}
                             </DialogDescription>
                           </DialogHeader>
-                          <div className="relative w-full pb-[56.25%]">
-                            <iframe
-                              src={`${item.url}?autoplay=1`}
+                          <div className="relative w-full bg-black flex items-center justify-center overflow-hidden video-wrapper" style={{ height: 'calc(85vh - 140px)', minHeight: '400px' }}>
+                            <HLSVideoPlayer
+                              src={item.url}
                               title={item.title}
-                              frameBorder="0"
-                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                              allowFullScreen
-                              className="absolute top-0 left-0 w-full h-full"
-                            ></iframe>
+                              autoplay={true}
+                              controls={true}
+                              className="w-full h-full"
+                            />
                           </div>
                         </DialogContent>
                       </Dialog>
@@ -490,22 +490,21 @@ const Gallery = () => {
                             </div>
                           </div>
                         </DialogTrigger>
-                        <DialogContent className="max-w-5xl w-[95vw] max-h-[90vh] p-0 overflow-hidden">
-                          <DialogHeader className="p-4 pb-4 bg-white">
+                        <DialogContent className="max-w-5xl w-[95vw] max-h-[85vh] p-0 overflow-hidden flex flex-col">
+                          <DialogHeader className="p-4 pb-4 bg-white flex-shrink-0">
                             <DialogTitle className="text-xl">{item.title}</DialogTitle>
                             <DialogDescription className="text-sm">
                               {item.description}
                             </DialogDescription>
                           </DialogHeader>
-                          <div className="relative w-full pb-[56.25%]">
-                            <iframe
-                              src={`${item.url}?autoplay=1`}
+                          <div className="relative w-full bg-black flex items-center justify-center overflow-hidden video-wrapper" style={{ height: 'calc(85vh - 140px)', minHeight: '400px' }}>
+                            <HLSVideoPlayer
+                              src={item.url}
                               title={item.title}
-                              frameBorder="0"
-                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                              allowFullScreen
-                              className="absolute top-0 left-0 w-full h-full"
-                            ></iframe>
+                              autoplay={true}
+                              controls={true}
+                              className="w-full h-full"
+                            />
                           </div>
                         </DialogContent>
                       </Dialog>
