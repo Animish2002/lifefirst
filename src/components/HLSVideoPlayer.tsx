@@ -111,34 +111,34 @@ const HLSVideoPlayer: React.FC<HLSVideoPlayerProps> = ({
           const hls = new Hls({
             enableWorker: true,
             lowLatencyMode: false,
-            backBufferLength: 90,
-            maxBufferLength: 30,
-            maxMaxBufferLength: 60,
-            maxBufferSize: 60 * 1000 * 1000, // 60MB
+            // Optimized for fast startup
+            backBufferLength: 30, // Reduced from 90
+            maxBufferLength: 10, // Reduced from 30 for faster startup
+            maxMaxBufferLength: 20, // Reduced from 60
+            maxBufferSize: 30 * 1000 * 1000, // 30MB reduced from 60MB
             maxBufferHole: 0.5,
             highBufferWatchdogPeriod: 2,
             nudgeOffset: 0.1,
-            nudgeMaxRetry: 3,
-            maxFragLoadingTimeOut: 200000,
-            maxMaxFragLoadingTimeOut: 600000,
-            fragLoadingTimeOut: 20000,
-            manifestLoadingTimeOut: 10000,
-            manifestLoadingMaxRetry: 3,
-            levelLoadingTimeOut: 10000,
-            levelLoadingMaxRetry: 4,
-            fragLoadingMaxRetry: 6,
-            startFragPrefetch: false,
-            testBandwidth: true,
+            nudgeMaxRetry: 2, // Reduced retries
+            fragLoadingTimeOut: 10000, // Reduced from 20000
+            manifestLoadingTimeOut: 5000, // Reduced from 10000
+            manifestLoadingMaxRetry: 2, // Reduced from 3
+            levelLoadingTimeOut: 5000, // Reduced from 10000
+            levelLoadingMaxRetry: 2, // Reduced from 4
+            fragLoadingMaxRetry: 3, // Reduced from 6
+            startFragPrefetch: true, // Enable prefetch for faster start
+            testBandwidth: false, // Disable for faster initial load
             progressive: false,
+            // Start with lower quality for faster initial load
+            startLevel: -1, // Auto-select, but prefer lower for speed
             abrEwmaFastLive: 3.0,
             abrEwmaSlowLive: 9.0,
             abrEwmaFastVoD: 3.0,
             abrEwmaSlowVoD: 9.0,
-            abrEwmaDefaultVoD: 5.0,
             abrBandWidthFactor: 0.95,
             abrBandWidthUpFactor: 0.7,
-            maxStarvationDelay: 4,
-            maxLoadingDelay: 4,
+            maxStarvationDelay: 2, // Reduced from 4
+            maxLoadingDelay: 2, // Reduced from 4
             minAutoBitrate: 0,
             emeEnabled: false,
             widevineLicenseUrl: undefined,
@@ -151,14 +151,26 @@ const HLSVideoPlayer: React.FC<HLSVideoPlayerProps> = ({
           hls.loadSource(src);
           hls.attachMedia(video);
 
+          // Start loading immediately, don't wait for play
           hls.on(Hls.Events.MANIFEST_PARSED, () => {
             setIsLoading(false);
             setError(null);
+            // Start loading the first segment immediately
+            hls.startLoad(-1); // -1 means start from beginning
+            // Try to play immediately if autoplay is enabled
             if (autoplay) {
-              video.play().catch((err) => {
-                console.error("Autoplay failed:", err);
-              });
+              // Small delay to ensure first segment is loading
+              setTimeout(() => {
+                video.play().catch((err) => {
+                  console.error("Autoplay failed:", err);
+                });
+              }, 100);
             }
+          });
+
+          // Start loading as soon as manifest starts loading
+          hls.on(Hls.Events.MANIFEST_LOADING, () => {
+            setIsLoading(true);
           });
 
           hls.on(Hls.Events.ERROR, (event, data) => {
@@ -229,6 +241,7 @@ const HLSVideoPlayer: React.FC<HLSVideoPlayerProps> = ({
       } else if (video.canPlayType("application/vnd.apple.mpegurl")) {
         // Native HLS support (Safari, iOS)
         video.src = src;
+        video.preload = "auto"; // Preload immediately
         setIsLoading(false);
         if (autoplay) {
           video.play().catch((err) => {
@@ -240,13 +253,15 @@ const HLSVideoPlayer: React.FC<HLSVideoPlayerProps> = ({
         const fallbackUrl = getFallbackUrl(src);
         console.log("No HLS support, using MP4 fallback:", fallbackUrl);
         video.src = fallbackUrl;
-        video.preload = "metadata";
+        video.preload = "auto"; // Preload immediately
+        video.load(); // Start loading immediately
       }
-    } else {
-      // Not HLS format, use directly
-      video.src = src;
-      video.preload = "metadata";
-    }
+      } else {
+        // Not HLS format, use directly
+        video.src = src;
+        video.preload = "auto"; // Preload immediately
+        video.load(); // Start loading immediately
+      }
 
     // Common event listeners for all video types
     video.addEventListener("loadstart", () => setIsLoading(true));
@@ -305,7 +320,7 @@ const HLSVideoPlayer: React.FC<HLSVideoPlayerProps> = ({
         controls={controls}
         controlsList="nodownload"
         playsInline
-        preload="metadata"
+        preload="auto"
         title={title}
         style={{
           maxHeight: "100%",
