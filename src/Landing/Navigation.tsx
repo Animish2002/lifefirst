@@ -182,12 +182,7 @@ const socialLinks: SocialLink[] = [
     color: "hover:text-pink-600",
   },
 
-  {
-    icon: <Youtube size={18} />,
-    href: "https://www.youtube.com/@lifefirstindia",
-    label: "YouTube",
-    color: "hover:text-red-600",
-  },
+  
 ];
 
 const Navigation: React.FC = () => {

@@ -80,11 +80,7 @@ const Footer = () => {
       href: "https://www.instagram.com/lifefirstconcepts",
       color: "hover:text-pink-600",
     },
-    {
-      icon: <Youtube className="w-5 h-5" />,
-      href: "#",
-      color: "hover:text-red-600",
-    },
+    
   ];
 
   return (
@@ -120,7 +116,7 @@ const Footer = () => {
             </p>
 
             {/* Social Links */}
-            <div className="flex space-x-4">
+            <div className="flex space-x-6 px-2">
               {socialLinks.map((social, index) => (
                 <motion.a
                   key={index}
