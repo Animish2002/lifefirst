@@ -1,0 +1,99 @@
+# LifeFirst Concepts & Technologies Pvt. Ltd.
+
+> LifeFirst is an ISO 9001:2015 certified Indian water, wastewater, and sanitation solution company founded in 2019. It designs, supplies, installs, and maintains prefabricated water and wastewater treatment systems for hospitals, hostels, institutions, urban local bodies, industries, and residential/commercial complexes. The company recycles over 50 million litres of wastewater per day across 500+ projects (5 KLD to 5 MLD capacity).
+
+## Company Overview
+
+- **Founded**: 2019
+- **Founders**: Sagar Shah (CEO) and Gajanan Ghule (COO)
+- **Headquarters**: Gat. No. 1086, Next to Wadki Timber Market, Pune Saswad Road, Wadki, Pune – 412308, Maharashtra, India
+- **Project Offices**: Mumbai, Bangalore, Nagpur, Chhatrapati Sambhajinagar, Chandrapur, Panvel, Nanded, Latur, Solapur
+- **International Office**: 29, College Road, New Alexandra Park, Harare, Zimbabwe
+- **Certifications**: ISO 9001:2015, CE Marking, MSME (Ministry of MSME, Govt. of India), DPIIT recognized, Scotland International
+- **Production Facility**: 40,000 sq. ft., solar-powered, Zero Liquid Discharge policy, rainwater harvesting
+
+## Vision & Values
+
+- **Vision**: To be a leader in innovative and sustainable decentralised wastewater treatment, transforming waste into a resource and ensuring clean water access for all.
+- **Values**: Committed to delivering sustainable, reliable, and innovative wastewater treatment solutions that protect the environment, support public health, and empower communities.
+
+## Products & Services
+
+### Water Treatment Plants
+Packaged, prefabricated, plug-and-play water treatment systems. Features include minimal civil work, quick installation, compact and portable design, low maintenance, and high efficiency. Suitable for residential, commercial, and industrial applications.
+
+### Wastewater Treatment Plants (STP)
+Prefabricated containerised WWT systems for residential/commercial complexes, hotels, institutions, and hospitals. Treated water can be reused for landscaping, gardening, or toilet flushing. Supports decentralised sanitation in areas without sewer networks.
+
+### Effluent Treatment Plants (ETP)
+Prefabricated ETPs tailored for industrial sectors including textile/dyeing, food & beverage, pharmaceutical & chemical, sugar & distilleries, tanneries, and hospitality. Employs MBBR, MBR, and Advanced Oxidation Processes. Supports Zero Liquid Discharge (ZLD). Capacity: 1 KLD to 100 KLD.
+
+### Filters
+- **Pressure Sand Filters (PSF)**: Remove suspended solids, turbidity, and particulate matter via quartz sand and gravel media under pressure.
+- **Activated Carbon Filters (ACF)**: Remove organic compounds, chlorine, odor, color, and residual chemicals using high-grade activated carbon media.
+
+### Lamella Clarifier (Inclined Plate Settler)
+Compact sedimentation device using inclined plates to remove suspended solids from wastewater. Suitable for STPs, ETPs, and pre-treatment systems.
+
+### Clarifier Mechanism
+Rotating scraper arm system that moves settled sludge to a central hopper. Available in MS, MSRL, or SS materials. Used in sewage and effluent treatment plants.
+
+### Tube Settlers
+Compact, high-efficiency sedimentation systems using inclined tubular modules. Enhances clarification efficiency by up to 6–8 times compared to conventional basins. Saves up to 70% space. Available in FRP/MS with epoxy coating. Inclination: commonly 60°.
+
+### Ultrafiltration (UF) Systems
+Advanced membrane filtration removing suspended solids, bacteria, viruses, and high molecular weight contaminants. Low pressure operation. Skid-mounted and prefabricated. Available from 1 m³/hr to 1,000 m³/hr and beyond.
+
+### Water Softeners
+Ion exchange units removing hardness-causing calcium and magnesium. Prevents scaling in pipelines, boilers, and appliances. Skid-mounted for quick installation.
+
+### Demineralization (DM) Plants
+Remove dissolved salts and minerals via cation/anion exchange resins with mixed bed polishing. Used in pharmaceuticals, power plants, electronics, and laboratories.
+
+### Reverse Osmosis (RO) Systems
+Semi-permeable membrane systems removing TDS, heavy metals, bacteria, and viruses. Equipped with PLC/SCADA integration. Built with FRP, SS, or MS powder-coated frames. Used with pre-treatment (sand/carbon filters) to extend membrane life.
+
+### Chemical Dosing Systems
+Precision-engineered automatic chemical dosing units for pH correction, disinfection, coagulation, and scaling control. Used in STPs, ETPs, RO plants, and cooling towers. Include dosing pump, chemical storage tank, and control panel.
+
+### Bio-Digesters & Bio-Toilets (Sanitation)
+FRP bio-digester systems using anaerobic bacterial digestion. Capacities: 500 L to 10,000 L. Suitable for residential colonies, schools, hospitals, defense camps, railways, rural sanitation, and community toilets. Aligns with global SDG sanitation goals.
+
+### InFlow Hydration Monitoring System
+World's first real-time, non-invasive urine analysis device for hydration tracking. Uses Reflectance Spectroscopy and proprietary algorithms. Touch-free, compact, hygienic. Applications: hospitals, sports/fitness, workplaces, defence, and aviation.
+
+## Key Projects
+
+- **4 MLD Wastewater Treatment Plant**: Decentralised STP with Primary, Secondary, Tertiary, UF, and RO treatment stages.
+- **3 MLD Water Treatment Plant**: Multi-stage potable water treatment (coagulation, filtration, disinfection).
+- **20 KLD Leachate Treatment Plant**: Physico-chemical and biological treatment for toxic leachate from solid waste processing units.
+- **WWT Plant with Full Treatment Train**: Integrates Primary → Secondary → Tertiary → UF → RO for ZLD-capable output.
+
+## Team
+
+- **Sagar Shah** – CEO, 31+ years of industry experience
+- **Gajanan Ghule** – COO & Technical Head
+- **Dattaram Rane** – VP Global Projects, B.E. & Diploma in Chemical Engineering, DNV certified, 12 years global water treatment experience
+- **Supriya Sathe** – Global Business Head, Marketing & Sales; B.E. Computer Science, MBA HR, Certified CSR Practitioner
+- **Shashank More** – Manager Projects, B.E. Civil Engineering, 8 years experience
+- **Albert Mnangagwa** – Chairman (Zimbabwe), ICT Engineer
+
+## Awards & Recognition
+
+- Indian Achievers' Award 2021 (Sagar Shah, CEO)
+- Indian Achievers' Award (LifeFirst Concepts & Technologies)
+- SKOCH Award – Silver, District Governance, Nanded (2022) – Decentralised Liquid Waste Management System
+- SwiftNLift Business Excellence Awards 2023 – Most Innovative Company of the Year (Gajanan Ghule)
+- H2O Latur Recognition
+
+## Clients
+
+**Private**: Kirloskar Industries, Daund Sugar Pvt. Ltd., Pyramid Infratech, XRBIA, Agro Diamond, Oxford Earth, BlueDrop Enviro, Logicon Technosolutions, Unitop Aquacare, Filesure, Golden Group, Rohan Corporation, and others.
+
+**Government**: Maharashtra PWD, Maharashtra Police, National Health Mission, Govt. Medical College Nagpur, Indira Gandhi Govt. Medical College & Hospital Nagpur, Govt. Medical College Latur, Govt. Medical College Nalgonda, Zilla Parishad (Nagpur, Nanded, Latur), Chandrapur Municipal Corporation, Latur Municipal Corporation, Tribal Development Department (Maharashtra Govt.), Public Health Department (Maharashtra), and others.
+
+## Contact
+
+- **Phone**: +91 9011 677 277
+- **Email**: sales@life-first.in
+- **Website**: www.life-first.in

@@ -34,6 +34,8 @@ const certificationsAndClients: Certification[] = [
     description: "ISO Certification for Quality Management Systems",
     media: [
       { type: "image", url: "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1766853929/ISO_QMS_Certificate_1_dzmipw.jpg", title: "ISO Certificate" },
+      { type: "image", url: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1774438345/LIFEFIRST_CONCEPTS_EMS_page-0001_m4hxwn.jpg", title: "ISO EMS Certificate" },
+      { type: "image", url: "https://res.cloudinary.com/dsvfcckqy/image/upload/v1774438350/LIFEFIRST_CONCEPTS_OHSMS_page-0001_ikbktq.jpg", title: "ISO OHSMS Certificate" },
     ]
   },
   {
@@ -216,7 +218,7 @@ const Page = () => {
                       </h3>
                     </div>
                   </DialogTrigger>
-                  <DialogContent className="max-w-5xl w-[95vw] max-h-[90vh] p-0 fixed">
+                  <DialogContent className="max-w-5xl w-[95vw] max-h-[90vh] p-0 fixed overflow-y-auto overflow-x-hidden">
                     <DialogHeader className="p-6 pb-4 bg-white border-b">
                       <DialogTitle className="text-2xl font-bold text-gray-900">
                         {item.title}
@@ -228,19 +230,19 @@ const Page = () => {
                       )}
                     </DialogHeader>
                     
-                    <div className="relative bg-gray-50 p-6">
+                    <div className="relative bg-gray-50 p-6 flex flex-col">
                       {mediaItems.length > 0 && (
                         <>
                           {/* Media Display Area */}
-                          <div className="relative w-full bg-white rounded-lg overflow-hidden shadow-inner min-h-[400px] flex items-center justify-center">
+                          <div className="relative w-full bg-white rounded-lg overflow-hidden shadow-inner min-h-[320px] p-4 flex items-center justify-center">
                             {currentMedia.type === "image" ? (
                               <img
                                 src={currentMedia.url}
                                 alt={currentMedia.title || item.title}
-                                className="max-w-full max-h-[70vh] object-contain"
+                                className="max-w-full max-h-[55vh] object-contain"
                               />
                             ) : (
-                              <div className="w-full h-[70vh] flex flex-col items-center justify-center p-4">
+                              <div className="w-full h-[55vh] flex flex-col items-center justify-center p-4">
                                 <FileText className="w-16 h-16 text-gray-400 mb-4" />
                                 <p className="text-gray-600 mb-4 text-center">
                                   {currentMedia.title || "PDF Document"}
@@ -268,39 +270,43 @@ const Page = () => {
                                 </Button>
                               </div>
                             )}
+
+                            {/* Navigation Controls (overlay on media area) */}
+                            {mediaItems.length > 1 && (
+                              <>
+                                <Button
+                                  variant="outline"
+                                  size="icon"
+                                  className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white shadow-lg z-10"
+                                  onClick={(e) => {
+                                    e.stopPropagation();
+                                    handlePrevious(index, mediaItems.length);
+                                  }}
+                                >
+                                  <ChevronLeft className="w-5 h-5" />
+                                </Button>
+                                <Button
+                                  variant="outline"
+                                  size="icon"
+                                  className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white shadow-lg z-10"
+                                  onClick={(e) => {
+                                    e.stopPropagation();
+                                    handleNext(index, mediaItems.length);
+                                  }}
+                                >
+                                  <ChevronRight className="w-5 h-5" />
+                                </Button>
+
+                                {/* Media Counter */}
+                                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/70 text-white px-4 py-2 rounded-full text-sm">
+                                  {currentIndex + 1} / {mediaItems.length}
+                                </div>
+                              </>
+                            )}
                           </div>
 
-                          {/* Navigation Controls */}
                           {mediaItems.length > 1 && (
                             <>
-                              <Button
-                                variant="outline"
-                                size="icon"
-                                className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white shadow-lg z-10"
-                                onClick={(e) => {
-                                  e.stopPropagation();
-                                  handlePrevious(index, mediaItems.length);
-                                }}
-                              >
-                                <ChevronLeft className="w-5 h-5" />
-                              </Button>
-                              <Button
-                                variant="outline"
-                                size="icon"
-                                className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white shadow-lg z-10"
-                                onClick={(e) => {
-                                  e.stopPropagation();
-                                  handleNext(index, mediaItems.length);
-                                }}
-                              >
-                                <ChevronRight className="w-5 h-5" />
-                              </Button>
-
-                              {/* Media Counter */}
-                              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/70 text-white px-4 py-2 rounded-full text-sm">
-                                {currentIndex + 1} / {mediaItems.length}
-                              </div>
-
                               {/* Media Thumbnails */}
                               <div className="flex gap-2 mt-4 justify-center overflow-x-auto pb-2">
                                 {mediaItems.map((media, mediaIndex) => (
