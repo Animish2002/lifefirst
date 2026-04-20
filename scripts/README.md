@@ -29,6 +29,10 @@ R2_BUCKET_NAME=your_bucket_name_here
 # Optional: Video prefix/folder in R2 (e.g., "videos/" to only process videos in that folder)
 R2_VIDEO_PREFIX=
 
+# Optional: Convert only specific MP4 object keys (comma-separated)
+# Example: videos/new/video1.mp4,videos/new/video2.mp4
+R2_VIDEO_KEYS=
+
 # Optional: HLS output prefix/folder (default: "hls")
 R2_HLS_PREFIX=hls
 
@@ -37,6 +41,9 @@ HLS_SEGMENT_DURATION=10
 
 # Delete original MP4 after conversion (default: false)
 DELETE_ORIGINAL_MP4=false
+
+# Safety mode: skip conversion when target HLS manifest already exists (default: true)
+SKIP_IF_HLS_EXISTS=true
 ```
 
 2. **Install dependencies** (already done):
@@ -58,9 +65,29 @@ Or directly with tsx:
 npx tsx scripts/convert-r2-to-hls.ts
 ```
 
+### Safe Add-Only Run (Recommended for adding new videos)
+
+To convert only newly uploaded videos while keeping existing HLS outputs untouched:
+
+1. Set `SKIP_IF_HLS_EXISTS=true` (default behavior).
+2. Set `R2_VIDEO_KEYS` to the exact 2 new MP4 object keys.
+3. Run:
+
+```bash
+npm run convert:hls
+```
+
+Example:
+
+```env
+R2_VIDEO_KEYS=gallery/new-video-1.mp4,gallery/new-video-2.mp4
+SKIP_IF_HLS_EXISTS=true
+```
+
 ## How It Works
 
 1. **Lists all MP4 files** in your R2 bucket (optionally filtered by prefix)
+   - If `R2_VIDEO_KEYS` is set, only those files are processed
 2. **Downloads each MP4** to a temporary directory
 3. **Converts to HLS format** using FFmpeg:
    - Creates `.m3u8` playlist file

@@ -276,7 +276,8 @@ const Gallery = () => {
         url: "https://gallery.life-first.in/hls/wastewater_treatment_plants_sambhajinagar/wastewater_treatment_plants_sambhajinagar.m3u8",
         thumbnail:
           "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1767037128/city_liquid_waste_management_system_sambhajinagar_tdxjxq.png",
-      },{
+      },
+      {
         id: 15,
         title: "Decentralized Water Treatment Plant",
         category: "video",
@@ -286,6 +287,28 @@ const Gallery = () => {
         url: "https://gallery.life-first.in/hls/Decentralized%20Wastewater%20Treatment%20Plant%20-Chhatrapati%20Sambhajinagar%20-%20Chhatrapati%20Sambhajinagar%20Mahapalika%20(1080p%2C%20h264)/Decentralized%20Wastewater%20Treatment%20Plant%20-Chhatrapati%20Sambhajinagar%20-%20Chhatrapati%20Sambhajinagar%20Mahapalika%20(1080p%2C%20h264).m3u8",
         thumbnail:
           "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1767095896/decentralized_wtp_g_sreekanth_fbeij5.png",
+      },
+      {
+        id: 16,
+        title: "Innovative Decentralized Liquid Waste Management System - Nanded",
+        category: "video",
+        subcategory: "Products & Services",
+        description:
+          "Showcasing our innovative decentralized liquid waste management system installed in Nanded.",
+        url: "https://gallery.life-first.in/hls/innovative_decentralized_liquid_waste_management_system_nanded/innovative_decentralized_liquid_waste_management_system_nanded.m3u8",
+        thumbnail:
+          "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1767035135/innovative_decentralized_liquid_waste_management_system_ozgg69.png",
+      },
+      {
+        id: 17,
+        title: "Life First Eco Module Advanced System",
+        category: "video",
+        subcategory: "Products & Services",
+        description:
+          "Overview of the Life First Eco Module advanced system and its treatment workflow.",
+        url: "https://gallery.life-first.in/hls/life_first_eco_module_advanced_system/life_first_eco_module_advanced_system.m3u8",
+        thumbnail:
+          "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1766269478/Screenshot_20250812_235526_Gallery_dmiay2.jpg",
       },
     ],
   };

@@ -87,11 +87,12 @@ async function setupCORS() {
     console.log("   - https://life-first.in");
     console.log("\n✅ Your HLS videos should now work without CORS errors!");
 
-  } catch (error: any) {
-    console.error("❌ Failed to configure CORS:", error.message);
-    if (error.name === "NoSuchBucket") {
+  } catch (error: unknown) {
+    const errorMessage = error instanceof Error ? error.message : String(error);
+    console.error("❌ Failed to configure CORS:", errorMessage);
+    if (error instanceof Error && error.name === "NoSuchBucket") {
       console.error("   The bucket does not exist. Please check R2_BUCKET_NAME in your .env file.");
-    } else if (error.name === "AccessDenied") {
+    } else if (error instanceof Error && error.name === "AccessDenied") {
       console.error("   Access denied. Please check your R2 credentials have write permissions.");
     }
     process.exit(1);

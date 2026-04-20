@@ -5,7 +5,13 @@ import { resolve } from "path";
 // Load .env from project root
 dotenvConfig({ path: resolve(process.cwd(), ".env") });
 
-import { S3Client, ListObjectsV2Command, GetObjectCommand, PutObjectCommand } from "@aws-sdk/client-s3";
+import {
+  S3Client,
+  ListObjectsV2Command,
+  GetObjectCommand,
+  PutObjectCommand,
+  HeadObjectCommand,
+} from "@aws-sdk/client-s3";
 import { createWriteStream, readdirSync, unlinkSync, existsSync, mkdirSync, readFileSync } from "fs";
 import { join, dirname, basename, extname } from "path";
 import { pipeline } from "stream/promises";
@@ -21,11 +27,18 @@ const config = {
   endpoint: process.env.R2_ENDPOINT || `https://${process.env.R2_ACCOUNT_ID}.r2.cloudflarestorage.com`,
   // Optional: specify video prefix/folder in R2
   videoPrefix: process.env.R2_VIDEO_PREFIX || "",
+  // Optional: convert only specific R2 object keys (comma-separated)
+  videoKeys: (process.env.R2_VIDEO_KEYS || "")
+    .split(",")
+    .map((key) => key.trim())
+    .filter(Boolean),
   // Optional: output folder for HLS files
   hlsPrefix: process.env.R2_HLS_PREFIX || "hls",
   // FFmpeg settings
   segmentDuration: parseInt(process.env.HLS_SEGMENT_DURATION || "10"), // seconds
   deleteOriginal: process.env.DELETE_ORIGINAL_MP4 === "true", // Set to true to delete MP4 after conversion
+  // Safety guard: skip conversion if target HLS manifest already exists
+  skipIfHLSExists: process.env.SKIP_IF_HLS_EXISTS !== "false",
 };
 
 // Initialize S3 client for R2
@@ -55,10 +68,50 @@ interface VideoFile {
   name: string;
 }
 
+function getHlsDirForVideo(video: VideoFile): string {
+  const originalDir = dirname(video.key);
+  const baseName = basename(video.name, extname(video.name));
+  return originalDir === "."
+    ? `${config.hlsPrefix}/${baseName}`
+    : `${config.hlsPrefix}/${originalDir}/${baseName}`;
+}
+
+function getManifestKeyForVideo(video: VideoFile): string {
+  const baseName = basename(video.name, extname(video.name));
+  return `${getHlsDirForVideo(video)}/${baseName}.m3u8`;
+}
+
+async function hlsManifestExists(video: VideoFile): Promise<boolean> {
+  const manifestKey = getManifestKeyForVideo(video);
+  try {
+    await s3Client.send(
+      new HeadObjectCommand({
+        Bucket: config.bucketName,
+        Key: manifestKey,
+      })
+    );
+    return true;
+  } catch {
+    return false;
+  }
+}
+
 /**
  * List all MP4 files in the R2 bucket
  */
 async function listMP4Files(): Promise<VideoFile[]> {
+  if (config.videoKeys.length > 0) {
+    console.log("📋 Using explicit R2 video keys from R2_VIDEO_KEYS...");
+    const explicitVideos = config.videoKeys
+      .filter((key) => key.toLowerCase().endsWith(".mp4"))
+      .map((key) => ({
+        key,
+        name: basename(key),
+      }));
+    console.log(`✅ Found ${explicitVideos.length} explicit MP4 file(s)`);
+    return explicitVideos;
+  }
+
   console.log("📋 Listing MP4 files from R2 bucket...");
   const videos: VideoFile[] = [];
   let continuationToken: string | undefined;
@@ -279,6 +332,11 @@ async function convertVideo(video: VideoFile): Promise<string | null> {
  */
 async function main() {
   console.log("🚀 Starting R2 to HLS conversion process...\n");
+  if (config.skipIfHLSExists) {
+    console.log("🛡️  Safety mode ON: existing HLS manifests will be skipped.");
+  } else {
+    console.log("⚠️  Safety mode OFF: existing HLS outputs can be overwritten.");
+  }
 
   // Validate configuration
   if (!config.accountId || !config.accessKeyId || !config.secretAccessKey || !config.bucketName) {
@@ -306,7 +364,17 @@ async function main() {
     for (let i = 0; i < videos.length; i++) {
       const video = videos[i];
       console.log(`\n[${i + 1}/${videos.length}] Processing: ${video.name}`);
-      
+
+      if (config.skipIfHLSExists && (await hlsManifestExists(video))) {
+        const manifestKey = getManifestKeyForVideo(video);
+        console.log(`⏭️  Skipping ${video.name} (already exists: ${manifestKey})`);
+        results.push({
+          original: video.key,
+          hls: manifestKey,
+        });
+        continue;
+      }
+
       const hlsKey = await convertVideo(video);
       results.push({
         original: video.key,
