@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://life-first.in/sitemap.xml",
+    sitemap: "https://www.life-first.in/sitemap.xml",
   };
 }

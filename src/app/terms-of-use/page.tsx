@@ -1,6 +1,14 @@
 import Footer from "@/Landing/Footer";
 import Navigation from "@/Landing/Navigation";
 import React from "react";
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata = pageMetadata({
+  title: "Terms of Use | LifeFirst",
+  description:
+    "Terms and conditions governing the use of the LifeFirst Concepts & Technologies Pvt. Ltd. website, life-first.in, and its content.",
+  path: "/terms-of-use",
+});
 
 const page = () => {
   return (

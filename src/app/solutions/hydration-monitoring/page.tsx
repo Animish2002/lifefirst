@@ -3,6 +3,14 @@ import Navigation from "@/Landing/Navigation";
 import React from "react";
 import Link from "next/link";
 import CTASection from "@/Landing/Contact";
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata = pageMetadata({
+  title: "InFlow Hydration Monitoring System | LifeFirst",
+  description:
+    "InFlow is a real-time, non-invasive urine analysis device for hydration tracking, built for hospitals, sports, workplaces, defence and aviation.",
+  path: "/solutions/hydration-monitoring",
+});
 
 const page = () => {
   const solutions = [

@@ -4,6 +4,14 @@ import React from "react";
 import Link from "next/link";
 import CTASection from "@/Landing/Contact";
 import solutionsData from "@/data/data.json";
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata = pageMetadata({
+  title: "Water & Wastewater Treatment Solutions | LifeFirst",
+  description:
+    "Explore LifeFirst's prefabricated STPs, ETPs, packaged water treatment plants, advanced filtration, sanitation systems and hydration monitoring technology.",
+  path: "/solutions",
+});
 
 const page = () => {
   const solutions = [

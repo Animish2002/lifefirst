@@ -3,6 +3,14 @@ import Navigation from "@/Landing/Navigation";
 import React from "react";
 import Link from "next/link";
 import CTASection from "@/Landing/Contact";
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata = pageMetadata({
+  title: "Bio-Digesters & Bio-Toilets for Sanitation | LifeFirst",
+  description:
+    "FRP bio-digesters (500 L to 10,000 L) and bio-toilets for schools, hospitals, railways, defence camps, rural and community sanitation by LifeFirst.",
+  path: "/solutions/sanitation",
+});
 
 const page = () => {
   const solutions = [

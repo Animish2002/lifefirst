@@ -46,7 +46,7 @@ const SolutionPage = async ({ params }: PageProps) => {
   // Check if solution has an info image
   const hasInfoImage = Boolean(solution.infoImage);
 
-  const baseUrl = "https://life-first.in";
+  const baseUrl = "https://www.life-first.in";
   const solutionUrl = `${baseUrl}/solutions/${solutionSlug}`;
 
   // Service Schema
@@ -243,9 +243,13 @@ export async function generateMetadata({ params }: PageProps) {
   return {
     title: solution.title,
     description: solution.subtitle,
+    alternates: {
+      canonical: `/solutions/${solution.slug}`,
+    },
     openGraph: {
       title: solution.title,
       description: solution.subtitle,
+      url: `/solutions/${solution.slug}`,
       images: [solution.heroImage],
     },
   };

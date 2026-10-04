@@ -3,6 +3,7 @@ import "./globals.css";
 import { Funnel_Sans } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import JsonLd from "@/components/JsonLd";
+import { OG_IMAGE, SITE_URL } from "@/lib/seo";
 
 const funnelSans = Funnel_Sans({
   variable: "--font-geist-sans",
@@ -10,6 +11,7 @@ const funnelSans = Funnel_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title:
     "LifeFirst Concepts & Technologies Pvt. Ltd. | Water, Wastewater and Sanitation Solution Company",
   description:
@@ -30,19 +32,10 @@ export const metadata: Metadata = {
       "LifeFirst Concepts & Technologies Pvt. Ltd. | Water, Wastewater and Sanitation Solution Company",
     description:
       "LifeFirst Concepts & Technologies Pvt. Ltd. is a leading provider of sustainable water and wastewater treatment solutions. Offering STP, ETP, water filtration systems, and turnkey environmental technologies for industries, communities, and global clients",
-    url: "https://www.life-first.in",
     siteName: "LifeFirst",
     type: "website",
-    locale: "en_US",
-    images: [
-      {
-        url: "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1766261038/life-first-logo-and-text-mark-transparent_lt25wu.png",
-        width: 500,
-        height: 500,
-        alt: "LifeFirst Concepts & Technologies - Water, Wastewater and Sanitation Solution Company",
-        type: "image/png",
-      },
-    ],
+    locale: "en_IN",
+    images: [OG_IMAGE],
   },
   twitter: {
     card: "summary_large_image",
@@ -50,12 +43,7 @@ export const metadata: Metadata = {
       "LifeFirst Concepts & Technologies Pvt. Ltd. | Water, Wastewater and Sanitation Solution Company",
     description:
       "LifeFirst Concepts & Technologies Pvt. Ltd. is a leading provider of sustainable water and wastewater treatment solutions.",
-    images: [
-      "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto,w_1200,h_630/v1755163758/Logo_Mark_cxx7hp.png",
-    ],
-  },
-  alternates: {
-    canonical: "https://www.life-first.in",
+    images: [OG_IMAGE.url],
   },
   robots: {
     index: true,
@@ -77,7 +65,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const baseUrl = "https://www.life-first.in";
+  const baseUrl = SITE_URL;
   const logoUrl =
     "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1766261038/life-first-logo-and-text-mark-transparent_lt25wu.png";
 
@@ -164,7 +152,7 @@ export default function RootLayout({
       "https://www.instagram.com/lifefirstconcepts",
       "https://www.youtube.com/@lifefirstindia",
     ],
-    foundingDate: "2020",
+    foundingDate: "2019",
     numberOfEmployees: {
       "@type": "QuantitativeValue",
       value: "50-100",

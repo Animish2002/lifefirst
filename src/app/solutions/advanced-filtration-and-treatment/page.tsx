@@ -3,6 +3,14 @@ import Navigation from "@/Landing/Navigation";
 import React from "react";
 import Link from "next/link";
 import CTASection from "@/Landing/Contact";
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata = pageMetadata({
+  title: "Advanced Filtration & Water Treatment Systems | LifeFirst",
+  description:
+    "UF and RO systems, pressure sand and activated carbon filters, lamella clarifiers, tube settlers, softeners, DM plants and chemical dosing by LifeFirst.",
+  path: "/solutions/advanced-filtration-and-treatment",
+});
 
 const page = () => {
   const solutions = [

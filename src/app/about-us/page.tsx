@@ -403,7 +403,7 @@ const AboutUsPage: React.FC = () => {
   const firstRowMembers = teamMembers3.slice(0, 5);
   const secondRowMembers = teamMembers3.slice(5);
 
-  const baseUrl = "https://life-first.in";
+  const baseUrl = "https://www.life-first.in";
   const aboutUrl = `${baseUrl}/about-us`;
 
   // BreadcrumbList Schema

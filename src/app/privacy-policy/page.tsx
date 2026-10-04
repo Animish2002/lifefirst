@@ -1,6 +1,14 @@
 import Footer from "@/Landing/Footer";
 import Navigation from "@/Landing/Navigation";
 import React from "react";
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata = pageMetadata({
+  title: "Privacy Policy | LifeFirst",
+  description:
+    "How LifeFirst Concepts & Technologies Pvt. Ltd. collects, uses and protects personal information submitted through the life-first.in website.",
+  path: "/privacy-policy",
+});
 
 const page = () => {
   return (

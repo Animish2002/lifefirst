@@ -131,7 +131,7 @@ const Page = () => {
     }
   };
 
-  const baseUrl = "https://life-first.in";
+  const baseUrl = "https://www.life-first.in";
   const investorsUrl = `${baseUrl}/investors`;
 
   // Convert React elements to plain text for description
