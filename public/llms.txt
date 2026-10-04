@@ -8,7 +8,12 @@
 - **Founders**: Sagar Shah (CEO) and Gajanan Ghule (COO)
 - **Headquarters**: Gat. No. 1086, Next to Wadki Timber Market, Pune Saswad Road, Wadki, Pune – 412308, Maharashtra, India
 - **Project Offices**: Mumbai, Bangalore, Nagpur, Chhatrapati Sambhajinagar, Chandrapur, Panvel, Nanded, Latur, Solapur
-- **International Office**: 29, College Road, New Alexandra Park, Harare, Zimbabwe
+- **International Offices**:
+  - **Zimbabwe** – LifeFirst Concepts & Technologies (Private) Limited, 29 College Road, New Alexandra Park, Harare | +263 787 196333 | export@life-first.in
+  - **South Africa** – LifeFirst Concepts & Technologies (Pty) Limited, 282 Tryall Road, Cape Town, Western Cape, 7441 | +27 72 777 0653 | mdsa@life-first.in
+  - **Kenya** – LIFCOT Limited, Luther Plaza, Nyerere Road, P.O. Box 161 - 00100, Nairobi | +254 721 796515 | mdken@life-first.in
+  - **Nigeria** – LifeFirst Water & Environmental Solutions Limited, No 161, Ajao Road, Ikeja, Lagos State | +234 806 393 6747 | nigbd@life-first.in
+  - **Europe (Netherlands)** – Nitin Srivastava, Business Head Europe, Oosterlengte 57, 3454 RH, De Meern, Utrecht | +31 6 44118794 | nitin@life-first.in
 - **Certifications**: ISO 9001:2015, CE Marking, MSME (Ministry of MSME, Govt. of India), DPIIT recognized, Scotland International
 - **Production Facility**: 40,000 sq. ft., solar-powered, Zero Liquid Discharge policy, rainwater harvesting
 
@@ -73,10 +78,12 @@ World's first real-time, non-invasive urine analysis device for hydration tracki
 
 - **Sagar Shah** – CEO, 31+ years of industry experience
 - **Gajanan Ghule** – COO & Technical Head
-- **Ravikumar Dhul** – Head – Engineering Division, B.E. in Chemical Engineering, 16 years global water treatment experience
-- **Supriya Sathe** – Global Business Head, Marketing & Sales; B.E. Computer Science, MBA HR, Certified CSR Practitioner
-- **Shashank More** – Manager Projects, B.E. Civil Engineering, 8 years experience
-- **Prince Sibanda** – Director (Zimbabwe), ICT Engineer
+- **Ravikumar Dhul** – Chief Technical Officer, B.E. in Chemical Engineering, 16+ years global water treatment experience
+- **Supriya Sathe** – Director & Global Business Head; B.E. Computer Science, MBA HR, Certified CSR Practitioner
+- **Prince Sibanda** – Director (Zimbabwe), IT and digital transformation expert with 20+ years of experience
+- **Shaun Brooker** – Managing Director (South Africa), leads growth across South Africa and the SADC region
+- **Kipkoros Kandie** – Managing Director (Kenya), Sanitary and Civil Engineer with 32+ years of experience; M.Sc. Sanitary Engineering (UNESCO-IHE Delft), B.Sc. Civil Engineering (University of Nairobi)
+- **Shashank More** – Manager Projects, B.E. Civil Engineering, 8+ years experience
 
 ## Awards & Recognition
 
