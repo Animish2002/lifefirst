@@ -188,11 +188,11 @@ const CTASection: React.FC = () => {
         {
           name: "LifeFirst Concepts & Technologies (Private) Limited",
           address: "29 College Road, New Alexandra Park, Harare, ZIMBABWE",
-          phone: "+91 8806 977 277 ",
+          phone: "+263 787 196333 ",
           email: "export@life-first.in",
         },
         {
-          name: "LifeFirst Concepts & Technologies (Private) Limited",
+          name: "LifeFirst Concepts & Technologies (Pty) Limited",
           address: "282 Tryall Road, 282, Cape Town, Western Cape, 7441, South Africa.",
           phone: "+27 72 777 0653",
           email: "mdsa@life-first.in",
@@ -205,10 +205,17 @@ const CTASection: React.FC = () => {
           email: "nitin@life-first.in",
         },
         {
-          name: "Kipkoros Kandie — Managing Director (Kenya)",
-          address: "Nairobi, Kenya",
+          name: "LIFCOT Limited",
+          address: "Luther Plaza, Neyerere Road, P.O Box 161 - 00100 Nairobi",
           phone: "+254 721 796515",
           email: "mdken@life-first.in",
+        },
+
+        {
+          name: "LifeFirst Water & Environmental Solutions Limited",
+          address: "No 161, Ajao Road, Ikeja, Lagos State, Nigeria",
+          phone: "+234 806 393 6747",
+          email: "nigbd@life-first.in",
         },
 
       ],

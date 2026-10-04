@@ -238,6 +238,26 @@ const AboutUsPage: React.FC = () => {
   ];
 
   const teamMembers2: TeamMember[] = [
+
+    {
+      name: "Ravikumar Dhul",
+      position: "Cheif Technical Officer  ",
+      experience: "16+ years of global experience in Water Treatment Industry.",
+      image:
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/v1788357233/image_kyjbua.png",
+      description:
+        "Mr. Ravikumar Dhul, Head – Engineering Division at Life First Concepts & Technologies Pvt. Ltd., brings over 16 years of rich international experience in the Water and Wastewater Treatment Industry. Holding a B.E. in Chemical Engineering, along with 1st Class certification, Ravikumar combines strong technical expertise with a sharp strategic outlook to lead global projects from concept to successful execution. With strong expertise in water and wastewater treatment projects, he is responsible for leading multidisciplinary engineering activities from conceptual design and technology selection through detailed engineering, procurement support, execution and commissioning. Experienced in WTP, STP, ETP, RO, UF, Advance oxidation (PCO), water reuse and advanced treatment systems, with a focus on technically robust, cost-effective and energy-efficient solutions. With his in-depth knowledge of all engineering aspects and compliance standards, Ravikumar has spearheaded numerous industrial, municipal, and commercial water treatment initiatives across India, Asia, the Middle East, and Africa. His ability to integrate cutting-edge technologies with practical, cost-effective designs ensures that Life First delivers world-class, sustainable solutions tailored to diverse client needs. Known for his meticulous planning and collaborative leadership style, Ravikumar excels in coordinating multi-disciplinary teams, managing complex stakeholder requirements, and ensuring timely, quality-driven, 'First Time Right' deliveries. His expertise in Design Engineering, 3D Model Review, HAZOP, SIL Study and safety compliance also strengthens the organization’s commitment to operational excellence and environmental responsibility. Through his global perspective and technical acumen, Ravikumar plays a crucial role in advancing LifeFirst’s vision of sustainable growth and international expansion, making a meaningful impact on communities and industries worldwide.",
+    },
+    {
+      name: "Supriya Sathe",
+      position: "Director & Global Business Head",
+      experience:
+        "Certified CSR Practitioner with 8+ years of experience in Marketing & Sales.",
+      image:
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1754928788/WhatsApp_Image_2025-07-28_at_11.39.26_xcakld.jpg",
+      description:
+        "Supriya Sathe leads the Global Marketing & Sales initiatives at LifeFirst Concepts & Technologies Pvt. Ltd., bringing a powerful combination of technical expertise, strategic insight, and purpose-driven leadership. With a B.E. in Computer Science and an MBA in Human Resources, Supriya offers a multidisciplinary perspective that blends technology, people management, and business strategy seamlessly. As a Certified CSR Practitioner, she is deeply committed to aligning business growth with sustainability, social impact, and ethical practices. Supriya has played a pivotal role in positioning LifeFirst as a global brand, spearheading marketing campaigns, international collaborations, and customer engagement initiatives that have expanded the company’s footprint across India, the Middle East, and Africa. Her approach combines data-driven strategies with innovative storytelling, ensuring that the company’s mission of “Make in India for the World” resonates across diverse markets. Beyond driving revenue and partnerships, Supriya champions women leadership in technology and advocates for inclusive growth and responsible business practices. With her visionary outlook and collaborative leadership style, Supriya Sathe continues to shape LifeFirst’s journey toward becoming a global leader in sustainable water, wastewater, and sanitation solutions. ",
+    },
     {
       name: "Prince Sibanda",
       position: "Director (Zimbabwe)",
@@ -249,25 +269,33 @@ const AboutUsPage: React.FC = () => {
         "Mr. Prince Sibanda is a seasoned IT expert with over 20 years of experience leading multi-million-dollar digital transformation projects across diverse industries. With a strong background in technology strategy, systems integration, and innovation management, he has successfully driven large-scale initiatives that enhance operational efficiency, digital growth, and organizational performance."
     },
     {
-      name: "Ravikumar Dhul",
-      position: "Head – Engineering Division",
-      experience: "16+ years of global experience in Water Treatment Industry.",
+      name: "Shaun Brooker",
+      position: "Managing Director (South Africa)",
+      experience:
+        "25+ years of experience in strategic partnerships & project structuring.",
       image:
-        "https://res.cloudinary.com/dsvfcckqy/image/upload/v1788357233/image_kyjbua.png",
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1781549955/Shaun_Brooker_cjvcgs.jpg",
       description:
-        "Mr. Ravikumar Dhul, Head – Engineering Division at Life First Concepts & Technologies Pvt. Ltd., brings over 16 years of rich international experience in the Water and Wastewater Treatment Industry. Holding a B.E. in Chemical Engineering, along with 1st Class certification, Ravikumar combines strong technical expertise with a sharp strategic outlook to lead global projects from concept to successful execution. With strong expertise in water and wastewater treatment projects, he is responsible for leading multidisciplinary engineering activities from conceptual design and technology selection through detailed engineering, procurement support, execution and commissioning. Experienced in WTP, STP, ETP, RO, UF, Advance oxidation (PCO), water reuse and advanced treatment systems, with a focus on technically robust, cost-effective and energy-efficient solutions. With his in-depth knowledge of all engineering aspects and compliance standards, Ravikumar has spearheaded numerous industrial, municipal, and commercial water treatment initiatives across India, Asia, the Middle East, and Africa. His ability to integrate cutting-edge technologies with practical, cost-effective designs ensures that Life First delivers world-class, sustainable solutions tailored to diverse client needs. Known for his meticulous planning and collaborative leadership style, Ravikumar excels in coordinating multi-disciplinary teams, managing complex stakeholder requirements, and ensuring timely, quality-driven, 'First Time Right' deliveries. His expertise in Design Engineering, 3D Model Review, HAZOP, SIL Study and safety compliance also strengthens the organization’s commitment to operational excellence and environmental responsibility. Through his global perspective and technical acumen, Ravikumar plays a crucial role in advancing LifeFirst’s vision of sustainable growth and international expansion, making a meaningful impact on communities and industries worldwide.",
+        "Shaun Brooker is a business strategist and sustainability-driven entrepreneur focused on delivering innovative water, wastewater, sanitation, and environmental infrastructure solutions across Southern Africa. As the driving force behind LifeFirst’s growth in South Africa and the SADC region, Shaun is passionate about connecting world-class technologies with real-world industry challenges particularly within mining, municipalities, commercial developments, agriculture, and ESG-driven sectors. With a strong background in business development, project structuring, strategic partnerships, and infrastructure opportunities, Shaun specializes in identifying practical, scalable solutions that create measurable environmental and operational impact. His approach combines commercial thinking with a commitment to sustainability, helping organisations reduce environmental risk, improve compliance, and unlock long-term value through smarter water and sanitation systems. Shaun believes that sustainable infrastructure is not just about compliance it is about building resilient communities, enabling responsible industrial growth, and creating solutions that leave a lasting legacy.  At LifeFirst, Shaun is committed to expanding access to innovative decentralised water, wastewater, and sanitation technologies that transform challenges into opportunities for cleaner, more sustainable operations across Africa.",
+    },
+    
+    {
+      name: "Kipkoros Kandie",
+      position: "Managing Director (Kenya)",
+      experience:
+        "32+ years of experience in Sanitary and Civil Engineering.",
+      image:
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1791152418/Kipkoros_Kandie_p7pusw.jpg",
+      description:
+        "Kipkoros Kandie is a Sanitary and Civil Engineer with over 32 years of experience in engineering projects across government, NGOs, and the private sector. He holds an M.Sc. in Sanitary Engineering from UNESCO-IHE Delft, The Netherlands, and a B.Sc. in Civil Engineering from the University of Nairobi. Alongside his professional engineering career, Kandie served for 23 years as Faculty at the University of Nairobi and has held Board Leadership and Governance positions in various Government Agencies. He brings to LifeFirst extensive technical expertise, leadership and governance experience, and strong professional networks across Kenya and the wider East African region, supporting the company’s growth and impact in water, wastewater, and sanitation solutions."
     },
 
-    {
-      name: "Supriya Sathe",
-      position: "Global Business Head Marketing & Sales",
-      experience:
-        "Certified CSR Practitioner with 8+ years of experience in Marketing & Sales.",
-      image:
-        "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1754928788/WhatsApp_Image_2025-07-28_at_11.39.26_xcakld.jpg",
-      description:
-        "Supriya Sathe leads the Global Marketing & Sales initiatives at LifeFirst Concepts & Technologies Pvt. Ltd., bringing a powerful combination of technical expertise, strategic insight, and purpose-driven leadership. With a B.E. in Computer Science and an MBA in Human Resources, Supriya offers a multidisciplinary perspective that blends technology, people management, and business strategy seamlessly. As a Certified CSR Practitioner, she is deeply committed to aligning business growth with sustainability, social impact, and ethical practices. Supriya has played a pivotal role in positioning LifeFirst as a global brand, spearheading marketing campaigns, international collaborations, and customer engagement initiatives that have expanded the company’s footprint across India, the Middle East, and Africa. Her approach combines data-driven strategies with innovative storytelling, ensuring that the company’s mission of “Make in India for the World” resonates across diverse markets. Beyond driving revenue and partnerships, Supriya champions women leadership in technology and advocates for inclusive growth and responsible business practices. With her visionary outlook and collaborative leadership style, Supriya Sathe continues to shape LifeFirst’s journey toward becoming a global leader in sustainable water, wastewater, and sanitation solutions. ",
-    },
+    
+    
+    
+  ];
+
+  const teamMembers3: TeamMember[] = [
     {
       name: "Shashank More",
       position: "Manager Projects",
@@ -278,19 +306,6 @@ const AboutUsPage: React.FC = () => {
       description:
         "Shashank More, Manager – Projects at LifeFirst Concepts & Technologies Pvt. Ltd., brings 10 years of specialized experience in executing water and wastewater treatment projects with precision and excellence. Holding a B.E. in Civil Engineering, Shashank has developed a strong foundation in project planning, structural design, and site execution, enabling him to deliver solutions that consistently meet client expectations. Throughout his career, Shashank has demonstrated a keen eye for quality, efficiency, and reliability, ensuring that every project adheres to the highest technical standards while maintaining strict timelines and budgets. His expertise spans municipal, industrial, and commercial installations, where he has successfully managed multidisciplinary teams and coordinated with clients, consultants, and vendors to ensure smooth project execution from start to finish. Known for his problem solving abilities and commitment to innovation, Shashank continuously adopts modern construction methodologies and digital tools to enhance project productivity and accuracy. His dedication to timely delivery and customer satisfaction has earned him recognition as a dependable leader within the LifeFirst project team. By combining technical expertise with a results driven approach, Shashank More plays a pivotal role in strengthening LifeFirst’s reputation as a trusted partner for sustainable water and wastewater infrastructure solutions.",
     },
-    {
-      name: "Shaun Brooker",
-      position: "Managing Director (South Africa)",
-      experience:
-        "25+ years of experience in strategic partnerships & project structuring.",
-      image:
-        "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1781549955/Shaun_Brooker_cjvcgs.jpg",
-      description:
-        "Shaun Brooker is a business strategist and sustainability-driven entrepreneur focused on delivering innovative water, wastewater, sanitation, and environmental infrastructure solutions across Southern Africa. As the driving force behind LifeFirst’s growth in South Africa and the SADC region, Shaun is passionate about connecting world-class technologies with real-world industry challenges particularly within mining, municipalities, commercial developments, agriculture, and ESG-driven sectors. With a strong background in business development, project structuring, strategic partnerships, and infrastructure opportunities, Shaun specializes in identifying practical, scalable solutions that create measurable environmental and operational impact. His approach combines commercial thinking with a commitment to sustainability, helping organisations reduce environmental risk, improve compliance, and unlock long-term value through smarter water and sanitation systems. Shaun believes that sustainable infrastructure is not just about compliance it is about building resilient communities, enabling responsible industrial growth, and creating solutions that leave a lasting legacy.  At LifeFirst, Shaun is committed to expanding access to innovative decentralised water, wastewater, and sanitation technologies that transform challenges into opportunities for cleaner, more sustainable operations across Africa.",
-    },
-  ];
-
-  const teamMembers3: TeamMember[] = [
     {
       name: "Chetan K. Bawane",
       position: "Water Infrastructure Project Specialist", // Add actual position

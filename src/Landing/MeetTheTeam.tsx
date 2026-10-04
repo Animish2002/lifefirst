@@ -25,35 +25,36 @@ const MeetTheTeam = () => {
 
   const teamMembers2 = [
     {
+      name: "Ravikumar Dhul",
+      position: "Cheif Technical Officer",
+      image:
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/v1788357233/image_kyjbua.png",
+    },
+    {
+      name: "Supriya Sathe",
+      position: "Director & Global Business Head",
+      image:
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1754928788/WhatsApp_Image_2025-07-28_at_11.39.26_xcakld.jpg",
+    },
+    {
       name: "Prince Sibanda",
       position: "Director (Zimbabwe)",
       image:
         "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1778258770/Price_oodvho.jpg",
     },
     {
-      name: "Ravikumar Dhul",
-      position: "Head – Engineering Division",
-      image:
-        "https://res.cloudinary.com/dsvfcckqy/image/upload/v1788357233/image_kyjbua.png",
-    },
-    {
-      name: "Supriya Sathe",
-      position: "Global Business Head Marketing & Sales",
-      image:
-        "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1754928788/WhatsApp_Image_2025-07-28_at_11.39.26_xcakld.jpg",
-    },
-    {
-      name: "Shashank More",
-      position: "Manager Projects",
-      image:
-        "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1754928789/WhatsApp_Image_2025-07-28_at_12.40.01_eg2zec.jpg",
-    },
-    {
       name: "Shaun Brooker",
       position: "Managing Director (South Africa)",
       image:
         "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1781549955/Shaun_Brooker_cjvcgs.jpg",
+    },    
+    {
+      name: "Kipkoros Kandie",
+      position: "Managing Director (Kenya)",
+      image:
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1791152418/Kipkoros_Kandie_p7pusw.jpg",
     },
+    
   ];
 
   const cardVariants: Variants = {
