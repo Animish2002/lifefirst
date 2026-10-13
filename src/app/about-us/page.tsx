@@ -394,7 +394,7 @@ const AboutUsPage: React.FC = () => {
       position: "Manufacturing & Operations Professional", // Add actual position
       experience: "Manufacturing & Operations Professional with 2+ Years of Experience",
       image:
-        "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1758548403/Ravindra_Darade_zteu2r.jpg", // Placeholder image
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1791883186/Ravi_Darade_az33dj.jpg", // Placeholder image
       description:
         "A highly adaptable professional with over 2 years of experience in manufacturing and operations, demonstrating the ability to deliver results under pressure while ensuring efficiency and quality standards. Skilled in leveraging advanced tools such as Computer-Aided Design (CAD) and CATIA to optimize processes and drive operational excellence.", // Add actual description
     },
