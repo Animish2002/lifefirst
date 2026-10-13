@@ -97,11 +97,11 @@ const MeetTheTeam = () => {
               viewport={{ once: true }}
             >
               {/* Image */}
-              <div className="w-full md:w-56 h-80 md:h-56 flex-shrink-0 overflow-hidden border-b md:border-b-0 md:border-r border-gray-300">
+              <div className="w-full md:w-56 h-80 md:h-56 flex-shrink-0 overflow-hidden bg-gray-100 border-b md:border-b-0 md:border-r border-gray-300">
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="w-full h-full object-fit rounded-t-lg md:rounded-l-xl md:rounded-tr-none"
+                  className="w-full h-full object-contain rounded-t-lg md:rounded-l-xl md:rounded-tr-none"
                 />
               </div>
 
