@@ -17,7 +17,7 @@ const MeetTheTeam = () => {
       name: "Gajanan Ghule",
       position: "Chief Operations Officer",
       image:
-        "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1755361767/WhatsApp_Image_2025-07-28_at_15.41.57_sooibr_w9s67f.jpg",
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1791881239/Gajanan_ghule_kivdit.jpg",
       description:
         "Our technical expert, he transforms innovative ideas into sustainable, practical solutions.",
     },
