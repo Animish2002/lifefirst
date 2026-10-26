@@ -3,7 +3,7 @@ import { ComponentProps } from "react";
 import Link from "next/link";
 import Navigation from "@/Landing/Navigation";
 import Footer from "@/Landing/Footer";
-import { jobs } from "@/data/careers";
+import { getJobs } from "@/lib/careers";
 
 import { Card, CardHeader, CardFooter } from "@/components/ui/card";
 import { CardTitle, CardDescription } from "@/components/ui/card";
@@ -72,7 +72,12 @@ const LightbulbIcon = ({ className }: ComponentProps<"svg">) => (
   </svg>
 );
 
-const Page = () => {
+// Openings come from LifeFlow; the page is rebuilt at most every 5 minutes.
+export const revalidate = 300;
+
+const Page = async () => {
+  const jobs = await getJobs();
+
   return (
     <div className="bg-gray-50 text-gray-800 font-sans">
       <Navigation />
@@ -149,9 +154,14 @@ const Page = () => {
             Current Openings
           </h2>
 
+          {jobs.length === 0 ? (
+            <p className="text-center text-gray-600">
+              There are no openings right now. Please check back soon.
+            </p>
+          ) : (
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {jobs.map((job) => (
-              <Card key={job.id} className="flex flex-col gap-2 py-2">
+              <Card key={job.slug} className="flex flex-col gap-2 py-2">
                 <CardHeader className="p-4">
                   <CardTitle className="text-lg font-semibold">
                     {job.title}
@@ -159,6 +169,17 @@ const Page = () => {
                   <CardDescription className="text-sm text-gray-600">
                     {job.department} • <br /> {job.location}
                   </CardDescription>
+                  <div className="flex flex-wrap gap-1.5 pt-2">
+                    <span className="text-xs font-medium bg-blue-50 text-blue-700 rounded-full px-2.5 py-1">
+                      {job.experienceLabel}
+                    </span>
+                    <span className="text-xs font-medium bg-blue-50 text-blue-700 rounded-full px-2.5 py-1">
+                      {job.openings} opening{job.openings === 1 ? "" : "s"}
+                    </span>
+                    <span className="text-xs font-medium bg-blue-50 text-blue-700 rounded-full px-2.5 py-1">
+                      {job.employmentTypeLabel}
+                    </span>
+                  </div>
                 </CardHeader>
 
                 <CardFooter className="p-4 pt-0">
@@ -171,6 +192,7 @@ const Page = () => {
               </Card>
             ))}
           </div>
+          )}
         </div>
       </section>
 

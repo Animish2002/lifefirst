@@ -3,7 +3,7 @@ import Link from "next/link";
 import Navigation from "@/Landing/Navigation";
 import Footer from "@/Landing/Footer";
 import JsonLd from "@/components/JsonLd";
-import { jobs, Job } from "@/data/careers";
+import { getJob, getJobs, Job } from "@/lib/careers";
 import JobApplyClient from "./JobApplyClient";
 import JobDescriptionView from "./JobDescriptionView";
 
@@ -13,9 +13,72 @@ interface PageProps {
   }>;
 }
 
+// Jobs come from LifeFlow; a page is rebuilt at most every 5 minutes, and
+// jobs posted after the build are rendered on first visit.
+export const revalidate = 300;
+
+/**
+ * schema.org JobPosting, so the job can appear in Google's job search. The
+ * hiring organisation is always LifeFirst: which company in the group a job
+ * belongs to isn't shown on the website.
+ */
+function jobPostingSchema(job: Job, jobUrl: string, baseUrl: string) {
+  const description = [
+    job.summary ? `<p>${escapeHtml(job.summary)}</p>` : "",
+    ...job.sections.map(
+      (s) =>
+        `<h3>${escapeHtml(s.heading)}</h3><ul>${s.items.map((i) => `<li>${escapeHtml(i)}</li>`).join("")}</ul>`,
+    ),
+  ].join("");
+  return {
+    "@context": "https://schema.org",
+    "@type": "JobPosting",
+    title: job.title,
+    description: description || `${job.title} (${job.department}) at LifeFirst, ${job.location}.`,
+    identifier: { "@type": "PropertyValue", name: "LifeFirst", value: job.slug },
+    // The day in India it was posted.
+    datePosted: new Date(Date.parse(job.publishedAt ?? job.updatedAt) + 330 * 60_000).toISOString().slice(0, 10),
+    ...(job.applyBy ? { validThrough: `${job.applyBy}T23:59:59+05:30` } : {}),
+    employmentType: job.schemaEmploymentType,
+    hiringOrganization: { "@type": "Organization", name: "LifeFirst", sameAs: baseUrl, logo: `${baseUrl}/favicon.ico` },
+    ...(job.workMode === "remote"
+      ? { jobLocationType: "TELECOMMUTE", applicantLocationRequirements: { "@type": "Country", name: "India" } }
+      : {
+          jobLocation: {
+            "@type": "Place",
+            address: { "@type": "PostalAddress", addressLocality: job.location, addressCountry: "IN" },
+          },
+        }),
+    experienceRequirements: {
+      "@type": "OccupationalExperienceRequirements",
+      monthsOfExperience: job.experienceMinYears * 12,
+    },
+    totalJobOpenings: job.openings,
+    ...(job.salary && (job.salary.min !== null || job.salary.max !== null)
+      ? {
+          baseSalary: {
+            "@type": "MonetaryAmount",
+            currency: "INR",
+            value: {
+              "@type": "QuantitativeValue",
+              ...(job.salary.min !== null ? { minValue: job.salary.min } : {}),
+              ...(job.salary.max !== null ? { maxValue: job.salary.max } : {}),
+              unitText: "YEAR",
+            },
+          },
+        }
+      : {}),
+    directApply: true,
+    url: jobUrl,
+  };
+}
+
+const escapeHtml = (text: string) =>
+  text.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+
 const JobPage = async ({ params }: PageProps) => {
   const { slug } = await params;
-  const job = jobs.find((j: Job) => j.slug === slug);
+  const job = await getJob(slug);
 
   if (!job) {
     notFound();
@@ -42,6 +105,7 @@ const JobPage = async ({ params }: PageProps) => {
   return (
     <div className="bg-gray-50 text-gray-800 font-sans">
       <JsonLd data={breadcrumbSchema} />
+      {job.acceptingApplications && <JsonLd data={jobPostingSchema(job, jobUrl, baseUrl)} />}
       <Navigation />
 
       {/* Hero Section */}
@@ -77,12 +141,12 @@ const JobPage = async ({ params }: PageProps) => {
 export default JobPage;
 
 export async function generateStaticParams() {
-  return jobs.map((job) => ({ slug: job.slug }));
+  return (await getJobs()).map((job) => ({ slug: job.slug }));
 }
 
 export async function generateMetadata({ params }: PageProps) {
   const { slug } = await params;
-  const job = jobs.find((j: Job) => j.slug === slug);
+  const job = await getJob(slug);
 
   if (!job) {
     return {
@@ -93,6 +157,8 @@ export async function generateMetadata({ params }: PageProps) {
 
   return {
     title: `${job.title} | Careers at LifeFirst`,
-    description: `Apply for the ${job.title} role (${job.department}) at LifeFirst, ${job.location}.`,
+    description:
+      job.summary ||
+      `Apply for the ${job.title} role (${job.department}) at LifeFirst, ${job.location}.`,
   };
 }
