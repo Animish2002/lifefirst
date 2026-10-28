@@ -238,7 +238,6 @@ const AboutUsPage: React.FC = () => {
   ];
 
   const teamMembers2: TeamMember[] = [
-
     {
       name: "Ravikumar Dhul",
       position: "Cheif Technical Officer  ",
@@ -266,7 +265,7 @@ const AboutUsPage: React.FC = () => {
       image:
         "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1778258770/Price_oodvho.jpg",
       description:
-        "Mr. Prince Sibanda is a seasoned IT expert with over 20 years of experience leading multi-million-dollar digital transformation projects across diverse industries. With a strong background in technology strategy, systems integration, and innovation management, he has successfully driven large-scale initiatives that enhance operational efficiency, digital growth, and organizational performance."
+        "Mr. Prince Sibanda is a seasoned IT expert with over 20 years of experience leading multi-million-dollar digital transformation projects across diverse industries. With a strong background in technology strategy, systems integration, and innovation management, he has successfully driven large-scale initiatives that enhance operational efficiency, digital growth, and organizational performance.",
     },
     {
       name: "Shaun Brooker",
@@ -278,21 +277,16 @@ const AboutUsPage: React.FC = () => {
       description:
         "Shaun Brooker is a business strategist and sustainability-driven entrepreneur focused on delivering innovative water, wastewater, sanitation, and environmental infrastructure solutions across Southern Africa. As the driving force behind LifeFirst’s growth in South Africa and the SADC region, Shaun is passionate about connecting world-class technologies with real-world industry challenges particularly within mining, municipalities, commercial developments, agriculture, and ESG-driven sectors. With a strong background in business development, project structuring, strategic partnerships, and infrastructure opportunities, Shaun specializes in identifying practical, scalable solutions that create measurable environmental and operational impact. His approach combines commercial thinking with a commitment to sustainability, helping organisations reduce environmental risk, improve compliance, and unlock long-term value through smarter water and sanitation systems. Shaun believes that sustainable infrastructure is not just about compliance it is about building resilient communities, enabling responsible industrial growth, and creating solutions that leave a lasting legacy.  At LifeFirst, Shaun is committed to expanding access to innovative decentralised water, wastewater, and sanitation technologies that transform challenges into opportunities for cleaner, more sustainable operations across Africa.",
     },
-    
+
     {
       name: "Kipkoros Kandie",
       position: "Managing Director (Kenya)",
-      experience:
-        "32+ years of experience in Sanitary and Civil Engineering.",
+      experience: "32+ years of experience in Sanitary and Civil Engineering.",
       image:
         "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1791152418/Kipkoros_Kandie_p7pusw.jpg",
       description:
-        "Kipkoros Kandie is a Sanitary and Civil Engineer with over 32 years of experience in engineering projects across government, NGOs, and the private sector. He holds an M.Sc. in Sanitary Engineering from UNESCO-IHE Delft, The Netherlands, and a B.Sc. in Civil Engineering from the University of Nairobi. Alongside his professional engineering career, Kandie served for 23 years as Faculty at the University of Nairobi and has held Board Leadership and Governance positions in various Government Agencies. He brings to LifeFirst extensive technical expertise, leadership and governance experience, and strong professional networks across Kenya and the wider East African region, supporting the company’s growth and impact in water, wastewater, and sanitation solutions."
+        "Kipkoros Kandie is a Sanitary and Civil Engineer with over 32 years of experience in engineering projects across government, NGOs, and the private sector. He holds an M.Sc. in Sanitary Engineering from UNESCO-IHE Delft, The Netherlands, and a B.Sc. in Civil Engineering from the University of Nairobi. Alongside his professional engineering career, Kandie served for 23 years as Faculty at the University of Nairobi and has held Board Leadership and Governance positions in various Government Agencies. He brings to LifeFirst extensive technical expertise, leadership and governance experience, and strong professional networks across Kenya and the wider East African region, supporting the company’s growth and impact in water, wastewater, and sanitation solutions.",
     },
-
-    
-    
-    
   ];
 
   const teamMembers3: TeamMember[] = [
@@ -309,7 +303,8 @@ const AboutUsPage: React.FC = () => {
     {
       name: "Chetan K. Bawane",
       position: "Water Infrastructure Project Specialist", // Add actual position
-      experience: "Water Infrastructure Project Specialist with 8+ Years of Experience",
+      experience:
+        "Water Infrastructure Project Specialist with 8+ Years of Experience",
       image:
         "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1758548404/Chetan_Bawane_foggrl.jpg", // Placeholder image
       description:
@@ -318,25 +313,27 @@ const AboutUsPage: React.FC = () => {
     {
       name: "Atish Kamble",
       position: "Water Infrastructure Project Engineer", // Add actual position
-      experience: "Water Infrastructure Project Engineer with 5+ Years of Experience",
+      experience:
+        "Water Infrastructure Project Engineer with 5+ Years of Experience",
       image:
         "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1758548402/Atish_Kamble_yukqpg.jpg", // Placeholder image
       description:
         "A highly adaptable professional with over 5 years of experience in executing and managing water supply schemes, water treatment plants (WTPs), sewage treatment plants (STPs), and lift irrigation projects. Recognized for strong team leadership and project management skills, ensuring quality execution, timely delivery, and operational efficiency across all stages of infrastructure projects.", // Add actual description
     },
     {
-      name: "Ravi Chavan",
-      position: "Electrical Technician",
-      experience: "Electrical Technician with 5+ Years of Experience.",
+      name: "Swati Joshi",
+      position: "Assistant HR Manager",
+      experience: "HR & Administration ",
       image:
-        "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1758548403/Ravi_Chavan_lxfmjs.jpg", // Placeholder image
+        "https://res.cloudinary.com/dsvfcckqy/image/upload/v1793174663/Swati_Joshi_ycrlut.jpg", // Placeholder image
       description:
-        "An experienced Electrical Technician with over 5 years of expertise in diagnosing, repairing, and maintaining complex electrical systems. Highly skilled in utilizing advanced diagnostic equipment and tools to ensure operational efficiency while maintaining strict quality and safety standards. Dedicated to delivering reliable solutions and minimizing downtime through precise troubleshooting and preventive maintenance practices.", // Add actual description
+        "HR & Administration professional with 8+ years of experience in HR operations, recruitment, employee relations, office administration, and management coordination. MBA in HR with expertise in streamlining administrative processes, employee onboarding, vendor management, and ensuring smooth day-to-day business operations.", // Add actual description
     },
     {
       name: "Amol Sanap",
       position: "Dedicated Civil Engineer", // Add actual position
-      experience: "Dedicated Civil Engineer with 8+ Years of Expertise in Water & Waste Management",
+      experience:
+        "Dedicated Civil Engineer with 8+ Years of Expertise in Water & Waste Management",
       image:
         "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1758548403/Amol_Sanap_rrdwne.jpg", // Placeholder image
       description:
@@ -351,7 +348,7 @@ const AboutUsPage: React.FC = () => {
       description:
         "An accomplished professional with expertise in Purchase and Supply Chain Management, bringing strong capabilities in Data Analysis, Supplier Evaluation and Selection, Cost Management and Savings, Market Research, and End-to-End Supply Chain Optimization. Adept at driving process efficiency, strategic sourcing, and innovative solutions to ensure cost-effective and seamless operations across the procurement and supply chain lifecycle.", // Add actual description
     },
-    
+
     {
       name: "Shubham Shivarkar",
       position: "CAD Engineer", // Add actual position
@@ -360,6 +357,34 @@ const AboutUsPage: React.FC = () => {
         "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1758548405/Shubham_Shivarkar_owxfzt.jpg", // Placeholder image
       description:
         "A highly motivated CAD Engineer with over 2 years of experience in developing innovative designs, leading projects from concept to completion, and contributing to successful team collaborations. Skilled in translating ideas into practical engineering solutions while ensuring precision, quality, and timely delivery.", // Add actual description
+    },
+
+    {
+      name: "Akshay Shinde",
+      position: "Project Manager",
+      experience: "Project Manager with 10+ Years of Experience",
+      image: "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1793175136/Akshay_Shinde_howkvt.jpg", // Replace with actual image URL
+      description:
+        "An experienced Project Manager with over 10 years of expertise in planning, designing, and delivering water and wastewater treatment infrastructure projects. Skilled in end-to-end project execution, including design, procurement, erection, commissioning, and operations, with a focus on quality, timely delivery, and efficient project management.",
+    },
+
+    {
+      name: "Samiksha Raut",
+      position: "Process & Proposal Engineer",
+      experience:
+        "Process & Proposal Engineer | B.Tech in Chemical Engineering",
+      image: "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1793175137/Samiksha_Raut_d17hg2.jpg", // Replace with actual image URL
+      description:
+        "A Process & Proposal Engineer specializing in process design and technical proposal preparation for water and wastewater treatment systems. Skilled in process calculations, equipment sizing, RO system projections, technical specifications, equipment datasheets, Design Basis Reports (DBR), and cost estimation. Focused on developing efficient, reliable, and cost-effective engineering solutions with strong analytical and problem-solving skills.",
+    },
+
+    {
+      name: "Omkar Gorakhe",
+      position: "Draughtsman – Design",
+      experience: "Mechanical Draughtsman with 3 Years of Experience",
+      image: "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1793175137/Omkar_Gorakhe_oairrs.jpg", // Replace with actual image URL
+      description:
+        "A Mechanical Draughtsman with 3 years of experience in water and wastewater treatment and process engineering. Skilled in preparing proposal drawings, Process P&IDs, plant layouts, equipment layouts, GA drawings, BOQs, and detailed engineering drawings using AutoCAD. Committed to drawing accuracy, quality, timely delivery, and effective coordination with process engineering teams.",
     },
     {
       name: "Sarika Thalkari",
@@ -373,17 +398,19 @@ const AboutUsPage: React.FC = () => {
     {
       name: "Manisha Walde",
       position: "Project Proposal & Estimation Engineer", // Add actual position
-      experience: "Project Proposal & Estimation Engineer with 2+ Years of Experience",
+      experience:
+        "Project Proposal & Estimation Engineer with 2+ Years of Experience",
       image:
         "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1758548403/Manisha_Walde_fifdf2.jpg", // Placeholder image
       description:
         "A results-driven professional with over 2 years of experience in preparing project proposals and cost estimations for water supply schemes, water treatment plants (WTPs), and sewage treatment plant (STP) projects. Skilled in delivering accurate, cost-effective, and technically sound solutions to support successful project execution.", // Add actual description
     },
-    
+
     {
       name: "Rupesh Ingale",
       position: "Water Infrastructure Project Specialist", // Add actual position
-      experience: "Water Infrastructure Project Specialist with 5+ Years of Experience",
+      experience:
+        "Water Infrastructure Project Specialist with 5+ Years of Experience",
       image:
         "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1758548404/Rupesh_Ingle_xpbjs8.jpg", // Placeholder image
       description:
@@ -392,7 +419,8 @@ const AboutUsPage: React.FC = () => {
     {
       name: "Ravindra Darade",
       position: "Manufacturing & Operations Professional", // Add actual position
-      experience: "Manufacturing & Operations Professional with 2+ Years of Experience",
+      experience:
+        "Manufacturing & Operations Professional with 2+ Years of Experience",
       image:
         "https://res.cloudinary.com/dsvfcckqy/image/upload/f_auto,q_auto/v1791883186/Ravi_Darade_az33dj.jpg", // Placeholder image
       description:
