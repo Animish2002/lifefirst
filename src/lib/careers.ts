@@ -1,8 +1,9 @@
 /**
  * Job openings come from LifeFlow (HR posts them there). The pages read them
- * on the server and refresh every few minutes, so a newly posted job shows up
- * without a redeploy. Applications are sent from the browser straight to the
- * same API.
+ * on the server. LifeFlow calls /api/careers/revalidate after every change, so
+ * a job shows up on the next visit, without a redeploy; the timer below is the
+ * fallback if that call is lost. Applications are sent from the browser
+ * straight to the same API.
  */
 
 /** LifeFlow's API root, e.g. https://api.example.com/api/v1. Unset = no openings are shown. */
@@ -10,6 +11,9 @@ export const LIFEFLOW_API_URL = (process.env.NEXT_PUBLIC_LIFEFLOW_API_URL ?? "")
 
 /** Seconds a fetched list or job is reused before it's fetched again. */
 export const CAREERS_REVALIDATE = 300;
+
+/** Cache tag on every LifeFlow fetch; clearing it refreshes the Careers pages. */
+export const CAREERS_TAG = "careers";
 
 export type JobSection = {
   heading: string;
@@ -58,7 +62,7 @@ export async function getJobs(): Promise<Job[]> {
   if (!LIFEFLOW_API_URL) return [];
   try {
     const res = await fetch(`${LIFEFLOW_API_URL}/careers/public/jobs`, {
-      next: { revalidate: CAREERS_REVALIDATE, tags: ["careers"] },
+      next: { revalidate: CAREERS_REVALIDATE, tags: [CAREERS_TAG] },
     });
     if (!res.ok) return [];
     const body = (await res.json()) as ApiResponse<Job[]>;
@@ -73,7 +77,7 @@ export async function getJob(slug: string): Promise<Job | null> {
   if (!LIFEFLOW_API_URL) return null;
   try {
     const res = await fetch(`${LIFEFLOW_API_URL}/careers/public/jobs/${encodeURIComponent(slug)}`, {
-      next: { revalidate: CAREERS_REVALIDATE, tags: ["careers"] },
+      next: { revalidate: CAREERS_REVALIDATE, tags: [CAREERS_TAG] },
     });
     if (!res.ok) return null;
     const body = (await res.json()) as ApiResponse<Job>;

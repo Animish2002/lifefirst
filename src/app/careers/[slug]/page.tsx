@@ -13,8 +13,8 @@ interface PageProps {
   }>;
 }
 
-// Jobs come from LifeFlow; a page is rebuilt at most every 5 minutes, and
-// jobs posted after the build are rendered on first visit.
+// Jobs come from LifeFlow, which refreshes these pages after every change (the
+// 5 minutes are the fallback); jobs posted after the build render on first visit.
 export const revalidate = 300;
 
 /**

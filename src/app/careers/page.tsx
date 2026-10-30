@@ -72,7 +72,8 @@ const LightbulbIcon = ({ className }: ComponentProps<"svg">) => (
   </svg>
 );
 
-// Openings come from LifeFlow; the page is rebuilt at most every 5 minutes.
+// Openings come from LifeFlow, which refreshes this page after every change;
+// the 5 minutes are the fallback if that call is lost.
 export const revalidate = 300;
 
 const Page = async () => {

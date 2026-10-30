@@ -26,6 +26,18 @@ The Careers pages now read job openings from LifeFlow and send applications ther
   - Optional: Google's Rich Results Test on a job page finds a **JobPosting**.
 - [ ] **The old form service is no longer used** for applications (`formflowapi.thefortune.club`). Nothing to switch off on this side; decide whether to close that form there.
 
+### 2. Careers changes show straight away (2026-10-30)
+
+LifeFlow now tells this site when HR changes a job. **Do this before LifeFlow's side** (LifeFlow-Backend `DEPLOYMENT-PRODUCTION.md` → Pending → item 2), which uses the same secret.
+
+- [ ] **Make the secret once:** `openssl rand -hex 32`. The same value goes on Vercel and on Railway. Don't commit it.
+- [ ] **Vercel → Project → Settings → Environment Variables**, add for **Production**:
+  | Variable | Value |
+  |---|---|
+  | `CAREERS_REVALIDATE_SECRET` | the secret above |
+- [ ] **Deploy** (see [Routine release](#routine-release)). Vercel only applies a new variable to deployments made after it.
+- [ ] **Check:** `curl -i -X POST https://www.life-first.in/api/careers/revalidate` answers **401** (not 404), and the same call with `-H "Authorization: Bearer <secret>"` answers **200**.
+
 ---
 
 ## How production is set up
@@ -36,7 +48,7 @@ The Careers pages now read job openings from LifeFlow and send applications ther
 | Host | **Vercel** (Next.js), serving `life-first.in` |
 | Data it needs | job openings from LifeFlow's API (`NEXT_PUBLIC_LIFEFLOW_API_URL`); everything else is in the repo |
 
-The Careers pages are rebuilt at most every **5 minutes** from LifeFlow, so a job HR posts, closes or archives shows up (or disappears) within about 5 minutes without a deploy. A job page for a job posted after the last deploy is built on its first visit.
+When HR posts, edits, closes or archives a job, LifeFlow calls `POST /api/careers/revalidate` here, and the Careers pages are rebuilt on their next visit, without a deploy. The **5-minute** timer stays as the fallback if that call is lost: a change then shows up once the timer has run out and someone visits the page (that visit still sees the old copy and starts the rebuild). A job page for a job posted after the last deploy is built on its first visit.
 
 ---
 
@@ -55,6 +67,7 @@ The Careers pages are rebuilt at most every **5 minutes** from LifeFlow, so a jo
 | Variable | Production value | Notes |
 |---|---|---|
 | `NEXT_PUBLIC_LIFEFLOW_API_URL` | `https://api.lifeflow.life-first.in/api/v1` | read at build time and by the browser (applications); changing it needs a redeploy |
+| `CAREERS_REVALIDATE_SECRET` | random, `openssl rand -hex 32` | secret; must equal the same variable on LifeFlow's API. Unset or different = job changes wait for the 5-minute timer |
 
 `.env.example` lists them for local development (`.env.local`, with LifeFlow's API running locally).
 
